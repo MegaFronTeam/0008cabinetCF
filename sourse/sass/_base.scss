@@ -444,7 +444,7 @@ iframe {
 
 // *::selection {
 // 	color: #fff;
-// 	/* Цвет текста */
+// 	/* Цвет тета */
 // 	background: var(--bs-primary) ;
 // 	/* Цвет фона */
 // }
@@ -517,7 +517,7 @@ iframe {
 		--bs-gutter-x: 30px;
 	}
 	@include media-breakpoint-up(xl) {
-		margin: 0;
+		// margin: 0;
 		max-width: calc(1500px + var(--bs-gutter-x));
 	}
 	
@@ -616,6 +616,7 @@ main{
 		
 		img{
 			@extend .res-i;
+			border-radius: rem(12);
 		}
 		&::before{
 			content: '';
@@ -914,6 +915,10 @@ main{
 		font-weight: bold;
 		font-size: rem(60);
 		margin-bottom: rem(20);
+		img{
+			border-radius: rem(20);
+
+		}
 		&::before{
 			content: '';
 			position: absolute;

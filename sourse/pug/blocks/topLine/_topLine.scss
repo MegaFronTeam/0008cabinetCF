@@ -1,0 +1,106 @@
+
+	// start .topLine
+	.topLine {
+		border-bottom: 1px solid #EBEBEB;
+		--sPT: #{rem(15)};
+		@include media-breakpoint-up(xl) {
+
+			font-size: 14px;
+		}
+		font-size: rem(14px);
+		--sPB: #{rem(15)};
+		margin-bottom: rem(20); 
+		.row{
+			align-items: center;
+			--bs-gutter-x: 10px;
+		 }
+		 &__btn{
+			 @extend .btn, .btn-outline-light;
+			 font-weight: normal;
+			display: flex;
+			justify-content: center;
+			min-width: rem(40);
+			height: rem(40);
+			border-radius: 100px;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			--bs-btn-color: #{$body-color};
+			@include media-breakpoint-down(xl) {
+				&--alarm,
+				&--balance{
+					padding: 0;
+					background: none !important;
+					border: none !important;
+					min-width: 1px;
+				}
+
+				border: none !important;
+			}
+			&--cabinet{
+				--bs-btn-border-color: #F6F6F6;
+				--bs-btn-bg: #F6F6F6;
+				--bs-btn-color: #C2C2C2;
+			}
+			&--balance{
+				padding-left: rem(27);
+				padding-right: rem(27);
+				.icon{
+				@include media-breakpoint-up(xl) {
+
+						display: none;
+					}
+					color: $primary;
+					margin-right: rem(10);
+				}
+			}
+
+			&--alarm{
+				--bs-btn-color: #8c8d8f;
+			}
+		 }
+		 &__title{
+				display: flex;
+				align-items: center;
+				font-weight: bold;
+				.badge{
+					font-weight: normal;
+					border-radius: 100px;
+					margin-left: rem(5px);
+					--bs-badge-color: #{$body-color};
+					--bs-badge-padding-y: 0.35em;
+					--bs-badge-padding-x: 0.35em;
+					text-align: center;
+					min-width: rem(20px);
+					display: inline-flex;
+					height: rem(20px);
+					align-items: center;
+					justify-content: center;
+				}
+		 }
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.topLine

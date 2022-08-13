@@ -1,0 +1,29 @@
+mixin topLine()
+	// start topLine
+	+b.topLine.section#topLine&attributes(attributes)
+		.container-fluid
+			.row
+				.col-auto.d-xl-none
+					+b.toggle-menu-mobile--js.d-xl-none
+						span
+						+e.counter 8
+				if block
+					block
+				else
+					.col-auto
+						+e.title  Мои чат-боты
+							.badge.bg-light 1
+				.col.p-0
+				.col-auto
+					+e.btn--balance(href="#")
+						+icon("wallet")
+						span.d-none.d-sm-block  Баланс: 
+						| 
+						strong 777 ₽
+				.col-auto
+					+e.btn--alarm(href="#")
+						+icon("alarm")
+				.col-auto.d-xl-none
+					+e.btn--cabinet(href="#")
+						+icon("avatar")
+	// end topLine

@@ -23,6 +23,30 @@ const JSCCommon = {
 				PREV: "Назад",
 			},
 		});
+		
+		Fancybox.bind('.link-modal-aside-js', {
+			arrows: false,
+			// infobar: false,
+			touch: false,
+			trapFocus: false,
+			placeFocusBack: false,
+			infinite: false,
+			dragToClose: false,
+			type: 'inline',
+			autoFocus: false,
+			groupAll: false,
+			groupAttr: false,
+			mainClass:"fancy-aside",
+			// parentEl: document.querySelector(".main-center-wrap"),
+			showClass: "fancybox-throwOutUp",
+			hideClass: "fancybox-throwOutDown",
+			l10n: {
+				Escape: "Закрыть",
+				NEXT: "Вперед",
+				PREV: "Назад",
+			},
+		});
+
 		document.querySelectorAll(".modal-close-js").forEach(el=>{
 			el.addEventListener("click", ()=>{
 				Fancybox.close();
@@ -238,18 +262,16 @@ const JSCCommon = {
 
 		let catalogDrop = drop;
 		let catalogToggle = toggle;
-
+		
 		$(document).on('click', catalogToggle, function () {
-			$(this).toggleClass('active').next().fadeToggle('fast', function () {
-				$(this).toggleClass("active")
-			});
+			$(this).toggleClass('active').next() .toggleClass("active") 
 		})
 
 		document.addEventListener('mouseup', (event) => {
 			let container = event.target.closest(catalogDrop + ".active"); // (1)
 			let link = event.target.closest(catalogToggle); // (1)
-			if (!container || !catalogToggle) {
-				$(catalogDrop).removeClass('active').fadeOut();
+			if (!container && !link) {
+				$(catalogDrop).removeClass('active');
 				$(catalogToggle).removeClass('active');
 			};
 		}, { passive: true });
@@ -295,7 +317,8 @@ function eventHandler() {
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
-	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
+
+	JSCCommon.toggleShow(".alert-item__dots .icon-dots", '.alert-item__dropdown');
 	// JSCCommon.animateScroll();
 	
 	// JSCCommon.CustomInputFile(); 
@@ -371,6 +394,21 @@ function eventHandler() {
 	});
 	// modal window
 
+	let inputGroups = document.querySelectorAll(".form-wrap__input-wrap");
+	for (const inputGroup of inputGroups) {
+		
+		inputGroup.addEventListener("click", function(event){
+			let toggle = event.target.closest(".btn-toggle-pass")
+			if(toggle) {
+					toggle.classList.toggle("active")
+					let  input = this.querySelector("input");
+					input.type = input.type == 'password' ? "text" : "password";
+					
+			}
+		})
+	}
+
+
 	$(".toggle-menu-mobile--js").click(function(){
 		this.classList.toggle("on");
 		document.body.classList.toggle("show-sidebar")
@@ -379,13 +417,43 @@ function eventHandler() {
 	document.addEventListener("click", function(event){
 		let menu = event.target.closest("aside.active");
 		let toggle = event.target.closest(".toggle-menu-mobile--js");
-		if(!menu && !toggle) {
+		if(!menu && !toggle && document.body.classList.contains('show-sidebar')) {
 			$(".toggle-menu-mobile--js")[0].classList.remove("on");
 			document.body.classList.remove("show-sidebar")
 			document.querySelector("aside").classList.remove("active")
 
 		}
 	})
+
+
+	try {
+		document.querySelector('.avatar-block input').onchange = function (evt) {
+			var tgt = evt.target || window.event.srcElement,
+			files = tgt.files; 
+			var fr = new FileReader();
+			if (FileReader && files && files.length) {
+			fr.onload = function () {
+				document.querySelector('.avatar-block img').src = fr.result;
+				document.querySelector('.avatar-block').classList.add("active");
+			}
+			fr.readAsDataURL(files[0]); 
+		}
+			
+			document.querySelector('.avatar-block').addEventListener("click", function(event){
+				let target = event.target.closest(".avatar-block__img-wrap")
+				if(this.classList.contains("active") && target) {
+					console.log(1);
+					event.stopPropagation();
+					this.classList.remove("active")
+				} 
+
+			})
+
+	}
+	} catch (error) {
+		
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

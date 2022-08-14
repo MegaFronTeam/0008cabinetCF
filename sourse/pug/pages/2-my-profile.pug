@@ -1,0 +1,82 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= '2-my-profile'
+	title= title
+block pagecontent
+	+b.cabinet-block.section
+		+e.head.row
+			.col-sm-auto.h1.strong.mb-0 Профиль #13405
+			.col-auto
+				a.strong(href="#").link-danger Выйти из аккаунта 
+			.col.p-0.m-0
+			.col-auto.m-0
+				+b.link-close(href="#")
+					+icon("close")
+		+e.body
+			+form-wrap
+				+b.LABEL.avatar-block
+					input(type="file", name="")
+					+e.img-wrap.bg-wrap
+						+e.btn-delete
+							+icon("trash-can")
+						img(src="#", alt="").img-bg
+						+icon("avatar")
+					+e.caption.small
+						.strong.mb-1 Загрузить фото
+						.text-secondary.mb-3 Изображение в формате jpeg, png, gif весом не более 5 мб.
+						span.btn.btn-sm.btn-outline-primary  Выбрать файл
+				mixin gr(t)
+					+e.group
+						+e.group-title= t
+						block
+				+gr(`Персональные данные`)
+					+input("Введите имя и фамилию",'text','Имя и фамилия')
+				+gr(`Контактные данные`)
+					+input("Введите email",'text','Ваш email')
+					+e.input-wrap--tel.form-group
+						+e.SPAN.input-title Ваш телефон
+						.input-group
+							+e.SELECT.input.form-select()
+								option +380
+								option +381
+								option +382
+								option +383
+							+e.INPUT.input.form-control(  type="text" placeholder="000 000-00-00")
+				+gr(`Безопасность`)
+					+input("Введите текущий пароль",'text','Текущий пароль')
+						+b.SPAN.btn-toggle-pass.active
+							+icon("eye")
+					+input("Введите новый пароль",'password','Новый пароль')
+						+b.SPAN.btn-toggle-pass
+							+icon("eye")
+					+input("Повторите новый пароль",'password','Повторите новый пароль')
+						+b.SPAN.btn-toggle-pass
+							+icon("eye")
+					+input("Введите новый пароль",'text','Поле чтобы показать как выглядит ошибка')(class="is-invalid")
+						.invalid-feedback.d-block Текст ошибки.
+					+input("Введите новый пароль",'text','Поле чтобы показать как выглядит ошибка')(disabled)
+				button.btn.btn-orange.px-4(type="submit") Сохранить изменения
+
+		+b.save-alert
+			+icon("square_checked")
+			.small.strong Изменения сохранены
+			+e.close
+				+icon('close')

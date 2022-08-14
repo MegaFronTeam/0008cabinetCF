@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Модальные окна</title>
+		<title>2-my-profile</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -11,12 +11,116 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body>
+	<body class="main-page">
 		<div class="main-wrapper">
-			<div class="section container">
-				<h1>Страница для  демонстрации модальных окон</h1>
-				<div class="row">
-										<div class="col-auto mb-2"><a class="btn btn-primary" href="#" data-src="modal-confirm" data-fancybox="modal">Подтвердите электронную почту</a></div>
+			<div class="cabinet-block section">
+				<div class="cabinet-block__head row">
+					<div class="col-sm-auto h1 strong mb-0">Профиль #13405</div>
+					<div class="col-auto"><a class="strong link-danger" href="#">Выйти из аккаунта </a></div>
+					<div class="col p-0 m-0"></div>
+					<div class="col-auto m-0">
+						<a class="link-close" href="#">
+							<svg class="icon icon-close ">
+								<use xlink:href="img/svg/sprite.svg#close"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="cabinet-block__body">
+					<div class="form-wrap">
+						<form>
+							<label class="avatar-block">
+								<input type="file" name=""><span class="avatar-block__img-wrap bg-wrap"><span class="avatar-block__btn-delete">
+								<svg class="icon icon-trash-can ">
+									<use xlink:href="img/svg/sprite.svg#trash-can"></use>
+								</svg></span><img class="img-bg" src="#" alt="">
+								<svg class="icon icon-avatar ">
+									<use xlink:href="img/svg/sprite.svg#avatar"></use>
+								</svg></span><span class="avatar-block__caption small">
+								<div class="strong mb-1">Загрузить фото</div>
+								<div class="text-secondary mb-3">Изображение в формате jpeg, png, gif весом не более 5 мб.</div><span class="btn btn-sm btn-outline-primary"> Выбрать файл</span></span>
+							</label>
+							<div class="form-wrap__group">
+								<div class="form-wrap__group-title">Персональные данные
+								</div>
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Имя и фамилия</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите имя и фамилию"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="form-wrap__group">
+								<div class="form-wrap__group-title">Контактные данные
+								</div>
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Ваш email</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите email"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-wrap__input-wrap--tel form-group"><span class="form-wrap__input-title">Ваш телефон</span>
+									<div class="input-group">
+										<select class="form-wrap__input form-select">
+											<option>+380</option>
+											<option>+381</option>
+											<option>+382</option>
+											<option>+383</option>
+										</select><input class="form-wrap__input form-control" type="text" placeholder="000 000-00-00"/>
+									</div>
+								</div>
+							</div>
+							<div class="form-wrap__group">
+								<div class="form-wrap__group-title">Безопасность
+								</div>
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Текущий пароль</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите текущий пароль"/>
+									</label><span class="btn-toggle-pass active">
+									<svg class="icon icon-eye ">
+										<use xlink:href="img/svg/sprite.svg#eye"></use>
+									</svg></span>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Новый пароль</span><input class="form-wrap__input form-control" name="password" type="password" placeholder="Введите новый пароль"/>
+									</label><span class="btn-toggle-pass">
+									<svg class="icon icon-eye ">
+										<use xlink:href="img/svg/sprite.svg#eye"></use>
+									</svg></span>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Повторите новый пароль</span><input class="form-wrap__input form-control" name="password" type="password" placeholder="Повторите новый пароль"/>
+									</label><span class="btn-toggle-pass">
+									<svg class="icon icon-eye ">
+										<use xlink:href="img/svg/sprite.svg#eye"></use>
+									</svg></span>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Поле чтобы показать как выглядит ошибка</span><input class="form-wrap__input form-control is-invalid" name="text" type="text" placeholder="Введите новый пароль"/>
+									</label>
+									<div class="invalid-feedback d-block">Текст ошибки.</div>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__input-title">Поле чтобы показать как выглядит ошибка</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите новый пароль" disabled="disabled"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<button class="btn btn-orange px-4" type="submit">Сохранить изменения</button>
+						</form>
+					</div>
+				</div>
+				<div class="save-alert">
+					<svg class="icon icon-square_checked ">
+						<use xlink:href="img/svg/sprite.svg#square_checked"></use>
+					</svg>
+					<div class="small strong">Изменения сохранены</div>
+					<div class="save-alert__close">
+						<svg class="icon icon-close ">
+							<use xlink:href="img/svg/sprite.svg#close"></use>
+						</svg>
+					</div>
 				</div>
 			</div>
 		</div>

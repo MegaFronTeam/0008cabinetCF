@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Модальные окна</title>
+		<title>1.2. My Bots</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -11,13 +11,186 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body>
+	<body class="main-page">
 		<div class="main-wrapper">
-			<div class="section container">
-				<h1>Страница для  демонстрации модальных окон</h1>
-				<div class="row">
-										<div class="col-auto mb-2"><a class="btn btn-primary" href="#" data-src="modal-confirm" data-fancybox="modal">Подтвердите электронную почту</a></div>
+			<aside>
+				<div class="nav-chat">
+					<ul>
+						<li><a class="btn active" href="#"><img src="img/svg/main.svg" alt=""/></a></li>
+						<li><a class="btn" href="#"> 
+								<div class="nav-chat__counter">1
+								</div><img src="img/svg/praga.png" alt=""/></a></li>
+						<li><a class="btn" href="#"><img src="img/svg/bgr.png" alt=""/></a></li>
+						<li><a class="btn" href="#" style="--bs-btn-bg:#6F64EC; --bs-btn-color: #fff; --bs-btn-hover-color: #fff; --bs-btn-hover-bg:#887fea"> С</a></li>
+						<li><a class="btn btn-orange" href="#">+</a></li>
+					</ul>
 				</div>
+				<div class="nav-main-wrap">
+					<div class="nav-main">
+						<ul>
+								<li>
+									<a class="nav-main__link active" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-shop ">
+												<use xlink:href="img/svg/sprite.svg#shop"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Мои чат-боты
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="nav-main__link" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-star ">
+												<use xlink:href="img/svg/sprite.svg#star"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Тарифы
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="nav-main__link" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-gift ">
+												<use xlink:href="img/svg/sprite.svg#gift"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Акции
+											<div class="badge bg-success">скоро</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="nav-main__link" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-currency-rub ">
+												<use xlink:href="img/svg/sprite.svg#currency-rub"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Кабинет партнера
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="nav-main__link" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-faqs ">
+												<use xlink:href="img/svg/sprite.svg#faqs"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Техподдержка
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="nav-main__link" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-document ">
+												<use xlink:href="img/svg/sprite.svg#document"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">API
+											<div class="badge bg-success">скоро</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="nav-main__link" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-newspaper ">
+												<use xlink:href="img/svg/sprite.svg#newspaper"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Блог
+											<div class="badge bg-success">скоро</div>
+										</div>
+									</a>
+								</li>
+						</ul>
+						<a class="cabinet-btn" href="#">
+							<div class="cabinet-btn__icon-wrap">
+								<svg class="icon icon-avatar ">
+									<use xlink:href="img/svg/sprite.svg#avatar"></use>
+								</svg>
+							</div>
+							<div class="cabinet-btn__text"> 
+								<div class="cabinet-btn__name">Валентин Ковалентин
+								</div>
+								<div class="cabinet-btn__id">#13405
+								</div>
+							</div>
+							<svg class="icon icon-setting ">
+								<use xlink:href="img/svg/sprite.svg#setting"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</aside>
+			<div class="main-center-wrap">
+				<main>
+					<!-- start topLine-->
+					<div class="topLine section" id="topLine">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-auto d-xl-none">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js d-xl-none"><span></span>
+										<div class="toggle-menu-mobile__counter">8
+										</div>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="topLine__title"> Мои чат-боты
+										<div class="badge bg-light">1</div>
+									</div>
+								</div>
+								<div class="col p-0"></div>
+								<div class="col-auto">
+									<a class="topLine__btn topLine__btn--balance" href="#">
+										<svg class="icon icon-wallet ">
+											<use xlink:href="img/svg/sprite.svg#wallet"></use>
+										</svg><span class="d-none d-sm-block"> Баланс: </span> <strong>777 ₽</strong>
+									</a>
+								</div>
+								<div class="col-auto">
+									<a class="topLine__btn topLine__btn--alarm topLine__btn--new link-modal-aside-js" href="#modal-alarm">
+										<svg class="icon icon-alarm ">
+											<use xlink:href="img/svg/sprite.svg#alarm"></use>
+										</svg>
+									</a>
+								</div>
+								<div class="col-auto d-xl-none">
+									<a class="topLine__btn topLine__btn--cabinet" href="#">
+										<svg class="icon icon-avatar ">
+											<use xlink:href="img/svg/sprite.svg#avatar"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end topLine-->
+					<div class="container-fluid container-main">
+						<div class="alert alert-orange small d-md-flex text-md-start text-center align-items-center" role="alert"><img class="me-md-2 mb-md-0 mb-1" src="img/svg/info_square_icon.svg" alt="">
+							<div class="text-body flex-grow-1 me-md-2 mb-md-0 mb-1">Мы отправили письмо на вашу эл. почту <strong>example@yandex.ru</strong> для подтверждения регистрации. После подтверждения регистрации вам будет доступен функционал личного кабинета.</div>
+							<div class="strong text-secondary w-sp">Отправить еще раз через 4:59</div>
+						</div>
+						<div class="centered-block text-center">
+							<div class="my-2"><img class="mb-20" src="img/robot.png" alt="" loading="lazy"/>
+								<div class="h1 strong">У вас пока нет созданных чат-ботов</div>
+								<div class="small mb-4">Создайте своего первого чат-бота и начните пользоваться сервисом ChatFood.</div><a class="btn btn-orange px-4 link-modal-js" href="#modal-confirm">
+									 <svg class="me-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 1.25V14.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1.25 8H14.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>Создать чат-бота</a>
+							</div>
+						</div>
+					</div>
+					<footer class="footer">
+						<div class="container-fluid">ChatFood v 3.1</div>
+					</footer>
+				</main>
 			</div>
 		</div>
 		<!--  start modals-->

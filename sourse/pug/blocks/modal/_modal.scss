@@ -6,15 +6,47 @@
 	padding: 0;
 	max-width: 100%;
 }
+.fancybox__container.is-animated[aria-hidden=false] .carousel__button.is-close{ 
+		--carousel-button-width: #{rem(32)};
+		--carousel-button-height: var(--carousel-button-width);
+	top: rem(10);
+	right: rem(10);
+	color:  #C2C2C2;
+	@include mt;
+	&:hover{
+		// color: $body-color	;
+		opacity: 0.6;
+	}
+	svg{
+		filter: none;
+	}
+}
+@include media-breakpoint-down(sm) {
+	.fancybox__slide::before, .fancybox__slide::after{
+		display: none;
+	}
+	.fancybox__slide{
+		padding: 15px;
+	}
+}
 .modal-win {
 	// display: block;
 	background-color: #fff;
 	max-width: 100%;
 	position: relative;
-	width: rem(1500);
+	width: rem(500);
+	border: 1px solid #EBEBEB;
+	box-shadow: 0px 0px 15px rgba(25, 28, 31, 0.1);
+	border-radius: rem(12px);
 	// min-height: 100%; 
-	padding: 40px;
-
+	@include media-breakpoint-up(sm) {
+		padding: 40px;
+	}
+	padding: 30px;
+	&__btn-close{
+		@extend .btn, .btn-orange;
+		width: rem(198);
+	}
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
@@ -148,21 +180,28 @@ a {
 
 
 .fancybox-throwOutUp {
-  animation: 0.25s ease both fancybox-throwOutUp;
+	// overflow: hidden;
+}
+.fancybox-throwOutUp  {
+  animation: .25s ease both fancybox-throwOutUp;
 }
 
 .fancybox-throwOutDown {
-  animation: 0.25s ease both fancybox-throwOutDown;
+	// overflow: hidden;
+	animation: 0.25s ease both fancybox-throwOutDown;
+	.modal-win{
+
+	}
 }
 
 @keyframes fancybox-throwOutUp {
   from {
-    transform: translate3d(0, -5%, 0);
+    // transform: translate3d(100%, 0, 0);
     opacity: 0;
   }
 	
   to {
-    transform: translate3d(0, 0, 0);
+    // transform: translate3d(0, 0, 0);
     opacity: 1;
   }
 
@@ -170,7 +209,55 @@ a {
 
 @keyframes fancybox-throwOutDown {
   to {
-    transform: translate3d(0, 10%, 0);
+    // transform: translate3d(100%, 0, 0);
     opacity: 0;
   }
+}
+.with-fancybox{
+	body{
+		width: 100%;
+		overflow: hidden;
+	}
+}
+.fancy-aside{
+	overflow: hidden; 
+	.fancybox__carousel,
+	.fancybox__track,
+	.fancybox__viewport{
+		position: relative;
+		overflow: hidden; 
+	}
+	width: 100%;
+	.fancybox__slide{
+		padding: 0;
+	}
+	.fancybox__content{
+		align-self: flex-end;
+	}
+	.modal-win{
+		border-radius: 0;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		height: 100vh;
+		padding: 20px 0 !important;
+		&__head,
+		&__body,
+		&__footer{
+			@include media-breakpoint-up(sm) {
+				padding: 20px 40px;
+				// padding-bottom: 20px;
+			}
+			padding: 10px 30px;
+			// padding-bottom: 20px;
+		}
+		&__body{
+			flex-grow: 1;
+			overflow-y: auto;
+			position: relative;
+		}
+		&__footer{
+			padding-bottom: 10vh !important;
+		}
+	}
 }

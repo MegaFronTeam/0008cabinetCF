@@ -1,7 +1,31 @@
+.btn-toggle-pass{
+	position: absolute;
+	right: rem(10);
+	top: rem(33);
+	color: #c2c2c2;
+	cursor: pointer;
+	@include mt;
+	&.active{
+		color: $orange;
+	}
+}
 .form-wrap{
  	&__input-wrap{
 			// @extend .form-group;
-			
+			margin-bottom: rem(20);
+			position: relative;
+			&--tel{
+				select{
+					max-width: rem(86);
+					padding-right: rem(25);
+					background-position: calc(100% - #{rem(8)}) center;
+				}
+			}
+		}
+		&__input-title{
+			font-size: rem(14);
+			display: block;
+			margin-bottom: rem(5);
 		}
 		&__input{
 			// @extend .form-control;
@@ -15,6 +39,15 @@
  		width: 100%;
  		display: block;
  	}
+	&__group-title{
+		font-weight: bold;
+		font-size: rem(14);
+		margin-bottom: rem(15);
+	}
+	&__group{
+		margin-bottom: rem(20);
+	}
+
 }
 
 

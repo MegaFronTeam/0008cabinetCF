@@ -18,93 +18,14 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= index.head.title
+	- let  title= 'Главная'
 	title= title
 block pagecontent
-	aside
-		+b.nav-chat
-			ul
-				li: a(href="#").btn.active
-					img(src="img/svg/main.svg", alt="")
-				li: a(href="#").btn  
-					+e.counter 1
-					img(src="img/svg/praga.png", alt="")
-				li: a(href="#").btn
-					img(src="img/svg/bgr.png", alt="")
-				li: a(href="#" style="--bs-btn-bg:#6F64EC; --bs-btn-color: #fff; --bs-btn-hover-color: #fff; --bs-btn-hover-bg:#887fea").btn  С
-				li: a(href="#").btn.btn-orange +
-		+b.nav-main-wrap
-			+b.nav-main
-				ul
-					mixin a(i,t)
-						li: +e.link(href="#")&attributes(attributes)
-							+e.icon-wrap: +icon(i)
-							+e.text= t
-								block
-					+a('shop',`Мои чат-боты`).active
-					+a('star',`Тарифы`)
-					+a('gift',`Акции`)
-						.badge.bg-success скоро
-					+a('currency-rub',`Кабинет партнера`)
-					+a('faqs',`Техподдержка`)
-					+a('document',`API`)
-						.badge.bg-success скоро
-					+a('newspaper',`Блог`)
-						.badge.bg-success скоро
-				+b.cabinet-btn(href="#")
-					+e.icon-wrap
-						+icon("avatar")
-					+e.text 
-						+e.name Валентин Ковалентин
-						+e.id #13405
-					+icon("setting")
-	.main-center-wrap
-		main
-			+topLine
-			.container-fluid
-				.alert.alert-orange.small(class="d-md-flex text-md-start text-center align-items-center" role="alert")
-					img(src="img/svg/info_square_icon.svg", alt="").me-md-2.mb-md-0.mb-2
-					.text-body.flex-grow-1.me-md-2 Необходимо пополнить баланс, чтобы возобновить работу чат-ботов с подключенными платными тарифами.
-					a(href="#").text-orange Пополнить баланс 
-				.row.gy-4
-					mixin chat-item(t, btn)
-						.col-xl-3.col-sm-6
-							+b.chat-item
-								+e.head.row
-									.col.text-start
-										+e.tooltip
-											+icon("check_star")
-											+e.tooltip-dropdown Вы владелец этого чат-бота
-									.col-auto.text-end
-										div Тариф Start
-										.strong(style="color: var(--bs-success)") Активен
-								+e.body
-									block
-								+e.footer
-									.strong= t
-									a(href="#") @prahacafebot
-								if btn == 'btn-primary'
-									+e.btn.btn(href="#").btn-success 1 новый заказ
-								else
-									+e.btn.btn(href="#").btn-success.disabled Новых заказов нет
-					+chat-item('Прага | Доставка ❤️') 
-						a(href="#").btn.btn-center   
-							img(src="img/svg/praga.png", alt="")
-					+chat-item('ЕДРЁН-БАТОН Доставка | Уфа 🥖','btn-primary')
-						a(href="#").btn.btn-center
-							img(src="img/svg/bgr.png", alt="")
-					+chat-item('Сантоку Доставка | Сочи 🍣')
-						a(href="#" style="--bs-btn-bg:#6F64EC; --bs-btn-color: #fff; --bs-btn-hover-color: #fff; --bs-btn-hover-bg:#887fea").btn.btn-center  С
-					+chat-item('Прага | Доставка ❤️')
-						a(href="#").btn.btn-center   
-							img(src="img/svg/praga.png", alt="")
-					.col-xl-3.col-sm-6
-						+b.chat-item--add-chart
-							+e.center
-								a(href="#").btn.btn-orange.btn-center  +
-								.strong Создать чат-бота
-			+footer()
-				
-
-
-
+	+aside()
+	+main()
+		
+		.alert.alert-orange.small(class="d-md-flex text-md-start text-center align-items-center" role="alert")
+			img(src="img/svg/info_square_icon.svg", alt="").me-md-2.mb-md-0.mb-2
+			.text-body.flex-grow-1.me-md-2 Необходимо пополнить баланс, чтобы возобновить работу чат-ботов с подключенными платными тарифами.
+			a(href="#").link-orange Пополнить баланс 
+		+chat-items()

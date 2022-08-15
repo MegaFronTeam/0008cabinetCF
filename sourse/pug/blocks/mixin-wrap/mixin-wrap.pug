@@ -139,3 +139,17 @@ mixin chat-items()
 					+e.center
 						a(href="#").btn.btn-orange.btn-center  +
 						.strong Создать чат-бота
+
+
+mixin gr(t)
+	+e.group
+		+e.group-title= t
+		block
+
+mixin save-alert()
+	+b.save-alert
+			+icon("square_checked")
+			.small.strong Изменения сохранены
+			+e.close
+				+icon('close')
+			+e.progress

@@ -77,11 +77,6 @@ block pagecontent
 					+input("Введите новый пароль",'text','Поле чтобы показать как выглядит ошибка')(class="is-invalid")
 						.invalid-feedback.d-block Текст ошибки.
 					+input("Введите новый пароль",'text','Поле чтобы показать как выглядит ошибка')(disabled)
-				button.btn.btn-orange.btn-200.btn-mob-100.btn-save-js(type="button") Сохранить изменения
+				button.btn.btn-orange.btn-200.btn-save-js(type="button") Сохранить изменения
 
-		+b.save-alert
-			+icon("square_checked")
-			.small.strong Изменения сохранены
-			+e.close
-				+icon('close')
-			+e.progress
+		+save-alert()

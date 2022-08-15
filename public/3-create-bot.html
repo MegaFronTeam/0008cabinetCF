@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>2-my-profile</title>
+		<title>3. Create bot</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0">
@@ -16,8 +16,7 @@
 		<div class="main-wrapper">
 			<div class="cabinet-block section">
 				<div class="cabinet-block__head row">
-					<div class="col-sm-auto h1 strong mb-0">Профиль #13405</div>
-					<div class="col-auto"><a class="strong link-danger small" href="#">Выйти из аккаунта </a></div>
+					<div class="col-sm-auto h1 strong mb-0">Создание чат-бота</div>
 					<div class="col p-0 m-0"></div>
 					<div class="col-auto m-0">
 						<a class="link-close" href="#">
@@ -30,89 +29,25 @@
 				<div class="cabinet-block__body">
 					<div class="form-wrap">
 						<form>
-							<label class="avatar-block">
-								<input type="file" name=""><span class="avatar-block__img-wrap bg-wrap"><span class="avatar-block__btn-delete">
-								<svg class="icon icon-trash-can ">
-									<use xlink:href="img/svg/sprite.svg#trash-can"></use>
-								</svg></span><img class="img-bg" src="#" alt="">
-								<svg class="icon icon-avatar ">
-									<use xlink:href="img/svg/sprite.svg#avatar"></use>
-								</svg></span><span class="avatar-block__caption small">
-								<div class="strong mb-1">Загрузить фото</div>
-								<div class="text-secondary mb-3">Изображение в формате jpeg, png, gif весом не более 5 мб.</div><span class="btn btn-sm btn-outline-primary"> Выбрать файл</span></span>
-							</label>
 							<div class="form-wrap__group">
-								<div class="form-wrap__group-title">Персональные данные
+								<div class="form-wrap__group-title">Введите токен
 								</div>
-								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__input-title">Имя и фамилия</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите имя и фамилию"/>
-									</label>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="5467484101:AAFmsPni4fqS38OCh8Z0KWWhPCIW5dRElTc"/>
 								</div>
 								<!-- +e.input-wrap-->
 							</div>
 							<div class="form-wrap__group">
-								<div class="form-wrap__group-title">Контактные данные
+								<div class="form-wrap__group-title">Как получить токен?
 								</div>
-								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__input-title">Ваш email</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите email"/>
-									</label>
-								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-wrap__input-wrap--tel form-group"><span class="form-wrap__input-title">Ваш телефон</span>
-									<div class="input-group">
-										<select class="form-wrap__input form-select custom-select-js">
-											<option>+380</option>
-											<option>+381</option>
-											<option>+382</option>
-											<option>+383</option>
-											<option>+384</option>
-											<option>+385</option>
-											<option>+385</option>
-											<option>+385</option>
-										</select><input class="form-wrap__input form-control" type="text" placeholder="000 000-00-00"/>
-									</div>
-								</div>
-							</div>
-							<div class="form-wrap__group">
-								<div class="form-wrap__group-title">Безопасность
-								</div>
-								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__input-title">Текущий пароль</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите текущий пароль"/>
-									</label><span class="btn-toggle-pass active">
-									<svg class="icon icon-eye ">
-										<use xlink:href="img/svg/sprite.svg#eye"></use>
-									</svg></span>
-								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__input-title">Новый пароль</span><input class="form-wrap__input form-control" name="password" type="password" placeholder="Введите новый пароль"/>
-									</label><span class="btn-toggle-pass">
-									<svg class="icon icon-eye ">
-										<use xlink:href="img/svg/sprite.svg#eye"></use>
-									</svg></span>
-								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__input-title">Повторите новый пароль</span><input class="form-wrap__input form-control" name="password" type="password" placeholder="Повторите новый пароль"/>
-									</label><span class="btn-toggle-pass">
-									<svg class="icon icon-eye ">
-										<use xlink:href="img/svg/sprite.svg#eye"></use>
-									</svg></span>
-								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__input-title">Поле чтобы показать как выглядит ошибка</span><input class="form-wrap__input form-control is-invalid" name="text" type="text" placeholder="Введите новый пароль"/>
-									</label>
-									<div class="invalid-feedback d-block">Текст ошибки.</div>
-								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__input-title">Поле чтобы показать как выглядит ошибка</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите новый пароль" disabled="disabled"/>
-									</label>
-								</div>
-								<!-- +e.input-wrap-->
-							</div>
-							<button class="btn btn-orange btn-200 btn-save-js" type="button">Сохранить изменения</button>
+								<ol class="small">
+									<li>Зайдите в&nbsp;Telegram и&nbsp;запустите чат-бота <a href="#"> @BotFather</a>.</li>
+									<li>Отправьте ему команду ‘<em class="strong"> /newbot</em>’, что означает “создать бота”.</li>
+									<li>Далее отправьте ему название вашего чат-бота, как правило это название заведения, вы&nbsp;также можете использовать эмоджи. Например, &lsquo;<em class="strong"> Хорошая пицца</em> 🍕&rsquo;. В&nbsp;будущем вы&nbsp;сможете вернуться к&nbsp;редактированию названия чат-бота.</li>
+									<li>Далее отправьте ему юзернейм вашего чат-бота на&nbsp;латинице, например &lsquo;<em class="strong"> moyrestoran_bot</em>&rsquo; или &lsquo;<em class="strong"> moyrestoranbot</em>&rsquo;. Помните что в&nbsp;конце названия чат-бота должно фигурировать слово &lsquo;<em class="strong"> bot</em>&rsquo;, также имя бота должно быть уникальным. В&nbsp;противном случае попытка регистрации чат-бота будет неудачна. Внимание: юзернейм чат-бота нельзя будет изменить в&nbsp;будущем.</li>
+									<li>Если вы&nbsp;все сделали правильно, бот <a href="#"> @BotFather </a>отправит вам сообщение в&nbsp;котором будет ваш API TOKEN, например: &lsquo;<em class="strong"> 5467484101:AAFmsPni4fqS38OCh8Z0KWWhPCIW5dRElTc</em>&rsquo;.</li>
+								</ol>
+							</div><br>
+							<button class="btn btn-orange btn-200 btn-mob-100 btn-save-js" type="button">Продолжить</button>
 						</form>
 					</div>
 				</div>

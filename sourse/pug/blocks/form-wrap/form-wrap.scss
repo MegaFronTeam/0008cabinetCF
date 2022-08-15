@@ -284,8 +284,10 @@ input::-webkit-inner-spin-button {
 // }
 
 .choices__inner{
+	
 	@extend .form-select;
 	background-image: none ;
+
 }
 .input-group .choices{
 	margin: 0;
@@ -297,6 +299,7 @@ input::-webkit-inner-spin-button {
 		padding-right: rem(25);
 		background-position: calc(100% - #{rem(8)}) center;
 	border-color: $form-select-focus-border-color !important;
+	min-height: 100%;
 	}
 }
 
@@ -325,8 +328,9 @@ input::-webkit-inner-spin-button {
 
 .choices__list--single{
 	// padding: 0;
-	padding-left: 0;
-	padding-right: 0;
+	// padding-left: 0;
+	// padding-right: 0;
+	padding: 0;
 }
 
 .choices__list--dropdown, .choices__list[aria-expanded]{

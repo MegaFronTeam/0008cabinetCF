@@ -5,10 +5,11 @@
 		<title>Главная</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page">
@@ -142,7 +143,7 @@
 								</div>
 								<div class="col-auto">
 									<div class="topLine__title"> Мои чат-боты
-										<div class="badge bg-light">1</div>
+										<div class="badge bg-light d-none d-sm-flex">1</div>
 									</div>
 								</div>
 								<div class="col p-0"></div>
@@ -151,9 +152,9 @@
 										<div class="toggle-text">
 											<svg class="icon icon-wallet ">
 												<use xlink:href="img/svg/sprite.svg#wallet"></use>
-											</svg><span class="d-none d-xl-block"> Баланс: </span> <strong>777 ₽</strong>
+											</svg><span class="d-none d-xl-block me-1"> Баланс: </span> <strong>777 ₽</strong>
 										</div>
-										<div class="toggle-text toggle-text--hover d-none d-xl-block">
+										<div class="toggle-text toggle-text--hover d-none d-xl-flex">
 											<svg class="icon icon-wallet ">
 												<use xlink:href="img/svg/sprite.svg#wallet"></use>
 											</svg>Пополнить
@@ -164,13 +165,6 @@
 									<a class="topLine__btn topLine__btn--alarm topLine__btn--new link-modal-aside-js" href="#modal-alarm">
 										<svg class="icon icon-alarm ">
 											<use xlink:href="img/svg/sprite.svg#alarm"></use>
-										</svg>
-									</a>
-								</div>
-								<div class="col-auto d-xl-none">
-									<a class="topLine__btn topLine__btn--cabinet" href="#">
-										<svg class="icon icon-avatar ">
-											<use xlink:href="img/svg/sprite.svg#avatar"></use>
 										</svg>
 									</a>
 								</div>
@@ -196,7 +190,7 @@
 											</div>
 										</div>
 										<div class="col-auto text-end small">
-											<div>Тариф Start</div><a class="strong" href="#">Включить</a>
+											<div>Тариф Start</div><a class="strong small" href="#">Включить</a>
 										</div>
 									</div>
 									<div class="chat-item__body"> <a class="btn btn-center" href="#">  <img src="img/svg/praga.png" alt=""/></a>
@@ -226,7 +220,7 @@
 										</div>
 										<div class="col-auto text-end small">
 											<div>Тариф Start</div>
-											<div class="strong" style="color: var(--bs-success)">Активен</div>
+											<div class="strong small" style="color: var(--bs-success)">Активен</div>
 										</div>
 									</div>
 									<div class="chat-item__body"><a class="btn btn-center" href="#"><img src="img/svg/bgr.png" alt=""/></a>
@@ -254,7 +248,7 @@
 										</div>
 										<div class="col-auto text-end small">
 											<div>Тариф Start</div>
-											<div class="strong" style="color: var(--bs-success)">Активен</div>
+											<div class="strong small" style="color: var(--bs-success)">Активен</div>
 										</div>
 									</div>
 									<div class="chat-item__body"><a class="btn btn-center" href="#" style="--bs-btn-bg:#6F64EC; --bs-btn-color: #fff; --bs-btn-hover-color: #fff; --bs-btn-hover-bg:#6F64EC"> С</a>
@@ -284,7 +278,7 @@
 										</div>
 										<div class="col-auto text-end small">
 											<div>Тариф Start</div>
-											<div class="strong" style="color: var(--bs-success)">Активен</div>
+											<div class="strong small" style="color: var(--bs-success)">Активен</div>
 										</div>
 									</div>
 									<div class="chat-item__body"><a class="btn btn-center" href="#">  <img src="img/svg/praga.png" alt=""/></a>
@@ -629,6 +623,7 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/choices.js/public/assets/scripts/choices.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

@@ -54,11 +54,15 @@ block pagecontent
 					+e.input-wrap--tel.form-group
 						+e.SPAN.input-title Ваш телефон
 						.input-group
-							+e.SELECT.input.form-select()
+							+e.SELECT.input.form-select.custom-select-js
 								option +380
 								option +381
 								option +382
 								option +383
+								option +384
+								option +385
+								option +385
+								option +385
 							+e.INPUT.input.form-control(  type="text" placeholder="000 000-00-00")
 				+gr(`Безопасность`)
 					+input("Введите текущий пароль",'text','Текущий пароль')
@@ -73,10 +77,11 @@ block pagecontent
 					+input("Введите новый пароль",'text','Поле чтобы показать как выглядит ошибка')(class="is-invalid")
 						.invalid-feedback.d-block Текст ошибки.
 					+input("Введите новый пароль",'text','Поле чтобы показать как выглядит ошибка')(disabled)
-				button.btn.btn-orange.px-4(type="submit") Сохранить изменения
+				button.btn.btn-orange.btn-200.btn-mob-100.btn-save-js(type="button") Сохранить изменения
 
 		+b.save-alert
 			+icon("square_checked")
 			.small.strong Изменения сохранены
 			+e.close
 				+icon('close')
+			+e.progress

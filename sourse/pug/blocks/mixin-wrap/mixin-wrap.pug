@@ -106,9 +106,9 @@ mixin chat-item(t, btn, a)
 				.col-auto.text-end.small
 					div Тариф Start
 					if a
-						a(href="#").strong Включить
+						a(href="#").strong.small Включить
 					else
-						.strong(style="color: var(--bs-success)") Активен
+						.strong.small(style="color: var(--bs-success)") Активен
 			+e.body
 				block
 			+e.footer

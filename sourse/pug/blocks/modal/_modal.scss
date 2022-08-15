@@ -6,7 +6,7 @@
 	padding: 0;
 	max-width: 100%;
 }
-.fancybox__container.is-animated[aria-hidden=false] .carousel__button.is-close{ 
+.fancybox__container  .carousel__button.is-close{ 
 		--carousel-button-width: #{rem(32)};
 		--carousel-button-height: var(--carousel-button-width);
 	top: rem(10);

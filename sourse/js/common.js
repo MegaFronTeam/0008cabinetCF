@@ -408,22 +408,26 @@ function eventHandler() {
 		})
 	}
 
-
-	$(".toggle-menu-mobile--js").click(function(){
-		this.classList.toggle("on");
-		document.body.classList.toggle("show-sidebar")
-		document.querySelector("aside").classList.toggle("active")
-	})
-	document.addEventListener("click", function(event){
-		let menu = event.target.closest("aside.active");
-		let toggle = event.target.closest(".toggle-menu-mobile--js");
-		if(!menu && !toggle && document.body.classList.contains('show-sidebar')) {
-			$(".toggle-menu-mobile--js")[0].classList.remove("on");
-			document.body.classList.remove("show-sidebar")
-			document.querySelector("aside").classList.remove("active")
-
-		}
-	})
+	try {
+		
+		$(".toggle-menu-mobile--js").click(function(){
+			this.classList.toggle("on");
+			document.body.classList.toggle("show-sidebar")
+			document.querySelector("aside").classList.toggle("active")
+		})
+		document.addEventListener("click", function(event){
+			let menu = event.target.closest("aside.active");
+			let toggle = event.target.closest(".toggle-menu-mobile--js");
+			if(!menu && !toggle && document.body.classList.contains('show-sidebar')) {
+				$(".toggle-menu-mobile--js")[0].classList.remove("on");
+				document.body.classList.remove("show-sidebar")
+				document.querySelector("aside").classList.remove("active")
+	
+			}
+		})
+	} catch (error) {
+		
+	}
 
 
 	try {
@@ -452,6 +456,32 @@ function eventHandler() {
 	}
 	} catch (error) {
 		
+	}
+	$(".save-alert__progress").removeClass("active");
+
+	$(".btn-save-js").click(function(){
+			$(".save-alert").addClass("active");
+			let duration = 1000;
+			document.querySelector(".save-alert__progress").animate([
+				// keyframes
+				{ transform: 'scaleX(0)' },
+				{ transform: 'scaleX(1)' }
+			], { 
+				duration
+			})
+			setTimeout(()=>{
+				$(".save-alert").removeClass("active");
+			}, duration)	
+	})
+
+	let customSelects = document.querySelectorAll(".custom-select-js");
+
+	for (const select of customSelects) {
+		const choices = new Choices(select,{
+			itemSelectText: '',
+			searchEnabled: false,
+    searchChoices: false,
+		});
 	}
 
 };

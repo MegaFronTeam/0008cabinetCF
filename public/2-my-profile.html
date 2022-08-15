@@ -5,10 +5,11 @@
 		<title>2-my-profile</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page">
@@ -59,11 +60,15 @@
 								<!-- +e.input-wrap-->
 								<div class="form-wrap__input-wrap form-wrap__input-wrap--tel form-group"><span class="form-wrap__input-title">Ваш телефон</span>
 									<div class="input-group">
-										<select class="form-wrap__input form-select">
+										<select class="form-wrap__input form-select custom-select-js">
 											<option>+380</option>
 											<option>+381</option>
 											<option>+382</option>
 											<option>+383</option>
+											<option>+384</option>
+											<option>+385</option>
+											<option>+385</option>
+											<option>+385</option>
 										</select><input class="form-wrap__input form-control" type="text" placeholder="000 000-00-00"/>
 									</div>
 								</div>
@@ -107,7 +112,7 @@
 								</div>
 								<!-- +e.input-wrap-->
 							</div>
-							<button class="btn btn-orange px-4" type="submit">Сохранить изменения</button>
+							<button class="btn btn-orange btn-200 btn-mob-100 btn-save-js" type="button">Сохранить изменения</button>
 						</form>
 					</div>
 				</div>
@@ -120,6 +125,8 @@
 						<svg class="icon icon-close ">
 							<use xlink:href="img/svg/sprite.svg#close"></use>
 						</svg>
+					</div>
+					<div class="save-alert__progress">
 					</div>
 				</div>
 			</div>
@@ -438,6 +445,7 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/choices.js/public/assets/scripts/choices.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

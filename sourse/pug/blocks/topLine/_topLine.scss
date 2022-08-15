@@ -54,12 +54,12 @@
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					opacity: var(--op2, 1);
+					opacity: var(--opa2, 1);
 					@include mt;
 					&--hover{
-						@include a-cent1;
+						@include a-cent;
 						position: absolute;
-						opacity: var(--op, 0);
+						opacity: var(--opa, 0);
 						color: #fff;
 						.icon{
 							display: block;
@@ -69,8 +69,8 @@
 				}
 				@include media-breakpoint-up(xl) {
 				&:hover{
-					--op: 1;
-					--op2: 0;
+					--opa: 1;
+					--opa2: 0;
 				}
 				}
 				@include media-breakpoint-up(xl) {

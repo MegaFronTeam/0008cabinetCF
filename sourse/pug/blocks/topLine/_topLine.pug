@@ -12,22 +12,22 @@ mixin topLine()
 				else
 					.col-auto
 						+e.title  Мои чат-боты
-							.badge.bg-light 1
+							.badge.bg-light.d-none.d-sm-flex 1
 				.col.p-0
 				.col-auto
 					+e.btn--balance(href="#")
 						+b.toggle-text
 							+icon("wallet")
-							span.d-none.d-xl-block  Баланс: 
+							span.d-none.d-xl-block.me-1  Баланс: 
 							| 
 							strong 777 ₽
-						+b.toggle-text--hover.d-none.d-xl-block
+						+b.toggle-text--hover.d-none.d-xl-flex
 							+icon("wallet")
 							| Пополнить
 				.col-auto
 					+e.btn--alarm.--new(href="#modal-alarm").link-modal-aside-js
 						+icon("alarm")
-				.col-auto.d-xl-none
-					+e.btn--cabinet(href="#")
-						+icon("avatar")
+				//- .col-auto.d-xl-none
+				//- 	+e.btn--cabinet(href="#")
+				//- 		+icon("avatar")
 	// end topLine

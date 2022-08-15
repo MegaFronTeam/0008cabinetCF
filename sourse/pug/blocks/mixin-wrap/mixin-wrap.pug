@@ -103,7 +103,7 @@ mixin chat-item(t, btn, a)
 					+e.tooltip
 						+icon("check_star")
 						+e.tooltip-dropdown Вы владелец этого чат-бота
-				.col-auto.text-end
+				.col-auto.text-end.small
 					div Тариф Start
 					if a
 						a(href="#").strong Включить
@@ -113,7 +113,7 @@ mixin chat-item(t, btn, a)
 				block
 			+e.footer
 				.strong= t
-				a(href="#") @prahacafebot
+				a(href="#").strong @prahacafebot
 			+e.btn-wrap
 				if btn == 'btn-primary'
 					+e.btn.btn(href="#").btn-success 1 новый заказ
@@ -121,7 +121,7 @@ mixin chat-item(t, btn, a)
 					+e.btn.btn(href="#").btn-success.disabled Новых заказов нет
 					+e.btn.btn(href="#").btn-primary Перейти
 mixin chat-items()
-	.row.gy-4
+	.row.gy-md-4.gy-3
 			
 			+chat-item('Прага | Доставка ❤️','', 'a') 
 				a(href="#").btn.btn-center   
@@ -130,7 +130,7 @@ mixin chat-items()
 				a(href="#").btn.btn-center
 					img(src="img/svg/bgr.png", alt="")
 			+chat-item('Сантоку Доставка | Сочи 🍣')
-				a(href="#" style="--bs-btn-bg:#6F64EC; --bs-btn-color: #fff; --bs-btn-hover-color: #fff; --bs-btn-hover-bg:#887fea").btn.btn-center  С
+				a(href="#" style="--bs-btn-bg:#6F64EC; --bs-btn-color: #fff; --bs-btn-hover-color: #fff; --bs-btn-hover-bg:#6F64EC").btn.btn-center  С
 			+chat-item('Прага | Доставка ❤️')
 				a(href="#").btn.btn-center   
 					img(src="img/svg/praga.png", alt="")

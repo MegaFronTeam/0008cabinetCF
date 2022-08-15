@@ -148,9 +148,16 @@
 								<div class="col p-0"></div>
 								<div class="col-auto">
 									<a class="topLine__btn topLine__btn--balance" href="#">
-										<svg class="icon icon-wallet ">
-											<use xlink:href="img/svg/sprite.svg#wallet"></use>
-										</svg><span class="d-none d-sm-block"> Баланс: </span> <strong>777 ₽</strong>
+										<div class="toggle-text">
+											<svg class="icon icon-wallet ">
+												<use xlink:href="img/svg/sprite.svg#wallet"></use>
+											</svg><span class="d-none d-xl-block"> Баланс: </span> <strong>777 ₽</strong>
+										</div>
+										<div class="toggle-text toggle-text--hover d-none d-xl-block">
+											<svg class="icon icon-wallet ">
+												<use xlink:href="img/svg/sprite.svg#wallet"></use>
+											</svg>Пополнить
+										</div>
 									</a>
 								</div>
 								<div class="col-auto">
@@ -172,10 +179,10 @@
 					</div>
 					<!-- end topLine-->
 					<div class="container-fluid container-main">
-						<div class="alert alert-orange small d-md-flex text-md-start text-center align-items-center" role="alert"><img class="me-md-2 mb-md-0 mb-2" src="img/svg/info_square_icon.svg" alt="">
-							<div class="text-body flex-grow-1 me-md-2">Необходимо пополнить баланс, чтобы возобновить работу чат-ботов с подключенными платными тарифами.</div><a class="link-orange" href="#">Пополнить баланс </a>
+						<div class="alert alert-orange d-md-flex text-md-start text-center align-items-center" role="alert"><img class="me-md-2 mb-md-0 mb-2" src="img/svg/info_square_icon.svg" alt="">
+							<div class="text-body flex-grow-1 me-md-2">Необходимо пополнить баланс, чтобы возобновить работу чат-ботов с подключенными платными тарифами.</div><a class="link-orange strong" href="#">Пополнить баланс </a>
 						</div>
-						<div class="row gy-4">
+						<div class="row gy-md-4 gy-3">
 							<div class="col-xl-3 col-sm-6">
 								<div class="chat-item">
 									<div class="chat-item__head row">
@@ -188,14 +195,14 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-auto text-end">
+										<div class="col-auto text-end small">
 											<div>Тариф Start</div><a class="strong" href="#">Включить</a>
 										</div>
 									</div>
 									<div class="chat-item__body"> <a class="btn btn-center" href="#">  <img src="img/svg/praga.png" alt=""/></a>
 									</div>
 									<div class="chat-item__footer">
-										<div class="strong">Прага | Доставка ❤️</div><a href="#">@prahacafebot</a>
+										<div class="strong">Прага | Доставка ❤️</div><a class="strong" href="#">@prahacafebot</a>
 									</div>
 									<div class="chat-item__btn-wrap">
 										<a class="chat-item__btn btn btn-success disabled" href="#">Новых заказов нет
@@ -217,7 +224,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-auto text-end">
+										<div class="col-auto text-end small">
 											<div>Тариф Start</div>
 											<div class="strong" style="color: var(--bs-success)">Активен</div>
 										</div>
@@ -225,7 +232,7 @@
 									<div class="chat-item__body"><a class="btn btn-center" href="#"><img src="img/svg/bgr.png" alt=""/></a>
 									</div>
 									<div class="chat-item__footer">
-										<div class="strong">ЕДРЁН-БАТОН Доставка | Уфа 🥖</div><a href="#">@prahacafebot</a>
+										<div class="strong">ЕДРЁН-БАТОН Доставка | Уфа 🥖</div><a class="strong" href="#">@prahacafebot</a>
 									</div>
 									<div class="chat-item__btn-wrap">
 										<a class="chat-item__btn btn btn-success" href="#">1 новый заказ
@@ -245,15 +252,15 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-auto text-end">
+										<div class="col-auto text-end small">
 											<div>Тариф Start</div>
 											<div class="strong" style="color: var(--bs-success)">Активен</div>
 										</div>
 									</div>
-									<div class="chat-item__body"><a class="btn btn-center" href="#" style="--bs-btn-bg:#6F64EC; --bs-btn-color: #fff; --bs-btn-hover-color: #fff; --bs-btn-hover-bg:#887fea"> С</a>
+									<div class="chat-item__body"><a class="btn btn-center" href="#" style="--bs-btn-bg:#6F64EC; --bs-btn-color: #fff; --bs-btn-hover-color: #fff; --bs-btn-hover-bg:#6F64EC"> С</a>
 									</div>
 									<div class="chat-item__footer">
-										<div class="strong">Сантоку Доставка | Сочи 🍣</div><a href="#">@prahacafebot</a>
+										<div class="strong">Сантоку Доставка | Сочи 🍣</div><a class="strong" href="#">@prahacafebot</a>
 									</div>
 									<div class="chat-item__btn-wrap">
 										<a class="chat-item__btn btn btn-success disabled" href="#">Новых заказов нет
@@ -275,7 +282,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-auto text-end">
+										<div class="col-auto text-end small">
 											<div>Тариф Start</div>
 											<div class="strong" style="color: var(--bs-success)">Активен</div>
 										</div>
@@ -283,7 +290,7 @@
 									<div class="chat-item__body"><a class="btn btn-center" href="#">  <img src="img/svg/praga.png" alt=""/></a>
 									</div>
 									<div class="chat-item__footer">
-										<div class="strong">Прага | Доставка ❤️</div><a href="#">@prahacafebot</a>
+										<div class="strong">Прага | Доставка ❤️</div><a class="strong" href="#">@prahacafebot</a>
 									</div>
 									<div class="chat-item__btn-wrap">
 										<a class="chat-item__btn btn btn-success disabled" href="#">Новых заказов нет

@@ -24,8 +24,8 @@ block pagecontent
 	+aside()
 	+main()
 		
-		.alert.alert-orange.small(class="d-md-flex text-md-start text-center align-items-center" role="alert")
+		.alert.alert-orange(class="d-md-flex text-md-start text-center align-items-center" role="alert")
 			img(src="img/svg/info_square_icon.svg", alt="").me-md-2.mb-md-0.mb-2
 			.text-body.flex-grow-1.me-md-2 Необходимо пополнить баланс, чтобы возобновить работу чат-ботов с подключенными платными тарифами.
-			a(href="#").link-orange Пополнить баланс 
+			a(href="#").link-orange.strong Пополнить баланс 
 		+chat-items()

@@ -1,4 +1,4 @@
-$rfs-rem-value: 16 !default;
+$rfs-rem-value: 18 !default;
 $em-base: $rfs-rem-value * 1px;
 $small: rem(14);
 $url: '../img/';
@@ -1398,7 +1398,7 @@ $badge-font-weight:                 $font-weight-bold !default;
 $badge-color:                       $white !default;
 $badge-padding-y:                   .35em !default;
 $badge-padding-x:                   .65em !default;
-$badge-border-radius:               $border-radius !default;
+$badge-border-radius:               em(5) !default;
 // scss-docs-end badge-variables
 
 

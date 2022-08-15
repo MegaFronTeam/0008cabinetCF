@@ -16,10 +16,14 @@ mixin topLine()
 				.col.p-0
 				.col-auto
 					+e.btn--balance(href="#")
-						+icon("wallet")
-						span.d-none.d-sm-block  Баланс: 
-						| 
-						strong 777 ₽
+						+b.toggle-text
+							+icon("wallet")
+							span.d-none.d-xl-block  Баланс: 
+							| 
+							strong 777 ₽
+						+b.toggle-text--hover.d-none.d-xl-block
+							+icon("wallet")
+							| Пополнить
 				.col-auto
 					+e.btn--alarm.--new(href="#modal-alarm").link-modal-aside-js
 						+icon("alarm")

@@ -4,7 +4,7 @@
 	@include media-breakpoint-up(xxl) {
 		--bs-body-font-size: #{$em-base} !important;
 	}
-	--bs-body-font-size: 14px !important;
+	// --bs-body-font-size: 14px !important;
 
 	@include media-breakpoint-up(md) {
 
@@ -34,9 +34,9 @@
 
 	--nav-chat-w: #{rem(80)};
 	@include media-breakpoint-up(xl) {
+	}
+	// --nav-main-w: #{rem(200)};
 	--nav-main-w: #{rem(240)};
-}
---nav-main-w: #{rem(200)};
 	
 	@include media-breakpoint-up(xl) {
 

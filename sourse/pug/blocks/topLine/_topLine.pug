@@ -1,4 +1,4 @@
-mixin topLine()
+mixin topLine(t)
 	// start topLine
 	+b.topLine.section#topLine&attributes(attributes)
 		.container-fluid
@@ -11,8 +11,8 @@ mixin topLine()
 					block
 				else
 					.col-auto
-						+e.title  Мои чат-боты
-							.badge.bg-light.d-none.d-sm-flex 1
+						+e.title= t
+							//- .badge.bg-light.d-none.d-sm-flex 1
 				.col.p-0
 				.col-auto
 					+e.btn--balance(href="#")

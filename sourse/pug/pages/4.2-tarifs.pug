@@ -1,0 +1,42 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= '4.2. Tarifs '
+	title= title
+block pagecontent
+	+aside()
+	+main('Тарифы')
+		
+		.alert.alert-orange.small(class="d-md-flex text-md-start text-center align-items-center" role="alert")
+			img(src="img/svg/info_square_icon.svg", alt="").me-md-2.mb-md-0.mb-1
+			.text-body.flex-grow-1.me-md-2.mb-md-0.mb-1 Мы отправили письмо на вашу эл. почту #[strong example@yandex.ru] для подтверждения регистрации. После подтверждения регистрации вам будет доступен функционал личного кабинета.
+			.strong.text-secondary.w-sp Отправить еще раз через 4:59
+		div.centered-block.text-center
+			div.my-2
+				+img("img/robot.png").mb-20
+				.h1.strong У вас пока нет созданных чат-ботов
+				.small.mb-4 Создайте своего первого чат-бота и начните пользоваться сервисом ChatFood.
+				a.btn.btn-orange.px-4(href="#modal-confirm" style="--bs-btn-padding-y: .75rem").link-modal-js 
+					<svg class="me-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M8 1.25V14.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M1.25 8H14.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+
+					| Создать чат-бота

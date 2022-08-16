@@ -86,10 +86,10 @@ mixin aside()
 						+e.id #13405
 					+icon("setting")
 
-mixin main()
+mixin main(t='Мои чат-боты')
 	.main-center-wrap
 		main
-			+topLine
+			+topLine(t)
 			.container-fluid.container-main
 				block
 			+footer()

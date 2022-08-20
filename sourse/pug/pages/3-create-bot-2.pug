@@ -40,8 +40,11 @@ block pagecontent
 				br 
 				.row
 					.col-sm-auto.col-6
-						button.btn.btn-outline-orange.btn-200.btn-mob-100(type="button") Вернуться назад
+						button.btn.btn-outline-orange.btn-200.btn-mob-100(type="button") 
+							span.d-none.d-sm-inline Вернуться назад
+							span.d-sm-none Назад
 					.col-sm-auto.col-6
-						button.btn.btn-orange.btn-200.btn-mob-100.btn-save-js(type="button") Продолжить
-
+						button.btn.btn-orange.btn-200.btn-mob-100.btn-save-js(type="button")  
+							| Сохранить 
+							span.d-none.d-sm-inline изменения
 		+save-alert()

@@ -13,11 +13,13 @@ mixin modal()
 		+b.modal-win--aside
 			+e.head
 				.h2.strong.mb-3 Уведомления
-				p.small.mb-4.text-secondary Пометить все как прочитанные
+				p.small.mb-4
+					a.text-secondary(href="#")  Пометить все как прочитанные
 			+e.body
 				mixin item(t)
 					+b.alert-item&attributes(attributes)
-						.small.mb-1= t
+						.small.mb-1
+							a.text-body(href="#")= t
 						.smallest.text-secondary 15 минут назад
 						+e.dots
 							+icon('dots')

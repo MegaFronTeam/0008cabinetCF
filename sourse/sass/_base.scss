@@ -712,6 +712,10 @@ main{
 	}
 	&__dropdown-item{
 		cursor: pointer;
+		@include mt;
+		&:hover{
+			background: rgba($color: #F6F6F6, $alpha: .5);
+		}
 		&:not(:last-child) {
 			border-bottom: 1px solid #E8E8E8;
 

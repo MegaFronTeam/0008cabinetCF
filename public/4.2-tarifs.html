@@ -172,20 +172,441 @@
 					</div>
 					<!-- end topLine-->
 					<div class="container-fluid container-main">
-						<div class="alert alert-orange small d-md-flex text-md-start text-center align-items-center" role="alert"><img class="me-md-2 mb-md-0 mb-1" src="img/svg/info_square_icon.svg" alt="">
-							<div class="text-body flex-grow-1 me-md-2 mb-md-0 mb-1">Мы отправили письмо на вашу эл. почту <strong>example@yandex.ru</strong> для подтверждения регистрации. После подтверждения регистрации вам будет доступен функционал личного кабинета.</div>
-							<div class="strong text-secondary w-sp">Отправить еще раз через 4:59</div>
-						</div>
-						<div class="centered-block text-center">
-							<div class="my-2"><img class="mb-20" src="img/robot.png" alt="" loading="lazy"/>
-								<div class="h1 strong">У вас пока нет созданных чат-ботов</div>
-								<div class="small mb-4">Создайте своего первого чат-бота и начните пользоваться сервисом ChatFood.</div><a class="btn btn-orange px-4 link-modal-js" href="#modal-confirm" style="--bs-btn-padding-y: .75rem">
-									 <svg class="me-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8 1.25V14.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M1.25 8H14.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>Создать чат-бота</a>
+						<!-- start sGetTarif-->
+						<section class="sGetTarif" id="sGetTarif">
+							<div class="container-fluid tabs">
+								<div class="section-title text-center">
+									<div class="row">
+										<h1 class="col-auto strong">Выбрать тариф для</h1>
+										<div class="col-auto">
+											<div class="section-title__input-wrap form-group">
+												<select class="section-title__input form-select custom-select-js" name="select">
+													<option value="Прага | Доставка ❤️">Прага | Доставка ❤️</option>
+													<option value=" placeholder 1">placeholder 1</option>
+													<option value=" placeholder 2">placeholder 2</option>
+													<option value=" placeholder 3">placeholder 3</option>
+													<option value=" placeholder 4">placeholder 4</option>
+												</select>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+									</div>
+								</div>
+								<div class="tabs__caption">
+									<div class="tabs__btn active">Месяц</div>
+									<div class="tabs__btn">Полгода (-10%)</div>
+									<div class="tabs__btn">Год (-20%)</div>
+								</div>
+								<div class="tabs__wrap">
+											<div class="tabs__content active">
+												<div class="row gy-md-4 gy-3">
+																	<div class="sGetTarif__col col-xl-3 col-sm-6">
+																		<div class="tarif-item">
+																			<div class="tarif-item__head">
+																				<div class="tarif-item__label text-secondary">Free
+																				</div>
+																				<div class="tarif-item__price">0 ₽
+																				</div>
+																				<div class="small text-secondary">За один чат-бот за полгода</div>
+																			</div>
+																			<div class="tarif-item__body">
+																				<ul>
+																					<li>До 30 заказов в&nbsp;месяц</li>
+																					<li>До 4 категорий товаров</li>
+																					<li>До 20 товаров</li>
+																					<li>До 3 рассылок в&nbsp;месяц</li>
+																					<li class="close">Онлайн-оплата заказов</li>
+																					<li class="close">Скрытие логотипа ChatFood</li>
+																					<li class="close">API</li>
+																					<li class="close">Премиум поддержка 
+																						<div class="tooltip">
+																							<div class="tooltip__toggle">?
+																							</div>
+																							<div class="tooltip__dropdown">Lorem ipsum dolor sit amet.
+																							</div>
+																						</div>
+																					</li>
+																				</ul>
+																			</div>
+																			<button class="btn btn-success w-100" disabled="disabled" data-fancybox="modal" data-src="modal-tarif" data-new-tarif="Free"> Текущий  тариф</button>
+																		</div>
+																	</div>
+																	<div class="sGetTarif__col col-xl-3 col-sm-6">
+																		<div class="tarif-item">
+																			<div class="tarif-item__head">
+																				<div class="tarif-item__label">Start
+																				</div>
+																				<div class="tarif-item__price">19 200 ₽
+																					<div class="text-danger">24 000 ₽</div>
+																				</div>
+																				<div class="small text-secondary">За один чат-бот за полгода</div>
+																			</div>
+																			<div class="tarif-item__body">
+																				<ul>
+																					<li>До 60 заказов в&nbsp;месяц</li>
+																					<li class="infinity">Категории товаров без&nbsp;ограничений</li>
+																					<li class="infinity">Товары без&nbsp;ограничений</li>
+																					<li class="infinity">Рассылки без&nbsp;ограничений</li>
+																					<li class="close">Онлайн-оплата заказов</li>
+																					<li class="close">Скрытие логотипа ChatFood</li>
+																					<li class="close">API</li>
+																					<li class="close">Премиум поддержка 
+																						<div class="tooltip">
+																							<div class="tooltip__toggle">?
+																							</div>
+																							<div class="tooltip__dropdown">Lorem ipsum dolor sit amet.
+																							</div>
+																						</div>
+																					</li>
+																				</ul>
+																			</div>
+																			<button class="btn btn-success w-100" data-fancybox="modal" data-src="modal-tarif" data-new-tarif="Start">Подключить</button>
+																		</div>
+																	</div>
+																	<div class="sGetTarif__col col-xl-3 col-sm-6">
+																		<div class="tarif-item">
+																			<div class="tarif-item__pop-wrap">
+																				<div class="tarif-item__pop">Популярный
+																				</div>
+																			</div>
+																			<div class="tarif-item__head">
+																				<div class="tarif-item__label"><img src="img/fire.png" alt=""/>Standart
+																				</div>
+																				<div class="tarif-item__price">28 800 ₽
+																					<div class="text-danger">36 000 ₽</div>
+																				</div>
+																				<div class="small text-secondary">За один чат-бот за полгода</div>
+																			</div>
+																			<div class="tarif-item__body">
+																				<ul>
+																					<li>До 100 заказов в&nbsp;месяц</li>
+																					<li class="infinity">Категории товаров без&nbsp;ограничений</li>
+																					<li class="infinity">Товары без&nbsp;ограничений</li>
+																					<li class="infinity">Рассылки без&nbsp;ограничений</li>
+																					<li>Онлайн-оплата заказов</li>
+																					<li>Скрытие логотипа ChatFood</li>
+																					<li>API</li>
+																					<li class="close">Премиум поддержка 
+																						<div class="tooltip">
+																							<div class="tooltip__toggle">?
+																							</div>
+																							<div class="tooltip__dropdown">Lorem ipsum dolor sit amet.
+																							</div>
+																						</div>
+																					</li>
+																				</ul>
+																			</div>
+																			<button class="btn btn-success w-100" data-fancybox="modal" data-src="modal-tarif" data-new-tarif="Standart">Подключить</button>
+																		</div>
+																	</div>
+																	<div class="sGetTarif__col col-xl-3 col-sm-6">
+																		<div class="tarif-item">
+																			<div class="tarif-item__head">
+																				<div class="tarif-item__label">Pro
+																				</div>
+																				<div class="tarif-item__price">57 600 ₽
+																					<div class="text-danger">72 000 ₽</div>
+																				</div>
+																				<div class="small text-secondary">За один чат-бот за полгода</div>
+																			</div>
+																			<div class="tarif-item__body"> 
+																				<ul>
+																					<li class="infinity">До 100 заказов в&nbsp;месяц</li>
+																					<li class="infinity">Категории товаров без&nbsp;ограничений</li>
+																					<li class="infinity">Товары без&nbsp;ограничений</li>
+																					<li class="infinity">Рассылки без&nbsp;ограничений</li>
+																					<li>Онлайн-оплата заказов</li>
+																					<li>Скрытие логотипа ChatFood</li>
+																					<li>API</li>
+																					<li>Премиум поддержка 
+																						<div class="tooltip">
+																							<div class="tooltip__toggle">?
+																							</div>
+																							<div class="tooltip__dropdown">Lorem ipsum dolor sit amet.
+																							</div>
+																						</div>
+																					</li>
+																				</ul>
+																			</div>
+																			<button class="btn btn-success w-100" data-fancybox="modal" data-src="modal-tarif" data-new-tarif="Pro">Подключить</button>
+																		</div>
+																	</div>
+												</div>
+											</div>
+											<div class="tabs__content">
+												<div class="row gy-md-4 gy-3">
+																	<div class="sGetTarif__col col-xl-3 col-sm-6">
+																		<div class="tarif-item">
+																			<div class="tarif-item__head">
+																				<div class="tarif-item__label text-secondary">Free
+																				</div>
+																				<div class="tarif-item__price">0 ₽
+																				</div>
+																				<div class="small text-secondary">За один чат-бот за полгода</div>
+																			</div>
+																			<div class="tarif-item__body">
+																				<ul>
+																					<li>До 30 заказов в&nbsp;месяц</li>
+																					<li>До 4 категорий товаров</li>
+																					<li>До 20 товаров</li>
+																					<li>До 3 рассылок в&nbsp;месяц</li>
+																					<li class="close">Онлайн-оплата заказов</li>
+																					<li class="close">Скрытие логотипа ChatFood</li>
+																					<li class="close">API</li>
+																					<li class="close">Премиум поддержка 
+																						<div class="tooltip">
+																							<div class="tooltip__toggle">?
+																							</div>
+																							<div class="tooltip__dropdown">Lorem ipsum dolor sit amet.
+																							</div>
+																						</div>
+																					</li>
+																				</ul>
+																			</div>
+																			<button class="btn btn-success w-100" disabled="disabled" data-fancybox="modal" data-src="modal-tarif" data-new-tarif="Free"> Текущий  тариф</button>
+																		</div>
+																	</div>
+																	<div class="sGetTarif__col col-xl-3 col-sm-6">
+																		<div class="tarif-item">
+																			<div class="tarif-item__head">
+																				<div class="tarif-item__label">Start
+																				</div>
+																				<div class="tarif-item__price">19 200 ₽
+																					<div class="text-danger">24 000 ₽</div>
+																				</div>
+																				<div class="small text-secondary">За один чат-бот за полгода</div>
+																			</div>
+																			<div class="tarif-item__body">
+																				<ul>
+																					<li>До 60 заказов в&nbsp;месяц</li>
+																					<li class="infinity">Категории товаров без&nbsp;ограничений</li>
+																					<li class="infinity">Товары без&nbsp;ограничений</li>
+																					<li class="infinity">Рассылки без&nbsp;ограничений</li>
+																					<li class="close">Онлайн-оплата заказов</li>
+																					<li class="close">Скрытие логотипа ChatFood</li>
+																					<li class="close">API</li>
+																					<li class="close">Премиум поддержка 
+																						<div class="tooltip">
+																							<div class="tooltip__toggle">?
+																							</div>
+																							<div class="tooltip__dropdown">Lorem ipsum dolor sit amet.
+																							</div>
+																						</div>
+																					</li>
+																				</ul>
+																			</div>
+																			<button class="btn btn-success w-100" data-fancybox="modal" data-src="modal-tarif" data-new-tarif="Start">Подключить</button>
+																		</div>
+																	</div>
+																	<div class="sGetTarif__col col-xl-3 col-sm-6">
+																		<div class="tarif-item">
+																			<div class="tarif-item__pop-wrap">
+																				<div class="tarif-item__pop">Популярный
+																				</div>
+																			</div>
+																			<div class="tarif-item__head">
+																				<div class="tarif-item__label"><img src="img/fire.png" alt=""/>Standart
+																				</div>
+																				<div class="tarif-item__price">28 800 ₽
+																					<div class="text-danger">36 000 ₽</div>
+																				</div>
+																				<div class="small text-secondary">За один чат-бот за полгода</div>
+																			</div>
+																			<div class="tarif-item__body">
+																				<ul>
+																					<li>До 100 заказов в&nbsp;месяц</li>
+																					<li class="infinity">Категории товаров без&nbsp;ограничений</li>
+																					<li class="infinity">Товары без&nbsp;ограничений</li>
+																					<li class="infinity">Рассылки без&nbsp;ограничений</li>
+																					<li>Онлайн-оплата заказов</li>
+																					<li>Скрытие логотипа ChatFood</li>
+																					<li>API</li>
+																					<li class="close">Премиум поддержка 
+																						<div class="tooltip">
+																							<div class="tooltip__toggle">?
+																							</div>
+																							<div class="tooltip__dropdown">Lorem ipsum dolor sit amet.
+																							</div>
+																						</div>
+																					</li>
+																				</ul>
+																			</div>
+																			<button class="btn btn-success w-100" data-fancybox="modal" data-src="modal-tarif" data-new-tarif="Standart">Подключить</button>
+																		</div>
+																	</div>
+																	<div class="sGetTarif__col col-xl-3 col-sm-6">
+																		<div class="tarif-item">
+																			<div class="tarif-item__head">
+																				<div class="tarif-item__label">Pro
+																				</div>
+																				<div class="tarif-item__price">57 600 ₽
+																					<div class="text-danger">72 000 ₽</div>
+																				</div>
+																				<div class="small text-secondary">За один чат-бот за полгода</div>
+																			</div>
+																			<div class="tarif-item__body"> 
+																				<ul>
+																					<li class="infinity">До 100 заказов в&nbsp;месяц</li>
+																					<li class="infinity">Категории товаров без&nbsp;ограничений</li>
+																					<li class="infinity">Товары без&nbsp;ограничений</li>
+																					<li class="infinity">Рассылки без&nbsp;ограничений</li>
+																					<li>Онлайн-оплата заказов</li>
+																					<li>Скрытие логотипа ChatFood</li>
+																					<li>API</li>
+																					<li>Премиум поддержка 
+																						<div class="tooltip">
+																							<div class="tooltip__toggle">?
+																							</div>
+																							<div class="tooltip__dropdown">Lorem ipsum dolor sit amet.
+																							</div>
+																						</div>
+																					</li>
+																				</ul>
+																			</div>
+																			<button class="btn btn-success w-100" data-fancybox="modal" data-src="modal-tarif" data-new-tarif="Pro">Подключить</button>
+																		</div>
+																	</div>
+												</div>
+											</div>
+											<div class="tabs__content">
+												<div class="row gy-md-4 gy-3">
+																	<div class="sGetTarif__col col-xl-3 col-sm-6">
+																		<div class="tarif-item">
+																			<div class="tarif-item__head">
+																				<div class="tarif-item__label text-secondary">Free
+																				</div>
+																				<div class="tarif-item__price">0 ₽
+																				</div>
+																				<div class="small text-secondary">За один чат-бот за полгода</div>
+																			</div>
+																			<div class="tarif-item__body">
+																				<ul>
+																					<li>До 30 заказов в&nbsp;месяц</li>
+																					<li>До 4 категорий товаров</li>
+																					<li>До 20 товаров</li>
+																					<li>До 3 рассылок в&nbsp;месяц</li>
+																					<li class="close">Онлайн-оплата заказов</li>
+																					<li class="close">Скрытие логотипа ChatFood</li>
+																					<li class="close">API</li>
+																					<li class="close">Премиум поддержка 
+																						<div class="tooltip">
+																							<div class="tooltip__toggle">?
+																							</div>
+																							<div class="tooltip__dropdown">Lorem ipsum dolor sit amet.
+																							</div>
+																						</div>
+																					</li>
+																				</ul>
+																			</div>
+																			<button class="btn btn-success w-100" disabled="disabled" data-fancybox="modal" data-src="modal-tarif" data-new-tarif="Free"> Текущий  тариф</button>
+																		</div>
+																	</div>
+																	<div class="sGetTarif__col col-xl-3 col-sm-6">
+																		<div class="tarif-item">
+																			<div class="tarif-item__head">
+																				<div class="tarif-item__label">Start
+																				</div>
+																				<div class="tarif-item__price">19 200 ₽
+																					<div class="text-danger">24 000 ₽</div>
+																				</div>
+																				<div class="small text-secondary">За один чат-бот за полгода</div>
+																			</div>
+																			<div class="tarif-item__body">
+																				<ul>
+																					<li>До 60 заказов в&nbsp;месяц</li>
+																					<li class="infinity">Категории товаров без&nbsp;ограничений</li>
+																					<li class="infinity">Товары без&nbsp;ограничений</li>
+																					<li class="infinity">Рассылки без&nbsp;ограничений</li>
+																					<li class="close">Онлайн-оплата заказов</li>
+																					<li class="close">Скрытие логотипа ChatFood</li>
+																					<li class="close">API</li>
+																					<li class="close">Премиум поддержка 
+																						<div class="tooltip">
+																							<div class="tooltip__toggle">?
+																							</div>
+																							<div class="tooltip__dropdown">Lorem ipsum dolor sit amet.
+																							</div>
+																						</div>
+																					</li>
+																				</ul>
+																			</div>
+																			<button class="btn btn-success w-100" data-fancybox="modal" data-src="modal-tarif" data-new-tarif="Start">Подключить</button>
+																		</div>
+																	</div>
+																	<div class="sGetTarif__col col-xl-3 col-sm-6">
+																		<div class="tarif-item">
+																			<div class="tarif-item__pop-wrap">
+																				<div class="tarif-item__pop">Популярный
+																				</div>
+																			</div>
+																			<div class="tarif-item__head">
+																				<div class="tarif-item__label"><img src="img/fire.png" alt=""/>Standart
+																				</div>
+																				<div class="tarif-item__price">28 800 ₽
+																					<div class="text-danger">36 000 ₽</div>
+																				</div>
+																				<div class="small text-secondary">За один чат-бот за полгода</div>
+																			</div>
+																			<div class="tarif-item__body">
+																				<ul>
+																					<li>До 100 заказов в&nbsp;месяц</li>
+																					<li class="infinity">Категории товаров без&nbsp;ограничений</li>
+																					<li class="infinity">Товары без&nbsp;ограничений</li>
+																					<li class="infinity">Рассылки без&nbsp;ограничений</li>
+																					<li>Онлайн-оплата заказов</li>
+																					<li>Скрытие логотипа ChatFood</li>
+																					<li>API</li>
+																					<li class="close">Премиум поддержка 
+																						<div class="tooltip">
+																							<div class="tooltip__toggle">?
+																							</div>
+																							<div class="tooltip__dropdown">Lorem ipsum dolor sit amet.
+																							</div>
+																						</div>
+																					</li>
+																				</ul>
+																			</div>
+																			<button class="btn btn-success w-100" data-fancybox="modal" data-src="modal-tarif" data-new-tarif="Standart">Подключить</button>
+																		</div>
+																	</div>
+																	<div class="sGetTarif__col col-xl-3 col-sm-6">
+																		<div class="tarif-item">
+																			<div class="tarif-item__head">
+																				<div class="tarif-item__label">Pro
+																				</div>
+																				<div class="tarif-item__price">57 600 ₽
+																					<div class="text-danger">72 000 ₽</div>
+																				</div>
+																				<div class="small text-secondary">За один чат-бот за полгода</div>
+																			</div>
+																			<div class="tarif-item__body"> 
+																				<ul>
+																					<li class="infinity">До 100 заказов в&nbsp;месяц</li>
+																					<li class="infinity">Категории товаров без&nbsp;ограничений</li>
+																					<li class="infinity">Товары без&nbsp;ограничений</li>
+																					<li class="infinity">Рассылки без&nbsp;ограничений</li>
+																					<li>Онлайн-оплата заказов</li>
+																					<li>Скрытие логотипа ChatFood</li>
+																					<li>API</li>
+																					<li>Премиум поддержка 
+																						<div class="tooltip">
+																							<div class="tooltip__toggle">?
+																							</div>
+																							<div class="tooltip__dropdown">Lorem ipsum dolor sit amet.
+																							</div>
+																						</div>
+																					</li>
+																				</ul>
+																			</div>
+																			<button class="btn btn-success w-100" data-fancybox="modal" data-src="modal-tarif" data-new-tarif="Pro">Подключить</button>
+																		</div>
+																	</div>
+												</div>
+											</div>
+								</div>
 							</div>
-						</div>
+						</section>
+						<!-- end sGetTarif-->
 					</div>
 					<footer class="footer">
 						<div class="container-fluid">ChatFood v 3.1</div>
@@ -498,6 +919,21 @@
 				</div>
 				<div class="modal-win__footer">
 					<button class="btn btn-outline-orange w-100">Загрузить еще</button>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="modal-tarif" style="display: none">
+			<div class="modal-win text-center">
+				<div class="h2 strong mb-3">Смена тарифа</div>
+				<p class="small mb-4">У&nbsp;вас уже подключен тариф <strong>Standart</strong>, вы&nbsp;уверены, что хотите изменить тариф на&nbsp;<strong class="newTarif">Free</strong>? Тариф можно изменять только раз в&nbsp;сутки. При смене тарифа будет произведен перерасчет.</p>
+				<div class="row">
+					<div class="col-6">
+						<button class="btn btn-outline-orange w-100">Подтвердить</button>
+					</div>
+					<div class="col-6">
+						<button class="btn btn-orange modal-close-js w-100">Отменить</button>
+					</div>
 				</div>
 			</div>
 		</div>

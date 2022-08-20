@@ -1,0 +1,96 @@
+mixin sGetTarif(data)
+	// start sGetTarif
+	+b.SECTION.sGetTarif#sGetTarif&attributes(attributes)
+		.container-fluid.tabs
+			+b.section-title.text-center
+				.row
+					h1.col-auto.strong Выбрать тариф для
+					.col-auto
+						+input("Прага | Доставка ❤️",'select').custom-select-js
+			.tabs__caption
+				.tabs__btn.active Месяц
+				.tabs__btn Полгода (-10%)
+				.tabs__btn Год (-20%)
+			.tabs__wrap
+				mixin tab()
+					.tabs__content&attributes(attributes)
+						.row.gy-md-4.gy-3
+							mixin item(l, pr, oldpr, current, pop)
+								+e.col.col-xl-3.col-sm-6
+									+b.tarif-item
+										if pop
+											+e.pop-wrap
+												+e.pop= pop
+										+e.head
+											+e.label(class=(l=='Free' ? 'text-secondary': ''))
+												if l== 'Standart'
+
+													img(src="img/fire.png", alt="")
+												= l
+											+e.price= pr
+												if oldpr 
+													.text-danger= oldpr
+											.small.text-secondary За один чат-бот за полгода
+										+e.body
+											block
+										if current
+											button.btn.btn-success.w-100(disabled data-fancybox="modal" data-src="modal-tarif" data-new-tarif= l)  Текущий  тариф
+										else
+											button.btn.btn-success.w-100( data-fancybox="modal" data-src="modal-tarif" data-new-tarif= l) Подключить
+							+item('Free','0 ₽','','current')
+								ul
+									li До 30 заказов в&nbsp;месяц
+									li До 4 категорий товаров
+									li До 20 товаров
+									li До 3 рассылок в&nbsp;месяц
+									li.close Онлайн-оплата заказов
+									li.close Скрытие логотипа ChatFood
+									li.close API
+									li.close Премиум поддержка 
+										+b.tooltip
+											+e.toggle ?
+											+e.dropdown Lorem ipsum dolor sit amet.
+							+item('Start','19 200 ₽','24 000 ₽')
+								ul
+									li До 60 заказов в&nbsp;месяц
+									li.infinity Категории товаров без&nbsp;ограничений
+									li.infinity Товары без&nbsp;ограничений
+									li.infinity Рассылки без&nbsp;ограничений
+									li.close Онлайн-оплата заказов
+									li.close Скрытие логотипа ChatFood
+									li.close API
+									li.close Премиум поддержка 
+										+b.tooltip
+											+e.toggle ?
+											+e.dropdown Lorem ipsum dolor sit amet.
+							+item('Standart','28 800 ₽','36 000 ₽','','Популярный')
+								ul
+									li До 100 заказов в&nbsp;месяц
+									li.infinity Категории товаров без&nbsp;ограничений
+									li.infinity Товары без&nbsp;ограничений
+									li.infinity Рассылки без&nbsp;ограничений
+									li Онлайн-оплата заказов
+									li Скрытие логотипа ChatFood
+									li API
+									li.close Премиум поддержка 
+										+b.tooltip
+											+e.toggle ?
+											+e.dropdown Lorem ipsum dolor sit amet.
+							+item('Pro','57 600 ₽','72 000 ₽') 
+								ul
+									li.infinity До 100 заказов в&nbsp;месяц
+									li.infinity Категории товаров без&nbsp;ограничений
+									li.infinity Товары без&nbsp;ограничений
+									li.infinity Рассылки без&nbsp;ограничений
+									li Онлайн-оплата заказов
+									li Скрытие логотипа ChatFood
+									li API
+									li Премиум поддержка 
+										+b.tooltip
+											+e.toggle ?
+											+e.dropdown Lorem ipsum dolor sit amet.
+				+tab().active
+				+tab()
+				+tab()
+
+	// end sGetTarif

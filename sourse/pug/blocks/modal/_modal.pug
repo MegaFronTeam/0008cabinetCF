@@ -40,4 +40,18 @@ mixin modal()
 			
 	// #modal-call
 	
+	div(id="modal-tarif"  style="display: none" )
+		+b.modal-win.text-center
+			.h2.strong.mb-3 Смена тарифа
+			p.small.mb-4 У&nbsp;вас уже подключен тариф #[strong Standart], вы&nbsp;уверены, что хотите изменить тариф на&nbsp;#[strong.newTarif Free]? Тариф можно изменять только раз в&nbsp;сутки. При смене тарифа будет произведен перерасчет.
+			.row
+				.col-6
+					button.btn.btn-outline-orange.w-100 Подтвердить
+					
+				.col-6
+					button.btn.btn-orange.modal-close-js.w-100 Отменить
+
+			
+	// #modal-call
+	
 	// end modals

@@ -59,7 +59,7 @@ const JSCCommon = {
 		function addData() {
 			linkModal.forEach(element => {
 				element.addEventListener('click', () => {
-					let modal = document.querySelector(element.getAttribute("href"));
+					let modal = document.querySelector(element.getAttribute("href") || '#'+element.dataset.src);
 					const data = element.dataset;
 
 					function setValue(val, elem) {
@@ -75,6 +75,7 @@ const JSCCommon = {
 					setValue(data.text, '.after-headline');
 					setValue(data.btn, '.btn');
 					setValue(data.order, '.order');
+					setValue(data.newTarif, '.newTarif');
 				})
 			})
 		}
@@ -311,7 +312,7 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();

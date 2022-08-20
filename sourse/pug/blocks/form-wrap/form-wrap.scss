@@ -288,6 +288,9 @@ input::-webkit-inner-spin-button {
 	overflow: hidden;
 }
 
+.choices{
+	text-align: start
+}
 .choices__inner{
 	
 	@extend .form-select;
@@ -295,19 +298,7 @@ input::-webkit-inner-spin-button {
 	background-image: none ;
 
 }
-.input-group .choices{
-	margin: 0;
-	.choices__inner{
-		border-radius: $border-radius 0 0 $border-radius;
-		width: rem(86) !important;
-		flex: 0 0 auto;
-		padding-left: $input-padding-x;
-		padding-right: rem(25);
-		background-position: calc(100% - #{rem(8)}) center;
-	border-color: $form-select-focus-border-color !important;
-	min-height: 100%;
-	}
-}
+
 
 .choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable{
 	padding-right: 10px ;
@@ -340,7 +331,7 @@ input::-webkit-inner-spin-button {
 }
 
 .choices__list--dropdown, .choices__list[aria-expanded]{
-	border: 1px solid #EBEBEB !important;
+	border: 1px solid $form-select-focus-border-color !important;
 	border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
 		overflow: visible;
@@ -367,11 +358,14 @@ input::-webkit-inner-spin-button {
 .choices[data-type*=select-one].is-open{
 	.choices__inner{
 		border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
+		border-top-right-radius: $border-radius;
+    // border-top-right-radius: 0;
 		border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+		border-color: $form-select-focus-border-color !important;
 	}
 }
+
 
 .is-flipped{
 	.choices__list--dropdown, .choices__list[aria-expanded]{
@@ -397,6 +391,21 @@ input::-webkit-inner-spin-button {
 	}
 }
 
+
+.input-group .choices{
+	margin: 0;
+	.choices__inner{
+		border-radius: $border-radius 0 0 $border-radius;
+		width: rem(86) !important;
+		flex: 0 0 auto;
+		padding-left: $input-padding-x;
+		padding-right: rem(25);
+		background-position: calc(100% - #{rem(8)}) center;
+	border-color: $form-select-border-color !important;
+	min-height: 100%;
+	}
+}
+
 .input-group {
 	choices[data-type*=select-one]{
 		.choices__inner{
@@ -404,6 +413,15 @@ input::-webkit-inner-spin-button {
 			// border-bottom-right-radius: 0;
 			// border-top-left-radius: 0;
 			border-top-right-radius: 0;
+		}
+	}
+	.choices[data-type*=select-one].is-open{
+		.choices__inner{
+			border-top-left-radius: $border-radius;
+			border-top-right-radius: 0;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+			border-color: $form-select-focus-border-color !important;
 		}
 	}
 	.is-flipped{

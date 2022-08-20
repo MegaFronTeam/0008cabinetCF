@@ -352,28 +352,32 @@
 		// color: #8C8D8F;
 	}
 }
+.card{
 
-
-.chat-item{
 	display: flex;
 	flex-direction: column;
-	text-align: center;
 	border: 1px solid #EBEBEB;
 	border-radius: rem(12px);
-	min-height: 100%;
-	@include mt;
-	position: relative;
-	z-index: 2;
-	
+	@include media-breakpoint-up(xxl) {
+		
+		padding: rem(20px) rem(30px);
+	}
+	padding: rem(20px) rem(20px);
 	&:hover{
 		box-shadow: 0px 0px 15px rgba(25, 28, 31, 0.1);
 		--op: 1;
 	}
-	@include media-breakpoint-up(xxl) {
+	min-height: 100%;
+}
 
-		padding: rem(20px) rem(30px);
-	}
-	padding: rem(20px) rem(20px);
+.chat-item{
+	text-align: center;
+	@include mt;
+	position: relative;
+	z-index: 2;
+	@extend .card;
+	
+
 
 	&__head{
 		margin-bottom: rem(20);

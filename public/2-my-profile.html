@@ -10,6 +10,7 @@
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet"/>
+		<link href="css/dataTables.bootstrap5.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page">
@@ -457,10 +458,60 @@
 		<!-- #modal-call-->
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/datatables.net-dt/js/dataTables.dataTables.min.js"> </script>
+		<script src="libs/datatables.net/js/jquery.dataTables.min.js"> </script>
+		<script src="libs/jquery-datatables-pageloadmore/js/dataTables.pageLoadMore.min.js"> </script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/choices.js/public/assets/scripts/choices.min.js"> </script>
 		<script src="js/common.js"></script>
+		<script>
+			var table = $('#table-1').DataTable({
+			language: {
+				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				},
+				"lengthChange": false, 
+				info: false,
+				pageLength: 5,
+				// ajax: 'https://gyrocode.github.io/files/jquery-datatables/arrays.json',
+						drawCallback: function(){ 
+							$('#btn-example-load-more-1').toggle(this.api().page.hasMore());
+						}   
+			});
+			$('#btn-example-load-more-1').on('click', function(){   
+				table.page.loadMore();
+			});
+			var table2 = $('#table-2').DataTable({
+			language: {
+				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				},
+				"lengthChange": false, 
+				info: false,
+				pageLength: 5,
+				// ajax: 'https://gyrocode.github.io/files/jquery-datatables/arrays.json',
+						drawCallback: function(){ 
+							$('#btn-example-load-more-2').toggle(this.api().page.hasMore());
+						}   
+			});
+			$('#btn-example-load-more-2').on('click', function(){   
+				table2.page.loadMore();
+			});
+			var table3 = $('#table-3').DataTable({
+			language: {
+				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				},
+				"lengthChange": false, 
+				info: false,
+				pageLength: 5,
+				// ajax: 'https://gyrocode.github.io/files/jquery-datatables/arrays.json',
+						drawCallback: function(){ 
+							$('#btn-example-load-more-3').toggle(this.api().page.hasMore());
+						}   
+			});
+			$('#btn-example-load-more-3').on('click', function(){   
+				table3.page.loadMore();
+			});
+		</script>
 	</body>
 </html>

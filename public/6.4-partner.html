@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title> 5.3 Balance</title>
+		<title> 6.4  Partner</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0">
@@ -17,7 +17,7 @@
 		<div class="main-wrapper">
 			<div class="cabinet-block section">
 				<div class="cabinet-block__head row">
-					<div class="col-sm-auto h1 strong mb-0">История пополнений</div>
+					<div class="col-sm-auto h1 strong mb-0">Создать промокод</div>
 					<div class="col p-0 m-0"></div>
 					<div class="col-auto m-0">
 						<a class="link-close" href="#">
@@ -28,28 +28,21 @@
 					</div>
 				</div>
 				<div class="cabinet-block__body">
-					<table class="table">
-						<thead>
-							<tr class="small">
-								<th>Дата</th>
-								<th class="text-end">Сумма</th>
-							</tr>
-						</thead>
-						<tbody> 
-							<tr>
-								<td>18:32, 22.06.222</td>
-								<td class="text-end text-success">+ 3 000 ₽</td>
-							</tr>
-							<tr>
-								<td>18:32, 22.06.222</td>
-								<td class="text-end text-success">+ 3 000 ₽</td>
-							</tr>
-							<tr>
-								<td>18:32, 22.06.222</td>
-								<td class="text-end text-success">+ 3 000 ₽</td>
-							</tr>
-						</tbody>
-					</table>
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__group">
+								<div class="form-wrap__group-title">Название промокода
+								</div>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Например, LETO"/> 
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="alert alert-primary d-flex   align-items-center" role="alert"><img class="img-to-svg me-2 col-auto text-primary" src="img/svg/info_square_icon.svg" alt="">
+								<div class="text-body flex-shrink-1 me-md-2">Необходимо пополнить баланс, чтобы возобновить работу чат-ботов с подключенными платными тарифами.</div>
+							</div>
+							<button class="btn btn-orange btn-200 btn-mob-100 btn-save-js" type="button">Создать</button>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>

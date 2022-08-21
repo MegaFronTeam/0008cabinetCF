@@ -1,0 +1,206 @@
+mixin sCabinetPanel(data)
+	// start sCabinetPanel
+	+b.sCabinetPanel&attributes(attributes)
+		+e.group
+			+e.slider--js.swiper
+				.swiper-wrapper
+					mixin item(t)
+						+e.slide.swiper-slide
+							+b.sCabinetPanel-item.card
+								+e.title= t
+								block
+
+					+item(`Активные клиенты`)
+						+e.body
+							+e.text-with-img
+								+img("img/slightly-smiling-face_1f642.png")
+								+e.text-lg 28
+								+e.text-sm / 86 всего
+						+e.footer.row
+							.col-sm-4.col-auto.small
+								.strong.up 5
+								|  за сегодня
+							.col-sm-4.col-auto.small
+								.strong.up 17
+								| за неделю
+							.col-sm-4.col-auto.small
+								.strong.down 36
+								| за месяц
+					+item(`Реферальная ссылка`)
+						+e.body
+							+b.link-block 
+								+e.INPUT.copy-text(type="text" value='https://chatfood.ru/?p=324' readonly)
+								+icon('copy')
+						+e.footer.row
+							.col-6 
+								button.btn.btn-light.w-100 Промокоды
+							.col-6
+								button.btn.btn-light.w-100 Media-kit
+					+item(`Статус партнера`)
+						+e.body
+							+e.text-with-img
+								+img("img/silver.svg")
+								+e.text Серебряный партнер
+						+e.footer.row
+							.col-sm-3.col-auto.small
+								.strong 35%
+								|  I уровень
+							.col-sm-3.col-auto.small
+								.strong 5%
+								| II уровень
+							.col
+								button.btn.btn-light.w-100 Подробнее
+					+item(`Баланс`)
+						+e.body
+							+e.text-with-img
+								+img("img/grinning-face_1f600.png")
+								+e.text-lg 890 650 ₽
+						+e.footer.row
+							.col-6
+								button.btn.btn-primary.w-100 
+									span.d-none.d-sm-block Запрос на выплату
+									span.d-sm-none Выплата
+							.col-6
+								button.btn.btn-light.w-100 Договор №8975
+				.swiper-pagination.d-none.d-sm-block
+			mixin gr(t, l, tab)
+				+e.group
+					.row
+						.col
+							+e.group-title= t
+								if l
+									span.badge.bg-light= l
+						if tab
+							.col-lg-auto
+								+b.btn-tabs.swiper.breadcrumb-slider--js
+									.swiper-wrapper
+										.swiper-slide
+											+e.item(href="#").active   за 1 день
+										.swiper-slide
+											+e.item(href="#") за 7 дней
+										.swiper-slide
+											+e.item(href="#") за 30 дней
+										.swiper-slide
+											+e.item(href="#") за 6 месяцев
+										.swiper-slide
+											+e.item(href="#") за год
+										.swiper-slide
+											+e.item(href="#") за все время
+					block
+			+gr("Регистрации",'', true)
+				img.res-i(src="img/table.png", alt="")
+			+gr("Начисления",'', true)
+				img.res-i(src="img/table.png", alt="")
+			+gr("Список запросов на выплату",'1 892')
+				.table-wrap-js
+					table.table.table-js#table-1
+						thead
+							tr
+								th Дата
+								th Сумма
+								th Адрес
+								th.text-end Статус
+						tbody
+							mixin tr()
+								tr
+									td 24.06.2022, 17:29
+									td 1 350 ₽
+									td Банковский счет 
+									td.strong.text-end 
+										block
+							- for (var x = 0; x < 3; x++)
+								+tr()
+									span(style="color:#F5B04D") В обработке
+								+tr()
+									span(style="color:#4BB14B") Исполнено
+								+tr()
+									span(style="color:#F5B04D") В обработке
+								+tr()
+									span(style="color:#4BB14B") Исполнено
+								+tr()
+									span(style="color:#4BB14B") Исполнено
+								+tr()
+									span(style="color:#4BB14B") Исполнено
+								+tr()
+									span(style="color:#4BB14B") Исполнено
+				button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-1
+					+icon("reload")
+					| Загрузить еще 
+			+gr("Клиенты",'1 892') 
+				.table-wrap-js.table-wrap-clients
+					table.table.table-js#table-2
+						thead
+							tr
+								th Дата регистрации
+								th Email
+								th Статус
+								th Кол-во чат-ботов
+								th Оплачено до
+								th.text-end Начисления
+						tbody
+							mixin tr()
+								tr
+									td 24.06.2022, 17:29
+									td mail@mail.ru
+									td 
+										block
+									td 3
+									td 24.06.2022
+									td.text-end 23 350 ₽
+							- for (var x = 0; x < 3; x++)
+								+tr()
+									span(style="color:var(--bs-danger)") Неактивен с&nbsp;24.06.22
+								+tr()
+									span(style="color:#4BB14B") Активен
+								+tr()
+									span(style="color:var(--bs-danger)") Неактивен с&nbsp;24.06.22
+								+tr()
+									span(style="color:#4BB14B") Активен
+								+tr()
+									span(style="color:#4BB14B") Активен
+								+tr()
+									span(style="color:#4BB14B") Активен
+								+tr()
+									span(style="color:#4BB14B") Активен
+				button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-2
+					+icon("reload")
+					| Загрузить еще 
+			+gr("Промокоды",'1 892') 
+				.table-wrap-js.table-wrap-clients
+					table.table.table-js#table-3
+						thead
+							tr
+								th Дата создания
+								th Промокод
+								th Кол-во активаций
+								th.text-end 
+						tbody
+							mixin tr()
+								tr
+									td 
+										span.d-inline-block 24.06.2022,  
+										span.d-inline-block 17:29
+									td LETO22
+									td  32
+									td.text-end
+										.btn-delete-row
+											+icon("delete")
+							- for (var x = 0; x < 3; x++)
+								+tr()
+									span(style="color:var(--bs-danger)") Неактивен с&nbsp;24.06.22
+								+tr()
+									span(style="color:#4BB14B") Активен
+								+tr()
+									span(style="color:var(--bs-danger)") Неактивен с&nbsp;24.06.22
+								+tr()
+									span(style="color:#4BB14B") Активен
+								+tr()
+									span(style="color:#4BB14B") Активен
+								+tr()
+									span(style="color:#4BB14B") Активен
+								+tr()
+									span(style="color:#4BB14B") Активен
+				button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-3
+					+icon("reload")
+					| Загрузить еще 
+	// end sCabinetPanel

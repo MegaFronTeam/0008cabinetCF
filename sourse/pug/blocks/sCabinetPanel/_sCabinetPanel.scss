@@ -1,0 +1,319 @@
+// start .sCabinetPanel
+.sCabinetPanel {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	padding-top: rem(20);
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+	&__slider{
+		overflow: visible;
+	}
+	&__slide{
+		@include media-breakpoint-down(sm) {
+			margin-right: 0 !important;
+			margin-bottom: 20px;
+		}
+		@include media-breakpoint-up(sm) {
+			max-width: rem(360);
+			margin-right: rem(20);
+		}
+	// 	@include media-breakpoint-up(md) {
+	// 	width: 50%;
+	// }
+	width: 100%;
+		height: auto;
+	}
+	.swiper-pagination{
+		position: static;
+		margin-top: .5rem;
+	}
+	.swiper-wrapper{
+		@include media-breakpoint-down(sm) {
+			flex-wrap: wrap;
+			transform: none !important;
+			@include roww(20px);
+			width: fit-content;
+		}
+
+	}
+
+	&__group{
+		margin-bottom: rem(40);
+		
+	}
+	&__group-title{
+		@include rfs(24px);
+		font-weight: bold;
+		margin-bottom: rem(20);
+		.badge{
+			font-weight: normal;
+			font-size: 14px;
+			border-radius: 100px;
+			color: $body-color;
+			margin-left: rem(10);
+		}
+	}
+	.btn-example-load-more{
+		font-weight: normal;
+		margin-top: rem(20);
+		.icon{
+			color: $orange;
+			margin-right: rem(10);
+			font-size: rem(20);
+		}
+	}
+
+	.btn-light {
+    --bs-btn-bg: #F6F6F6;
+    --bs-btn-border-color: #F6F6F6;
+}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCabinetPanel
+
+.sCabinetPanel-item{
+	@include media-breakpoint-up(sm) {
+
+		padding: rem(20) !important;
+	}
+	padding: rem(20)  rem(15) !important;
+	&__title{
+		color: $secondary;
+		font-weight: bold;
+		font-size: 14px;
+		margin-bottom: rem(20);
+	}
+	&__body{
+		margin-bottom: rem(20);
+	}
+	&__text-with-img{
+		display: flex;
+		img{
+			// align-items: center;
+			// align-self: center;
+			margin-right: rem(10);
+			flex: 0 0 auto;
+			width: rem(40);
+		}
+	}
+	&__text{
+		align-self: center;
+		font-weight: bold;
+		@include rfs(20px);	
+	}
+	&__text-lg{
+		align-self: center;
+		@extend .h1;
+		font-weight: bold;
+		margin: 0;
+		// line-height: 125%;
+	}
+	&__text-sm{
+		margin-left: rem(5);
+		font-size: 14px;
+	}
+	&__footer{
+		margin-top: auto;
+		--bs-gutter-x: 10px;
+		.strong{
+			position: relative;
+			&.down,
+			&.up{
+				padding-left: rem(10);
+				&::before{
+					content: '';
+					position: absolute;
+					left: 0;
+					top: em(9);
+
+				}
+			}
+			&.up{
+				&::before{
+					@include triangle(8px 6px, $success, up);
+
+				}
+			}
+			&.down{
+				&::before{
+					@include triangle(8px 6px, $danger, down);
+	
+				}
+
+			}
+		}
+		.row{
+			--bs-gutter-x: 10px;
+
+		}
+	}
+	.btn-light{
+
+	}
+	.btn{
+
+		font-weight: normal;
+		font-size: 14px;
+		border-radius: 100px;
+		padding: rem(8);
+	}
+}
+
+.link-block{
+	@extend .form-control;
+	display: flex;
+	justify-content: space-between;
+	font-size: 14px;
+	padding: rem(8) rem(10) rem(8) rem(20);
+	input{
+		position: relative;
+		border: none !important;
+		box-shadow: none !important;
+		outline: none !important;
+		width: 100%;
+	}
+	.icon{
+		color: $secondary;
+		cursor: pointer;
+		@include mt;
+		&:hover{
+			color: $orange;
+		}
+	}
+}
+
+.btn-tabs{
+	// display: flex;
+	margin-right: -20px;
+	.swiper-slide{
+		width: auto;
+		margin-right: 20px;
+	}
+	.swiper-slide{
+	}
+	// @include roww(20px, m);
+	&__item{
+		color: $body-color;
+		font-size: 14px;
+		&:hover,
+		&.active{
+			color: $orange;
+		}
+	}
+}
+
+.dataTables_paginate{
+	display: none;
+}
+.dataTables_filter{
+	label{
+
+		font-size: 0;
+		display: block;
+	}
+	input{
+	}
+}
+.dataTables_wrapper .dataTables_filter{
+	float: none
+
+}
+.dataTables_wrapper .dataTables_filter input{
+	@extend .form-control;
+	margin-left: 0 !important;
+	display: block !important;  
+	width: 100% !important;
+
+}
+
+.table-js:not(.dataTable) {
+	tbody tr:nth-child(n + 6) {
+		display: none;
+	}
+}
+
+.table-wrap-clients{
+	span[style] {
+		display: block;
+		position: relative;
+		padding-left: rem(10);
+		&::before{
+			content: '';
+			width: em(6);
+			height: em(6);
+			border-radius: 50%;
+			margin-right: em(5);
+			display: inline-block;
+			margin-right: em(6);
+			background-color: currentColor;
+			position: relative;
+			top: em(6);
+			position: absolute;
+			left: 0;
+		}
+	}
+}
+
+.btn-delete-row{
+	display: inline-block;
+	cursor: pointer;
+	color: $danger;
+	.icon{
+		font-size: em(20);
+	}
+}
+#table-3{
+	th:last-child{
+		&::before,
+		&::after{
+			display: none;
+		}
+	}
+}
+
+
+@include media-breakpoint-down(md) {
+
+	.table{
+		font-size: 12px;
+		padding: 12px 0;
+		th{
+			line-height: 1.2;
+		}
+		vertical-align: middle;
+		td:not(:last-child){
+			padding-right: 3px;
+		}
+	}
+	#table-2{
+		th,
+		td{
+			&:nth-child(4) {
+				padding-right: 0;
+				min-width: 60px;
+			}
+			&:nth-child(n + 5) {
+				display: none;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,38 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= ' 6.3  Partner'
+	title= title
+block pagecontent
+	+b.cabinet-block.section
+		+e.head.row
+			.col-sm-auto.h1.strong.mb-0 Запросить выплату
+			.col.p-0.m-0
+			.col-auto.m-0
+				+b.link-close(href="#")
+					+icon("close")
+		+e.body
+			+form-wrap
+				+gr(`Тип выплаты`)
+					+input("На банковский счет",'select').custom-select-js
+				+gr(`Сумма`)
+					+input("Введите сумму",'number').input-number
+						+e.link-all(href="#") Все 
+					button.btn.btn-orange.btn-200.btn-save-js(type="button") Отправить

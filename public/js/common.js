@@ -382,15 +382,22 @@ function eventHandler() {
 		watchOverflow: true
 	});
 	
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
+	const swiper4 = new Swiper('.sCabinetPanel__slider--js', { 
 		slidesPerView: 'auto',
 		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
+		spaceBetween: 20,
+		// loopFillGroupWithBlank: true,
+		// touchRatio: 0.2,
+		// slideToClickedSlide: true,
 		freeModeMomentum: true,
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+			// renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
+		},
 
 	});
 	// modal window
@@ -484,6 +491,59 @@ function eventHandler() {
     searchChoices: false,
 		});
 	}
+
+
+
+	const convertImages = (query, callback) => {
+		const images = document.querySelectorAll(query);
+	
+		images.forEach(image => {
+			fetch(image.src)
+			.then(res => res.text())
+			.then(data => {
+				const parser = new DOMParser();
+				const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
+	
+				if (image.id) svg.id = image.id;
+				if (image.className) svg.classList = image.classList;
+	
+				image.parentNode.replaceChild(svg, image);
+			})
+			.then(callback)
+			.catch(error => console.error(error))
+		});
+	}
+
+	convertImages('.img-to-svg');
+
+	$('.link-block .icon').click(function(){
+		function myFunction() {
+			/* Get the text field */
+			var copyText = $(this).parent().find('.link-block__copy-text')[0];
+		
+			/* Select the text field */
+			copyText.select();
+			copyText.setSelectionRange(0, 99999); /* For mobile devices */
+		
+			 /* Copy the text inside the text field */
+			navigator.clipboard.writeText(copyText.value);
+		
+			/* Alert the copied text */
+			// alert("Copied the text: " + copyText.value);
+		}
+
+	})
+
+// 	$('.table-js').DataTable({
+// 		// order: [[3, 'desc']],
+// });
+
+
+// let table = new DataTable('.table-js',{
+	
+	$(".btn-delete-row").click(function(){
+		$(this).parents("tr").fadeOut();
+	})
 
 };
 if (document.readyState !== 'loading') {

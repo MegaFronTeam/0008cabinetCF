@@ -50,8 +50,19 @@
 	&__btn{
 		@extend .btn, .btn-orange;
 	}
+
+	&__link-all{
+		font-weight: bold;
+		position: absolute;
+		right: rem(20);
+		font-size: $small;
+		top: rem(10);
+	}
 }
 
+.input-number{
+	padding-right: rem(60);
+}
 
 
 .parsley-error{

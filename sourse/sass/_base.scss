@@ -343,20 +343,21 @@ ul {
 
 	&-bullet {
 		opacity: 1;
-		width: 8px;
-		height: 8px;
+		width: rem(12);
+		height: rem(12);
 		border-radius: 50%;
 		background-color: #E6E6E6;
 		outline: none !important;
 		@include mt;
 		margin-left: rem(8);
-		// padding-right: rem(8);
-		margin-right: rem(5);
+		padding-right: rem(8);
+		// margin-right: rem(5);
 		display: inline-block;
 
 		&-active,
 		&:hover {
 			background-color: var(--bs-primary) ;
+			transform: scale(1.04);
 		}
 	}
 }
@@ -527,6 +528,10 @@ iframe {
 	--bs-btn-active-color: var(--bs-btn-hover-color); 
 }
 
+.btn-light{
+	--bs-btn-hover-bg: #f8f8f8; 
+	--bs-btn-hover-border-color: #f8f8f8; 
+}
 .btn-primary{
 
 }
@@ -1045,6 +1050,19 @@ cursor:no-drop;
 			@include media-breakpoint-down(md){
 				margin-left: -20px;
 			}
+		}
+	}
+}
+
+.alert{
+	svg{
+		[stroke] {
+
+			stroke: currentColor !important;
+		}
+		[fill]{
+			fill: currentColor !important;
+			
 		}
 	}
 }

@@ -100,9 +100,8 @@ mixin chat-item(t, btn, a)
 		+b.chat-item
 			+e.head.row
 				.col.text-start
-					+e.tooltip
-						+icon("check_star")
-						+e.tooltip-dropdown Вы владелец этого чат-бота
+					+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Вы владелец этого чат-бота")
+						+icon("check_star") 
 				.col-auto.text-end.small
 					div Тариф Start
 					if a

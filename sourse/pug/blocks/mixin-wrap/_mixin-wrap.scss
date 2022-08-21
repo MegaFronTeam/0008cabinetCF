@@ -358,6 +358,8 @@
 	flex-direction: column;
 	border: 1px solid #EBEBEB;
 	border-radius: rem(12px);
+	@include mt;
+	position: relative;
 	@include media-breakpoint-up(xxl) {
 		
 		padding: rem(20px) rem(30px);
@@ -372,8 +374,6 @@
 
 .chat-item{
 	text-align: center;
-	@include mt;
-	position: relative;
 	z-index: 2;
 	@extend .card;
 	

@@ -539,11 +539,8 @@ function eventHandler() {
 // });
 
 
-// let table = new DataTable('.table-js',{
-	
-	$(".btn-delete-row").click(function(){
-		$(this).parents("tr").fadeOut();
-	})
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 };
 if (document.readyState !== 'loading') {

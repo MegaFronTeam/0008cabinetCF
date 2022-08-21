@@ -29,6 +29,20 @@
 				@include rfs(40px);
 			}
 		}
+		.form-wrap__input-wrap-border{
+			background-color: $orange;
+			height: 1px;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			@include mt;
+			transform-origin: left;
+			transform: scaleX(0);
+		}
+		&__input:focus ~ .form-wrap__input-wrap-border{
+			transform: scaleX(1);
+		}
 		&__input{
 			border-top: none !important;
 			border-left: none !important;
@@ -38,16 +52,19 @@
 			padding-bottom: rem(10);
 			padding-right: rem(40);
 			padding-left: rem(40);
+			position: relative;
+			
 			@include media-breakpoint-up(sm) { 
 				padding-right: rem(260);
 				text-align: left;
+				padding-left: 0;
 			} 
 			text-align: center;
 			box-shadow: none !important;
 			@include rfs(40px);
 			font-weight: bold;
 			&:focus{
-				border-color: $orange;
+				// border-color: $orange;
 			}
 			&::placeholder{
 				color: #EBEBEB;

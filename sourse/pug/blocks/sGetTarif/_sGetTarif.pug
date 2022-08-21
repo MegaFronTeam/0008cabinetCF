@@ -1,13 +1,13 @@
 mixin sGetTarif(data)
 	// start sGetTarif
-	+b.SECTION.sGetTarif#sGetTarif&attributes(attributes)
-		.container-fluid.tabs
+	+b.SECTION.sGetTarif.tabs#sGetTarif&attributes(attributes)
+		
 			+b.section-title.text-center
-				.row
+				.row.gy-1
 					h1.col-auto.strong Выбрать тариф для
 					.col-auto
 						+input("Прага | Доставка ❤️",'select').custom-select-js
-			.tabs__caption
+			.tabs__caption.small
 				.tabs__btn.active Месяц
 				.tabs__btn Полгода (-10%)
 				.tabs__btn Год (-20%)
@@ -47,9 +47,8 @@ mixin sGetTarif(data)
 									li.close Скрытие логотипа ChatFood
 									li.close API
 									li.close Премиум поддержка 
-										+b.tooltip
-											+e.toggle ?
-											+e.dropdown Lorem ipsum dolor sit amet.
+										+b.tooltip-wrap()
+											+e.toggle.tooltip-toggle( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="This top tooltip is themed via CSS variables.") ?
 							+item('Start','19 200 ₽','24 000 ₽')
 								ul
 									li До 60 заказов в&nbsp;месяц
@@ -60,9 +59,8 @@ mixin sGetTarif(data)
 									li.close Скрытие логотипа ChatFood
 									li.close API
 									li.close Премиум поддержка 
-										+b.tooltip
-											+e.toggle ?
-											+e.dropdown Lorem ipsum dolor sit amet.
+										+b.tooltip-wrap()
+											+e.toggle.tooltip-toggle( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="This top tooltip is themed via CSS variables.") ?
 							+item('Standart','28 800 ₽','36 000 ₽','','Популярный')
 								ul
 									li До 100 заказов в&nbsp;месяц
@@ -73,9 +71,8 @@ mixin sGetTarif(data)
 									li Скрытие логотипа ChatFood
 									li API
 									li.close Премиум поддержка 
-										+b.tooltip
-											+e.toggle ?
-											+e.dropdown Lorem ipsum dolor sit amet.
+										+b.tooltip-wrap()
+											+e.toggle.tooltip-toggle( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="This top tooltip is themed via CSS variables.") ?
 							+item('Pro','57 600 ₽','72 000 ₽') 
 								ul
 									li.infinity До 100 заказов в&nbsp;месяц
@@ -86,9 +83,8 @@ mixin sGetTarif(data)
 									li Скрытие логотипа ChatFood
 									li API
 									li Премиум поддержка 
-										+b.tooltip
-											+e.toggle ?
-											+e.dropdown Lorem ipsum dolor sit amet.
+										+b.tooltip-wrap()
+											+e.toggle.tooltip-toggle( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="This top tooltip is themed via CSS variables.") ?
 				+tab().active
 				+tab()
 				+tab()

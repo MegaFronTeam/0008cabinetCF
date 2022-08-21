@@ -1004,8 +1004,8 @@ cursor:no-drop;
 }
 
 
-.tooltip{
-	position: relative;
+.tooltip-wrap{
+	// position: relative;
 	display: inline-block;
 	&:hover{
 		--show: 1;
@@ -1024,34 +1024,34 @@ cursor:no-drop;
 		text-align: center;
 		justify-content: center;
 	}
-	&__dropdown{
-		position: absolute;
-		@include a-cent1(x);
-		bottom: calc(100% +  12px);
-		background: rgba($color: #191C1F, $alpha: .7);
-		border-radius: 6px;
-		color: #fff;text-align: center;
-		width: rem(130);
-		font-size: 12px;
-		line-height: 1;
-		padding: rem(10);
-		line-height: calc(14 / 12);
-		@include mt;
-		opacity: var(--show, 0);
-		visibility: var(--show, hidden);
-		@include media-breakpoint-down(md){
-			margin-left: 20px;
-		}
-		&::before{
-			content: '';
-			top: 100%;
-			@include a-cent1(x);
-			@include triangle(10px, rgba($color: #191C1F, $alpha: .7), down);
-			@include media-breakpoint-down(md){
-				margin-left: -20px;
-			}
-		}
-	}
+	// &__dropdown{
+	// 	position: absolute;
+	// 	@include a-cent1(x);
+	// 	bottom: calc(100% +  12px);
+	// 	background: rgba($color: #191C1F, $alpha: .7);
+	// 	border-radius: 6px;
+	// 	color: #fff;text-align: center;
+	// 	width: rem(130);
+	// 	font-size: 12px;
+	// 	line-height: 1;
+	// 	padding: rem(10);
+	// 	line-height: calc(14 / 12);
+	// 	@include mt;
+	// 	opacity: var(--show, 0);
+	// 	visibility: var(--show, hidden);
+	// 	@include media-breakpoint-down(md){
+	// 		margin-left: 20px;
+	// 	}
+	// 	&::before{
+	// 		content: '';
+	// 		top: 100%;
+	// 		@include a-cent1(x);
+	// 		@include triangle(10px, rgba($color: #191C1F, $alpha: .7), down);
+	// 		@include media-breakpoint-down(md){
+	// 			margin-left: -20px;
+	// 		}
+	// 	}
+	// }
 }
 
 .alert{
@@ -1066,3 +1066,37 @@ cursor:no-drop;
 		}
 	}
 }
+
+
+#arrow,
+#arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+}
+
+#arrow {
+  visibility: hidden;
+}
+
+#arrow::before {
+  visibility: visible;
+  content: '';
+  transform: rotate(45deg);
+}
+
+ 
+
+.tooltip{
+	width: 200px;
+	// @include mt;
+}
+
+.bs-tooltip-top .tooltip-arrow {
+  bottom: 0;
+
+  &::before {
+    top: 0 
+  }
+  }

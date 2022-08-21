@@ -21,7 +21,7 @@
 	.tabs__caption{
 		display: flex;
 		@include roww(20px, m);
-		margin-bottom: 20px;
+		margin-bottom: rem(40px);
 	}
 	.tabs__btn{
 		cursor: pointer;
@@ -40,6 +40,9 @@
 	@include media-breakpoint-down(xl) {}
 } // end.sGetTarif
 
+.tabs__btn{
+	@include mt;
+}
 .tarif-item{
 	@extend .card;
 	display: flex;

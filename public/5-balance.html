@@ -178,9 +178,9 @@
 							<h1>Сумма для пополнения</h1>
 							<div class="form-wrap">
 								<form> 
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control is-invalid" name="number" type="number" placeholder="Введите сумму" step="any"/>
-									</div>
-									<!-- +e.input-wrap-->
+									<label class="form-wrap__input-wrap form-group">
+										<input class="form-wrap__input form-control " type="number" step="any" placeholder="Введите сумму"/><span class="form-wrap__input-wrap-border"></span>
+									</label>
 									<button class="btn btn-orange">
 										<svg class="icon icon-wallet ">
 											<use xlink:href="img/svg/sprite.svg#wallet"></use>
@@ -531,6 +531,8 @@
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/choices.js/public/assets/scripts/choices.min.js"> </script>
+		<script src="libs/@popperjs/core/umd/popper.min.js"> </script>
+		<script src="libs/bootstrap/js/bootstrap.min.js"> </script>
 		<script src="js/common.js"></script>
 		<script>
 			var table = $('#table-1').DataTable({

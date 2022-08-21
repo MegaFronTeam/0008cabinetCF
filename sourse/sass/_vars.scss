@@ -1311,9 +1311,9 @@ $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w
 $tooltip-font-size:                 $font-size-sm !default;
 $tooltip-max-width:                 200px !default;
 $tooltip-color:                     $white !default;
-$tooltip-bg:                        $black !default;
+$tooltip-bg:                        $body-color !default;
 $tooltip-border-radius:             $border-radius !default;
-$tooltip-opacity:                   .9 !default;
+$tooltip-opacity:                   .8 !default;
 $tooltip-padding-y:                 $spacer * .25 !default;
 $tooltip-padding-x:                 $spacer * .5 !default;
 $tooltip-margin:                    null !default; // TODO: remove this in v6

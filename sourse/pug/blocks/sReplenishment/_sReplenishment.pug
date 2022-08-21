@@ -1,0 +1,12 @@
+mixin sReplenishment(data)
+	// start sReplenishment
+	+b.sReplenishment#sReplenishment&attributes(attributes) 
+		h1 Сумма для пополнения
+		+form-wrap 
+				+input("Введите сумму",'number')(class="is-invalid")
+				button.btn.btn-orange
+					+icon("wallet")
+					| Пополнить
+		p.small.text-secondary После нажатия на кнопку “Пополнить” вы будете переведены на страницу оплаты и ввода реквизитов.
+		a.small(href="#") Истоия пополнений 
+	// end sReplenishment

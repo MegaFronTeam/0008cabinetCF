@@ -1,4 +1,4 @@
-mixin sCabinetPanel(data)
+mixin sCabinetPanel(empty)
 	// start sCabinetPanel
 	+b.sCabinetPanel&attributes(attributes)
 		+e.group
@@ -87,120 +87,132 @@ mixin sCabinetPanel(data)
 										.swiper-slide
 											+e.item(href="#") за все время
 					block
-			+gr("Регистрации",'', true)
-				img.res-i(src="img/table.png", alt="")
-			+gr("Начисления",'', true)
-				img.res-i(src="img/table.png", alt="")
-			+gr("Список запросов на выплату",'1 892')
-				.table-wrap-js
-					table.table.table-js#table-1
-						thead
-							tr
-								th Дата
-								th Сумма
-								th Адрес
-								th.text-end Статус
-						tbody
-							mixin tr()
+			if empty
+				+gr("Регистрации",'', true)
+					img.res-i(src="img/table-empty.png", alt="")
+				+gr("Начисления",'', true)
+					img.res-i(src="img/table-empty.png", alt="")
+				+gr("Список запросов на выплату", '0')
+					p Информации нет.
+				+gr("Клиенты",'0')
+					p Информации нет.
+				+gr("Промокоды",'0')
+					p Информации нет.
+			else
+				+gr("Регистрации",'', true)
+					img.res-i(src="img/table.png", alt="")
+				+gr("Начисления",'', true)
+					img.res-i(src="img/table.png", alt="")
+				+gr("Список запросов на выплату",'1 892')
+					.table-wrap-js
+						table.table.table-js#table-1
+							thead
 								tr
-									td 24.06.2022, 17:29
-									td 1 350 ₽
-									td Банковский счет 
-									td.strong.text-end 
-										block
-							- for (var x = 0; x < 3; x++)
-								+tr()
-									span(style="color:#F5B04D") В обработке
-								+tr()
-									span(style="color:#4BB14B") Исполнено
-								+tr()
-									span(style="color:#F5B04D") В обработке
-								+tr()
-									span(style="color:#4BB14B") Исполнено
-								+tr()
-									span(style="color:#4BB14B") Исполнено
-								+tr()
-									span(style="color:#4BB14B") Исполнено
-								+tr()
-									span(style="color:#4BB14B") Исполнено
-				button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-1
-					+icon("reload")
-					| Загрузить еще 
-			+gr("Клиенты",'1 892') 
-				.table-wrap-js.table-wrap-clients
-					table.table.table-js#table-2
-						thead
-							tr
-								th Дата регистрации
-								th Email
-								th Статус
-								th Кол-во чат-ботов
-								th Оплачено до
-								th.text-end Начисления
-						tbody
-							mixin tr()
+									th Дата
+									th Сумма
+									th Адрес
+									th.text-end Статус
+							tbody
+								mixin tr()
+									tr
+										td 24.06.2022, 17:29
+										td 1 350 ₽
+										td Банковский счет 
+										td.strong.text-end 
+											block
+								- for (var x = 0; x < 3; x++)
+									+tr()
+										span(style="color:#F5B04D") В обработке
+									+tr()
+										span(style="color:#4BB14B") Исполнено
+									+tr()
+										span(style="color:#F5B04D") В обработке
+									+tr()
+										span(style="color:#4BB14B") Исполнено
+									+tr()
+										span(style="color:#4BB14B") Исполнено
+									+tr()
+										span(style="color:#4BB14B") Исполнено
+									+tr()
+										span(style="color:#4BB14B") Исполнено
+					button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-1
+						+icon("reload")
+						| Загрузить еще 
+				+gr("Клиенты",'1 892') 
+					.table-wrap-js.table-wrap-clients
+						table.table.table-js#table-2
+							thead
 								tr
-									td 24.06.2022, 17:29
-									td mail@mail.ru
-									td 
-										block
-									td 3
-									td 24.06.2022
-									td.text-end 23 350 ₽
-							- for (var x = 0; x < 3; x++)
-								+tr()
-									span(style="color:var(--bs-danger)") Неактивен с&nbsp;24.06.22
-								+tr()
-									span(style="color:#4BB14B") Активен
-								+tr()
-									span(style="color:var(--bs-danger)") Неактивен с&nbsp;24.06.22
-								+tr()
-									span(style="color:#4BB14B") Активен
-								+tr()
-									span(style="color:#4BB14B") Активен
-								+tr()
-									span(style="color:#4BB14B") Активен
-								+tr()
-									span(style="color:#4BB14B") Активен
-				button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-2
-					+icon("reload")
-					| Загрузить еще 
-			+gr("Промокоды",'1 892') 
-				.table-wrap-js.table-wrap-clients
-					table.table.table-js#table-3
-						thead
-							tr
-								th Дата создания
-								th Промокод
-								th Кол-во активаций
-								th.text-end 
-						tbody
-							mixin tr()
+									th Дата регистрации
+									th Email
+									th Статус
+									th Кол-во чат-ботов
+									th Оплачено до
+									th.text-end Начисления
+							tbody
+								mixin tr()
+									tr
+										td 24.06.2022, 17:29
+										td mail@mail.ru
+										td 
+											block
+										td 3
+										td 24.06.2022
+										td.text-end 23 350 ₽
+								- for (var x = 0; x < 3; x++)
+									+tr()
+										span(style="color:var(--bs-danger)") Неактивен с&nbsp;24.06.22
+									+tr()
+										span(style="color:#4BB14B") Активен
+									+tr()
+										span(style="color:var(--bs-danger)") Неактивен с&nbsp;24.06.22
+									+tr()
+										span(style="color:#4BB14B") Активен
+									+tr()
+										span(style="color:#4BB14B") Активен
+									+tr()
+										span(style="color:#4BB14B") Активен
+									+tr()
+										span(style="color:#4BB14B") Активен
+					button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-2
+						+icon("reload")
+						| Загрузить еще 
+				+gr("Промокоды",'1 892') 
+					.table-wrap-js.table-wrap-clients
+						table.table.table-js#table-3
+							thead
 								tr
-									td 
-										span.d-inline-block 24.06.2022,  
-										span.d-inline-block 17:29
-									td LETO22
-									td  32
-									td.text-end
-										.btn-delete-row
-											+icon("delete")
-							- for (var x = 0; x < 3; x++)
-								+tr()
-									span(style="color:var(--bs-danger)") Неактивен с&nbsp;24.06.22
-								+tr()
-									span(style="color:#4BB14B") Активен
-								+tr()
-									span(style="color:var(--bs-danger)") Неактивен с&nbsp;24.06.22
-								+tr()
-									span(style="color:#4BB14B") Активен
-								+tr()
-									span(style="color:#4BB14B") Активен
-								+tr()
-									span(style="color:#4BB14B") Активен
-								+tr()
-									span(style="color:#4BB14B") Активен
-				button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-3
-					+icon("reload")
-					| Загрузить еще 
+									th Дата создания
+									th Промокод
+									th Кол-во активаций
+									th.text-end 
+							tbody
+								mixin tr()
+									tr
+										td 
+											span.d-inline-block 24.06.2022,  
+											span.d-inline-block 17:29
+										td LETO22
+										td  32
+										td.text-end
+											.btn-delete-row
+												+icon("delete")
+								- for (var x = 0; x < 3; x++)
+									+tr()
+										span(style="color:var(--bs-danger)") Неактивен с&nbsp;24.06.22
+									+tr()
+										span(style="color:#4BB14B") Активен
+									+tr()
+										span(style="color:var(--bs-danger)") Неактивен с&nbsp;24.06.22
+									+tr()
+										span(style="color:#4BB14B") Активен
+									+tr()
+										span(style="color:#4BB14B") Активен
+									+tr()
+										span(style="color:#4BB14B") Активен
+									+tr()
+										span(style="color:#4BB14B") Активен
+					button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-3
+						+icon("reload")
+						| Загрузить еще 
 	// end sCabinetPanel

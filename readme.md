@@ -9,5 +9,6 @@
 8. <https://megafronteam.github.io/0008cabinetCF/public/5-balance.html>
 9. <https://megafronteam.github.io/0008cabinetCF/public/5.3-balance.html>
 10. <https://megafronteam.github.io/0008cabinetCF/public/6-partner.html>
+10. <https://megafronteam.github.io/0008cabinetCF/public/6-2-partner.html>
 11. <https://megafronteam.github.io/0008cabinetCF/public/6.3-partner.html>
 12. <https://megafronteam.github.io/0008cabinetCF/public/6.4-partner.html>

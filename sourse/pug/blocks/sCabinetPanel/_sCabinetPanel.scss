@@ -52,7 +52,9 @@
 
 	&__group{
 		margin-bottom: rem(40);
-		
+		p {
+			font-size: 14px;
+		}
 	}
 	&__group-title{
 		@include rfs(24px);

@@ -152,3 +152,15 @@ mixin save-alert()
 			+e.close
 				+icon('close')
 			+e.progress
+
+mixin qrCode()
+	+b.qr-code
+		+e.row.row
+			.col-sm-auto
+				+e.wrap
+					+img('img/qr-code.png')
+			.col-sm
+				+e.content
+					+e.title Получайте уведомления в телеграм
+					p QR код для авторизации в администраторском чат-боте ChatFood для получения уведомлений о новых заказах в телеграм.
+					a(href="#") @ChatFoodrubot

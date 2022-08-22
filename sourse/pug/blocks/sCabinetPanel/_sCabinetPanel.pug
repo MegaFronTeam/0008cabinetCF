@@ -9,59 +9,113 @@ mixin sCabinetPanel(empty)
 							+b.sCabinetPanel-item.card
 								+e.title= t
 								block
-
-					+item(`Активные клиенты`)
-						+e.body
-							+e.text-with-img
-								+img("img/slightly-smiling-face_1f642.png")
-								+e.text-lg 28
-								+e.text-sm / 86 всего
-						+e.footer.row
-							.col-sm-4.col-auto.small
-								.strong.up 5
-								|  за сегодня
-							.col-sm-4.col-auto.small
-								.strong.up 17
-								| за неделю
-							.col-sm-4.col-auto.small
-								.strong.down 36
-								| за месяц
-					+item(`Реферальная ссылка`)
-						+e.body
-							+b.link-block 
-								+e.INPUT.copy-text(type="text" value='https://chatfood.ru/?p=324' readonly)
-								+icon('copy')
-						+e.footer.row
-							.col-6 
-								button.btn.btn-light.w-100 Промокоды
-							.col-6
-								button.btn.btn-light.w-100 Media-kit
-					+item(`Статус партнера`)
-						+e.body
-							+e.text-with-img
-								+img("img/silver.svg")
-								+e.text Серебряный партнер
-						+e.footer.row
-							.col-sm-3.col-auto.small
-								.strong 35%
-								|  I уровень
-							.col-sm-3.col-auto.small
-								.strong 5%
-								| II уровень
-							.col
-								button.btn.btn-light.w-100 Подробнее
-					+item(`Баланс`)
-						+e.body
-							+e.text-with-img
-								+img("img/grinning-face_1f600.png")
-								+e.text-lg 890 650 ₽
-						+e.footer.row
-							.col-6
-								button.btn.btn-primary.w-100 
-									span.d-none.d-sm-block Запрос на выплату
-									span.d-sm-none Выплата
-							.col-6
-								button.btn.btn-light.w-100 Договор №8975
+					if empty
+						+item(`Активные клиенты`)
+							+e.body
+								+e.text-with-img
+									+img("img/slightly-smiling-face_1f642.png")
+									+e.text-lg 0
+									+e.text-sm / 0 всего
+							+e.footer.row
+								.col-sm-4.col-auto.small
+									.strong.up 0
+									|  за сегодня
+								.col-sm-4.col-auto.small
+									.strong.up 0
+									| за неделю
+								.col-sm-4.col-auto.small
+									.strong.down 0
+									| за месяц
+						+item(`Реферальная ссылка`)
+							+e.body
+								+b.link-block 
+									+e.INPUT.copy-text(type="text" value='https://chatfood.ru/?p=324' readonly)
+									+icon('copy')
+							+e.footer.row
+								.col-6 
+									button.btn.btn-light.w-100 Промокоды
+								.col-6
+									button.btn.btn-light.w-100 Media-kit
+						+item(`Статус партнера`)
+							+e.body
+								+e.text-with-img
+									+img("img/silver.svg")
+									+e.text Серебряный партнер
+							+e.footer.row
+								.col-sm-3.col-auto.small
+									.strong 35%
+									|  I уровень
+								.col-sm-3.col-auto.small
+									.strong 5%
+									| II уровень
+								.col
+									button.btn.btn-light.w-100 Подробнее
+						+item(`Баланс`)
+							+e.body
+								+e.text-with-img
+									+img("img/grinning-face_1f600.png")
+									+e.text-lg 0
+							+e.footer.row
+								.col-6
+									button.btn.btn-primary.w-100 
+										span Скачать договор
+								.col-6
+									button.btn.btn-light.w-100 Загрузить договор
+								.col-12
+									button.btn.btn-light.w-100 Договор отправлен
+					else
+						+item(`Активные клиенты`)
+							+e.body
+								+e.text-with-img
+									+img("img/slightly-smiling-face_1f642.png")
+									+e.text-lg 28
+									+e.text-sm / 86 всего
+							+e.footer.row
+								.col-sm-4.col-auto.small
+									.strong.up 5
+									|  за сегодня
+								.col-sm-4.col-auto.small
+									.strong.up 17
+									| за неделю
+								.col-sm-4.col-auto.small
+									.strong.down 36
+									| за месяц
+						+item(`Реферальная ссылка`)
+							+e.body
+								+b.link-block 
+									+e.INPUT.copy-text(type="text" value='https://chatfood.ru/?p=324' readonly)
+									+icon('copy')
+							+e.footer.row
+								.col-6 
+									button.btn.btn-light.w-100 Промокоды
+								.col-6
+									button.btn.btn-light.w-100 Media-kit
+						+item(`Статус партнера`)
+							+e.body
+								+e.text-with-img
+									+img("img/silver.svg")
+									+e.text Серебряный партнер
+							+e.footer.row
+								.col-sm-3.col-auto.small
+									.strong 35%
+									|  I уровень
+								.col-sm-3.col-auto.small
+									.strong 5%
+									| II уровень
+								.col
+									button.btn.btn-light.w-100 Подробнее
+						+item(`Баланс`)
+							+e.body
+								+e.text-with-img
+									+img("img/grinning-face_1f600.png")
+									+e.text-lg 890 650 ₽
+							+e.footer.row
+								.col-6
+									button.btn.btn-primary.w-100 
+										span.d-none.d-sm-block Запрос на выплату
+										span.d-sm-none Выплата
+								.col-6
+									button.btn.btn-light.w-100 Договор №8975
 				.swiper-pagination.d-none.d-sm-block
 			mixin gr(t, l, tab)
 				+e.group

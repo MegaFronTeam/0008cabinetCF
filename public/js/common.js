@@ -542,6 +542,38 @@ function eventHandler() {
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
+let tabsMobileBtns = document.getElementsByClassName('tabs__content-toggle');
+for (let tabsMobileBtn of tabsMobileBtns) {
+	tabsMobileBtn.addEventListener('click', function() {
+		let val = tabsMobileBtn.dataset.id;
+		const tabs = document.querySelectorAll('.tabs__content');
+		if (!tabsMobileBtn.classList.contains('active')) {
+			for (let tabsMobileBtn of tabsMobileBtns) {
+				tabsMobileBtn.classList.remove('active');
+			}
+			tabsMobileBtn.classList.add('active');
+		}
+		for (let tab of tabs) {
+			if(tab.classList.contains('active')) {
+				tab.classList.remove('active');
+			} if(tab.id == val) {
+				tab.classList.add('active');
+			};
+		}
+		
+	});
+}
+
+// for (let i = 0; i < tabsMobileBtns.length; i++) {
+// 	tabsMobileBtns[i].addEventListener('click', function() {
+// 		console.log(tabsMobileBtns[i]);
+// 		if(tabsMobileBtns[i] == i) {
+// 		}
+
+// 	});
+	
+// }
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

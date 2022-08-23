@@ -176,8 +176,8 @@
 						<!-- start sStatistic-->
 						<div class="sStatistic section" id="sStatistic">
 							<div class="tabs">
-								<div class="tabs__caption row">
-									<div class="tabs__btn col-lg-6 col-xl-3 active">
+								<div class="tabs__caption row d-none d-lg-flex">
+									<div class="tabs__btn col-lg-6 col-xl-3 active" data-id="1">
 										<div class="sStatistic__cross">
 										</div>
 										<div class="sCabinetPanel-item card">
@@ -202,7 +202,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="tabs__btn col-lg-6 col-xl-3">
+									<div class="tabs__btn col-lg-6 col-xl-3" data-id="2">
 										<div class="sStatistic__cross">
 										</div>
 										<div class="sCabinetPanel-item card">
@@ -227,7 +227,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="tabs__btn col-lg-6 col-xl-3">
+									<div class="tabs__btn col-lg-6 col-xl-3" data-id="3">
 										<div class="sStatistic__cross">
 										</div>
 										<div class="sCabinetPanel-item card">
@@ -252,7 +252,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="tabs__btn col-lg-6 col-xl-3">
+									<div class="tabs__btn col-lg-6 col-xl-3" data-id="4">
 										<div class="sStatistic__cross">
 										</div>
 										<div class="sCabinetPanel-item card">
@@ -269,7 +269,32 @@
 										</div>
 									</div>
 								</div>
-								<div class="tabs__content active">
+								<div class="tabs__btn tabs__content-toggle active d-lg-none" data-id="1">
+									<div class="sStatistic__cross">
+									</div>
+									<div class="sCabinetPanel-item card">
+										<div class="sCabinetPanel-item__title">Пользователи
+										</div>
+										<div class="sCabinetPanel-item__body">
+											<div class="sCabinetPanel-item__text-with-img"><img src="img/slightly-smiling-face_1f642.png" alt="" loading="lazy"/>
+												<div class="sCabinetPanel-item__text-lg">2665
+												</div>
+											</div>
+										</div>
+										<div class="sCabinetPanel-item__footer row">
+											<div class="col-sm-4 col-auto small">
+												<div class="strong up">9</div> за сегодня
+											</div>
+											<div class="col-sm-4 col-auto small">
+												<div class="strong up">160</div>за неделю
+											</div>
+											<div class="col-sm-4 col-auto small">
+												<div class="strong up">447</div>за месяц
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabs__content active" id="1">
 										<div class="sStatistic__group">
 											<div class="row">
 												<div class="col">
@@ -309,7 +334,32 @@
 											</div><img class="res-i" src="img/table2.png" alt=""/>
 										</div>
 								</div>
-								<div class="tabs__content">
+								<div class="tabs__btn tabs__content-toggle d-lg-none" data-id="2">
+									<div class="sStatistic__cross">
+									</div>
+									<div class="sCabinetPanel-item card">
+										<div class="sCabinetPanel-item__title">Сумма заказов
+										</div>
+										<div class="sCabinetPanel-item__body">
+											<div class="sCabinetPanel-item__text-with-img"><img src="img/grinning-face_1f600.png" alt="" loading="lazy"/>
+												<div class="sCabinetPanel-item__text-lg">890 650 ₽
+												</div>
+											</div>
+										</div>
+										<div class="sCabinetPanel-item__footer row">
+											<div class="col-sm-4 col-auto small">
+												<div class="strong up">16 263 ₽</div> за сегодня
+											</div>
+											<div class="col-sm-4 col-auto small">
+												<div class="strong up">136 263 ₽</div>за неделю
+											</div>
+											<div class="col-sm-4 col-auto small">
+												<div class="strong up">324 26  ₽</div>за месяц
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabs__content" id="2">
 										<div class="sStatistic__group">
 											<div class="row">
 												<div class="col">
@@ -349,7 +399,32 @@
 											</div><img class="res-i" src="img/table2.png" alt=""/>
 										</div>
 								</div>
-								<div class="tabs__content">
+								<div class="tabs__btn tabs__content-toggle d-lg-none" data-id="3">
+									<div class="sStatistic__cross">
+									</div>
+									<div class="sCabinetPanel-item card">
+										<div class="sCabinetPanel-item__title">Заказы
+										</div>
+										<div class="sCabinetPanel-item__body">
+											<div class="sCabinetPanel-item__text-with-img"><img src="img/money.png" alt="" loading="lazy"/>
+												<div class="sCabinetPanel-item__text-lg">559
+												</div>
+											</div>
+										</div>
+										<div class="sCabinetPanel-item__footer row">
+											<div class="col-sm-4 col-auto small">
+												<div class="strong up">2</div> за сегодня
+											</div>
+											<div class="col-sm-4 col-auto small">
+												<div class="strong up">9</div>за неделю
+											</div>
+											<div class="col-sm-4 col-auto small">
+												<div class="strong up">31</div>за месяц
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabs__content" id="3">
 										<div class="sStatistic__group">
 											<div class="row">
 												<div class="col">
@@ -389,7 +464,23 @@
 											</div><img class="res-i" src="img/table2.png" alt=""/>
 										</div>
 								</div>
-								<div class="tabs__content">
+								<div class="tabs__btn tabs__content-toggle d-lg-none" data-id="4">
+									<div class="sStatistic__cross">
+									</div>
+									<div class="sCabinetPanel-item card">
+										<div class="sCabinetPanel-item__title">Активность
+										</div>
+										<div class="sCabinetPanel-item__body">
+											<div class="sCabinetPanel-item__text-with-img"><img src="img/grinning-face_1f600 1.png" alt="" loading="lazy"/>
+												<div class="sCabinetPanel-item__text-lg">21
+												</div>
+											</div>
+										</div>
+										<div class="sCabinetPanel-item__footer small">Активные пользователи за сегодня
+										</div>
+									</div>
+								</div>
+								<div class="tabs__content" id="4">
 										<div class="sStatistic__group">
 											<div class="row">
 												<div class="col">

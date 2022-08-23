@@ -58,6 +58,20 @@
 				}
 			}
 		}
+		&__content-toggle {
+			@include media-breakpoint-down(lg) {
+				margin-bottom: 15px;
+			}
+		}
+		&__content {
+			@include media-breakpoint-down(lg) {
+				display: none !important;
+				margin-bottom: 15px;
+				&.active {
+					display: block !important;
+				}
+			}
+		}
 	}
 	&__cross {
 		@include mt;

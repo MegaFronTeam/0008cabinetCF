@@ -6,8 +6,8 @@ mixin sStatistic(data)
 					+e.title= t
 					block
 			.tabs
-				.tabs__caption.row
-					.tabs__btn.col-lg-6.col-xl-3.active
+				.tabs__caption.row.d-none.d-lg-flex
+					.tabs__btn.col-lg-6.col-xl-3.active(data-id='1')
 						+e.cross
 						+item(`Пользователи`)
 							+e.body
@@ -24,7 +24,7 @@ mixin sStatistic(data)
 								.col-sm-4.col-auto.small
 									.strong.up 447
 									| за месяц
-					.tabs__btn.col-lg-6.col-xl-3
+					.tabs__btn.col-lg-6.col-xl-3(data-id='2')
 						+e.cross
 						+item(`Сумма заказов`)
 							+e.body
@@ -41,7 +41,7 @@ mixin sStatistic(data)
 								.col-sm-4.col-auto.small
 									.strong.up 324 26  ₽
 									| за месяц
-					.tabs__btn.col-lg-6.col-xl-3
+					.tabs__btn.col-lg-6.col-xl-3(data-id='3')
 						+e.cross
 						+item(`Заказы`)
 							+e.body
@@ -58,7 +58,7 @@ mixin sStatistic(data)
 								.col-sm-4.col-auto.small
 									.strong.up 31
 									| за месяц
-					.tabs__btn.col-lg-6.col-xl-3
+					.tabs__btn.col-lg-6.col-xl-3(data-id='4')
 						+e.cross
 						+item(`Активность`)
 							+e.body
@@ -90,16 +90,75 @@ mixin sStatistic(data)
 											.swiper-slide
 												+e.item(href="#") за все время
 						block
-				.tabs__content.active
+				.tabs__btn.tabs__content-toggle.active.d-lg-none(data-id='1')
+						+e.cross
+						+item(`Пользователи`)
+							+e.body
+								+e.text-with-img
+									+img("img/slightly-smiling-face_1f642.png")
+									+e.text-lg 2665
+							+e.footer.row
+								.col-sm-4.col-auto.small
+									.strong.up 9
+									|  за сегодня
+								.col-sm-4.col-auto.small
+									.strong.up 160
+									| за неделю
+								.col-sm-4.col-auto.small
+									.strong.up 447
+									| за месяц
+				.tabs__content(id='1').active
 					+gr("Регистрации",'', true)
 						img.res-i(src="img/table2.png", alt="")
-				.tabs__content
+				.tabs__btn.tabs__content-toggle.d-lg-none(data-id='2')
+						+e.cross
+						+item(`Сумма заказов`)
+							+e.body
+								+e.text-with-img
+									+img("img/grinning-face_1f600.png")
+									+e.text-lg 890 650 ₽
+							+e.footer.row
+								.col-sm-4.col-auto.small
+									.strong.up 16 263 ₽
+									|  за сегодня
+								.col-sm-4.col-auto.small
+									.strong.up 136 263 ₽
+									| за неделю
+								.col-sm-4.col-auto.small
+									.strong.up 324 26  ₽
+									| за месяц
+				.tabs__content(id='2')
 					+gr("Регистрации",'', true)
 						img.res-i(src="img/table2.png", alt="")
-				.tabs__content
+				.tabs__btn.tabs__content-toggle.d-lg-none(data-id='3')
+						+e.cross
+						+item(`Заказы`)
+							+e.body
+								+e.text-with-img
+									+img("img/money.png")
+									+e.text-lg 559
+							+e.footer.row
+								.col-sm-4.col-auto.small
+									.strong.up 2
+									|  за сегодня
+								.col-sm-4.col-auto.small
+									.strong.up 9
+									| за неделю
+								.col-sm-4.col-auto.small
+									.strong.up 31
+									| за месяц
+				.tabs__content(id='3')
 					+gr("Регистрации",'', true)
 						img.res-i(src="img/table2.png", alt="")
-				.tabs__content
+				.tabs__btn.tabs__content-toggle.d-lg-none(data-id='4')
+						+e.cross
+						+item(`Активность`)
+							+e.body
+								+e.text-with-img
+									+img("img/grinning-face_1f600 1.png")
+									+e.text-lg 21
+							+e.footer.small Активные пользователи за сегодня
+				.tabs__content(id='4')
 					+gr("Регистрации",'', true)
 						img.res-i(src="img/table2.png", alt="")
 

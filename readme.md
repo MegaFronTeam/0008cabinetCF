@@ -13,3 +13,4 @@
 11. <https://megafronteam.github.io/0008cabinetCF/public/6.3-partner.html>
 12. <https://megafronteam.github.io/0008cabinetCF/public/6.4-partner.html>
 12. <https://megafronteam.github.io/0008cabinetCF/public/14-promo.html>
+12. <https://megafronteam.github.io/0008cabinetCF/public/17-statistic.html>

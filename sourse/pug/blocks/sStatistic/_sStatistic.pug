@@ -7,7 +7,8 @@ mixin sStatistic(data)
 					block
 			.tabs
 				.tabs__caption.row
-					.tabs__btn.col-lg-3.active
+					.tabs__btn.col-lg-6.col-xl-3.active
+						+e.cross
 						+item(`Пользователи`)
 							+e.body
 								+e.text-with-img
@@ -23,7 +24,8 @@ mixin sStatistic(data)
 								.col-sm-4.col-auto.small
 									.strong.up 447
 									| за месяц
-					.tabs__btn.col-lg-3
+					.tabs__btn.col-lg-6.col-xl-3
+						+e.cross
 						+item(`Сумма заказов`)
 							+e.body
 								+e.text-with-img
@@ -39,7 +41,8 @@ mixin sStatistic(data)
 								.col-sm-4.col-auto.small
 									.strong.up 324 26  ₽
 									| за месяц
-					.tabs__btn.col-lg-3
+					.tabs__btn.col-lg-6.col-xl-3
+						+e.cross
 						+item(`Заказы`)
 							+e.body
 								+e.text-with-img
@@ -55,17 +58,49 @@ mixin sStatistic(data)
 								.col-sm-4.col-auto.small
 									.strong.up 31
 									| за месяц
-					.tabs__btn.col-lg-3
+					.tabs__btn.col-lg-6.col-xl-3
+						+e.cross
 						+item(`Активность`)
 							+e.body
 								+e.text-with-img
 									+img("img/grinning-face_1f600 1.png")
 									+e.text-lg 21
 							+e.footer.small Активные пользователи за сегодня
+				mixin gr(t, l, tab)
+					+e.group
+						.row
+							.col
+								+e.group-title= t
+									if l
+										span.badge.bg-light= l
+							if tab
+								.col-lg-auto
+									+b.btn-tabs.swiper.breadcrumb-slider--js
+										.swiper-wrapper
+											.swiper-slide
+												+e.item(href="#").active   за 1 день
+											.swiper-slide
+												+e.item(href="#") за 7 дней
+											.swiper-slide
+												+e.item(href="#") за 30 дней
+											.swiper-slide
+												+e.item(href="#") за 6 месяцев
+											.swiper-slide
+												+e.item(href="#") за год
+											.swiper-slide
+												+e.item(href="#") за все время
+						block
 				.tabs__content.active
 					+gr("Регистрации",'', true)
-						img.res-i(src="img/table.png", alt="")
-				.tabs__content 2
-				.tabs__content 3
-				.tabs__content 4
+						img.res-i(src="img/table2.png", alt="")
+				.tabs__content
+					+gr("Регистрации",'', true)
+						img.res-i(src="img/table2.png", alt="")
+				.tabs__content
+					+gr("Регистрации",'', true)
+						img.res-i(src="img/table2.png", alt="")
+				.tabs__content
+					+gr("Регистрации",'', true)
+						img.res-i(src="img/table2.png", alt="")
+
 	// end sStatistic

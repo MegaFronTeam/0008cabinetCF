@@ -24,6 +24,79 @@
 		&__caption {
 			--bs-gutter-x: #{rem(20)};
 			--bs-gutter-y: #{rem(15)};
+			margin-bottom: rem(40);
+		}
+		&__btn {
+			position: relative;
+			&:not(.active) {
+				.sCabinetPanel-item {
+					background-color: $gray-100;
+				}
+			}
+			&.active {
+				.sStatistic__cross {
+					transform: rotate(45deg);
+					color: #C2C2C2;
+				}
+				@include media-breakpoint-up(xl) {
+					.sCabinetPanel-item {
+						position: relative;
+						&:before {
+							content: '';
+							position: absolute;
+							display: block;
+							width: 15px;
+							height: 15px;
+							border-right: 1px solid #D9D9D9;
+							border-bottom: 1px solid #D9D9D9;
+							background-color: #fff;
+							bottom: -8px;
+							left: 50%;
+							transform: translateX(-50%) rotate(45deg);
+						}
+					}
+				}
+			}
+		}
+	}
+	&__cross {
+		@include mt;
+		position: absolute;
+		display: block;
+		top: 20px;
+		right: 20px;
+		width: 20px;
+		height: 20px;
+		z-index: 10;
+		color: $orange;
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			display: block;
+			@include a-cent;
+			background-color: currentColor;
+			border-radius: 4px;
+		}
+		&:before {
+			width: 2px;
+			height: 12px;
+		}
+		&:after {
+			width: 12px;
+			height: 2px;
+		}
+	}
+	.sStatistic {
+		&__group {
+			.row {
+				align-items: center;
+				margin-bottom: rem(20);
+			}
+		}
+		&__group-title {
+			font-weight: 700;
+			font-size: rem(24);
+
 		}
 	}
 	@include media-breakpoint-up(xl) {}

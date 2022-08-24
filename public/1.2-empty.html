@@ -576,6 +576,22 @@
 			$('#btn-example-load-more-3').on('click', function(){   
 				table3.page.loadMore();
 			});
+			var table3 = $('#table-4').DataTable({
+			language: {
+				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				},
+				"lengthChange": false, 
+				info: false,
+				searching: false,
+				pageLength: 3,
+				// ajax: 'https://gyrocode.github.io/files/jquery-datatables/arrays.json',
+						drawCallback: function(){ 
+							$('#btn-example-load-more-4').toggle(this.api().page.hasMore());
+						}   
+			});
+			$('#btn-example-load-more-4').on('click', function(){   
+				table3.page.loadMore();
+			});
 		</script>
 	</body>
 </html>

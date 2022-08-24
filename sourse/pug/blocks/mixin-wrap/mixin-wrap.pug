@@ -164,3 +164,33 @@ mixin qrCode()
 					+e.title Получайте уведомления в телеграм
 					p QR код для авторизации в администраторском чат-боте ChatFood для получения уведомлений о новых заказах в телеграм.
 					a(href="#") @ChatFoodrubot
+
+mixin orderCard()
+	+b.order-card.card
+		+e.row.row
+			.col
+				+e.rate
+					+icon('stars')
+					| 4.7
+				+e.orders 35 заказов
+			.col-auto
+				+img('img/food.jpg')
+		+e.info
+			+e.food 🥗 Салаты
+			a(href="#") Прага-Бургер
+			+e.type 1350 -13350 ₽
+		.row
+			.col
+				label.form-check.form-switch
+					input.form-check-input(name='model' type='checkbox' role='switch')
+					.form-check-label Видимость
+			+e.tooltips.col-auto
+				a(href="#")
+					+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Копировать")
+						+icon('copy')
+				a(href="#")
+					+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Редактировать")
+						+icon('edit')
+				a(href="#")
+					+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Удалить")
+						+icon('delete')

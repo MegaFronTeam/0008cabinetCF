@@ -574,6 +574,20 @@ for (let tabsMobileBtn of tabsMobileBtns) {
 	
 // }
 
+const sMenuswiper = new Swiper('.sMenu__slider--js', { 
+	slidesPerView: 'auto',
+	spaceBetween: 20,
+	grid: {
+    rows: 2,
+    // column: 2,
+  },
+	breakpoints: {
+    768: {
+      grid: false,
+    },
+  }
+});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

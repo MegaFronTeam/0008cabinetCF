@@ -175,34 +175,6 @@
 					<div class="container-fluid container-main">
 						<!-- start sBotMenu-->
 						<div class="sBotMenu section" id="sBotMenu">
-							<div class="container-fluid">
-								<div class="row">
-									<div class="col-auto">
-										<div class="sBotMenu__input-wrap form-group">
-											<select class="sBotMenu__input form-select custom-select-js" name="select">
-												<option value="Все товары">Все товары</option>
-												<option value=" placeholder 1">placeholder 1</option>
-												<option value=" placeholder 2">placeholder 2</option>
-												<option value=" placeholder 3">placeholder 3</option>
-												<option value=" placeholder 4">placeholder 4</option>
-											</select>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-									<div class="col">
-										<div class="sBotMenu__search-wrap">
-											<label>
-												<input type="search" placeholder="Поиск по товарам"/>
-											</label>
-											<button>
-												<svg class="icon icon-search ">
-													<use xlink:href="img/svg/sprite.svg#search"></use>
-												</svg>
-											</button>
-										</div>
-									</div>
-								</div>
-							</div>
 						</div>
 						<!-- end sBotMenu-->
 					</div>
@@ -592,6 +564,22 @@
 						}   
 			});
 			$('#btn-example-load-more-3').on('click', function(){   
+				table3.page.loadMore();
+			});
+			var table3 = $('#table-4').DataTable({
+			language: {
+				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				},
+				"lengthChange": false, 
+				info: false,
+				searching: false,
+				pageLength: 3,
+				// ajax: 'https://gyrocode.github.io/files/jquery-datatables/arrays.json',
+						drawCallback: function(){ 
+							$('#btn-example-load-more-4').toggle(this.api().page.hasMore());
+						}   
+			});
+			$('#btn-example-load-more-4').on('click', function(){   
 				table3.page.loadMore();
 			});
 		</script>

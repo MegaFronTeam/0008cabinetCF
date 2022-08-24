@@ -1,0 +1,45 @@
+// start .sMenu
+.sMenu {
+	--sPT: #{rem(20)};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+	&__slider {
+		@include media-breakpoint-down(md) {
+			overflow: visible;
+		}
+	}
+	.swiper-wrapper {
+		flex-direction: row;
+		margin-top: -20px;
+	}
+	&__slide {
+		width: rem(248);
+		height: rem(248);
+		max-height: 100%;
+		margin-top: 20px !important;
+		@include media-breakpoint-down(md) {
+			height: calc((100% - 20px) / 2) !important;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sMenu

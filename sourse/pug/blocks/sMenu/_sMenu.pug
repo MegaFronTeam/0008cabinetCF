@@ -1,0 +1,10 @@
+mixin sMenu(data)
+	// start sMenu
+	+b.sMenu.section#sMenu&attributes(attributes)
+		+e.slider--js.swiper
+			.swiper-wrapper
+				-for(let i = 1; i<=8; i++)
+					+e.slide.swiper-slide
+						+orderCard()
+
+	// end sMenu

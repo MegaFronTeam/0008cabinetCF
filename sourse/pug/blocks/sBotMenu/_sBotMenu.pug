@@ -1,14 +1,5 @@
 mixin sBotMenu(data)
 	// start sBotMenu
 	+b.sBotMenu.section#sBotMenu&attributes(attributes)
-		.container-fluid
-			.row
-				.col-auto
-					+input('Все товары','select','').custom-select-js
-				.col
-					+e.search-wrap
-						label
-							input(type="search" placeholder="Поиск по товарам")
-						button
-							+icon('search')
+		
 	// end sBotMenu

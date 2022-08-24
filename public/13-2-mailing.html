@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title> 6.3  Partner</title>
+		<title>13. Mailing</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0">
@@ -15,48 +15,175 @@
 	</head>
 	<body class="main-page">
 		<div class="main-wrapper">
-			<div class="cabinet-block section">
-				<div class="cabinet-block__head row">
-					<div class="col-sm-auto h1 strong mb-0">Запросить выплату</div>
-					<div class="col p-0 m-0"></div>
-					<div class="col-auto m-0">
-						<a class="link-close" href="#">
-							<svg class="icon icon-close ">
-								<use xlink:href="img/svg/sprite.svg#close"></use>
+			<aside>
+				<div class="nav-chat">
+					<ul>
+						<li><a class="btn active" href="#"><img src="img/svg/main.svg" alt=""/></a></li>
+						<li><a class="btn" href="#"> 
+								<div class="nav-chat__counter">1
+								</div><img src="img/svg/praga.png" alt=""/></a></li>
+						<li><a class="btn" href="#"><img src="img/svg/bgr.png" alt=""/></a></li>
+						<li><a class="btn" href="#" style="--bs-btn-bg:#6F64EC; --bs-btn-color: #fff; --bs-btn-hover-color: #fff; --bs-btn-hover-bg:#6F64EC"> С</a></li>
+						<li><a class="btn btn-orange" href="#">+</a></li>
+					</ul>
+				</div>
+				<div class="nav-main-wrap">
+					<div class="nav-main">
+						<ul>
+								<li>
+									<a class="nav-main__link active" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-shop ">
+												<use xlink:href="img/svg/sprite.svg#shop"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Мои чат-боты
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="nav-main__link" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-star ">
+												<use xlink:href="img/svg/sprite.svg#star"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Тарифы
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="nav-main__link" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-gift ">
+												<use xlink:href="img/svg/sprite.svg#gift"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Акции
+											<div class="badge bg-success">скоро</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="nav-main__link" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-currency-rub ">
+												<use xlink:href="img/svg/sprite.svg#currency-rub"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Кабинет партнера
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="nav-main__link" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-faqs ">
+												<use xlink:href="img/svg/sprite.svg#faqs"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Техподдержка
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="nav-main__link" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-document ">
+												<use xlink:href="img/svg/sprite.svg#document"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">API
+											<div class="badge bg-success">скоро</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="nav-main__link" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-newspaper ">
+												<use xlink:href="img/svg/sprite.svg#newspaper"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Блог
+											<div class="badge bg-success">скоро</div>
+										</div>
+									</a>
+								</li>
+						</ul>
+						<a class="cabinet-btn" href="#">
+							<div class="cabinet-btn__icon-wrap">
+								<svg class="icon icon-avatar ">
+									<use xlink:href="img/svg/sprite.svg#avatar"></use>
+								</svg>
+							</div>
+							<div class="cabinet-btn__text"> 
+								<div class="cabinet-btn__name">Валентин Ковалентин
+								</div>
+								<div class="cabinet-btn__id">#13405
+								</div>
+							</div>
+							<svg class="icon icon-setting ">
+								<use xlink:href="img/svg/sprite.svg#setting"></use>
 							</svg>
 						</a>
 					</div>
 				</div>
-				<div class="cabinet-block__body">
-					<div class="form-wrap">
-						<form>
-							<div class="form-wrap__group">
-								<div class="form-wrap__group-title">Тип выплаты
+			</aside>
+			<div class="main-center-wrap">
+				<main>
+					<!-- start topLine-->
+					<div class="topLine section" id="topLine">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-auto d-xl-none">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js d-xl-none"><span></span>
+										<div class="toggle-menu-mobile__counter">8
+										</div>
+									</div>
 								</div>
-								<div class="form-wrap__input-wrap form-group">
-									<select class="form-wrap__input form-select custom-select-js" name="select">
-										<option value="На банковский счет">На банковский счет</option>
-										<option value=" placeholder 1">placeholder 1</option>
-										<option value=" placeholder 2">placeholder 2</option>
-										<option value=" placeholder 3">placeholder 3</option>
-										<option value=" placeholder 4">placeholder 4</option>
-									</select>
+								<div class="col-auto">
+									<div class="topLine__title">Список рассылок
+									</div>
 								</div>
-								<!-- +e.input-wrap-->
-							</div>
-							<div class="form-wrap__group">
-								<div class="form-wrap__group-title">Сумма
-								</div>
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control input-number" name="number" type="number" placeholder="Введите сумму" step="any"/>
-									<a class="form-wrap__link-all" href="#">Все 
+								<div class="col p-0"></div>
+								<div class="col-auto">
+									<a class="topLine__btn topLine__btn--balance" href="#">
+										<div class="toggle-text">
+											<svg class="icon icon-wallet ">
+												<use xlink:href="img/svg/sprite.svg#wallet"></use>
+											</svg><span class="d-none d-xl-block me-1"> Баланс: </span> <strong>777 ₽</strong>
+										</div>
+										<div class="toggle-text toggle-text--hover d-none d-xl-flex">
+											<svg class="icon icon-wallet ">
+												<use xlink:href="img/svg/sprite.svg#wallet"></use>
+											</svg>Пополнить
+										</div>
 									</a>
 								</div>
-								<!-- +e.input-wrap-->
-								<button class="btn btn-orange btn-200 btn-save-js" type="button">Отправить</button>
+								<div class="col-auto">
+									<a class="topLine__btn topLine__btn--alarm topLine__btn--new link-modal-aside-js" href="#modal-alarm">
+										<svg class="icon icon-alarm ">
+											<use xlink:href="img/svg/sprite.svg#alarm"></use>
+										</svg>
+									</a>
+								</div>
 							</div>
-						</form>
+						</div>
 					</div>
-				</div>
+					<!-- end topLine-->
+					<div class="container-fluid container-main">
+						<div class="sMailing sMailing--2 section"><img src="img/love-letter_1f48c 1.png" alt="" loading="lazy"/>
+							<div class="h1">У вас пока нет ни одной рассылки</div>
+							<p>Создайте первую рассылку вашим клиентам и убедитесь на сколько это эффективно.</p>
+							<a class="sMailing__btn btn btn-orange" href="#">Запустить рассылку
+							</a>
+						</div>
+					</div>
+					<footer class="footer">
+						<div class="container-fluid">ChatFood v 3.1</div>
+					</footer>
+				</main>
 			</div>
 		</div>
 		<!--  start modals-->

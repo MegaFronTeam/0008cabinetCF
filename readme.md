@@ -12,5 +12,10 @@
 10. <https://megafronteam.github.io/0008cabinetCF/public/6-2-partner.html>
 11. <https://megafronteam.github.io/0008cabinetCF/public/6.3-partner.html>
 12. <https://megafronteam.github.io/0008cabinetCF/public/6.4-partner.html>
+12. <https://megafronteam.github.io/0008cabinetCF/public/10-bot-menu.html>
+12. <https://megafronteam.github.io/0008cabinetCF/public/13-mailing.html>
+12. <https://megafronteam.github.io/0008cabinetCF/public/13-2-mailing.html>
+12. <https://megafronteam.github.io/0008cabinetCF/public/13-3-mailing.html>
 12. <https://megafronteam.github.io/0008cabinetCF/public/14-promo.html>
 12. <https://megafronteam.github.io/0008cabinetCF/public/17-statistic.html>
+12. <https://megafronteam.github.io/0008cabinetCF/public/18-menu.html>

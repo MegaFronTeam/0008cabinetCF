@@ -1,0 +1,102 @@
+mixin sMailing(data)
+	// start sMailing
+	+b.sMailing.section#sMailing&attributes(attributes)
+		+e.row.row
+			mixin card(title="Майские праздники", status="Завершена", bg='#4BB14B', color="#009FE3")
+				+e.card.card
+					+e.head-row.row
+						.col-auto
+							+e.status(style=`--bg: ${bg}`)!= status
+						.col-auto
+							+e.prcent 626 / 845	(87%)
+					+e.title!= title
+					+e.body-row.row
+						.col
+							+e.time 18:24 01.02.2022
+						.col-auto
+							+e.id(href="#" style=`--color: ${color}`) #84
+			.col-md-6.col-lg-4.col-xl-3
+				+card('Мини кейки', 'В процессе', '#F5B04D', '#F5B04D')
+			.col-md-6.col-lg-4.col-xl-3
+				+card()
+			.col-md-6.col-lg-4.col-xl-3
+				+card()
+			.col-md-6.col-lg-4.col-xl-3
+				+card()
+			.col-md-6.col-lg-4.col-xl-3
+				+card()
+			.col-md-6.col-lg-4.col-xl-3
+				+card()
+			.col-md-6.col-lg-4.col-xl-3
+				+card('Майские праздники длинное название рассылки в две строки, врятли будет длиньше')
+			.col-md-6.col-lg-4.col-xl-3
+				+card()
+		button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-1
+			+icon("reload")
+			| Загрузить еще 
+	// end sMailing
+
+mixin sMailing2(data)
+	+b.sMailing--2.section&attributes(attributes)
+		+img('img/love-letter_1f48c 1.png')
+		.h1 У вас пока нет ни одной рассылки
+		p Создайте первую рассылку вашим клиентам и убедитесь на сколько это эффективно.
+		+e.btn(href="#").btn.btn-orange Запустить рассылку
+
+mixin sMailingNewsletter(data)
+	// start sMailing
+	+b.sMailingNewsletter.section&attributes(attributes)
+		+e.row.row
+			+e.col.col-lg-6.order-2.order-lg-1
+				+e.title.h2 Рассылка
+				p Давно выяснено, 😂
+				p что при оценке дизайна и&nbsp;композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а&nbsp;также реальное распределение букв и&nbsp;пробелов в&nbsp;абзацах, которое не&nbsp;получается при простой дубликации &laquo;Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст..&raquo; 👌🏻
+				p Многие программы электронной вёрстки и&nbsp;редакторы HTML используют Lorem Ipsum в&nbsp;качестве текста по&nbsp;умолчанию, так что поиск по&nbsp;ключевым словам &laquo;lorem ipsum&raquo; сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За&nbsp;прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по&nbsp;ошибке, некоторые&nbsp;&mdash; намеренно (например, юмористические варианты). ❤️
+			.col-lg-6.order-1.order-lg-2
+				+e.title.h2 Данные о рассылке
+				table
+					tr
+						th Дата создания
+						th 16:58, 13.07.2021
+					tr
+						td Пользователи
+						td 1 / 3	(33%)
+					tr
+						td Статус
+						td
+							+e.status(style=`--bg: #F5B04D`) В процессе
+		+e.footer-row 
+			+e.title.h2 Получатели
+				span.badge.bg-light 3
+			.table-wrap-js
+				table.table.table-js#table-4
+					thead
+						tr
+							th ID
+							th Имя
+							th.d-none.d-lg-table-cell Никнейм
+							th Статус
+					tbody
+						mixin tr(i, name, bg='#8C8D8F', text='Не доставлено')
+							tr
+								td 
+									a(href="#") #1127
+								td
+									+e.avatar
+										+img(`img/avatar-${i}.png`)
+										!= name
+								td.d-none.d-lg-table-cell 
+									a(href="#") @arts_man
+								td
+									+e.wrap.d-flex
+										+e.status(style=`--bg: ${bg}`)!= text
+										+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Пользователь отключил чат-бота") ?
+											//- +icon("check_star") 
+						- for (var x = 0; x < 3; x++)
+							+tr(1, 'Михаил', '#4BB14B', 'Доставлено')
+							+tr(2, 'Ольга')
+							+tr(3, 'Александр')
+			button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-4
+				+icon("reload")
+				| Загрузить еще
+			+save-alert()

@@ -1,6 +1,62 @@
 mixin sBotMenu(data)
 	// start sBotMenu
 	+b.sBotMenu.section#sBotMenu&attributes(attributes)
+		+e.head-row.row
+			.col-auto.order-sm-1.order-lg-1.d-none.d-sm-block
+				+e.all-goods
+					+input("Все товары",'select').custom-select-js
+			.col-auto.order-3.order-sm-last.order-lg-2
+				+e.search.d-none.d-sm-block
+					+input("Поиск по товарам",'text')
+					button: +icon('search')
+				+e.search--toggle.d-block.d-sm-none
+					button: +icon('search')
+					+e.wrap--search
+						+e.cross
+						.h2 Поиск
+						+e.inner-search
+							+input("Поиск по товарам",'text')
+							button: +icon('search')
+						a(href="#").btn.btn-orange Показать товары
+			.col-auto.order-sm-2.order-lg-3.d-none.d-sm-block
+				+e.sort
+					+input("Показывать все",'select').custom-select-js.sort
+			.col-auto.order-sm-5.order-lg-4.d-none.d-sm-block
+				+e.show-switch
+					+in-c('radio', '', 'switch')(checked)
+						+icon('category')
+					+in-c('radio', '', 'switch')
+						+icon('list')
+			.col-auto.order-2.order-sm-3.order-lg-5
+				+e.categories-btn(href="#").btn
+					+icon("shopping-bag")
+					span.d-none.d-sm-inline-block Категории меню
+					span.d-inline-block.d-sm-none Категории
+			.col-auto.order-1.order-sm-4.order-lg-6
+				+e.more-btn(href="#").btn.btn-orange
+					+icon("more")
+					span.d-none.d-sm-inline-block Добавить товар
+					span.d-inline-block.d-sm-none Добавить
+			.col-auto.order-last.d-block.d-sm-none
+				+e.filter: +icon('filter')
+				+e.wrap--filter.active
+					+e.cross
+					.h2 Сортировать
+					+e.inputs
+						+e.headline По категориям товаров
+						+in-c('radio', 'Все товары', 'food')
+						+in-c('radio', '🍔 Бургеры', 'food')
+						+in-c('radio', '🥘 Основные блюда', 'food')
+						+in-c('radio', '🍳 Завтраки', 'food')
+						+in-c('radio', '🥓 Закуски', 'food')
+						+in-c('radio', '🥗 Салаты', 'food')
+						+in-c('radio', '🥐 Круассаны', 'food')
+					+e.inputs
+						+e.headline По типу товаров
+						+in-c('radio', 'Показывать все', 'show')
+						+in-c('radio', 'Только активные', 'show')
+						+in-c('radio', 'Только неактивные', 'show')
+					a(href="#").btn.btn-orange Закрыть
 		+e.row.row
 			.col-sm-6.col-xl-auto
 				+orderCard

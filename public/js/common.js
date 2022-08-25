@@ -588,6 +588,24 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
   }
 });
 
+	$('.sBotMenu__search--toggle button').on('click', function() {
+		$('.sBotMenu__wrap--search').addClass('active');
+		$('body').addClass('fixed');
+	});
+	$('.sBotMenu__cross').on('click', function() {
+		$('.sBotMenu__wrap--search').removeClass('active');
+		$('body').removeClass('fixed');
+	});
+
+	$('.sBotMenu__filter').on('click', function() {
+		$('.sBotMenu__wrap--filter').addClass('active');
+		$('body').addClass('fixed');
+	});
+	$('.sBotMenu__cross').on('click', function() {
+		$('.sBotMenu__wrap--filter').removeClass('active');
+		$('body').removeClass('fixed');
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

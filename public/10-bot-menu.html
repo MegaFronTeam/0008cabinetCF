@@ -175,6 +175,138 @@
 					<div class="container-fluid container-main">
 						<!-- start sBotMenu-->
 						<div class="sBotMenu section" id="sBotMenu">
+							<div class="sBotMenu__head-row row">
+								<div class="col-auto order-sm-1 order-lg-1 d-none d-sm-block">
+									<div class="sBotMenu__all-goods">
+										<div class="sBotMenu__input-wrap form-group">
+											<select class="sBotMenu__input form-select custom-select-js" name="select">
+												<option value="Все товары">Все товары</option>
+												<option value=" placeholder 1">placeholder 1</option>
+												<option value=" placeholder 2">placeholder 2</option>
+												<option value=" placeholder 3">placeholder 3</option>
+												<option value=" placeholder 4">placeholder 4</option>
+											</select>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+								</div>
+								<div class="col-auto order-3 order-sm-last order-lg-2">
+									<div class="sBotMenu__search d-none d-sm-block">
+										<div class="sBotMenu__input-wrap form-group"><input class="sBotMenu__input form-control" name="text" type="text" placeholder="Поиск по товарам"/>
+										</div>
+										<!-- +e.input-wrap-->
+										<button>
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="sBotMenu__search sBotMenu__search--toggle d-block d-sm-none">
+										<button>
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</button>
+										<div class="sBotMenu__wrap sBotMenu__wrap--search">
+											<div class="sBotMenu__cross">
+											</div>
+											<div class="h2">Поиск</div>
+											<div class="sBotMenu__inner-search">
+												<div class="sBotMenu__input-wrap form-group"><input class="sBotMenu__input form-control" name="text" type="text" placeholder="Поиск по товарам"/>
+												</div>
+												<!-- +e.input-wrap-->
+												<button>
+													<svg class="icon icon-search ">
+														<use xlink:href="img/svg/sprite.svg#search"></use>
+													</svg>
+												</button>
+											</div><a class="btn btn-orange" href="#">Показать товары</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-auto order-sm-2 order-lg-3 d-none d-sm-block">
+									<div class="sBotMenu__sort">
+										<div class="sBotMenu__input-wrap form-group">
+											<select class="sBotMenu__input form-select custom-select-js sort" name="select">
+												<option value="Показывать все">Показывать все</option>
+												<option value=" placeholder 1">placeholder 1</option>
+												<option value=" placeholder 2">placeholder 2</option>
+												<option value=" placeholder 3">placeholder 3</option>
+												<option value=" placeholder 4">placeholder 4</option>
+											</select>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+								</div>
+								<div class="col-auto order-sm-5 order-lg-4 d-none d-sm-block">
+									<div class="sBotMenu__show-switch">
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="switch" type="radio" checked="checked"/>
+											<svg class="icon icon-category ">
+												<use xlink:href="img/svg/sprite.svg#category"></use>
+											</svg>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="switch" type="radio"/>
+											<svg class="icon icon-list ">
+												<use xlink:href="img/svg/sprite.svg#list"></use>
+											</svg>
+										</label>
+									</div>
+								</div>
+								<div class="col-auto order-2 order-sm-3 order-lg-5">
+									<a class="sBotMenu__categories-btn btn" href="#">
+										<svg class="icon icon-shopping-bag ">
+											<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+										</svg><span class="d-none d-sm-inline-block">Категории меню</span><span class="d-inline-block d-sm-none">Категории</span>
+									</a>
+								</div>
+								<div class="col-auto order-1 order-sm-4 order-lg-6">
+									<a class="sBotMenu__more-btn btn btn-orange" href="#">
+										<svg class="icon icon-more ">
+											<use xlink:href="img/svg/sprite.svg#more"></use>
+										</svg><span class="d-none d-sm-inline-block">Добавить товар</span><span class="d-inline-block d-sm-none">Добавить</span>
+									</a>
+								</div>
+								<div class="col-auto order-last d-block d-sm-none">
+									<div class="sBotMenu__filter">
+										<svg class="icon icon-filter ">
+											<use xlink:href="img/svg/sprite.svg#filter"></use>
+										</svg>
+									</div>
+									<div class="sBotMenu__wrap sBotMenu__wrap--filter active">
+										<div class="sBotMenu__cross">
+										</div>
+										<div class="h2">Сортировать</div>
+										<div class="sBotMenu__inputs">
+											<div class="sBotMenu__headline">По категориям товаров
+											</div>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">Все товары</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">🍔 Бургеры</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">🥘 Основные блюда</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">🍳 Завтраки</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">🥓 Закуски</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">🥗 Салаты</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">🥐 Круассаны</span>
+											</label>
+										</div>
+										<div class="sBotMenu__inputs">
+											<div class="sBotMenu__headline">По типу товаров
+											</div>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="show" type="radio"/><span class="custom-input__text form-check-label">Показывать все</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="show" type="radio"/><span class="custom-input__text form-check-label">Только активные</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="show" type="radio"/><span class="custom-input__text form-check-label">Только неактивные</span>
+											</label>
+										</div><a class="btn btn-orange" href="#">Закрыть</a>
+									</div>
+								</div>
+							</div>
 							<div class="sBotMenu__row row">
 								<div class="col-sm-6 col-xl-auto">
 									<div class="order-card card">

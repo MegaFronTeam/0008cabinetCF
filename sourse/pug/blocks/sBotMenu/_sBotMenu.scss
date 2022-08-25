@@ -328,6 +328,39 @@
 			height: rem(284);
 		}
 	}
+	&--empty {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+	}
+	&__empty {
+		display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+		text-align: center;
+		img {
+			max-width: rem(60);
+			margin-bottom: rem(20);
+		}
+		.h1 {
+			margin-bottom: rem(15);
+			font-weight: 700;
+		}
+		p {
+			font-size: 14px;
+			margin-bottom: rem(30);
+		}
+	}
+	&__btn {
+		.icon {
+			stroke: currentColor;
+			stroke-width: 2px;
+			margin-right: 5px;
+			font-size: rem(24);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

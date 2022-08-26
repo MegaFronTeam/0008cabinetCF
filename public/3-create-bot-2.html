@@ -480,6 +480,15 @@
 			$('#btn-example-load-more-4').on('click', function(){   
 				table4.page.loadMore();
 			});
+			var table4 = $('#table-5').DataTable({
+			language: {
+				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				},
+				"lengthChange": false, 
+				info: false,
+				searching: false,
+				// ajax: 'https://gyrocode.github.io/files/jquery-datatables/arrays.json',
+			});
 		</script>
 	</body>
 </html>

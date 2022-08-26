@@ -40,12 +40,37 @@
 				border: none !important;
 			}
 			&--cabinet{
-				--bs-btn-border-color: #F6F6F6;
-				--bs-btn-bg: #F6F6F6;
-				--bs-btn-color: #C2C2C2;
-				--bs-btn-hover-border-color: #F6F6F6;
-				--bs-btn-hover-bg: #F6F6F6;
-				--bs-btn-hover-color: #C2C2C2;
+				padding: rem(5);
+				border: 1px solid #EBEBEB !important;
+				@include media-breakpoint-down(xl) {
+					border: 1px solid #EBEBEB !important;
+				}
+				&:hover {
+					background-color: #fff;
+					box-shadow: 0px 2px 10px rgba(25, 28, 31, 0.1) !important;
+					border: 1px solid #EBEBEB !important;
+				}
+				img {
+					max-width: rem(22);
+					margin-right: rem(10);
+					@include media-breakpoint-up(sm) {
+						max-width: rem(30);
+					}
+				}
+				.icon-chevron-down {
+					@include mt;
+					font-size: 12px;
+					color: $orange;
+					margin-right: rem(4);
+				}
+				&.active {
+					box-shadow: 0px 2px 10px rgba(25, 28, 31, 0.1) !important;
+					background-color: #fff;
+					border: 1px solid #EBEBEB !important;
+					.icon-chevron-down {
+						transform: rotate(180deg);
+					}
+				}
 			}
 			&--balance{
 				padding-left: rem(27);
@@ -56,6 +81,14 @@
 					align-items: center;
 					opacity: var(--opa2, 1);
 					@include mt;
+					@include media-breakpoint-down(sm) {
+						font-size: 12px;
+					}
+					.icon {
+						@include media-breakpoint-down(sm) {
+							font-size: 20px;
+						}
+					}
 					&--hover{
 						@include a-cent;
 						position: absolute;
@@ -95,6 +128,9 @@
 					}
 					color: $primary;
 					margin-right: rem(10);
+					@include media-breakpoint-down(sm) {
+						margin-right: 2px;
+					}
 				}
 			}
 
@@ -106,6 +142,11 @@
 				--bs-btn-active-color: #{$orange};
 				--bs-btn-active-bg: transparent;
 				--bs-btn-active-border-color: #C2C2C2;
+				.icon {
+					@include media-breakpoint-down(sm) {
+						font-size: 20px;
+					}
+				}
 			}
 			&--new{ 
 				--bs-btn-color: #{$body-color};
@@ -126,25 +167,103 @@
 				} 
 			}
 		 }
-		 &__title{
-				display: flex;
-				align-items: center;
-				font-weight: bold;
-				.badge{
-					font-weight: normal;
-					border-radius: 100px;
-					margin-left: rem(5px);
-					--bs-badge-color: #{$body-color};
-					--bs-badge-padding-y: 0.35em;
-					--bs-badge-padding-x: 0.35em;
-					text-align: center;
-					min-width: rem(20px);
-					display: inline-flex;
-					height: rem(20px);
-					align-items: center;
-					justify-content: center;
+		&__btn-wrap {
+			position: relative;
+		}
+		&__btn-toggle {
+			@include mt(0);
+			cursor: auto;
+			position: absolute;
+			right: 0;
+			border: 1px solid #EBEBEB;
+			box-shadow: 0px 5px 15px rgba(25, 28, 31, 0.1);
+			background-color: #fff;
+			border-radius: 8px;
+			padding: rem(20);
+			z-index: 201;
+			text-align: left;
+			opacity: 0;
+			pointer-events: none;
+			top: calc(100% + 10px);
+			width: calc(100vw - 26px);
+			@include media-breakpoint-up(sm) {
+				width: 230px;
+			}
+			&.active {
+				opacity: 1;
+				pointer-events: all;
+			}
+			a {
+				display: block;
+				font-size: 12px;
+			}
+		}
+		&__headline {
+			font-weight: 600;
+			font-size: 12px;
+			margin-bottom: rem(5);
+		}
+		&__rate {
+			font-size: 12px;
+			margin-bottom: rem(12);
+			.icon {
+				font-size: 12px;
+				margin-right: 5px;
+				color: $orange;
+				vertical-align: text-top;
+			}
+		}
+		&__tarif {
+			font-size: 12px;
+			margin-bottom: 10px;
+			p {
+				margin-bottom: 0;
+				&:not(:last-child) {
+					margin-bottom: 5px;
 				}
-		 }
+				&.timeout {
+					color: $gray-600;
+				}
+			}
+		}
+		&__goto {
+			color: $gray-900;
+			margin-bottom: 10px;
+			&:hover {
+				color: $gray-900;
+				opacity: .8;
+			}
+		}
+		&__logout {
+			color: $red;
+			&:hover {
+				color: $red;
+				opacity: .8;
+			}
+		}
+		&__title{
+			display: flex;
+			align-items: center;
+			font-weight: bold;
+			font-size: 12px;
+			@include media-breakpoint-up(sm) {
+				font-size: 14px;
+			}
+			.badge{
+				font-weight: normal;
+				border-radius: 100px;
+				margin-left: rem(5px);
+				--bs-badge-color: #{$body-color};
+				--bs-badge-padding-y: 0.35em;
+				--bs-badge-padding-x: 0.35em;
+				text-align: center;
+				min-width: rem(20px);
+				display: inline-flex;
+				height: rem(20px);
+				align-items: center;
+				justify-content: center;
+			}
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

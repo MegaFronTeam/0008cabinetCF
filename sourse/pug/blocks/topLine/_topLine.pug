@@ -1,4 +1,4 @@
-mixin topLine(t)
+mixin topLine(t, badge, avatar)
 	// start topLine
 	+b.topLine.section#topLine&attributes(attributes)
 		.container-fluid
@@ -12,7 +12,8 @@ mixin topLine(t)
 				else
 					.col-auto
 						+e.title= t
-							//- .badge.bg-light.d-none.d-sm-flex 1
+							if badge
+								.badge.bg-light.d-none.d-sm-flex 2344
 				.col.p-0
 				.col-auto
 					+e.btn--balance(href="#")
@@ -27,7 +28,20 @@ mixin topLine(t)
 				.col-auto
 					+e.btn--alarm.--new(href="#modal-alarm").link-modal-aside-js
 						+icon("alarm")
-				//- .col-auto.d-xl-none
-				//- 	+e.btn--cabinet(href="#")
-				//- 		+icon("avatar")
+				if avatar
+					.col-auto
+						+e.btn-wrap
+							+e.btn--cabinet
+								+img('img/svg/praga.png')
+								+icon("chevron-down")
+							+e.btn-toggle
+								+e.headline Прага | Доставка
+								+e.rate
+									+icon('stars')
+									| 4.7
+								+e.tarif
+									p Тариф “Standart”
+									p.timeout Средств хватит до 22.06.2022
+								+e.goto(href="#") Перейти в тарифы
+								+e.logout(href="#") Выйти
 	// end topLine

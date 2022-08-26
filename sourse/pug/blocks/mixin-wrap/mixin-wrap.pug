@@ -47,7 +47,7 @@ mixin page-head(t,...items)
 			h1= t
 
 
-mixin aside()
+mixin aside(second)
 	aside
 		+b.nav-chat
 			ul
@@ -62,34 +62,67 @@ mixin aside()
 				li: a(href="#").btn.btn-orange +
 		+b.nav-main-wrap
 			+b.nav-main
-				ul
-					mixin a(i,t)
-						li: +e.link(href="#")&attributes(attributes)
-							+e.icon-wrap: +icon(i)
-							+e.text= t
-								block
-					+a('shop',`Мои чат-боты`).active
-					+a('star',`Тарифы`)
-					+a('gift',`Акции`)
-						.badge.bg-success скоро
-					+a('currency-rub',`Кабинет партнера`)
-					+a('faqs',`Техподдержка`)
-					+a('document',`API`)
-						.badge.bg-success скоро
-					+a('newspaper',`Блог`)
-						.badge.bg-success скоро
-				+b.cabinet-btn(href="#")
-					+e.icon-wrap
-						+icon("avatar")
-					+e.text 
-						+e.name Валентин Ковалентин
-						+e.id #13405
-					+icon("setting")
+				if second
+					ul
+						mixin a2(i,t, dropDown, activeClasses)
+							li
+								+e.link(href="#")&attributes(attributes)
+									+e.icon-wrap
+										+icon(i)
+									+e.text= t
+									block
+								if dropDown
+									+e.ddgroup-wrap(class=`${activeClasses}`)
+										a(href="#").active Список товаров
+										a(href="#") Категории меню
+										a(href="#") Добавить товар
+									
+						+a2('wallet',`Заказы`, false, '')
+						+a2('training',`Клиенты`, false, '')
+						+a2('pizza', 'Меню товаров', true, 'active').--js.active
+							+icon('chevron-down')
+						+a2('growth',`Статистика`, false, '')
+						+a2('tg', 'Рассылки', true, '').--js
+							+icon('chevron-down')
+						+a2('setting', 'Настройки', true, '').--js
+							+icon('chevron-down')
+						+a2('rocket',`Продвижение`, false, '')
+					+b.cabinet-btn(href="#")
+						+e.icon-wrap
+							+icon("avatar")
+						+e.text 
+							+e.name Валентин Ковалентин
+							+e.id #13405
+						+icon("setting")
+				else
+					ul
+						mixin a(i,t)
+							li: +e.link(href="#")&attributes(attributes)
+								+e.icon-wrap: +icon(i)
+								+e.text= t
+									block
+						+a('shop',`Мои чат-боты`).active
+						+a('star',`Тарифы`)
+						+a('gift',`Акции`)
+							.badge.bg-success скоро
+						+a('currency-rub',`Кабинет партнера`)
+						+a('faqs',`Техподдержка`)
+						+a('document',`API`)
+							.badge.bg-success скоро
+						+a('newspaper',`Блог`)
+							.badge.bg-success скоро
+					+b.cabinet-btn(href="#")
+						+e.icon-wrap
+							+icon("avatar")
+						+e.text 
+							+e.name Валентин Ковалентин
+							+e.id #13405
+						+icon("setting")
 
-mixin main(t='Мои чат-боты')
+mixin main(t='Мои чат-боты', badge, avatar)
 	.main-center-wrap
 		main
-			+topLine(t)
+			+topLine(t, badge, avatar)
 			.container-fluid.container-main
 				block
 			+footer()

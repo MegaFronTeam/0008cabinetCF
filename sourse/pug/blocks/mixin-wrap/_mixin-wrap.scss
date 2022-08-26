@@ -119,6 +119,7 @@
 	border-right: 1px solid #EBEBEB;
 	overflow-y: auto;
 	font-size: 14px;
+	background-color: #fff;
 	li{
 		margin: rem(15) rem(15);
 		list-style: none;
@@ -208,12 +209,25 @@
 	@include media-breakpoint-up(xxl) {
 		position: relative;
 	}
+	@include media-breakpoint-only(xl) {
+		.icon-chevron-down {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
 	@include media-breakpoint-up(xl){
 
 		position: absolute;
 		&:hover{
 			--tr:0;
-			--link-small: var(--link-w)
+			--link-small: var(--link-w);
+			.icon-chevron-down {
+				opacity: 1;
+				pointer-events: all;
+			}
+			.nav-main__ddgroup-wrap {
+				width: auto;
+			}
 		}
 	}
 	position: relative;
@@ -258,6 +272,23 @@
 			background: #F6F6F6;
 			--color: #{$orange};
 		}
+		&--js {
+			position: relative;
+			.icon-chevron-down {
+				@include mt;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				font-size: rem(12);
+				right: 10px;
+				color: $orange;
+			}
+			&.active {
+				.icon-chevron-down {
+					transform: translateY(-50%) rotate(-180deg);
+				}
+			}
+		}
 	}
 	&___icon-wrap{
 		text-align: center;
@@ -285,6 +316,32 @@
 	}
 	ul{
 		flex-grow: 1;
+	}
+	&__ddgroup-wrap {
+		@include mt;
+		display: none;
+		padding: rem(20) rem(0);
+		margin-bottom: rem(15);
+		border-bottom: 1px solid #EBEBEB;
+		@include media-breakpoint-only(xl) {
+			width: 40px;
+		}
+		&.active {
+			display: block;
+		}
+		a {
+			display: block;
+			color: $gray-900;
+			@include media-breakpoint-only(xl) {
+				white-space: nowrap;
+			}
+			&:not(:last-child) {
+				margin-bottom: rem(10);
+			}
+			&:hover, &.active {
+				color: $orange;
+			}
+		}
 	}
 }
 

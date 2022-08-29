@@ -618,23 +618,12 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 			}
 		})
 	});
-	let dropDown = document.querySelectorAll('.nav-main__ddgroup-wrap');
-	let dropDownBtns = document.querySelectorAll('.nav-main__link--js');
-	console.log(dropDownBtns);
-	for (let dropDownBtn of dropDownBtns) {
-		dropDownBtn.addEventListener('click', function() {
-			for (let dropDownBtn of dropDownBtns) {
-				dropDownBtn.classList.remove('active');
-			}
-			for (let item of dropDown) {
-				if (item.hasAttributes('active')) {
-					item.classList.remove('active');
-				}
-			}
-			this.classList.add('active');
-			if(dropDownBtn.nextElementSibling != null) {
-				dropDownBtn.nextElementSibling.classList.add('active');
-			}
+	let dropDown = $('.nav-main__ddgroup-wrap');
+	let dropDownBtns = $('.nav-main__link--js');
+	for (let i = 0; i< dropDownBtns.length; i++) {
+		dropDownBtns[i].addEventListener('click', function() {
+			$(this).toggleClass('active');
+			$(dropDown[i]).slideToggle('active');
 		});
 	}
 };

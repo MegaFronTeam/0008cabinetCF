@@ -9,7 +9,97 @@
 		color: $orange;
 	}
 }
+.drug-wrap-block{
+	@include media-breakpoint-up(lg) {
+	
+		--sp-x: var(--cabinet-x);
+	}
+	--sp-x: calc(var(--cabinet-x) + 25px);
+	margin-left: calc(var(--sp-x) * -1);
+	margin-right: calc(var(--sp-x) * -1);
+}
 .form-wrap{
+	&__btns{
+		display: flex;
+		@include roww(5px, m);
+
+	}
+	&__btn-circle{
+		@extend .btn, .btn-gray;
+		padding: 0;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		--bs-btn-bg: #F6F6F6;
+		--bs-btn-color: #8C8D8F;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&--down{
+			transform: rotateX(180deg);
+		}
+		.icon{
+			font-size: 12px;
+		}
+	}
+	&__drug-inner{
+		
+		padding-left: var(--sp-x);
+		padding-right: var(--sp-x);
+		position: relative;
+		z-index: 2;
+		.form-wrap__group::before{
+			content: '';
+			z-index: -1;
+			background-color: #fff;
+			box-shadow: 0px 0px 15px rgba(25, 28, 31, 0.1);
+			opacity: var(--op, 0);
+			@include mt;
+			width: calc(100%  );
+			height: calc(100% + #{rem(30)});
+			top: rem(-15);
+			left: 0;
+			position: absolute;
+		}
+		.form-wrap__btn-drug:hover ~ .form-wrap__group{
+			--op:1;
+		}
+	}
+	&__btn-drug,
+	&__btn-delete{
+		@include media-breakpoint-up(sm){
+			
+			padding: calc(#{$input-padding-y} * .8) rem(10);
+			position: absolute;
+			top: rem(36);
+		}
+		position: relative;
+		.icon{
+			@include mt;
+			font-size: rem(20);
+		}
+		&:hover{
+			.icon{
+				opacity: 0.8;
+			}
+		}
+	}
+	&__btn-delete{
+		right: 0;
+	}
+	&__btn-drug{
+		// right: 100%;
+		left: 0;
+		cursor: pointer;
+		cursor: move;
+	cursor: -webkit-grabbing;
+		@include media-breakpoint-down(sm){
+			display: none;
+		}
+	}
+	&__btn-delete{
+		cursor: pointer; 
+	}
  	&__input-wrap{
 			// @extend .form-group;
 			margin-bottom: rem(20);
@@ -43,6 +133,9 @@
 		font-weight: bold;
 		font-size: rem(14);
 		margin-bottom: rem(15);
+		.row{
+			align-items: center;
+		}
 	}
 	&__group{
 		margin-bottom: rem(20);

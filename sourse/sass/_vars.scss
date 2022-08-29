@@ -28,7 +28,7 @@ $gray-100: #F6F6F6;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
+$gray-500: #EBEBEB ;
 $gray-600: #8C8D8F;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
@@ -328,6 +328,7 @@ $dark:          $gray-900 !default;
 // scss-docs-start theme-colors-map
 $theme-colors: (
   "primary":    $primary,
+  "gray":    $gray-500,
   "secondary":  $secondary,
   "success":    $success,
   "orange":    $orange,
@@ -1317,7 +1318,7 @@ $tooltip-bg:                        $body-color !default;
 $tooltip-border-radius:             $border-radius !default;
 $tooltip-opacity:                   .8 !default;
 $tooltip-padding-y:                 $spacer * .25 !default;
-$tooltip-padding-x:                 $spacer * .5 !default;
+$tooltip-padding-x:                 $spacer !default;
 $tooltip-margin:                    null !default; // TODO: remove this in v6
 
 $tooltip-arrow-width:               .8rem !default;

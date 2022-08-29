@@ -1,0 +1,67 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= '10.4. Bot_Menu items'
+	title= title
+block pagecontent
+	+b.cabinet-block.section
+		+e.head.row
+			.col-sm-auto.h1.strong.mb-0 Категории меню
+			.col.p-0.m-0
+			.col-auto.m-0
+				+b.link-close(href="#")
+					+icon("close")
+			p.small Используйте эмоджи для каждого раздела, чтобы они выглядели интереснее.
+		+e.body
+			+form-wrap
+				.drug-wrap-block
+					mixin  dr-item(x, v, v2)
+						+e.drug-inner
+							+e.btn-drug.text-secondary.my-handle
+								+icon("dots") 
+							+e.group
+								+e.group-title
+									.row.gx-3
+										.col= `Категория ${x}`
+										.col-auto.d-sm-none
+											+e.btns
+												+e.btn-circle--top
+													+icon("chevron-up")
+												+e.btn-circle--down
+													+icon("chevron-up")
+										.col-auto
+											+e.btn-delete(data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Удалить").text-danger
+												+icon("delete" )
+								+input('Введите название раздела меню')(value= v)
+								+input('Небольшое описание категории (необязательно)')(value= v2)
+					+dr-item('1','🍕 Пиццы','Пиццы разных размеров и на любой вкус')
+					+dr-item('2','🍣 Роллы')
+					+dr-item('3','🥗 Салаты')
+					+dr-item('4')
+				
+				button.btn-add.btn.btn-outline-gray(type="button")
+					+icon("add-more")
+					| Добавить
+				br 
+				br 
+				br 
+				button.btn.btn-orange.btn-200.btn-mob-100.btn-save-js(type="button") Сохранить
+
+		+save-alert()

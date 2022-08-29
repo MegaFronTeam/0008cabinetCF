@@ -43,14 +43,15 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^4.0.31",
-    "bootstrap": "^5.2.0",
     "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.0",
     "choices.js": "^10.1.0",
     "datatables.net": "^1.12.1",
     "datatables.net-dt": "^1.12.1",
     "inputmask": "^5.0.7",
     "jquery": "^3.6.0",
     "jquery-datatables-pageloadmore": "^1.0.0",
+    "sortablejs": "^1.15.0",
     "swiper": "^8.3.2"
   }
 }

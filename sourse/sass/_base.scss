@@ -532,6 +532,20 @@ iframe {
 	--bs-btn-hover-bg: #f8f8f8; 
 	--bs-btn-hover-border-color: #f8f8f8; 
 }
+.btn-outline-gray{
+	--bs-btn-color: #{$body-color}; 
+	--bs-btn-hover-bg: #f8f8f8; 
+	--bs-btn-hover-border-color: #f8f8f8; 
+}
+.btn-add{
+	font-weight: normal;
+	padding-left: rem(20);
+	padding-right: rem(20);
+	.icon{
+		color: $orange;
+		margin-right: rem(10);
+	}
+}
 .btn-primary{
 
 }
@@ -755,13 +769,13 @@ main{
 	margin-right: auto;
 	@include media-breakpoint-up(xxl) {
 		
-		padding-left: rem(60);
-		padding-right: rem(60);
+		// padding-left: rem(60);
+		// padding-right: rem(60);
 	}
 	@include media-breakpoint-up(lg){
 		
-		padding-left: 40px;
-		padding-right: 40px;
+		// padding-left: 40px;
+		// padding-right: 40px;
 		min-height: 100vh;
 		border-left: 1px solid #EBEBEB;
 		// max-width: rem(640 + 120);
@@ -770,8 +784,8 @@ main{
 	}
 	width: 100%;
 	max-width: 490px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: var(--cabinet-x);
+	padding-right: var(--cabinet-x);
 	position: relative;
 	&__head{
 		margin-bottom: rem(40);
@@ -1089,7 +1103,7 @@ cursor:no-drop;
  
 
 .tooltip{
-	width: 200px;
+	// width: 200px;
 	// @include mt;
 }
 
@@ -1100,3 +1114,7 @@ cursor:no-drop;
     top: 0 
   }
   }
+
+	.mt-20{
+		margin-top: 20px;
+	}

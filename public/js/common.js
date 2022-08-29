@@ -637,6 +637,14 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 			}
 		});
 	}
+
+	var el = document.querySelector('.drug-wrap-block');
+	var sortable = new Sortable(el, {
+		handle: ".my-handle",
+		direction: 'vertical'
+	})
+
+	
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -1272,8 +1272,11 @@
 		<script src="libs/choices.js/public/assets/scripts/choices.min.js"> </script>
 		<script src="libs/@popperjs/core/umd/popper.min.js"> </script>
 		<script src="libs/bootstrap/js/bootstrap.min.js"> </script>
+		<script src="libs/sortablejs/Sortable.min.js"> </script>
 		<script src="js/common.js"></script>
 		<script>
+			try {
+			
 			var table = $('#table-1').DataTable({
 			language: {
 				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
@@ -1289,6 +1292,9 @@
 			$('#btn-example-load-more-1').on('click', function(){   
 				table.page.loadMore();
 			});
+			} catch (error) { }
+			try {
+				
 			var table2 = $('#table-2').DataTable({
 			language: {
 				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
@@ -1304,6 +1310,9 @@
 			$('#btn-example-load-more-2').on('click', function(){   
 				table2.page.loadMore();
 			});
+			} catch (error) { }
+			try {
+			
 			var table3 = $('#table-3').DataTable({
 			language: {
 				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
@@ -1319,6 +1328,9 @@
 			$('#btn-example-load-more-3').on('click', function(){   
 				table3.page.loadMore();
 			});
+			} catch (error) { 	}
+			try {
+			
 			var table4 = $('#table-4').DataTable({
 			language: {
 				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
@@ -1335,7 +1347,10 @@
 			$('#btn-example-load-more-4').on('click', function(){   
 				table4.page.loadMore();
 			});
-			var table4 = $('#table-5').DataTable({
+			} catch (error) { }
+			try {
+			
+			var table5 = $('#table-5').DataTable({
 			language: {
 				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
 				},
@@ -1344,6 +1359,7 @@
 				searching: false,
 				// ajax: 'https://gyrocode.github.io/files/jquery-datatables/arrays.json',
 			});
+			} catch (error) { 	}
 		</script>
 	</body>
 </html>

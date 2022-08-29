@@ -47,7 +47,12 @@
 		padding-left: var(--sp-x);
 		padding-right: var(--sp-x);
 		position: relative;
+		padding-top: rem(20);
+		padding-bottom: rem(20);
 		z-index: 2;
+		.form-wrap__group{
+			margin-bottom: 0;
+		}
 		.form-wrap__group::before{
 			content: '';
 			z-index: -1;
@@ -56,8 +61,8 @@
 			opacity: var(--op, 0);
 			@include mt;
 			width: calc(100%  );
-			height: calc(100% + #{rem(30)});
-			top: rem(-15);
+			height: calc(100%);
+			top: 0;
 			left: 0;
 			position: absolute;
 		}
@@ -71,7 +76,7 @@
 			
 			padding: calc(#{$input-padding-y} * .8) rem(10);
 			position: absolute;
-			top: rem(36);
+			top: rem(36 + 20);
 		}
 		position: relative;
 		.icon{
@@ -552,4 +557,21 @@ input::-webkit-inner-spin-button {
 
 .choices[data-type*=select-one] .choices__inner{
 	min-height: rem(40px);
+}
+
+.form-wrap__drug-inner{
+	&:nth-child(1){
+		.form-wrap__btn-circle--top{
+			pointer-events: none;
+			opacity: 0.5;
+		}
+	}
+	
+	&:last-child{
+		.form-wrap__btn-circle--down{
+			pointer-events: none;
+			opacity: 0.4;
+		}
+	}
+
 }

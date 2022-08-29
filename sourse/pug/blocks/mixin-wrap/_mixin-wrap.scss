@@ -318,7 +318,7 @@
 		flex-grow: 1;
 	}
 	&__ddgroup-wrap {
-		@include mt;
+		// @include mt;
 		display: none;
 		padding: rem(20) rem(0);
 		margin-bottom: rem(15);
@@ -705,8 +705,9 @@
 	label {
 		position: relative;
 		z-index: 2;
+		cursor: pointer;
 		input {
-			
+			cursor: pointer;
 			height: rem(16);
 			background-color: #C2C2C2;
 			border-color: #C2C2C2;

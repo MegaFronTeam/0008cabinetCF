@@ -618,31 +618,68 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 			}
 		})
 	});
-	let dropDown = document.querySelectorAll('.nav-main__ddgroup-wrap');
-	let dropDownBtns = document.querySelectorAll('.nav-main__link--js');
-	console.log(dropDownBtns);
-	for (let dropDownBtn of dropDownBtns) {
-		dropDownBtn.addEventListener('click', function() {
-			for (let dropDownBtn of dropDownBtns) {
-				dropDownBtn.classList.remove('active');
-			}
-			for (let item of dropDown) {
-				if (item.hasAttributes('active')) {
-					item.classList.remove('active');
-				}
-			}
-			this.classList.add('active');
-			if(dropDownBtn.nextElementSibling != null) {
-				dropDownBtn.nextElementSibling.classList.add('active');
-			}
+	let dropDown = $('.nav-main__ddgroup-wrap');
+	let dropDownBtns = $('.nav-main__link--js');
+	for (let i = 0; i< dropDownBtns.length; i++) {
+		dropDownBtns[i].addEventListener('click', function() {
+			$(this).toggleClass('active');
+			$(dropDown[i]).slideToggle('active');
 		});
 	}
 
-	var el = document.querySelector('.drug-wrap-block');
-	var sortable = new Sortable(el, {
-		handle: ".my-handle",
-		direction: 'vertical'
-	})
+	let drugWrap = document.querySelector(".drug-wrap-block");
+
+	if(drugWrap) {
+
+		function getListIndex(){
+			let itemsTitle = document.querySelectorAll(".form-wrap__col-title" );
+			let index = 0
+			for (const itemTitle of itemsTitle) {
+				itemTitle.innerHTML = `Категория ${++index}`
+			}
+		}
+		var sortable = new Sortable(drugWrap, {
+			handle: ".my-handle",
+			direction: 'vertical',
+			ghostClass: 'ghost',
+			onEnd: function (/**Event*/evt) {
+				var itemEl = evt.item;  // dragged HTMLElement
+				getListIndex(); 
+			},
+			
+		})
+		drugWrap.addEventListener("click", function(event){
+			let btnUp = event.target.closest(".form-wrap__btn-circle--top") 
+			let btnUDown = event.target.closest(".form-wrap__btn-circle--down") 
+			
+			if(btnUDown) {
+				let parent = btnUDown.closest(".form-wrap__drug-inner");
+				let clone = document.importNode(parent,true); 
+				let nextEl = parent.nextElementSibling;
+				if (!nextEl) return;
+				parent.remove();
+				nextEl.after( clone);
+				getListIndex();
+			}
+			
+			else if(btnUp) {
+				// console.log(btnUp);
+				let parent = btnUp.closest(".form-wrap__drug-inner");
+				let clone = document.importNode(parent,true); 
+				let prevEl = parent.previousElementSibling;
+				if (!prevEl) return; 
+				parent.remove();
+				prevEl.before( clone);
+				getListIndex();
+			}
+
+
+		})
+	}
+
+
+
+
 
 	
 };

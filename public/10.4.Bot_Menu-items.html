@@ -41,7 +41,8 @@
 										<div class="form-wrap__group">
 											<div class="form-wrap__group-title">
 												<div class="row gx-3">
-													<div class="col">Категория 1</div>
+													<div class="form-wrap__col-title col">Категория 1
+													</div>
 													<div class="col-auto d-sm-none">
 														<div class="form-wrap__btns">
 															<div class="form-wrap__btn-circle form-wrap__btn-circle--top">
@@ -82,7 +83,8 @@
 										<div class="form-wrap__group">
 											<div class="form-wrap__group-title">
 												<div class="row gx-3">
-													<div class="col">Категория 2</div>
+													<div class="form-wrap__col-title col">Категория 2
+													</div>
 													<div class="col-auto d-sm-none">
 														<div class="form-wrap__btns">
 															<div class="form-wrap__btn-circle form-wrap__btn-circle--top">
@@ -123,7 +125,8 @@
 										<div class="form-wrap__group">
 											<div class="form-wrap__group-title">
 												<div class="row gx-3">
-													<div class="col">Категория 3</div>
+													<div class="form-wrap__col-title col">Категория 3
+													</div>
 													<div class="col-auto d-sm-none">
 														<div class="form-wrap__btns">
 															<div class="form-wrap__btn-circle form-wrap__btn-circle--top">
@@ -164,7 +167,8 @@
 										<div class="form-wrap__group">
 											<div class="form-wrap__group-title">
 												<div class="row gx-3">
-													<div class="col">Категория 4</div>
+													<div class="form-wrap__col-title col">Категория 4
+													</div>
 													<div class="col-auto d-sm-none">
 														<div class="form-wrap__btns">
 															<div class="form-wrap__btn-circle form-wrap__btn-circle--top">
@@ -197,14 +201,14 @@
 										</div>
 									</div>
 							</div>
-							<button class="btn-add btn btn-outline-gray" type="button">
-								<svg class="icon icon-add-more ">
-									<use xlink:href="img/svg/sprite.svg#add-more"></use>
-								</svg>Добавить
-							</button><br><br><br>
-							<button class="btn btn-orange btn-200 btn-mob-100 btn-save-js" type="button">Сохранить</button>
 						</form>
 					</div>
+					<button class="btn-add btn btn-outline-gray" type="button">
+						<svg class="icon icon-add-more ">
+							<use xlink:href="img/svg/sprite.svg#add-more"></use>
+						</svg>Добавить
+					</button><br><br><br>
+					<button class="btn btn-orange btn-200 btn-mob-100 btn-save-js" type="button">Сохранить</button>
 				</div>
 				<div class="save-alert">
 					<svg class="icon icon-square_checked ">
@@ -630,10 +634,9 @@
 			});
 			$('#btn-example-load-more-4').on('click', function(){   
 				table4.page.loadMore();
-			});
+			}); 
 			} catch (error) { }
-			try {
-			
+			try { 
 			var table5 = $('#table-5').DataTable({
 			language: {
 				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
@@ -643,6 +646,9 @@
 				searching: false,
 				// ajax: 'https://gyrocode.github.io/files/jquery-datatables/arrays.json',
 			});
+			$('#btn-example-load-more-5').on('click', function(){   
+				table5.page.loadMore();
+			}); 
 			} catch (error) { 	}
 		</script>
 	</body>

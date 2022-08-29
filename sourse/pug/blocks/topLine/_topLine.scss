@@ -169,6 +169,7 @@
 		 }
 		&__btn-wrap {
 			position: relative;
+			z-index: 210;
 		}
 		&__btn-toggle {
 			@include mt(0);

@@ -39,7 +39,8 @@ block pagecontent
 							+e.group
 								+e.group-title
 									.row.gx-3
-										.col= `Категория ${x}`
+										+e.col-title.col= `Категория ${x}`
+										//- .col-auto
 										.col-auto.d-sm-none
 											+e.btns
 												+e.btn-circle--top
@@ -56,12 +57,12 @@ block pagecontent
 					+dr-item('3','🥗 Салаты')
 					+dr-item('4')
 				
-				button.btn-add.btn.btn-outline-gray(type="button")
-					+icon("add-more")
-					| Добавить
-				br 
-				br 
-				br 
-				button.btn.btn-orange.btn-200.btn-mob-100.btn-save-js(type="button") Сохранить
+			button.btn-add.btn.btn-outline-gray(type="button")
+				+icon("add-more")
+				| Добавить
+			br 
+			br 
+			br 
+			button.btn.btn-orange.btn-200.btn-mob-100.btn-save-js(type="button") Сохранить
 
 		+save-alert()

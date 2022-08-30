@@ -43,9 +43,17 @@
 		}
 	}
 	&__drug-inner{
+		@include media-breakpoint-up(xxl){
+
+			--m-x: 15px;
+			padding-left: calc(var(--sp-x) - var(--m-x, 0));
+			padding-right: calc(var(--sp-x) - var(--m-x, 0));
+		} 
+		padding-left: calc(var(--sp-x) );
+		padding-right: calc(var(--sp-x) );
+		margin-left: var(--m-x, 0);
+		margin-right: var(--m-x, 0);
 		
-		padding-left: var(--sp-x);
-		padding-right: var(--sp-x);
 		position: relative;
 		padding-top: rem(20);
 		padding-bottom: rem(20);
@@ -567,7 +575,7 @@ input::-webkit-inner-spin-button {
 		}
 	}
 	
-	&:last-child{
+	&:last-of-type{
 		.form-wrap__btn-circle--down{
 			pointer-events: none;
 			opacity: 0.4;

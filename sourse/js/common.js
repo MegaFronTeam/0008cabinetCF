@@ -654,7 +654,7 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 			
 			if(btnUDown) {
 				let parent = btnUDown.closest(".form-wrap__drug-inner");
-				let clone = document.importNode(parent,true); 
+				let clone = parent.cloneNode(true); 
 				let nextEl = parent.nextElementSibling;
 				if (!nextEl) return;
 				parent.remove();
@@ -662,10 +662,10 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 				getListIndex();
 			}
 			
-			else if(btnUp) {
+			 if(btnUp) {
 				// console.log(btnUp);
 				let parent = btnUp.closest(".form-wrap__drug-inner");
-				let clone = document.importNode(parent,true); 
+				let clone = parent.cloneNode(true); 
 				let prevEl = parent.previousElementSibling;
 				if (!prevEl) return; 
 				parent.remove();

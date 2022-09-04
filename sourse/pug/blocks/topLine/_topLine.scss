@@ -7,7 +7,7 @@
 
 			font-size: 14px;
 		}
-		font-size: rem(14px);
+		font-size: 14px;
 		--sPB: #{rem(15)};
 		margin-bottom: rem(20); 
 		.row{
@@ -27,7 +27,8 @@
 			justify-content: center;
 			align-items: center;
 			--bs-btn-color: #{$body-color};
-			font-size: rem(14);
+			--bs-btn-border-color: #{$gray-500};
+			font-size: 14px;
 			@include media-breakpoint-down(xl) {
 				&--alarm,
 				&--balance{
@@ -82,7 +83,7 @@
 					opacity: var(--opa2, 1);
 					@include mt;
 					@include media-breakpoint-down(sm) {
-						font-size: 12px;
+						font-size: 14px;
 					}
 					.icon {
 						@include media-breakpoint-down(sm) {
@@ -246,7 +247,7 @@
 			display: flex;
 			align-items: center;
 			font-weight: bold;
-			font-size: 12px;
+			font-size: 14px;
 			@include media-breakpoint-up(sm) {
 				font-size: 14px;
 			}

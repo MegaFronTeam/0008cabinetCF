@@ -20,6 +20,9 @@
 	}
 	&__slider{
 		overflow: visible;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(40);
+		}
 	}
 	&__slide{
 		@include media-breakpoint-down(sm) {
@@ -39,6 +42,11 @@
 	.swiper-pagination{
 		position: static;
 		margin-top: .5rem;
+		margin-bottom: rem(10);
+		&-bullet {
+			width: 10px;
+			height: 10px;
+		}
 	}
 	.swiper-wrapper{
 		@include media-breakpoint-down(sm) {
@@ -270,6 +278,12 @@
 			top: em(6);
 			position: absolute;
 			left: 0;
+		}
+	}
+	.btn-delete-row {
+		@include mt;
+		&:hover {
+			opacity: .70;
 		}
 	}
 }

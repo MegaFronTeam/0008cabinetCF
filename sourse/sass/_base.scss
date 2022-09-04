@@ -806,7 +806,16 @@ main{
 			}
 		}
 	}
-
+	&__body {
+		table {
+			th, td {
+				font-size: rem(12);
+				@include media-breakpoint-up(md) {
+					font-size: rem(14);
+				}
+			}
+		}
+	}
 	ol{
 		counter-reset: num;
 		padding-left: 0;

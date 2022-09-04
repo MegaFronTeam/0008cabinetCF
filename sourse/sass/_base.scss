@@ -1125,4 +1125,38 @@ cursor:no-drop;
 		background: $primary;
 	}
 	
-	
+	[type="checkbox"] {
+		background-size: 14px;
+		position: relative;
+		// top: em(-1);
+	}
+	.custom-input__text{
+		font-size: $small;
+	}
+
+
+	.dop-options{
+		border-bottom: 1px dashed #EBEBEB;
+		padding-bottom: rem(20);
+		margin-bottom: rem(25);
+	}
+
+	.tabs__caption--variant{
+		display: flex;
+		margin-bottom: 20px;
+		.tabs__btn{
+			cursor: pointer;
+			flex-grow: 1;
+			font-weight: normal;
+			&.active{
+				--bs-btn-hover-border-color: #EBEBEB;
+				--bs-btn-active-border-color: #EBEBEB;
+			}
+		}
+	}
+
+	.form-control.is-invalid{
+		&:focus{
+			box-shadow: 0px 5px 15px rgba(25, 28, 31, 0.1);
+		}
+	}

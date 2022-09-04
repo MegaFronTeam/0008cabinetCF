@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>10.4. Bot_Menu items</title>
+		<title>10.5. Bot_Menu items</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0">
@@ -17,7 +17,7 @@
 		<div class="main-wrapper">
 			<div class="cabinet-block section">
 				<div class="cabinet-block__head row">
-					<div class="col-sm-auto h1 strong mb-0">Категории меню</div>
+					<div class="col-sm-auto h1 strong mb-0">Добавление товара</div>
 					<div class="col p-0 m-0"></div>
 					<div class="col-auto m-0">
 						<a class="link-close" href="#">
@@ -26,37 +26,94 @@
 							</svg>
 						</a>
 					</div>
-					<p class="small">Используйте эмоджи для каждого раздела, чтобы они выглядели интереснее.</p>
 				</div>
 				<div class="cabinet-block__body">
 					<div class="form-wrap">
 						<form>
-							<div class="drug-wrap-block">
-									<div class="form-wrap__drug-inner">
-										<div class="form-wrap__btn-drug text-secondary my-handle">
-											<svg class="icon icon-dots ">
-												<use xlink:href="img/svg/sprite.svg#dots"></use>
-											</svg>
+							<div class="form-wrap__group">
+								<div class="add-photo-wrap">
+									<label class="add-photo preview-image-instruction">
+										<input type="file" name="" onchange="loadFile(event)"><span class="add-photo__inner"><img class="mb-2" src="img/hamburger_1f354 1.png" alt="" loading="lazy"/>
+										<div class="strong mb-1">Изображение товара</div><span class="add-photo__text">Для корректного отображения фотографии товара рекомендуем использовать пропорции 1:1, размер не менее 600х600 px. Изображение в формате jpeg и png весом не более 5 мб.</span><span class="add-photo__text text-danger"> Это изображение не подходит. Загрузите новое изображение.</span><span class="add-photo__btn">Выбрать файл</span><img class="img-preview" src="#" alt=""></span>
+									</label>
+									<div class="add-photo-wrap__btn-delete d-none">
+										<svg class="icon icon-delete ">
+											<use xlink:href="img/svg/sprite.svg#delete"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="form-wrap__group">
+								<div class="form-wrap__group-title">Категория меню 
+								</div>
+								<div class="form-wrap__input-wrap form-group">
+									<select class="form-wrap__input form-select custom-select-js" name="select">
+										<option value="🍕 Пиццы">🍕 Пиццы</option>
+										<option value=" placeholder 1">placeholder 1</option>
+										<option value=" placeholder 2">placeholder 2</option>
+										<option value=" placeholder 3">placeholder 3</option>
+										<option value=" placeholder 4">placeholder 4</option>
+									</select>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="form-wrap__group">
+								<div class="form-wrap__group-title"> Наименование
+								</div>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите наименование товара"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="form-wrap__group">
+								<label class="form-check form-switch form-switch--base">
+									<input class="form-check-input" name="model" type="checkbox" checked role="switch">
+									<div class="form-check-label">Видимость товара</div>
+								</label>
+							</div>
+							<div class="form-wrap__group">
+								<div class="form-wrap__group-title">Описание 
+								</div>
+								<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Состав: рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари. Вес: 270 гр."></textarea>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="tabs">
+								<div class="form-wrap__group">
+									<div class="form-wrap__group-title"> Тип товара
+									</div>
+									<div class="tabs__caption tabs__caption--variant btn-group">
+										<div class="tabs__btn btn btn-outline-gray active">Простой</div>
+										<div class="tabs__btn btn btn-outline-gray">Вариативный</div>
+									</div>
+									<div class="tabs__wrap">
+										<div class="tabs__content">
+											<div class="form-wrap__group">
+												<div class="form-wrap__group-title"> Цена
+												</div>
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите цену"/><span class="text-after"> ₽</span>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
 										</div>
-										<div class="form-wrap__group">
-											<div class="form-wrap__group-title">
-												<div class="row gx-3">
-													<div class="form-wrap__col-title col">Категория 1
-													</div>
-													<div class="col-auto d-sm-none">
-														<div class="form-wrap__btns">
-															<div class="form-wrap__btn-circle form-wrap__btn-circle--top">
-																<svg class="icon icon-chevron-up ">
-																	<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
-																</svg>
-															</div>
-															<div class="form-wrap__btn-circle form-wrap__btn-circle--down">
-																<svg class="icon icon-chevron-up ">
-																	<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
-																</svg>
-															</div>
-														</div>
-													</div>
+										<div class="tabs__content active">
+											<p class="small">Вариант — это товар с определенным набором свойств. Например: пирог маленький с песочным тестом. Свойства товара: размер, тесто. Каждый вариант может иметь отдельную цену.  <a class="tdu" href="#">Как работают вариации товара</a>.</p>
+											<div class="dop-options">
+												<div class="row mb-3">
+													<div class="col small">Свойство 1</div>
+													<div class="col-auto"><a class="text-secondary small" href="#">Удалить</a></div>
+												</div>
+												<div class="mb-1 small">Наименование свойства</div>
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Например, Размер"/> 
+												</div>
+												<!-- +e.input-wrap-->
+												<div class="form-wrap__head mb-1 row">
+													<div class="small col">Значение 1</div>
+												</div>
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Например, Маленькая"/> 
+												</div>
+												<!-- +e.input-wrap-->
+												<div class="form-wrap__head mb-1 row">
+													<div class="small col">Значение 2</div>
 													<div class="col-auto">
 														<div class="form-wrap__btn-delete text-danger" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
 															<svg class="icon icon-delete ">
@@ -65,40 +122,11 @@
 														</div>
 													</div>
 												</div>
-											</div>
-											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите название раздела меню" value="🍕 Пиццы"/>
-											</div>
-											<!-- +e.input-wrap-->
-											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Небольшое описание категории (необязательно)" value="Пиццы разных размеров и на любой вкус"/>
-											</div>
-											<!-- +e.input-wrap-->
-										</div>
-									</div>
-									<div class="form-wrap__drug-inner">
-										<div class="form-wrap__btn-drug text-secondary my-handle">
-											<svg class="icon icon-dots ">
-												<use xlink:href="img/svg/sprite.svg#dots"></use>
-											</svg>
-										</div>
-										<div class="form-wrap__group">
-											<div class="form-wrap__group-title">
-												<div class="row gx-3">
-													<div class="form-wrap__col-title col">Категория 2
-													</div>
-													<div class="col-auto d-sm-none">
-														<div class="form-wrap__btns">
-															<div class="form-wrap__btn-circle form-wrap__btn-circle--top">
-																<svg class="icon icon-chevron-up ">
-																	<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
-																</svg>
-															</div>
-															<div class="form-wrap__btn-circle form-wrap__btn-circle--down">
-																<svg class="icon icon-chevron-up ">
-																	<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
-																</svg>
-															</div>
-														</div>
-													</div>
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Например, Средняя"/> 
+												</div>
+												<!-- +e.input-wrap-->
+												<div class="form-wrap__head mb-1 row">
+													<div class="small col">Значение 3</div>
 													<div class="col-auto">
 														<div class="form-wrap__btn-delete text-danger" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
 															<svg class="icon icon-delete ">
@@ -107,41 +135,26 @@
 														</div>
 													</div>
 												</div>
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Например, Большая"/> 
+												</div>
+												<!-- +e.input-wrap-->
+												<div class="text-end"><a class="text-secondary small" href="#">Добавить значение</a></div>
 											</div>
-											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите название раздела меню" value="🍣 Роллы"/>
-											</div>
-											<!-- +e.input-wrap-->
-											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Небольшое описание категории (необязательно)"/>
-											</div>
-											<!-- +e.input-wrap-->
-										</div>
-									</div>
-									<div class="form-wrap__drug-inner">
-										<div class="form-wrap__btn-drug text-secondary my-handle">
-											<svg class="icon icon-dots ">
-												<use xlink:href="img/svg/sprite.svg#dots"></use>
-											</svg>
-										</div>
-										<div class="form-wrap__group">
-											<div class="form-wrap__group-title">
-												<div class="row gx-3">
-													<div class="form-wrap__col-title col">Категория 3
+											<button class="btn-add btn btn-outline-gray" type="button">
+												<svg class="icon icon-add-more ">
+													<use xlink:href="img/svg/sprite.svg#add-more"></use>
+												</svg>Добавить свойство
+											</button><br><br>
+											<div class="small mb-1">Вариации</div>
+											<div class="variang-gr">
+												<div class="row gx-1">
+													<div class="col">
+														<div class="input-group mb-3">
+															<div class="input-group-text">Размер Маленькая + Тесто Песочное</div>
+															<input class="form-control" type="text" placeholder="Цена">
+														</div><span class="text-after"> ₽</span>
 													</div>
-													<div class="col-auto d-sm-none">
-														<div class="form-wrap__btns">
-															<div class="form-wrap__btn-circle form-wrap__btn-circle--top">
-																<svg class="icon icon-chevron-up ">
-																	<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
-																</svg>
-															</div>
-															<div class="form-wrap__btn-circle form-wrap__btn-circle--down">
-																<svg class="icon icon-chevron-up ">
-																	<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
-																</svg>
-															</div>
-														</div>
-													</div>
-													<div class="col-auto">
+													<div class="col-auto p-sm-0">
 														<div class="form-wrap__btn-delete text-danger" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
 															<svg class="icon icon-delete ">
 																<use xlink:href="img/svg/sprite.svg#delete"></use>
@@ -150,40 +163,15 @@
 													</div>
 												</div>
 											</div>
-											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите название раздела меню" value="🥗 Салаты"/>
-											</div>
-											<!-- +e.input-wrap-->
-											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Небольшое описание категории (необязательно)"/>
-											</div>
-											<!-- +e.input-wrap-->
-										</div>
-									</div>
-									<div class="form-wrap__drug-inner">
-										<div class="form-wrap__btn-drug text-secondary my-handle">
-											<svg class="icon icon-dots ">
-												<use xlink:href="img/svg/sprite.svg#dots"></use>
-											</svg>
-										</div>
-										<div class="form-wrap__group">
-											<div class="form-wrap__group-title">
-												<div class="row gx-3">
-													<div class="form-wrap__col-title col">Категория 4
+											<div class="variang-gr">
+												<div class="row gx-1">
+													<div class="col">
+														<div class="input-group mb-3">
+															<div class="input-group-text">Размер Средняя + Тесто Песочное Размер Средняя + Тесто Песочное</div>
+															<input class="form-control is-invalid" type="text" placeholder="Цена">
+														</div><span class="text-after"> ₽</span>
 													</div>
-													<div class="col-auto d-sm-none">
-														<div class="form-wrap__btns">
-															<div class="form-wrap__btn-circle form-wrap__btn-circle--top">
-																<svg class="icon icon-chevron-up ">
-																	<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
-																</svg>
-															</div>
-															<div class="form-wrap__btn-circle form-wrap__btn-circle--down">
-																<svg class="icon icon-chevron-up ">
-																	<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
-																</svg>
-															</div>
-														</div>
-													</div>
-													<div class="col-auto">
+													<div class="col-auto p-sm-0">
 														<div class="form-wrap__btn-delete text-danger" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
 															<svg class="icon icon-delete ">
 																<use xlink:href="img/svg/sprite.svg#delete"></use>
@@ -192,21 +180,37 @@
 													</div>
 												</div>
 											</div>
-											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите название раздела меню"/>
-											</div>
-											<!-- +e.input-wrap-->
-											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Небольшое описание категории (необязательно)"/>
-											</div>
-											<!-- +e.input-wrap-->
 										</div>
 									</div>
+									<div class="form-wrap__group">
+										<div class="form-wrap__group-title">Дополнительные опции 
+										</div>
+										<p class="small">Создайте опции и перечислите их значения. Если при добавлении этой опции меняется стоимость товара то напишите знак + или - и само значение (только цифры, без знака валюты). Например: Кетчуп (название опции) и +30 (значение опции). <a class="tdu" href="#">Как работают дополнительные опции.</a></p>
+										<div class="dop-options">
+											<div class="row mb-3">
+												<div class="col small">Опция 1</div>
+												<div class="col-auto"><a class="text-secondary small" href="#">Удалить</a></div>
+											</div>
+											<div class="mb-1 small">Наименование опции</div>
+											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Например, Кетчуп"/> 
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="mb-1 small">Значение опции</div>
+											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Например, +30"/><span class="text-after"> ₽</span>
+											</div>
+											<!-- +e.input-wrap-->
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Включить по умолчанию</span>
+											</label>
+										</div>
+									</div>
+								</div>
 							</div>
 						</form>
 					</div>
 					<button class="btn-add btn btn-outline-gray" type="button">
 						<svg class="icon icon-add-more ">
 							<use xlink:href="img/svg/sprite.svg#add-more"></use>
-						</svg>Добавить
+						</svg>Добавить опцию
 					</button><br><br><br>
 					<button class="btn btn-orange btn-200 btn-mob-100 btn-save-js" type="button">Сохранить</button>
 				</div>

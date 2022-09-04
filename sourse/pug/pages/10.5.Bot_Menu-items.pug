@@ -1,0 +1,150 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= '10.5. Bot_Menu items'
+	title= title
+block pagecontent
+	+b.cabinet-block.section
+		+e.head.row
+			.col-sm-auto.h1.strong.mb-0 Добавление товара
+			.col.p-0.m-0
+			.col-auto.m-0
+				+b.link-close(href="#")
+					+icon("close")
+			//- p.small Используйте эмоджи для каждого раздела, чтобы они выглядели интереснее.
+		+e.body
+			+form-wrap
+				+gr()
+					+b.add-photo-wrap
+						+b.LABEL.add-photo.preview-image-instruction
+							input(type="file", name="" onchange="loadFile(event)" )
+							+e.inner
+								+img("img/hamburger_1f354 1.png").mb-2
+								.strong.mb-1 Изображение товара
+								+e.text Для корректного отображения фотографии товара рекомендуем использовать пропорции 1:1, размер не менее 600х600 px. Изображение в формате jpeg и png весом не более 5 мб.
+								+e.text.text-danger  Это изображение не подходит. Загрузите новое изображение.
+								+e.btn Выбрать файл
+								img(src="#", alt="").img-preview
+						+e.btn-delete.d-none
+							+icon("delete")
+				+gr(`Категория меню `)
+					+input("🍕 Пиццы",'select').custom-select-js
+				
+				+gr(` Наименование`)
+					+input("Введите наименование товара")
+				+gr()
+					label.form-check.form-switch.form-switch--base
+						input.form-check-input(name='model' type='checkbox' checked role='switch')
+						.form-check-label Видимость товара
+				+gr(`Описание `)
+					+input("Состав: рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари. Вес: 270 гр.",'textarea')
+				.tabs
+					+gr(` Тип товара`)
+						//- +input("Введите имя и фамилию")
+						.tabs__caption.tabs__caption--variant.btn-group
+							.tabs__btn.btn.btn-outline-gray.active Простой
+							.tabs__btn.btn.btn-outline-gray Вариативный
+						.tabs__wrap
+							.tabs__content
+						
+								+gr(` Цена`)
+									+input("Введите цену")
+										span.text-after  ₽
+								
+								
+							.tabs__content.active
+								p.small Вариант — это товар с определенным набором свойств. Например: пирог маленький с песочным тестом. Свойства товара: размер, тесто. Каждый вариант может иметь отдельную цену.  #[a.tdu(href="#") Как работают вариации товара].
+								.dop-options
+									.row.mb-3
+										.col.small Свойство 1
+										.col-auto
+											a.text-secondary(href="#").small Удалить
+									.mb-1.small Наименование свойства
+									+input("Например, Размер") 
+									+e.head.mb-1.row
+										.small.col Значение 1
+										//- .col-auto
+										//- 	+e.btn-delete(data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Удалить").text-danger
+										//- 			+icon("delete" )
+									+input("Например, Маленькая") 
+									+e.head.mb-1.row
+										.small.col Значение 2
+										.col-auto
+											+e.btn-delete(data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Удалить").text-danger
+													+icon("delete" )
+									+input("Например, Средняя") 
+									+e.head.mb-1.row
+										.small.col Значение 3
+										.col-auto
+											+e.btn-delete(data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Удалить").text-danger
+													+icon("delete" )
+									+input("Например, Большая") 
+									.text-end
+										a.text-secondary.small(href="#") Добавить значение
+								button.btn-add.btn.btn-outline-gray(type="button")
+									+icon("add-more")
+									| Добавить свойство
+								br 
+								br
+								.small.mb-1 Вариации
+								.variang-gr
+									.row.gx-1
+										.col
+											.input-group.mb-3
+												.input-group-text Размер Маленькая + Тесто Песочное
+												input(type="text" class="form-control" placeholder="Цена")
+											span.text-after  ₽
+										.col-auto.p-sm-0
+											+e.btn-delete(data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Удалить").text-danger
+													+icon("delete" ) 
+								.variang-gr
+									.row.gx-1
+										.col
+											.input-group.mb-3
+												.input-group-text Размер Средняя + Тесто Песочное Размер Средняя + Тесто Песочное
+												input(type="text" class="form-control is-invalid" placeholder="Цена")
+											span.text-after  ₽
+										.col-auto.p-sm-0
+											+e.btn-delete(data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Удалить").text-danger
+													+icon("delete" )
+						+gr(`Дополнительные опции `)
+							p.small Создайте опции и перечислите их значения. Если при добавлении этой опции меняется стоимость товара то напишите знак + или - и само значение (только цифры, без знака валюты). Например: Кетчуп (название опции) и +30 (значение опции). #[a.tdu(href="#") Как работают дополнительные опции.]
+							.dop-options
+								.row.mb-3
+									.col.small Опция 1
+									.col-auto
+										a.text-secondary(href="#").small Удалить
+								.mb-1.small Наименование опции
+								+input("Например, Кетчуп") 
+								.mb-1.small Значение опции
+								+input("Например, +30")
+									span.text-after  ₽
+								+in-c("checkbox",'Включить по умолчанию')
+								//- +in-c("checkbox",'Включить по умолчанию')
+				
+			button.btn-add.btn.btn-outline-gray(type="button")
+				+icon("add-more")
+				| Добавить опцию
+			br 
+			br 
+			br 
+			button.btn.btn-orange.btn-200.btn-mob-100.btn-save-js(type="button") Сохранить
+
+		+save-alert()

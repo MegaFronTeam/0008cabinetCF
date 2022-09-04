@@ -175,7 +175,8 @@ mixin chat-items()
 
 mixin gr(t)
 	+e.group
-		+e.group-title= t
+		if t
+			+e.group-title= t
 		block
 
 mixin save-alert()

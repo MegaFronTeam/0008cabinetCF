@@ -11,12 +11,14 @@
 }
 .drug-wrap-block{
 	@include media-breakpoint-up(lg) {
-	
+		
 		--sp-x: var(--cabinet-x);
 	}
+	@include media-breakpoint-up(sm) {
 	--sp-x: calc(var(--cabinet-x) + 25px);
 	margin-left: calc(var(--sp-x) * -1);
 	margin-right: calc(var(--sp-x) * -1);
+}
 }
 .form-wrap{
 	&__btns{
@@ -117,6 +119,13 @@
 			// @extend .form-group;
 			margin-bottom: rem(20);
 			position: relative;
+			.text-after{
+				position: absolute;
+				right: rem(10);
+				font-size: 14px;
+				top: rem(10);
+				pointer-events: none;
+			}
 			&--tel{
 				select{
 					max-width: rem(86);
@@ -163,6 +172,16 @@
 		right: rem(20);
 		font-size: $small;
 		top: rem(10);
+	}
+	&__head{
+		position: relative;
+		.form-wrap__btn-delete{ 
+			@include media-breakpoint-up(sm) {
+				right: auto;
+				left: calc(100% - 10px);
+				top: rem(24);
+			}
+		}
 	}
 }
 
@@ -582,4 +601,68 @@ input::-webkit-inner-spin-button {
 		}
 	}
 
+}
+
+.variang-gr{
+	position: relative;
+	// margin-bottom: rem(25);
+	@include media-breakpoint-down(sm) {
+		.row{
+			align-items: center;
+		}
+	}
+	.text-after{
+		position: absolute;
+		z-index: 4;
+		right: rem(10);
+		pointer-events: none;
+		top: 10px;
+		font-size: 14px;
+		@include media-breakpoint-down(sm) {
+			top: calc(50% - .55rem);
+			transform: translateY(-50%);
+			right: rem(35);
+		}
+	}
+	.form-control{
+		max-width: rem(124);
+		min-width: rem(124);
+	}
+	.input-group-text{
+		flex-grow: 1;
+	}
+	.form-wrap__btn-delete{
+		position: relative; 
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 1.4rem;
+		}
+			@include media-breakpoint-up(sm) {
+			right: auto;
+			position: absolute;
+			left: 100%;
+			top: rem(-1);
+		}
+	}
+	.input-group{
+		flex-wrap: nowrap;
+	}
+	.input-group-text{
+		text-align: left;
+		white-space: normal;
+	}
+}
+
+.form-switch .form-check-input:checked{
+	background-color: $primary;
+	border-color: $primary;
+}
+
+.form-switch--base{
+	font-size: 14px;
+	.form-check-input{
+		width: 36px;
+		height: 20px;
+		margin-right: 10px;
+		background-size: 18px 18px;
+	}
 }

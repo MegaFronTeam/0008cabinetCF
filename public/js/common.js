@@ -677,10 +677,7 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 		})
 	}
 
-
-
-
-
+ 
 	
 };
 if (document.readyState !== 'loading') {
@@ -696,3 +693,12 @@ if (document.readyState !== 'loading') {
 // 		document.body.classList.remove('loaded_hiding');
 // 	}, 500);
 // }
+
+
+ 
+	var loadFile = function(event) {
+		var image = document.querySelector('.img-preview');
+		image.classList.add("active")
+		document.querySelector(".add-photo-wrap__btn-delete").classList.remove("d-none")
+		image.src = URL.createObjectURL(event.target.files[0]);
+	}; 

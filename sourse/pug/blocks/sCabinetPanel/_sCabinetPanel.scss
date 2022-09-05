@@ -23,6 +23,15 @@
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(40);
 		}
+		.swiper-wrapper{
+			@include media-breakpoint-down(sm) {
+				flex-wrap: wrap;
+				transform: none !important;
+				@include roww(20px);
+				width: fit-content;
+			}
+	
+		}
 	}
 	&__slide{
 		@include media-breakpoint-down(sm) {
@@ -48,16 +57,7 @@
 			height: 10px;
 		}
 	}
-	.swiper-wrapper{
-		@include media-breakpoint-down(sm) {
-			flex-wrap: wrap;
-			transform: none !important;
-			@include roww(20px);
-			width: fit-content;
-		}
-
-	}
-
+	
 	&__group{
 		margin-bottom: rem(40);
 		p {
@@ -219,6 +219,9 @@
 	}
 	.swiper-slide{
 	}
+	.swiper-wrapper {
+		flex-wrap: nowrap !important;
+	}
 	// @include roww(20px, m);
 	&__item{
 		color: $body-color;
@@ -333,3 +336,25 @@
 	}
 }
 
+.table {
+	tr {
+		@include mt;
+		&:hover {
+			box-shadow: 0px 0px 15px rgba(25, 28, 31, 0.1);
+		}
+	}
+	th,
+	td{
+		@include media-breakpoint-up(md) {
+			font-size: 14px;
+		}
+	}
+	td {
+		&:first-child {
+			padding-left: rem(20);
+		}
+		&:last-child {
+			padding-right: rem(20);
+		}
+	}
+}

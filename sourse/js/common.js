@@ -114,7 +114,6 @@ const JSCCommon = {
 			let toggle = event.target.closest('.toggle-menu-mobile--js.on'); // (1)
 			if (!container && !toggle) this.closeMenu();
 		}, { passive: true });
-
 		window.addEventListener('resize', () => {
 			if (window.matchMedia("(min-width: 992px)").matches) this.closeMenu();
 		}, { passive: true });

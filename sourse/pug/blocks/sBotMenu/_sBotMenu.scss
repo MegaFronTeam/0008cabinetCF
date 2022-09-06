@@ -46,14 +46,14 @@
 	&__sort {
 		width: rem(168);
 		@include media-breakpoint-up(lg) {
-			width: rem(160);
+			width: rem(170);
 		}
 		@include media-breakpoint-up(xxl) {
 			width: rem(186);
 		}
 		.choices__item {
 			font-size: 12px;
-			@include media-breakpoint-up(xxl) { 
+			@include media-breakpoint-up(lg) { 
 				font-size: 14px;
 			}
 		}
@@ -74,10 +74,11 @@
 			border: none;
 		}
 		@include media-breakpoint-up(md) {
-			width: rem(200);
+			// width: rem(200);
+			// width: 100%;
 		}
 		@include media-breakpoint-up(xxl) {
-			width: rem(548);
+			// width: rem(548);
 		}
 		button {
 			border: none;
@@ -154,6 +155,7 @@
 				outline: none;
 			}
 			&:before {
+				cursor: pointer;
 				content: '';
 				position: absolute;
 				display: block;
@@ -175,8 +177,20 @@
 		--bs-btn-font-size: 12px;
 		--bs-btn-padding-x: #{rem(18)};
 		--bs-btn-padding-y: #{rem(9)};
+		--bs-btn-hover-border-color: #{$orange};
+		--bs-btn-hover-bg: #{$orange};
+		--bs-btn-hover-color: #fff;
 		font-weight: 400;
+		@include media-breakpoint-up(md) {
+			--bs-btn-font-size: 14px;
+		}
+		&:hover {
+			.icon {
+				color: #fff;
+			}
+		}
 		.icon {
+			@include mt;
 			color: $orange;
 			font-size: rem(20);
 			margin-right: rem(10);
@@ -346,12 +360,21 @@
 		}
 	}
 	// head menu end
-
+	&__colCard {
+		@media (min-width: 1862px) {
+			flex: 0 0 auto;
+    	width: auto;
+		}
+		@include media-breakpoint-up(xxl) {
+			// flex: 1 0 auto;
+			width: calc(100% / 4);
+		}
+	}
 	.order-card {
-
-		@include media-breakpoint-up(xl) {
-			width: rem(284);
+		width: calc(100%);
+		@include media-breakpoint-up(xxl) {
 			height: rem(284);
+			width: rem(284);
 		}
 	}
 	&--empty {
@@ -371,15 +394,17 @@
 			margin-bottom: rem(20);
 		}
 		.h1 {
-			margin-bottom: rem(15);
+			margin-bottom: rem(8);
 			font-weight: 700;
 		}
 		p {
 			font-size: 14px;
-			margin-bottom: rem(30);
+			margin-bottom: rem(24);
 		}
 	}
 	&__btn {
+		width: 100%;
+		max-width: rem(198);
 		.icon {
 			stroke: currentColor;
 			stroke-width: 2px;
@@ -391,6 +416,13 @@
 	table {
 		margin-top: 0;
 		margin-bottom: 0;
+		thead {
+			tr {
+				&:hover {
+					box-shadow: none;
+				}
+			}
+		}
 		tbody {
 			tr {
 				&:hover {
@@ -401,21 +433,29 @@
 		tr {
 			@include mt;
 			position: relative;
+			&:hover {
+				box-shadow: none;
+			}
 		}
 		th {
 			font-size: 14px;
+			border-bottom-color: #EBEBEB;
 			&:first-child {
 				padding-left: rem(44);
 			}
 			// &:last-child {
 			// 	padding-right: rem(20);
 			// }
+			tr {
+				
+			}
 		}
 		td {
 			vertical-align: middle;
 			font-size: 12px;
 			padding-top: 10px;
 			padding-bottom: 10px;
+			border-bottom-color: #EBEBEB;
 			@include media-breakpoint-up(sm) {
 				font-size: 14px;
 			}
@@ -445,6 +485,7 @@
 				background-color: #C2C2C2;
 				border-color: #C2C2C2;
 				outline: none;
+				top: 5px;
 				&:focus {
 					box-shadow: none;
 				}
@@ -466,6 +507,12 @@
 		font-weight: 400;
 		font-size: 14px;
 		text-decoration: underline;
+		@include media-breakpoint-up(xl) {
+			max-width: rem(330);
+		}
+		@include media-breakpoint-up(xxl) {
+			max-width: 100%;
+		}
 		&:hover {
 			color: $orange;
 		}

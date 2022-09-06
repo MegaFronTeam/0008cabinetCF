@@ -3,7 +3,10 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	padding-top: rem(20);
+	padding-top: 0;
+	@include media-breakpoint-up(sm) {
+		padding-top: rem(20);
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
@@ -20,6 +23,18 @@
 	}
 	&__slider{
 		overflow: visible;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(40);
+		}
+		.swiper-wrapper{
+			@include media-breakpoint-down(sm) {
+				flex-wrap: wrap;
+				transform: none !important;
+				@include roww(20px);
+				width: fit-content;
+			}
+	
+		}
 	}
 	&__slide{
 		@include media-breakpoint-down(sm) {
@@ -39,17 +54,13 @@
 	.swiper-pagination{
 		position: static;
 		margin-top: .5rem;
-	}
-	.swiper-wrapper{
-		@include media-breakpoint-down(sm) {
-			flex-wrap: wrap;
-			transform: none !important;
-			@include roww(20px);
-			width: fit-content;
+		margin-bottom: rem(10);
+		&-bullet {
+			width: 10px;
+			height: 10px;
 		}
-
 	}
-
+	
 	&__group{
 		margin-bottom: rem(40);
 		p {
@@ -70,7 +81,10 @@
 	}
 	.btn-example-load-more{
 		font-weight: normal;
-		margin-top: rem(20);
+		margin-top: 2px;
+		@include media-breakpoint-up(sm) {
+			margin-top: rem(20);
+		}
 		.icon{
 			color: $orange;
 			margin-right: rem(10);
@@ -81,7 +95,14 @@
 	.btn-light {
     --bs-btn-bg: #F6F6F6;
     --bs-btn-border-color: #F6F6F6;
-}
+	}
+	.table-wrap-js {
+		position: relative;
+		overflow: auto;
+		.dataTables_wrapper {
+			min-width: 470px;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -238,6 +259,9 @@
 	}
 	.swiper-slide{
 	}
+	.swiper-wrapper {
+		flex-wrap: nowrap !important;
+	}
 	// @include roww(20px, m);
 	&__item{
 		color: $body-color;
@@ -299,6 +323,12 @@
 			left: 0;
 		}
 	}
+	.btn-delete-row {
+		@include mt;
+		&:hover {
+			opacity: .70;
+		}
+	}
 }
 
 .btn-delete-row{
@@ -346,3 +376,25 @@
 	}
 }
 
+.table {
+	tr {
+		@include mt;
+		&:hover {
+			box-shadow: 0px 0px 15px rgba(25, 28, 31, 0.1);
+		}
+	}
+	th,
+	td{
+		@include media-breakpoint-up(md) {
+			font-size: 14px;
+		}
+	}
+	td {
+		&:first-child {
+			padding-left: rem(20);
+		}
+		&:last-child {
+			padding-right: rem(20);
+		}
+	}
+}

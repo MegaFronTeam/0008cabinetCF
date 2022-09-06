@@ -112,7 +112,7 @@ mixin sCabinetPanel(empty)
 										span.d-sm-none Выплата
 								.col-6
 									button.btn.btn-light.w-100 Договор №8975
-				.swiper-pagination.d-none.d-sm-block
+				.swiper-pagination.d-none.d-sm-block.d-lg-none
 			mixin gr(t, l, tab)
 				+e.group
 					.row
@@ -245,8 +245,9 @@ mixin sCabinetPanel(empty)
 										td LETO22
 										td  32
 										td.text-end
-											.btn-delete-row
-												+icon("delete")
+											.btn-delete-row(href="#")
+												+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Удалить")
+													+icon("delete")
 								- for (var x = 0; x < 3; x++)
 									+tr()
 										span(style="color:var(--bs-danger)") Неактивен с&nbsp;24.06.22

@@ -16,18 +16,18 @@
 		position: relative;
 		&__input-wrap{
 			position: relative;
-			&::after{
-				content: ' ₽';
-				position: absolute;
-				@include media-breakpoint-up(sm){
+			// &::after{
+			// 	content: ' ₽';
+			// 	position: absolute;
+			// 	@include media-breakpoint-up(sm){
 
-					right: rem(220);
-				}
-				right: 0;
-				font-weight: bold;
-				top: 0;
-				@include rfs(40px);
-			}
+			// 		right: rem(220);
+			// 	}
+			// 	right: 0;
+			// 	font-weight: bold;
+			// 	top: 0;
+			// 	@include rfs(40px);
+			// }
 		}
 		.form-wrap__input-wrap-border{
 			background-color: $orange;

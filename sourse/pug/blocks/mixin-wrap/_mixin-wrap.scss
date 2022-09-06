@@ -320,7 +320,7 @@
 	&__ddgroup-wrap {
 		// @include mt;
 		display: none;
-		padding: rem(20) rem(0);
+		padding: rem(20) rem(20) rem(20) rem(0);
 		margin-bottom: rem(15);
 		border-bottom: 1px solid #EBEBEB;
 		@include media-breakpoint-up(xxl) {
@@ -666,13 +666,13 @@
 		flex-grow: 1;
 	}
 	&__rate {
-		font-size: 12px;
+		font-size: 14px;
 		margin-bottom: rem(5);
 		.icon {
 			font-size: rem(12);
 			color: $orange;
 			margin-right: rem(5);
-			vertical-align: text-top;
+			vertical-align: baseline;
 		}
 	}
 	&__orders {
@@ -687,6 +687,7 @@
 			display: inline-block;
 			margin-bottom: 10px;
 			text-decoration: underline;
+			font-size: 14px;
 			&:before {
 				content: '';
 				position: absolute;
@@ -703,6 +704,9 @@
 			}
 		}
 	}
+	&__type {
+		font-size: 14px;
+	}
 	&__food {
 		margin-bottom: 5px;
 	}
@@ -716,6 +720,7 @@
 			background-color: #C2C2C2;
 			border-color: #C2C2C2;
 			outline: none;
+			top: 4.5px;
 			&:focus {
 				box-shadow: none;
 			}
@@ -742,9 +747,6 @@
 			}
 			.icon {
 				font-size: 20px;
-				@include media-breakpoint-up(sm) {
-					font-size: rem(24);
-				}
 			}
 			.icon-delete {
 				color: $red;
@@ -847,5 +849,15 @@ font-size: 14px;
 	&:hover &__btn-delete{
 		background: rgba($color: #191C1F, $alpha: .7);
 
+	}
+}
+
+.table {
+	thead {
+		tr {
+			&:hover {
+				box-shadow: none;
+			}
+		}
 	}
 }

@@ -1,11 +1,11 @@
 mixin sReplenishment(data)
 	// start sReplenishment
 	+b.sReplenishment#sReplenishment&attributes(attributes) 
-		h1 Сумма для пополнения
+		h1 Сумма для пополнения ₽
 		+form-wrap 
 				//- +input("Введите сумму",'number')(class="is-invalid")
 				label(class="form-wrap__input-wrap form-group")
-					input(type="number" class="form-wrap__input form-control " step="any" placeholder="Введите сумму")
+					input(type="number" class="form-wrap__input form-control " step="any" placeholder="Введите сумму ₽")
 					span.form-wrap__input-wrap-border
 				button.btn.btn-orange
 					+icon("wallet")

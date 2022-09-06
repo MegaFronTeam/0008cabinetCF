@@ -78,9 +78,63 @@ mixin sSettings(data)
 					.mb-1 #[strong {namemybot}] - вывести название вашего заведения из  #[a(href="#") Общих настроек].
 			+gr('Отображение товаров')
 				p.small Выберите наиболее подходящий для вас режим отображения товаров в разделах меню.
+				.row.gy-3
+					.col-auto
+						+b.LABEL.custom-input-block.form-check
+							+e.INPUT.input.form-check-input(name='var', type='radio' checked)
+							+e.SPAN.row.row
+								span.col-auto
+									img(src="img/icon-ryd.svg", alt="")
+							span.text-center 1 в ряд
+							
+					.col-auto
+						+b.LABEL.custom-input-block.form-check
+							+e.INPUT.input.form-check-input(name='var', type='radio')
+							+e.SPAN.row.row
+								span.col-auto
+									img(src="img/icon-ryd.svg", alt="")
+								span.col-auto
+									img(src="img/icon-ryd.svg", alt="")
+							span.text-center 2 в ряд
+
 			+gr('Адрес заведения')
 				p.small От этого адреса будет рассчитываться стоимость доставки, если вы выберите “Рассчет по формуле”.
 				+input("Введите адрес заведения")
+
+				#map
+				
+				script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
+
+				script. 
+
+					function init() {
+					const mark = 'img/map.svg';
+					var center = [55.733, 37.588];
+					var map = new ymaps.Map('map', {
+						center,
+						zoom: 16,
+						controls: ['zoomControl']
+					}),
+						myPlacemark = new ymaps.Placemark(center, {
+								hintContent: 'Собственный значок метки',
+								balloonContent: 'Это красивая метка'
+						}, {
+								// Опции.
+								// Необходимо указать данный тип макета.
+								iconLayout: 'default#image',
+								// Своё изображение иконки метки.
+								iconImageHref: mark,
+								// Размеры метки.
+								iconImageSize: [40, 40],
+								// Смещение левого верхнего угла иконки относительно
+								// её "ножки" (точки привязки).
+								iconImageOffset: [-5, -38]
+						});
+						map.geoObjects
+						.add(myPlacemark)
+					};
+
+					ymaps.ready(init);
 			+gr('Валюта')
 				+input("Российский рубль, ₽",'select').custom-select-js
 			+gr('Валюта')
@@ -107,7 +161,7 @@ mixin sSettings(data)
 						+in-c("radio",'Оплата картой')(name="wallet-meth")
 			+gr("Платежный токен")
 				p.small Введите платежный токен от онлайн-кассы для подключения онлайн-оплаты.
-				+input("токен")(value="381764678:TEST:38483")
+				+input("токен")(value="381764678:TEST:38483").is-valid
 
 			+gr()
 				.alert.alert-primary.small(class="d-md-flex text-md-start text-center align-items-center" role="alert")

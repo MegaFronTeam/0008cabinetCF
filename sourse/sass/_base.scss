@@ -1281,3 +1281,40 @@ cursor:no-drop;
 		padding-top: 15px;
 		padding-bottom: 15px;
 	}
+
+	.custom-input-block{
+		position: relative;
+		border: 1px solid #EBEBEB;
+		border-radius: 8px;
+		width: 180px !important;
+		display: block;
+		padding: rem(20);
+		text-align: center;
+		input{
+			position: absolute;
+			right: 10px;
+			top: 10px;
+		}
+		.row{
+			justify-content: center;
+		}
+		.text-center{
+			width: 100%;
+			display: block;
+			margin-top: rem(10);
+		}
+	}
+
+	#map{
+		height: 300px;
+	}
+
+	.form-control{
+
+		background-repeat: no-repeat;
+		background-position: calc(100% - 8px) 50%; 
+	}
+	.form-control.is-valid{
+		background-image: url(../img/checkmark.svg);
+		border-color: #EBEBEB;
+	}

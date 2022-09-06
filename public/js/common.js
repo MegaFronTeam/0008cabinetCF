@@ -748,6 +748,7 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 		if (swipedir =='left') {
 			$('aside').removeClass('active');
 			$('body').removeClass('show-sidebar');
+			$('.toggle-menu-mobile--js').removeClass('on');
 		}
 	})
 };

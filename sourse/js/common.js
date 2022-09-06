@@ -431,6 +431,7 @@ function eventHandler() {
 				document.querySelector("aside").classList.remove("active")
 	
 			}
+			
 		})
 	} catch (error) {
 		

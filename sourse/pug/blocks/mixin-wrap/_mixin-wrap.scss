@@ -666,8 +666,11 @@
 		flex-grow: 1;
 	}
 	&__rate {
-		font-size: 14px;
+		font-size: 12px;
 		margin-bottom: rem(5);
+		@include media-breakpoint-up(xl) {
+			font-size: 14px;
+		}
 		.icon {
 			font-size: rem(12);
 			color: $orange;
@@ -743,7 +746,7 @@
 				opacity: .5;
 			}
 			&:not(:last-child) {
-				margin-right: rem(5);
+				margin-right: rem(15);
 			}
 			.icon {
 				font-size: 20px;

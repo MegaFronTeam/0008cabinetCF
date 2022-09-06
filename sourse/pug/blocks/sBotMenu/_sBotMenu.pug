@@ -2,10 +2,10 @@ mixin sBotMenu(table)
 	// start sBotMenu
 	+b.sBotMenu.section#sBotMenu&attributes(attributes)
 		+e.head-row.row
-			.col-auto.order-sm-1.order-lg-1.d-none.d-sm-block
+			.col-xl.order-sm-1.order-lg-1.d-none.d-sm-block
 				+e.all-goods
 					+input("Все товары",'select').custom-select-js
-			.col-auto.col-sm-12.col-md-auto.order-3.order-sm-last.order-lg-2
+			.col-auto.col-sm-12.col-md.order-3.order-sm-last.order-lg-2
 				+e.search.d-none.d-sm-block
 					+input("Поиск по товарам",'text')
 					button: +icon('search')
@@ -27,12 +27,12 @@ mixin sBotMenu(table)
 						+icon('category')
 					+in-c('radio', '', 'switch')
 						+icon('list')
-			.col-auto.order-2.order-sm-3.order-lg-4
+			.col.col-lg-auto.order-2.order-sm-3.order-lg-4
 				+e.categories-btn(href="#").btn
 					+icon("shopping-bag")
 					span.d-none.d-sm-inline-block Категории меню
 					span.d-inline-block.d-sm-none Категории
-			.col-auto.order-1.order-sm-4.order-lg-6
+			.col.col-lg-auto.order-1.order-sm-4.order-lg-6
 				+e.more-btn(href="#").btn.btn-orange
 					+icon("more")
 					span.d-none.d-sm-inline-block Добавить товар
@@ -152,12 +152,12 @@ mixin sBotMenuEmpty(data)
 						+icon('category')
 					+in-c('radio', '', 'switch')
 						+icon('list')
-			.col-auto.order-2.order-sm-3.order-lg-5
+			.col.col-lg-auto.order-2.order-sm-3.order-lg-5
 				+e.categories-btn(href="#").btn
 					+icon("shopping-bag")
 					span.d-none.d-sm-inline-block Категории меню
 					span.d-inline-block.d-sm-none Категории
-			.col-auto.order-1.order-sm-4.order-lg-6
+			.col.col-lg-auto.order-1.order-sm-4.order-lg-6
 				+e.more-btn(href="#").btn.btn-orange
 					+icon("more")
 					span.d-none.d-sm-inline-block Добавить товар

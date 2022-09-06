@@ -657,8 +657,15 @@ input::-webkit-inner-spin-button {
 	border-color: $primary;
 }
 
+.form-switch{
+	cursor: pointer;
+}
 .form-switch--base{
 	font-size: 14px;
+	.form-check-input{
+		background-color: #c2c2c2;
+    border-color: #c2c2c2;
+	}
 	.form-check-input{
 		width: 36px;
 		height: 20px;

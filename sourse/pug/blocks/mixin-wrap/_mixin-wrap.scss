@@ -323,6 +323,10 @@
 		padding: rem(20) rem(0);
 		margin-bottom: rem(15);
 		border-bottom: 1px solid #EBEBEB;
+		@include media-breakpoint-up(xxl) {
+			padding-left:   rem(22); 
+		}
+		padding-left: rem(8);
 		@include media-breakpoint-only(xl) {
 			width: 40px;
 		}

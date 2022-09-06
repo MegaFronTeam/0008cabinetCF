@@ -193,12 +193,39 @@
 		width: 100%;
 	}
 	.icon{
-		color: $secondary;
 		cursor: pointer;
+		// @include mt;
+		@include a-cent1;
+		&-check{
+			opacity: 0;
+			font-size: 12px;
+		}
+	}
+	&__icon-wrap{
+		width: 24px;
+		height: 24px;
+		border-radius: 4px;
 		@include mt;
+		color: $secondary;
+		position: relative;
+		// display: inline-flex;
+		// justify-content: center;
+		// align-items: center;
 		&:hover{
 			color: $orange;
 		}
+	}
+	&.active &__icon-wrap{
+		background-color: $success;
+		color: #fff !important;
+		.icon-copy{
+			opacity: 0;
+		}
+		
+		.icon-check{
+			opacity: 1;
+		}
+
 	}
 }
 

@@ -285,22 +285,22 @@ const JSCCommon = {
 				let ChildHeads = parent.querySelectorAll('.dd-head-js:not(.disabled)');
 				$(ChildHeads).click(function () {
 					let clickedHead = this;
-
-					$(ChildHeads).each(function () {
-						if (this === clickedHead) {
-							//parent element gain toggle class, style head change via parent
-							$(this.parentElement).toggleClass('active');
-							$(this.parentElement).find('.dd-content-js').slideToggle(function () {
-								$(this).toggleClass('active');
-							});
-						}
-						else {
-							$(this.parentElement).removeClass('active');
-							$(this.parentElement).find('.dd-content-js').slideUp(function () {
-								$(this).removeClass('active');
-							});
-						}
+					$(this.parentElement).toggleClass('active');
+					$(this.parentElement).find('.dd-content-js').slideToggle(function () {
+						$(this).toggleClass('active');
 					});
+
+					// $(ChildHeads).each(function () {
+					// 	if (this === clickedHead) {
+					// 		//parent element gain toggle class, style head change via parent
+					// 	}
+					// 	else {
+					// 		$(this.parentElement).removeClass('active');
+					// 		$(this.parentElement).find('.dd-content-js').slideUp(function () {
+					// 			$(this).removeClass('active');
+					// 		});
+					// 	}
+					// });
 
 				});
 			}
@@ -516,11 +516,10 @@ function eventHandler() {
 
 	convertImages('.img-to-svg');
 
-	$('.link-block .icon').click(function(){
-		function myFunction() {
+	$(document).on('click', '.link-block .icon', function(){
+		$(this).parents('.link-block').addClass("active"); 
 			/* Get the text field */
 			var copyText = $(this).parent().find('.link-block__copy-text')[0];
-		
 			/* Select the text field */
 			copyText.select();
 			copyText.setSelectionRange(0, 99999); /* For mobile devices */
@@ -529,8 +528,7 @@ function eventHandler() {
 			navigator.clipboard.writeText(copyText.value);
 		
 			/* Alert the copied text */
-			// alert("Copied the text: " + copyText.value);
-		}
+			// alert("Copied the text: " + copyText.value); 
 
 	})
 
@@ -678,6 +676,16 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 	}
 
  
+	let aside = document.querySelector('aside');
+	if (aside) {
+		aside.addEventListener("mouseleave", function(){
+			$(aside).find(".nav-main__ddgroup-wrap").slideUp(function(){
+
+				$(aside).find(".nav-main__ddgroup-wrap, .nav-main__link--js").removeClass('active')
+			});
+		})
+	}
+
 	
 };
 if (document.readyState !== 'loading') {

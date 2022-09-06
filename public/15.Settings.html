@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>15. Settings</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet"/>
+		<link href="css/dataTables.bootstrap5.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<body class="main-page">
+		<div class="main-wrapper">
+			<aside>
+				<div class="nav-chat">
+					<ul>
+						<li><a class="btn active" href="#"><img src="img/svg/main.svg" alt=""/></a></li>
+						<li><a class="btn" href="#"> 
+								<div class="nav-chat__counter">1
+								</div><img src="img/svg/praga.png" alt=""/></a></li>
+						<li><a class="btn" href="#"><img src="img/svg/bgr.png" alt=""/></a></li>
+						<li><a class="btn" href="#" style="--bs-btn-bg:#6F64EC; --bs-btn-color: #fff; --bs-btn-hover-color: #fff; --bs-btn-hover-bg:#6F64EC"> С</a></li>
+						<li><a class="btn btn-orange" href="#">+</a></li>
+					</ul>
+				</div>
+				<div class="nav-main-wrap">
+					<div class="nav-main">
+						<ul>
+								<li>
+									<a class="nav-main__link" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-wallet ">
+												<use xlink:href="img/svg/sprite.svg#wallet"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Заказы
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="nav-main__link" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-training ">
+												<use xlink:href="img/svg/sprite.svg#training"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Клиенты
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="nav-main__link nav-main__link--js active" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-pizza ">
+												<use xlink:href="img/svg/sprite.svg#pizza"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Меню товаров
+										</div>
+										<svg class="icon icon-chevron-down ">
+											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+										</svg>
+									</a>
+									<div class="nav-main__ddgroup-wrap active"><a class="active" href="#">Список товаров</a><a href="#">Категории меню</a><a href="#">Добавить товар</a>
+									</div>
+								</li>
+								<li>
+									<a class="nav-main__link" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-growth ">
+												<use xlink:href="img/svg/sprite.svg#growth"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Статистика
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="nav-main__link nav-main__link--js" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-tg ">
+												<use xlink:href="img/svg/sprite.svg#tg"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Рассылки
+										</div>
+										<svg class="icon icon-chevron-down ">
+											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+										</svg>
+									</a>
+									<div class="nav-main__ddgroup-wrap"><a class="active" href="#">Список товаров</a><a href="#">Категории меню</a><a href="#">Добавить товар</a>
+									</div>
+								</li>
+								<li>
+									<a class="nav-main__link nav-main__link--js" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-setting ">
+												<use xlink:href="img/svg/sprite.svg#setting"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Настройки
+										</div>
+										<svg class="icon icon-chevron-down ">
+											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+										</svg>
+									</a>
+									<div class="nav-main__ddgroup-wrap"><a class="active" href="#">Список товаров</a><a href="#">Категории меню</a><a href="#">Добавить товар</a>
+									</div>
+								</li>
+								<li>
+									<a class="nav-main__link" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-rocket ">
+												<use xlink:href="img/svg/sprite.svg#rocket"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Продвижение
+										</div>
+									</a>
+								</li>
+						</ul>
+						<a class="cabinet-btn" href="#">
+							<div class="cabinet-btn__icon-wrap">
+								<svg class="icon icon-avatar ">
+									<use xlink:href="img/svg/sprite.svg#avatar"></use>
+								</svg>
+							</div>
+							<div class="cabinet-btn__text"> 
+								<div class="cabinet-btn__name">Валентин Ковалентин
+								</div>
+								<div class="cabinet-btn__id">#13405
+								</div>
+							</div>
+							<svg class="icon icon-setting ">
+								<use xlink:href="img/svg/sprite.svg#setting"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</aside>
+			<div class="main-center-wrap">
+				<main>
+					<!-- start topLine-->
+					<div class="topLine section" id="topLine">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-auto d-xl-none">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js d-xl-none"><span></span>
+										<div class="toggle-menu-mobile__counter">8
+										</div>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="topLine__title">Общие настройки
+									</div>
+								</div>
+								<div class="col p-0"></div>
+								<div class="col-auto">
+									<a class="topLine__btn topLine__btn--balance" href="#">
+										<div class="toggle-text">
+											<svg class="icon icon-wallet ">
+												<use xlink:href="img/svg/sprite.svg#wallet"></use>
+											</svg><span class="d-none d-xl-block me-1"> Баланс: </span> <strong>777 ₽</strong>
+										</div>
+										<div class="toggle-text toggle-text--hover d-none d-xl-flex">
+											<svg class="icon icon-wallet ">
+												<use xlink:href="img/svg/sprite.svg#wallet"></use>
+											</svg>Пополнить
+										</div>
+									</a>
+								</div>
+								<div class="col-auto">
+									<a class="topLine__btn topLine__btn--alarm topLine__btn--new link-modal-aside-js" href="#modal-alarm">
+										<svg class="icon icon-alarm ">
+											<use xlink:href="img/svg/sprite.svg#alarm"></use>
+										</svg>
+									</a>
+								</div>
+								<div class="col-auto">
+									<div class="topLine__btn-wrap">
+										<div class="topLine__btn topLine__btn--cabinet"><img src="img/svg/praga.png" alt="" loading="lazy"/>
+											<svg class="icon icon-chevron-down ">
+												<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+											</svg>
+										</div>
+										<div class="topLine__btn-toggle">
+											<div class="topLine__headline">Прага | Доставка
+											</div>
+											<div class="topLine__rate">
+												<svg class="icon icon-stars ">
+													<use xlink:href="img/svg/sprite.svg#stars"></use>
+												</svg>4.7
+											</div>
+											<div class="topLine__tarif">
+												<p>Тариф “Standart”</p>
+												<p class="timeout">Средств хватит до 22.06.2022</p>
+											</div>
+											<a class="topLine__goto" href="#">Перейти в тарифы
+											</a>
+											<a class="topLine__logout" href="#">Выйти
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end topLine-->
+					<div class="container-fluid container-main">
+						<!-- start sSettings-->
+						<div class="sSettings position-relative"> 
+							<div class="form-wrap">
+								<form>
+									<div class="form-wrap__group">
+										<div class="form-wrap__group-title">Токен чат-бота
+										</div>
+										<div class="small mb-2">Ключ доступа к созданному вами чат-боту в телеграм который вы получили от <a class="strong" href="#">@BotFather</a>.</div>
+										<div class="link-block"><input class="link-block__copy-text" type="text" value="2014576981:AAFEMZG5cyJi5oTMIiUqBjKYEjqFu0oLZLw" readonly="readonly"/>
+											<div class="link-block__icon-wrap">
+												<svg class="icon icon-copy ">
+													<use xlink:href="img/svg/sprite.svg#copy"></use>
+												</svg>
+												<svg class="icon icon-check ">
+													<use xlink:href="img/svg/sprite.svg#check"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<div class="form-wrap__group">
+										<div class="form-wrap__group-title">Прием заказов
+										</div>
+										<label class="form-check form-switch form-switch--base">
+											<input class="form-check-input" name="model" type="checkbox" checked="checked" role="switch"/>
+											<div class="form-check-label">Заказы принимаются</div>
+										</label>
+									</div>
+									<div class="form-wrap__group">
+										<div class="form-wrap__group-title">Информация о чат-боте
+										</div>
+										<div class="row align-items-center">
+											<div class="col-auto">
+												<div class="chat-avatar" style="background: #6F64EC;color: #FFFFFF;">П
+												</div>
+											</div>
+											<div class="col small">
+												<div class="strong mb-1">Прага | Доставка ❤️</div>
+												<div class="strong mb-1"><a href="#"> @prahacafebot</a></div>
+												<div class="text-secondary mb-1">Бот</div>
+												<div class="mb-1">Доставляем по всей Самаре 🚗🍰</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-wrap__group">
+										<div class="alert alert-primary small d-md-flex text-md-start text-center align-items-center" role="alert"><img class="me-md-2 mb-md-0 mb-1 img-to-svg text-primary" src="img/svg/info_square_icon.svg" alt=""/>
+											<div class="text-body flex-grow-1 me-md-2 mb-md-0 mb-1">Вся основная информация о чат-боте (кроме юзернейма): название, фотография и описание меняется только через <a href="#">@BotFather</a> в телеграм. Ознакомьтесь с инструкцией и нашими рекомендациями ниже, чтобы качественно заполнить профиль вашего чат-бота в телеграм.</div>
+										</div>
+									</div>
+									<div class="form-wrap__group">
+										<div class="accordion-block">
+											<div class="accordion-item dd-group-js">
+												<div class="accordion-item__head dd-head-js">Редактирование фотографии (аватара) чат-бота
+													<div class="accordion-item__toggle">
+													</div>
+												</div>
+												<div class="accordion-item__body dd-content-js">
+													<ol>
+														<li>Зайдите в Telegram и запустите чат-бота <a href="#">@BotFather</a>.</li>
+														<li>Отправьте ему команду ‘<strong>/mybots</strong>’, что означает <strong>“мои боты”</strong>.</li>
+														<li>Далее в новом сообщении со списком ваших чат-ботов выберите нужный и нажмите на него.</li>
+														<li>Далее в новом сообщении со списком действий для вашего чат-бота выберите пункт <strong>“Edit bot”</strong>.</li>
+														<li>Далее выберите из сообщения пункт меню <strong>“Edit Botpic”</strong>.</li>
+														<li>Далее прикрепите и отправьте чат-боту <a href="#">@BotFather</a> логотип вашего заведения в формате фотографии, не документа.</li>
+														<li>Если вы все сделали правильно, бот <a href="#">@BotFather</a> напишет вам сообщение <strong>“Success! Profile photo updated.”</strong> Теперь фотография установлена.</li>
+													</ol>
+												</div>
+											</div>
+											<div class="accordion-item dd-group-js">
+												<div class="accordion-item__head dd-head-js">Редактирование названия чат-бота
+													<div class="accordion-item__toggle">
+													</div>
+												</div>
+												<div class="accordion-item__body dd-content-js">
+													<ol>
+														<li>Зайдите в Telegram и запустите чат-бота <a href="#">@BotFather</a>.</li>
+														<li>Отправьте ему команду ‘<strong>/mybots</strong>’, что означает <strong>“мои боты”</strong>.</li>
+														<li>Далее в новом сообщении со списком ваших чат-ботов выберите нужный и нажмите на него.</li>
+														<li>Далее в новом сообщении со списком действий для вашего чат-бота выберите пункт <strong>“Edit bot”</strong>.</li>
+														<li>Далее выберите из сообщения пункт меню <strong>“Edit Name”</strong>.</li>
+														<li>Далее отправьте чат-боту новое название вашего заведения, вы также можете использовать эмоджи. Например, <strong>“ Хорошая пицца 🍕”</strong>.</li>
+														<li>Если вы все сделали правильно, бот <a href="#">@BotFather</a> напишет вам сообщение <strong>“Success! Name updated.”</strong> Теперь новое название применено.</li>
+													</ol>
+												</div>
+											</div>
+											<div class="accordion-item dd-group-js">
+												<div class="accordion-item__head dd-head-js">Редактирование информации профиля чат-бота
+													<div class="accordion-item__toggle">
+													</div>
+												</div>
+												<div class="accordion-item__body dd-content-js">
+													<ol>
+														<li>Зайдите в Telegram и запустите чат-бота <a href="#">@BotFather</a>.</li>
+														<li>Отправьте ему команду ‘<strong>/mybots</strong>’, что означает <strong>“мои боты”</strong>.</li>
+														<li>Далее в новом сообщении со списком ваших чат-ботов выберите нужный и нажмите на него.</li>
+														<li>Далее в новом сообщении со списком действий для вашего чат-бота выберите пункт <strong>“Edit bot”</strong>.</li>
+														<li>Далее выберите из сообщения пункт меню <strong>“Edit About”</strong>.</li>
+														<li>Далее отправьте чат-боту новую информацию профиля чат-бота, вы также можете использовать эмоджи. Например, <strong>“Доставка роллов и пиццы в Санкт-Петербурге 🍜Азиатская и европейская кухня 🍕”</strong>.</li>
+														<li>Если вы все сделали правильно, бот  <a href="#">@BotFather</a> напишет вам сообщение <strong>“Success! About section updated.”</strong> Теперь новое название применено.</li>
+													</ol>
+												</div>
+											</div>
+											<div class="accordion-item dd-group-js">
+												<div class="accordion-item__head dd-head-js">Редактирование описания чат-бота
+													<div class="accordion-item__toggle">
+													</div>
+												</div>
+												<div class="accordion-item__body dd-content-js">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-wrap__group">
+										<div class="row small mt-4">
+											<div class="col-auto"><a class="text-danger strong" href="#"> Удалить чат-бота навсегда</a></div>
+											<div class="col-auto"><a class="text-secondary" href="#"> Отключить чат-бота</a></div>
+										</div>
+									</div>
+									<div class="form-wrap__group">
+										<div class="form-wrap__group-title">Приветственное сообщение
+										</div>
+										<p class="small">Первое сообщение, которое получает пользователь после авторизации в чат-боте.</p>
+										<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Редактируемое приветственное сообщение" style="height: 10rem;"></textarea>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="message-prev">
+											<div class="strong">Пример:</div>{name}, приветствуем вас в нашем чат-боте 👋🏻
+											<br> 🔸 Для навигации в чат-боте используйте кнопку "Меню". 🔸<br>  🎁 Вам начислено 100 бонусных баллов за регистрацию в чат-боте 🎁. <br> Заказывайте доставку блюд через чат-бота и получайте бонусные баллы, которыми сможете оплачивать заказы.
+										</div>
+										<div class="border-orange border-start border-2 small ps-20 mb-20">
+											<div class="mb-1"><strong>{name}</strong> - вывести юзернейм пользователя;</div>
+											<div class="mb-1"><strong>{bonus}</strong> - вывести количество бонусов, которые вы установили в качестве начисления новым пользователям в разделе <a href="#">Настройки и оплата</a>;</div>
+											<div class="mb-1"><strong>{namemybot}</strong> - вывести название вашего заведения из  <a href="#">Общих настроек</a>.</div>
+										</div>
+									</div>
+									<div class="form-wrap__group">
+										<div class="form-wrap__group-title">Отображение товаров
+										</div>
+										<p class="small">Выберите наиболее подходящий для вас режим отображения товаров в разделах меню.</p>
+									</div>
+									<div class="form-wrap__group">
+										<div class="form-wrap__group-title">Адрес заведения
+										</div>
+										<p class="small">От этого адреса будет рассчитываться стоимость доставки, если вы выберите “Рассчет по формуле”.</p>
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите адрес заведения"/>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="form-wrap__group">
+										<div class="form-wrap__group-title">Валюта
+										</div>
+										<div class="form-wrap__input-wrap form-group">
+											<select class="form-wrap__input form-select custom-select-js" name="select">
+												<option value="Российский рубль, ₽">Российский рубль, ₽</option>
+												<option value=" placeholder 1">placeholder 1</option>
+												<option value=" placeholder 2">placeholder 2</option>
+												<option value=" placeholder 3">placeholder 3</option>
+												<option value=" placeholder 4">placeholder 4</option>
+											</select>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="form-wrap__group">
+										<div class="form-wrap__group-title">Валюта
+										</div>
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Стоимость доставки"/><span class="text-after"> ₽</span>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="form-wrap__group">
+										<div class="form-wrap__group-title">Максимальный радиус доставки
+										</div>
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите максимальный радиус доставки"/><span class="text-after"> км</span>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="form-wrap__group">
+										<div class="form-wrap__group-title">Способы оплаты при доставке курьером
+										</div>
+										<div class="row gy-2">
+											<div class="col-auto">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Онлайн-оплата</span>
+												</label>
+											</div>
+											<div class="col-auto">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Оплата наличными</span>
+												</label>
+											</div>
+											<div class="col-auto">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text form-check-label">Оплата картой</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-wrap__group">
+										<div class="form-wrap__group-title">Способы оплаты при доставке курьером
+										</div>
+										<div class="row gy-2">
+											<div class="col-auto">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="wallet-meth" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Онлайн-оплата</span>
+												</label>
+											</div>
+											<div class="col-auto">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="wallet-meth" type="radio"/><span class="custom-input__text form-check-label">Оплата наличными</span>
+												</label>
+											</div>
+											<div class="col-auto">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="wallet-meth" type="radio"/><span class="custom-input__text form-check-label">Оплата картой</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-wrap__group">
+										<div class="form-wrap__group-title">Платежный токен
+										</div>
+										<p class="small">Введите платежный токен от онлайн-кассы для подключения онлайн-оплаты.</p>
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="токен" value="381764678:TEST:38483"/>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="form-wrap__group">
+										<div class="alert alert-primary small d-md-flex text-md-start text-center align-items-center" role="alert"><img class="me-md-2 mb-md-0 mb-1 img-to-svg text-primary" src="img/svg/info_square_icon.svg" alt=""/>
+											<div class="text-body flex-grow-1 me-md-2 mb-md-0 mb-1">Читайте инструкцию о том, как <a class="tdu" href="#">подключить онлайн-оплату</a> для вашего чат-бота.</div>
+										</div>
+									</div>
+									<div class="form-wrap__group">
+										<div class="form-wrap__group-title">Статус бонусной системы
+										</div>
+										<label class="form-check form-switch form-switch--base">
+											<input class="form-check-input" name="model" type="checkbox" checked="checked" role="switch"/>
+											<div class="form-check-label">Включена</div>
+										</label>
+									</div>
+									<div class="form-wrap__group">
+										<div class="form-wrap__group-title">Бонус за приглашение
+										</div>
+										<p class="small">Количество бонусов, начисляемые пользователю за приглашенного им пользователя который совершил заказ.</p>
+										<div class="row">
+											<div class="col">
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите значение"/><span class="text-after"> %</span>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-3">
+												<div class="form-wrap__input-wrap form-group">
+													<select class="form-wrap__input form-select custom-select-js" name="select">
+														<option value="Процент">Процент</option>
+														<option value=" placeholder 1">placeholder 1</option>
+														<option value=" placeholder 2">placeholder 2</option>
+														<option value=" placeholder 3">placeholder 3</option>
+														<option value=" placeholder 4">placeholder 4</option>
+													</select>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+										</div>
+									</div>
+									<div class="form-wrap__group">
+										<div class="form-wrap__group-title">Понедельник
+										</div>
+										<div class="row gy-3">
+											<div class="col-sm-6">
+												<div class="form-wrap__input-wrap form-group">
+													<select class="form-wrap__input form-select custom-select-js" name="select">
+														<option value="8:00">8:00</option>
+														<option value=" placeholder 1">placeholder 1</option>
+														<option value=" placeholder 2">placeholder 2</option>
+														<option value=" placeholder 3">placeholder 3</option>
+														<option value=" placeholder 4">placeholder 4</option>
+													</select> 
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-sm-6">
+												<div class="form-wrap__input-wrap form-group">
+													<select class="form-wrap__input form-select custom-select-js" name="select">
+														<option value="00:00">00:00</option>
+														<option value=" placeholder 1">placeholder 1</option>
+														<option value=" placeholder 2">placeholder 2</option>
+														<option value=" placeholder 3">placeholder 3</option>
+														<option value=" placeholder 4">placeholder 4</option>
+													</select>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+										</div>
+									</div>
+									<div class="form-wrap__group">
+										<div class="alert alert-orange small d-md-flex text-md-start text-center align-items-center" role="alert"><img class="me-md-2 mb-md-0 mb-1 img-to-svg" src="img/svg/info_square_icon.svg" alt=""/>
+											<div class="text-body flex-grow-1 me-md-2 mb-md-0 mb-1">Чат-бот с текущим тарифом не имеет возможности предоставления API. Перейдите на другой тариф, чтобы открыть API. <br><a class="strong text-orange" href="#">Перейти в тарифы</a></div>
+										</div>
+									</div>
+									<div class="form-wrap__group">
+										<div class="form-wrap__group-title">API ключ
+										</div>
+										<div class="link-block"><input class="link-block__copy-text" type="text" value="fpqxou59R9MAGmGRzY3066CfJc71TJZ8GR3D64wGhwPzK0HY32" readonly="readonly"/>
+											<div class="link-block__icon-wrap">
+												<svg class="icon icon-copy ">
+													<use xlink:href="img/svg/sprite.svg#copy"></use>
+												</svg>
+												<svg class="icon icon-check ">
+													<use xlink:href="img/svg/sprite.svg#check"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<div class="form-wrap__group">
+										<div class="row align-items-center">
+											<div class="col-auto">
+												<button class="btn btn-orange"> 
+													<svg class="icon icon-reload  me-2">
+														<use xlink:href="img/svg/sprite.svg#reload"></use>
+													</svg>Создать новый ключ
+												</button>
+											</div>
+											<div class="col-auto"><a class="small strong" href="#"> Перейти к документации API</a></div>
+										</div>
+									</div>
+									<div class="qr-code">
+										<div class="qr-code__row row">
+											<div class="col-sm-auto">
+												<div class="qr-code__wrap"><img src="img/qr-code.png" alt="" loading="lazy"/>
+												</div>
+											</div>
+											<div class="col-sm">
+												<div class="qr-code__content">
+													<div class="qr-code__title">Получайте уведомления в телеграм
+													</div>
+													<p>QR код для авторизации в администраторском чат-боте ChatFood для получения уведомлений о новых заказах в телеграм.</p><a href="#">@ChatFoodrubot</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="footer-line">
+								<div class="container-fluid text-end">
+									<button class="btn btn-orange">Сохранить изменения</button>
+								</div>
+							</div>
+						</div>
+						<!-- end sSettings-->
+					</div>
+					<footer class="footer">
+						<div class="container-fluid">ChatFood v 3.1</div>
+					</footer>
+				</main>
+			</div>
+		</div>
+		<!--  start modals-->
+		<div id="modal-confirm" style="display: none">
+			<div class="modal-win text-center">
+				<div class="h2 strong mb-3">Подтвердите электронную почту</div>
+				<p class="small mb-4">Чтобы воспользоваться функционалом ChatFood вам необходимо подтвердить регистрацию.</p>
+				<div class="modal-win__btn-close modal-close-js">Закрыть
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="modal-alarm" style="display: none">
+			<div class="modal-win modal-win--aside">
+				<div class="modal-win__head">
+					<div class="h2 strong mb-3">Уведомления</div>
+					<p class="small mb-4"><a class="text-secondary" href="#"> Пометить все как прочитанные</a></p>
+				</div>
+				<div class="modal-win__body">
+					<div class="alert-item alert-item--new">
+						<div class="small mb-1"><a class="text-body" href="#">Промокод на скидку 15% на следующий месяц</a></div>
+						<div class="smallest text-secondary">15 минут назад</div>
+						<div class="alert-item__dots">
+							<svg class="icon icon-dots ">
+								<use xlink:href="img/svg/sprite.svg#dots"></use>
+							</svg>
+							<div class="alert-item__dropdown">
+								<div class="alert-item__dropdown-item">Пометить как прочитанное
+								</div>
+								<div class="alert-item__dropdown-item">Удалить
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alert-item">
+						<div class="small mb-1"><a class="text-body" href="#">Промокод на скидку 15% на следующий месяц</a></div>
+						<div class="smallest text-secondary">15 минут назад</div>
+						<div class="alert-item__dots">
+							<svg class="icon icon-dots ">
+								<use xlink:href="img/svg/sprite.svg#dots"></use>
+							</svg>
+							<div class="alert-item__dropdown">
+								<div class="alert-item__dropdown-item">Пометить как прочитанное
+								</div>
+								<div class="alert-item__dropdown-item">Удалить
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alert-item">
+						<div class="small mb-1"><a class="text-body" href="#">Промокод на скидку 15% на следующий месяц и скидка 50% при оплате на год</a></div>
+						<div class="smallest text-secondary">15 минут назад</div>
+						<div class="alert-item__dots">
+							<svg class="icon icon-dots ">
+								<use xlink:href="img/svg/sprite.svg#dots"></use>
+							</svg>
+							<div class="alert-item__dropdown">
+								<div class="alert-item__dropdown-item">Пометить как прочитанное
+								</div>
+								<div class="alert-item__dropdown-item">Удалить
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alert-item">
+						<div class="small mb-1"><a class="text-body" href="#">Промокод на скидку 15% на следующий месяц</a></div>
+						<div class="smallest text-secondary">15 минут назад</div>
+						<div class="alert-item__dots">
+							<svg class="icon icon-dots ">
+								<use xlink:href="img/svg/sprite.svg#dots"></use>
+							</svg>
+							<div class="alert-item__dropdown">
+								<div class="alert-item__dropdown-item">Пометить как прочитанное
+								</div>
+								<div class="alert-item__dropdown-item">Удалить
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alert-item">
+						<div class="small mb-1"><a class="text-body" href="#">Промокод на скидку 15% на следующий месяц и скидка 50% при оплате на год</a></div>
+						<div class="smallest text-secondary">15 минут назад</div>
+						<div class="alert-item__dots">
+							<svg class="icon icon-dots ">
+								<use xlink:href="img/svg/sprite.svg#dots"></use>
+							</svg>
+							<div class="alert-item__dropdown">
+								<div class="alert-item__dropdown-item">Пометить как прочитанное
+								</div>
+								<div class="alert-item__dropdown-item">Удалить
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alert-item">
+						<div class="small mb-1"><a class="text-body" href="#">Промокод на скидку 15% на следующий месяц и скидка 50% при оплате на год</a></div>
+						<div class="smallest text-secondary">15 минут назад</div>
+						<div class="alert-item__dots">
+							<svg class="icon icon-dots ">
+								<use xlink:href="img/svg/sprite.svg#dots"></use>
+							</svg>
+							<div class="alert-item__dropdown">
+								<div class="alert-item__dropdown-item">Пометить как прочитанное
+								</div>
+								<div class="alert-item__dropdown-item">Удалить
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alert-item">
+						<div class="small mb-1"><a class="text-body" href="#">Промокод на скидку 15% на следующий месяц</a></div>
+						<div class="smallest text-secondary">15 минут назад</div>
+						<div class="alert-item__dots">
+							<svg class="icon icon-dots ">
+								<use xlink:href="img/svg/sprite.svg#dots"></use>
+							</svg>
+							<div class="alert-item__dropdown">
+								<div class="alert-item__dropdown-item">Пометить как прочитанное
+								</div>
+								<div class="alert-item__dropdown-item">Удалить
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alert-item">
+						<div class="small mb-1"><a class="text-body" href="#">Промокод на скидку 15% на следующий месяц</a></div>
+						<div class="smallest text-secondary">15 минут назад</div>
+						<div class="alert-item__dots">
+							<svg class="icon icon-dots ">
+								<use xlink:href="img/svg/sprite.svg#dots"></use>
+							</svg>
+							<div class="alert-item__dropdown">
+								<div class="alert-item__dropdown-item">Пометить как прочитанное
+								</div>
+								<div class="alert-item__dropdown-item">Удалить
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alert-item">
+						<div class="small mb-1"><a class="text-body" href="#">Промокод на скидку 15% на следующий месяц и скидка 50% при оплате на год</a></div>
+						<div class="smallest text-secondary">15 минут назад</div>
+						<div class="alert-item__dots">
+							<svg class="icon icon-dots ">
+								<use xlink:href="img/svg/sprite.svg#dots"></use>
+							</svg>
+							<div class="alert-item__dropdown">
+								<div class="alert-item__dropdown-item">Пометить как прочитанное
+								</div>
+								<div class="alert-item__dropdown-item">Удалить
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alert-item">
+						<div class="small mb-1"><a class="text-body" href="#">Промокод на скидку 15% на следующий месяц</a></div>
+						<div class="smallest text-secondary">15 минут назад</div>
+						<div class="alert-item__dots">
+							<svg class="icon icon-dots ">
+								<use xlink:href="img/svg/sprite.svg#dots"></use>
+							</svg>
+							<div class="alert-item__dropdown">
+								<div class="alert-item__dropdown-item">Пометить как прочитанное
+								</div>
+								<div class="alert-item__dropdown-item">Удалить
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alert-item">
+						<div class="small mb-1"><a class="text-body" href="#">Промокод на скидку 15% на следующий месяц и скидка 50% при оплате на год</a></div>
+						<div class="smallest text-secondary">15 минут назад</div>
+						<div class="alert-item__dots">
+							<svg class="icon icon-dots ">
+								<use xlink:href="img/svg/sprite.svg#dots"></use>
+							</svg>
+							<div class="alert-item__dropdown">
+								<div class="alert-item__dropdown-item">Пометить как прочитанное
+								</div>
+								<div class="alert-item__dropdown-item">Удалить
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alert-item">
+						<div class="small mb-1"><a class="text-body" href="#">Промокод на скидку 15% на следующий месяц и скидка 50% при оплате на год</a></div>
+						<div class="smallest text-secondary">15 минут назад</div>
+						<div class="alert-item__dots">
+							<svg class="icon icon-dots ">
+								<use xlink:href="img/svg/sprite.svg#dots"></use>
+							</svg>
+							<div class="alert-item__dropdown">
+								<div class="alert-item__dropdown-item">Пометить как прочитанное
+								</div>
+								<div class="alert-item__dropdown-item">Удалить
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alert-item">
+						<div class="small mb-1"><a class="text-body" href="#">Промокод на скидку 15% на следующий месяц</a></div>
+						<div class="smallest text-secondary">15 минут назад</div>
+						<div class="alert-item__dots">
+							<svg class="icon icon-dots ">
+								<use xlink:href="img/svg/sprite.svg#dots"></use>
+							</svg>
+							<div class="alert-item__dropdown">
+								<div class="alert-item__dropdown-item">Пометить как прочитанное
+								</div>
+								<div class="alert-item__dropdown-item">Удалить
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alert-item">
+						<div class="small mb-1"><a class="text-body" href="#">Промокод на скидку 15% на следующий месяц</a></div>
+						<div class="smallest text-secondary">15 минут назад</div>
+						<div class="alert-item__dots">
+							<svg class="icon icon-dots ">
+								<use xlink:href="img/svg/sprite.svg#dots"></use>
+							</svg>
+							<div class="alert-item__dropdown">
+								<div class="alert-item__dropdown-item">Пометить как прочитанное
+								</div>
+								<div class="alert-item__dropdown-item">Удалить
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alert-item">
+						<div class="small mb-1"><a class="text-body" href="#">Промокод на скидку 15% на следующий месяц и скидка 50% при оплате на год</a></div>
+						<div class="smallest text-secondary">15 минут назад</div>
+						<div class="alert-item__dots">
+							<svg class="icon icon-dots ">
+								<use xlink:href="img/svg/sprite.svg#dots"></use>
+							</svg>
+							<div class="alert-item__dropdown">
+								<div class="alert-item__dropdown-item">Пометить как прочитанное
+								</div>
+								<div class="alert-item__dropdown-item">Удалить
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alert-item">
+						<div class="small mb-1"><a class="text-body" href="#">Промокод на скидку 15% на следующий месяц</a></div>
+						<div class="smallest text-secondary">15 минут назад</div>
+						<div class="alert-item__dots">
+							<svg class="icon icon-dots ">
+								<use xlink:href="img/svg/sprite.svg#dots"></use>
+							</svg>
+							<div class="alert-item__dropdown">
+								<div class="alert-item__dropdown-item">Пометить как прочитанное
+								</div>
+								<div class="alert-item__dropdown-item">Удалить
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alert-item">
+						<div class="small mb-1"><a class="text-body" href="#">Промокод на скидку 15% на следующий месяц и скидка 50% при оплате на год</a></div>
+						<div class="smallest text-secondary">15 минут назад</div>
+						<div class="alert-item__dots">
+							<svg class="icon icon-dots ">
+								<use xlink:href="img/svg/sprite.svg#dots"></use>
+							</svg>
+							<div class="alert-item__dropdown">
+								<div class="alert-item__dropdown-item">Пометить как прочитанное
+								</div>
+								<div class="alert-item__dropdown-item">Удалить
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alert-item">
+						<div class="small mb-1"><a class="text-body" href="#">Промокод на скидку 15% на следующий месяц и скидка 50% при оплате на год</a></div>
+						<div class="smallest text-secondary">15 минут назад</div>
+						<div class="alert-item__dots">
+							<svg class="icon icon-dots ">
+								<use xlink:href="img/svg/sprite.svg#dots"></use>
+							</svg>
+							<div class="alert-item__dropdown">
+								<div class="alert-item__dropdown-item">Пометить как прочитанное
+								</div>
+								<div class="alert-item__dropdown-item">Удалить
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="alert-item">
+						<div class="small mb-1"><a class="text-body" href="#">Промокод на скидку 15% на следующий месяц</a></div>
+						<div class="smallest text-secondary">15 минут назад</div>
+						<div class="alert-item__dots">
+							<svg class="icon icon-dots ">
+								<use xlink:href="img/svg/sprite.svg#dots"></use>
+							</svg>
+							<div class="alert-item__dropdown">
+								<div class="alert-item__dropdown-item">Пометить как прочитанное
+								</div>
+								<div class="alert-item__dropdown-item">Удалить
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-win__footer">
+					<button class="btn btn-outline-orange w-100">Загрузить еще</button>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="modal-tarif" style="display: none">
+			<div class="modal-win text-center">
+				<div class="h2 strong mb-3">Смена тарифа</div>
+				<p class="small mb-4">У&nbsp;вас уже подключен тариф <strong>Standart</strong>, вы&nbsp;уверены, что хотите изменить тариф на&nbsp;<strong class="newTarif">Free</strong>? Тариф можно изменять только раз в&nbsp;сутки. При смене тарифа будет произведен перерасчет.</p>
+				<div class="row">
+					<div class="col-6">
+						<button class="btn btn-outline-orange w-100">Подтвердить</button>
+					</div>
+					<div class="col-6">
+						<button class="btn btn-orange modal-close-js w-100">Отменить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/datatables.net-dt/js/dataTables.dataTables.min.js"> </script>
+		<script src="libs/datatables.net/js/jquery.dataTables.min.js"> </script>
+		<script src="libs/jquery-datatables-pageloadmore/js/dataTables.pageLoadMore.min.js"> </script>
+		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/choices.js/public/assets/scripts/choices.min.js"> </script>
+		<script src="libs/@popperjs/core/umd/popper.min.js"> </script>
+		<script src="libs/bootstrap/js/bootstrap.min.js"> </script>
+		<script src="libs/sortablejs/Sortable.min.js"> </script>
+		<script src="js/common.js"></script>
+		<script>
+			try {
+			
+			var table = $('#table-1').DataTable({
+			language: {
+				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				},
+				"lengthChange": false, 
+				info: false,
+				pageLength: 5,
+				// ajax: 'https://gyrocode.github.io/files/jquery-datatables/arrays.json',
+						drawCallback: function(){ 
+							$('#btn-example-load-more-1').toggle(this.api().page.hasMore());
+						}   
+			});
+			$('#btn-example-load-more-1').on('click', function(){   
+				table.page.loadMore();
+			});
+			} catch (error) { }
+			try {
+				
+			var table2 = $('#table-2').DataTable({
+			language: {
+				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				},
+				"lengthChange": false, 
+				info: false,
+				pageLength: 5,
+				// ajax: 'https://gyrocode.github.io/files/jquery-datatables/arrays.json',
+						drawCallback: function(){ 
+							$('#btn-example-load-more-2').toggle(this.api().page.hasMore());
+						}   
+			});
+			$('#btn-example-load-more-2').on('click', function(){   
+				table2.page.loadMore();
+			});
+			} catch (error) { }
+			try {
+			
+			var table3 = $('#table-3').DataTable({
+			language: {
+				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				},
+				"lengthChange": false, 
+				info: false,
+				pageLength: 5,
+				// ajax: 'https://gyrocode.github.io/files/jquery-datatables/arrays.json',
+						drawCallback: function(){ 
+							$('#btn-example-load-more-3').toggle(this.api().page.hasMore());
+						}   
+			});
+			$('#btn-example-load-more-3').on('click', function(){   
+				table3.page.loadMore();
+			});
+			} catch (error) { 	}
+			try {
+			
+			var table4 = $('#table-4').DataTable({
+			language: {
+				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				},
+				"lengthChange": false, 
+				info: false,
+				searching: false,
+				pageLength: 3,
+				// ajax: 'https://gyrocode.github.io/files/jquery-datatables/arrays.json',
+						drawCallback: function(){ 
+							$('#btn-example-load-more-4').toggle(this.api().page.hasMore());
+						}   
+			});
+			$('#btn-example-load-more-4').on('click', function(){   
+				table4.page.loadMore();
+			}); 
+			} catch (error) { }
+			try { 
+			var table5 = $('#table-5').DataTable({
+			language: {
+				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				},
+				"lengthChange": false, 
+				info: false,
+				searching: false,
+				// ajax: 'https://gyrocode.github.io/files/jquery-datatables/arrays.json',
+			});
+			$('#btn-example-load-more-5').on('click', function(){   
+				table5.page.loadMore();
+			}); 
+			} catch (error) { 	}
+		</script>
+	</body>
+</html>

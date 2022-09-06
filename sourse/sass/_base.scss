@@ -567,7 +567,8 @@ iframe {
 	}
 	
 	@include media-breakpoint-up(md) {
-		max-width: calc(700px + var(--bs-gutter-x));
+		max-width: calc(700px + var(--bs-gutter-x) * 1.5);
+		padding-left: calc(var(--bs-gutter-x));
 	}
 
 }
@@ -1159,4 +1160,115 @@ cursor:no-drop;
 		&:focus{
 			box-shadow: 0px 5px 15px rgba(25, 28, 31, 0.1);
 		}
+	}
+
+	.alert{
+		.img-to-svg{
+			flex: 0 0 auto;
+		}
+	}
+
+	.chat-avatar{
+		border-radius: rem(20px);
+		--w: #{rem(128)};
+		width: var(--w);
+		height: var(--w);
+		@include rfs(60px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+	.accordion-block{}
+	.accordion-item{
+		&__body{
+			display: none;
+		}
+		border-top: 1px solid #EBEBEB;
+		&:last-child{
+			border-bottom: 1px solid #EBEBEB;
+		}
+		&__head{
+			padding-top: rem(20);
+			padding-bottom: rem(20);
+			font-size: 14px;
+			font-weight: bold;
+			position: relative;
+			cursor: pointer;
+		}
+		&__toggle{
+			position: absolute;
+			right: 0;
+			top: 50%;
+			margin-top: -6px;
+			width: 12px;
+			height: 12px;
+			color: $orange;
+			&::before,
+			&::after{
+				content: '';
+				@include a-cent;
+				height: 2px;
+				background-color: currentColor;
+				width: 100%;
+			}
+			&::after{
+				transform: rotate(90deg);
+			}
+			@include mt;
+		}
+		&.active &__toggle{
+			transform: rotate(135deg);
+			color: #c2c2c2;
+		}
+		font-size: 14px;
+		ol{
+			padding-left: 0;
+			margin-left: 0;
+			list-style: none;
+			counter-reset: num;
+			li{
+				position: relative; 
+				padding-left: rem(40);
+				padding-top: rem(10);
+				padding-bottom: rem(10);
+				&::before {
+					content: counter(num);
+					counter-increment: num;
+					background: #F6F6F6;
+					width: rem(30);
+					height: rem(30);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border-radius: 50%;
+					position: absolute;
+					left: 0;
+					top: rem(5);
+				}
+			}
+		}
+	}
+
+	.message-prev{
+		background: #F6F6F6;
+		border-radius: 8px;
+		padding: rem(10) rem(20);
+		margin-bottom: rem(20);
+	}
+
+	.form-check{
+		cursor: pointer;
+	}
+
+	.footer-line{
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		background-color: #fff;
+		box-shadow: 0px 0px 15px rgba(25, 28, 31, 0.1);
+		width: 100%;
+		padding-top: 15px;
+		padding-bottom: 15px;
 	}

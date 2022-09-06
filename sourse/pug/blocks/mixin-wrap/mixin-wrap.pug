@@ -232,3 +232,12 @@ mixin orderCard(title="Прага-Бургер")
 					+icon('chevron-up')
 				+e.sort(href="#").d-sm-none
 					+icon('chevron-down')
+
+
+mixin link-block(v='https://chatfood.ru/?p=324')
+	+b.link-block
+		+e.INPUT.copy-text(type="text" value= v readonly)
+		+e.icon-wrap
+			+icon('copy')
+			+icon('check')
+		//- +e.icon-wrap

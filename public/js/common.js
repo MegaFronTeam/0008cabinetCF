@@ -685,6 +685,9 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 		})
 	}
 
+
+	
+
 	
 };
 if (document.readyState !== 'loading') {
@@ -709,3 +712,5 @@ if (document.readyState !== 'loading') {
 		document.querySelector(".add-photo-wrap__btn-delete").classList.remove("d-none")
 		image.src = URL.createObjectURL(event.target.files[0]);
 	}; 
+
+	

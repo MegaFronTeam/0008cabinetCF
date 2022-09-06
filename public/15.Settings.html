@@ -349,6 +349,16 @@
 										<div class="form-wrap__group-title">Отображение товаров
 										</div>
 										<p class="small">Выберите наиболее подходящий для вас режим отображения товаров в разделах меню.</p>
+										<div class="row gy-3">
+											<div class="col-auto">
+												<label class="custom-input-block form-check"><input class="custom-input-block__input form-check-input" name="var" type="radio" checked="checked"/><span class="custom-input-block__row row"><span class="col-auto"><img src="img/icon-ryd.svg" alt=""/></span></span><span class="text-center">1 в ряд</span>
+												</label>
+											</div>
+											<div class="col-auto">
+												<label class="custom-input-block form-check"><input class="custom-input-block__input form-check-input" name="var" type="radio"/><span class="custom-input-block__row row"><span class="col-auto"><img src="img/icon-ryd.svg" alt=""/></span><span class="col-auto"><img src="img/icon-ryd.svg" alt=""/></span></span><span class="text-center">2 в ряд</span>
+												</label>
+											</div>
+										</div>
 									</div>
 									<div class="form-wrap__group">
 										<div class="form-wrap__group-title">Адрес заведения
@@ -357,6 +367,38 @@
 										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите адрес заведения"/>
 										</div>
 										<!-- +e.input-wrap-->
+										<div id="map"></div>
+										<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
+										<script>
+											function init() {
+											const mark = 'img/map.svg';
+											var center = [55.733, 37.588];
+											var map = new ymaps.Map('map', {
+												center,
+												zoom: 16,
+												controls: ['zoomControl']
+											}),
+												myPlacemark = new ymaps.Placemark(center, {
+														hintContent: 'Собственный значок метки',
+														balloonContent: 'Это красивая метка'
+												}, {
+														// Опции.
+														// Необходимо указать данный тип макета.
+														iconLayout: 'default#image',
+														// Своё изображение иконки метки.
+														iconImageHref: mark,
+														// Размеры метки.
+														iconImageSize: [40, 40],
+														// Смещение левого верхнего угла иконки относительно
+														// её "ножки" (точки привязки).
+														iconImageOffset: [-5, -38]
+												});
+												map.geoObjects
+												.add(myPlacemark)
+											};
+											
+											ymaps.ready(init);
+										</script>
 									</div>
 									<div class="form-wrap__group">
 										<div class="form-wrap__group-title">Валюта
@@ -426,7 +468,7 @@
 										<div class="form-wrap__group-title">Платежный токен
 										</div>
 										<p class="small">Введите платежный токен от онлайн-кассы для подключения онлайн-оплаты.</p>
-										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="токен" value="381764678:TEST:38483"/>
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control is-valid" name="text" type="text" placeholder="токен" value="381764678:TEST:38483"/>
 										</div>
 										<!-- +e.input-wrap-->
 									</div>

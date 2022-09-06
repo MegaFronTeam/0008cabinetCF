@@ -3,7 +3,10 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	padding-top: rem(20);
+	padding-top: 0;
+	@include media-breakpoint-up(sm) {
+		padding-top: rem(20);
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
@@ -78,7 +81,10 @@
 	}
 	.btn-example-load-more{
 		font-weight: normal;
-		margin-top: rem(20);
+		margin-top: 2px;
+		@include media-breakpoint-up(sm) {
+			margin-top: rem(20);
+		}
 		.icon{
 			color: $orange;
 			margin-right: rem(10);
@@ -89,7 +95,14 @@
 	.btn-light {
     --bs-btn-bg: #F6F6F6;
     --bs-btn-border-color: #F6F6F6;
-}
+	}
+	.table-wrap-js {
+		position: relative;
+		overflow: auto;
+		.dataTables_wrapper {
+			min-width: 470px;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -847,3 +847,13 @@ font-size: 14px;
 
 	}
 }
+
+.table {
+	thead {
+		tr {
+			&:hover {
+				box-shadow: none;
+			}
+		}
+	}
+}

@@ -1,6 +1,6 @@
 // start .sMailing
 .sMailing {
-	--sPT: #{rem(15)};
+	--sPT: #{rem(0)};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	@include media-breakpoint-up(md) {
@@ -15,17 +15,25 @@
 		
 	}
 	&__card {
-		padding: rem(20);
-		min-height: rem(160);
+		padding: rem(15);
+		min-height: rem(127);
 		height: 100%;
+		@include media-breakpoint-up(sm) {
+			min-height: rem(160);
+			padding: rem(20);
+		}
 		@include media-breakpoint-up(xxl) {
 			padding: rem(20);
 		}
 	}
 	&__head-row {
-		--bs-gutter-y: #{rem(15)};
 		align-items: center;
-		margin-bottom: rem(20);
+		--bs-gutter-y: #{rem(15)};
+		margin-bottom: rem(15);
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(20);
+
+		}
 		@include media-breakpoint-down(md) {
 			justify-content: space-between;
 		}
@@ -89,6 +97,10 @@
 	}
 	.btn-example-load-more{
 		font-weight: normal;
+		font-size: 12px;
+		@include media-breakpoint-up(md) {
+			font-size: 14px;
+		}
 		.icon{
 			color: $orange;
 			margin-right: rem(10);
@@ -108,10 +120,12 @@
 		.h1 {
 			margin-bottom: rem(15);
 			font-weight: 700;
+			text-align: center;
 		}
 		p {
 			font-size: 14px;
 			margin-bottom: rem(30);
+			text-align: center;
 		}
 	}
 	&__btn {
@@ -263,6 +277,7 @@
 		font-weight: 700;
 		color: #8C8D8F;
 		margin-left: rem(20);
+		cursor: pointer;
 		&:hover {
 			background-color: $orange;
 			color: #fff;
@@ -275,9 +290,17 @@
 	}
 	.table-wrap-js {
 		margin-bottom: rem(20);
+		position: relative;
+		overflow: auto;
+		.dataTables_wrapper {
+			@include media-breakpoint-down(md) {
+				min-width: 360px;
+			}
+		}
 		th {
 			border-bottom: 1px solid #EBEBEB !important;
 			&:nth-child(1) {
+				padding-left: 0;
 				@include media-breakpoint-up(md) {
 					padding-left: rem(20);
 					width: 118px !important;
@@ -294,6 +317,7 @@
 			// 	}
 			// }
 			&:nth-child(4) {
+				padding-right: 0;
 				@include media-breakpoint-up(md) {
 					padding-right: rem(40);
 					width: 206px !important;
@@ -303,18 +327,24 @@
 		td {
 			vertical-align: middle;
 			border-bottom: 1px solid #EBEBEB !important;
+			padding-top: rem(10.200);
+			padding-bottom: rem(10.200);
 			&:nth-child(1) {
+				padding-left: 0;
 				@include media-breakpoint-up(md) {
 					padding-left: rem(20);
 				}
 			}
 			&:nth-child(4) {
+				padding-right: 0;
 				@include media-breakpoint-up(md) {
 					padding-right: rem(40);
 				}
 			}
 		}
+
 	}
+
 	&__wrap {
 		align-items: center;
 	}
@@ -322,15 +352,19 @@
 		display: flex;
 		align-items: center;
 		@include media-breakpoint-down(sm) {
-			flex-direction: column;
-			justify-content: center;
+			// flex-direction: column;
+			// align-items: flex-start;
 		}
 		img {
-			margin: rem(10);
+			margin-right: rem(10);
 		}
 	}
 	.btn-example-load-more{
 		font-weight: normal;
+		font-size: 12px;
+		@include media-breakpoint-up(sm) {
+			font-size: 14px;
+		}
 		.icon{
 			color: $orange;
 			margin-right: rem(10);

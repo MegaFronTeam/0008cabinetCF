@@ -31,6 +31,11 @@
 			&:not(.active) {
 				.sCabinetPanel-item {
 					background-color: $gray-100;
+					border-color: transparent;
+					&:hover {
+						box-shadow: none;
+						opacity: .7;
+					}
 				}
 			}
 			&.active {
@@ -73,6 +78,18 @@
 			}
 		}
 	}
+	.sCabinetPanel-item {
+		&__footer-wrap {
+			position: relative;
+			overflow: auto;
+			margin-top: auto;
+		}
+		&__footer {
+			min-width: calc(rem(300) );
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
 	&__cross {
 		@include mt;
 		position: absolute;
@@ -110,7 +127,10 @@
 		&__group-title {
 			font-weight: 700;
 			font-size: rem(24);
-
+			margin-bottom: 10px;
+			@include media-breakpoint-up(md) {
+				margin-bottom: 0;
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}

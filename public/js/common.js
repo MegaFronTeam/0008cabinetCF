@@ -685,10 +685,25 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 		})
 	}
 
-
+	let touchstartX = 0
+	let touchendX = 0
+			
+	function checkDirection() {
+		if (touchendX < touchstartX) {
+			$('aside').removeClass('active');
+			$('body').removeClass('show-sidebar');
+			$('.toggle-menu-mobile--js').removeClass('on');
+		}
+	}
 	
-
+	document.addEventListener('touchstart', e => {
+		touchstartX = e.changedTouches[0].screenX
+	})
 	
+	document.addEventListener('touchend', e => {
+		touchendX = e.changedTouches[0].screenX
+		checkDirection()
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
@@ -713,4 +728,3 @@ if (document.readyState !== 'loading') {
 		image.src = URL.createObjectURL(event.target.files[0]);
 	}; 
 
-	

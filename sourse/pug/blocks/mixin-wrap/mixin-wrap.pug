@@ -119,10 +119,10 @@ mixin aside(second)
 							+e.id #13405
 						+icon("setting")
 
-mixin main(t='Мои чат-боты', badge, avatar)
+mixin main(t='Мои чат-боты', badge, avatar, mailingList)
 	.main-center-wrap
 		main
-			+topLine(t, badge, avatar)
+			+topLine(t, badge, avatar, mailingList)
 			.container-fluid.container-main
 				block
 			+footer()
@@ -213,25 +213,28 @@ mixin orderCard(title="Прага-Бургер")
 			+e.food 🥗 Салаты
 			a(href="#")!= title
 			+e.type 1350 -13350 ₽
-		.row
+		.row.align-items-center
 			.col
 				label.form-check.form-switch
 					input.form-check-input(name='model' type='checkbox' role='switch')
 					.form-check-label Видимость
-			+e.tooltips.col-auto
-				a(href="#")
-					+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Копировать")
-						+icon('copy')
-				a(href="#")
-					+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Редактировать")
-						+icon('edit')
-				a(href="#")
-					+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Удалить")
-						+icon('delete')
-				+e.sort(href="#").d-sm-none
-					+icon('chevron-up')
-				+e.sort(href="#").d-sm-none
-					+icon('chevron-down')
+			+e.tooltips.col-auto.mb-2
+				.row.gx-2.align-items-center
+					a(href="#").col-auto
+						+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Копировать")
+							+icon('copy')
+					a(href="#").col-auto
+						+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Редактировать")
+							+icon('edit')
+					a(href="#").col-auto
+						+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Удалить")
+							+icon('delete')
+					.d-sm-none.col-auto
+						+e.sort(href="#").drop-top-js
+							+icon('chevron-up')
+					.d-sm-none.col-auto.ps-0.drop-down-js
+						+e.sort(href="#")
+							+icon('chevron-down')
 
 
 mixin link-block(v='https://chatfood.ru/?p=324')

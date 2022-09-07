@@ -229,7 +229,7 @@
 										<!-- +e.input-wrap-->
 									</div>
 								</div>
-								<div class="col-auto col-sm-12 col-md order-3 order-sm-last order-lg-2">
+								<div class="col-auto col-sm-12 col-lg order-3 order-sm-last order-lg-2">
 									<div class="sBotMenu__search d-none d-sm-block">
 										<div class="sBotMenu__input-wrap form-group"><input class="sBotMenu__input form-control" name="text" type="text" placeholder="Поиск по товарам"/>
 										</div>
@@ -240,14 +240,14 @@
 											</svg>
 										</button>
 									</div>
-									<div class="sBotMenu__search sBotMenu__search--toggle d-block d-sm-none">
-										<button>
+									<div class="sBotMenu__search d-block d-sm-none">
+										<button class="toggle-search">
 											<svg class="icon icon-search ">
 												<use xlink:href="img/svg/sprite.svg#search"></use>
 											</svg>
 										</button>
-										<div class="sBotMenu__wrap sBotMenu__wrap--search">
-											<div class="sBotMenu__cross">
+										<div class="sBotMenu__wrap search search--js">
+											<div class="sBotMenu__cross toggle-search">
 											</div>
 											<div class="h2">Поиск</div>
 											<div class="sBotMenu__inner-search">
@@ -277,7 +277,7 @@
 										<!-- +e.input-wrap-->
 									</div>
 								</div>
-								<div class="col-auto order-sm-5 order-lg-4 d-none d-md-block">
+								<div class="col-auto order-sm-5 order-lg-4 d-none d-lg-block">
 									<div class="sBotMenu__show-switch">
 										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="switch" type="radio" checked="checked"/>
 											<svg class="icon icon-category ">
@@ -292,27 +292,27 @@
 									</div>
 								</div>
 								<div class="col col-lg-auto order-2 order-sm-3 order-lg-4">
-									<a class="sBotMenu__categories-btn btn" href="#">
+									<a class="sBotMenu__btn-head sBotMenu__btn-head--categories btn btn-outline-gray" href="#">
 										<svg class="icon icon-shopping-bag ">
 											<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-										</svg><span class="d-none d-sm-inline-block">Категории меню</span><span class="d-inline-block d-sm-none">Категории</span>
+										</svg>Категории <span class="d-none d-sm-inline">меню</span>
 									</a>
 								</div>
 								<div class="col col-lg-auto order-1 order-sm-4 order-lg-6">
-									<a class="sBotMenu__more-btn btn btn-orange" href="#">
+									<a class="sBotMenu__btn-head sBotMenu__btn-head--more-btn btn btn-orange" href="#">
 										<svg class="icon icon-more ">
 											<use xlink:href="img/svg/sprite.svg#more"></use>
-										</svg><span class="d-none d-sm-inline-block">Добавить товар</span><span class="d-inline-block d-sm-none">Добавить</span>
+										</svg> Добавить <span class="d-none d-sm-inline">товар</span>
 									</a>
 								</div>
 								<div class="col-auto order-last d-block d-sm-none">
-									<div class="sBotMenu__filter">
+									<div class="sBotMenu__filter toggle-filter">
 										<svg class="icon icon-filter ">
 											<use xlink:href="img/svg/sprite.svg#filter"></use>
 										</svg>
 									</div>
-									<div class="sBotMenu__wrap sBotMenu__wrap--filter">
-										<div class="sBotMenu__cross">
+									<div class="sBotMenu__wrap filter filter--js">
+										<div class="sBotMenu__cross toggle-filter">
 										</div>
 										<div class="h2">Сортировать</div>
 										<div class="sBotMenu__inputs">
@@ -342,7 +342,7 @@
 											</label>
 											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="show" type="radio"/><span class="custom-input__text form-check-label">Только неактивные</span>
 											</label>
-										</div><a class="btn btn-orange" href="#">Закрыть</a>
+										</div><a class="btn btn-orange toggle-filter" href="#">Закрыть</a>
 									</div>
 								</div>
 							</div>
@@ -350,23 +350,26 @@
 								<table class="table table-js" id="table-5">
 									<thead>
 										<tr>
-											<th>Товар</th>
-											<th>Категория</th>
-											<th>Цена</th>
-											<th>Рейтинг</th>
-											<th>Заказы</th>
-											<th>Видимость</th>
+											<th class="td-small"></th>
+											<th><span>Товар</span></th>
+											<th><span>Категория</span></th>
+											<th><span>Цена</span></th>
+											<th><span>Рейтинг</span></th>
+											<th><span>Заказы</span></th>
+											<th><span>Видимость</span></th>
 										</tr>
 									</thead>
-									<tbody>
+									<tbody class="drug-wrap-block-js">
 													<tr>
+														<td class="td-small"> 
+															<div class="sBotMenu__ellipsis my-handle">
+																<svg class="icon icon-dots ">
+																	<use xlink:href="img/svg/sprite.svg#dots"></use>
+																</svg>
+															</div>
+														</td>
 														<td> 
-															<div class="sBotMenu__product-wrap">
-																<div class="sBotMenu__ellipsis">
-																	<svg class="icon icon-dots ">
-																		<use xlink:href="img/svg/sprite.svg#dots"></use>
-																	</svg>
-																</div><img src="img/food.jpg" alt="" loading="lazy"/>
+															<div class="sBotMenu__product-wrap"><img src="img/food.jpg" alt="" loading="lazy"/>
 																<a class="sBotMenu__headline-link" href="#">Фиш&Чипс с соусом Чеддер и овощным салатом третья строка названия
 																</a>
 															</div>
@@ -405,13 +408,15 @@
 														</td>
 													</tr>
 													<tr>
+														<td class="td-small"> 
+															<div class="sBotMenu__ellipsis my-handle">
+																<svg class="icon icon-dots ">
+																	<use xlink:href="img/svg/sprite.svg#dots"></use>
+																</svg>
+															</div>
+														</td>
 														<td> 
-															<div class="sBotMenu__product-wrap">
-																<div class="sBotMenu__ellipsis">
-																	<svg class="icon icon-dots ">
-																		<use xlink:href="img/svg/sprite.svg#dots"></use>
-																	</svg>
-																</div><img src="img/food.jpg" alt="" loading="lazy"/>
+															<div class="sBotMenu__product-wrap"><img src="img/food.jpg" alt="" loading="lazy"/>
 																<a class="sBotMenu__headline-link" href="#">Фиш&Чипс с соусом Чеддер и овощным салатом третья строка названия
 																</a>
 															</div>
@@ -450,13 +455,15 @@
 														</td>
 													</tr>
 													<tr>
+														<td class="td-small"> 
+															<div class="sBotMenu__ellipsis my-handle">
+																<svg class="icon icon-dots ">
+																	<use xlink:href="img/svg/sprite.svg#dots"></use>
+																</svg>
+															</div>
+														</td>
 														<td> 
-															<div class="sBotMenu__product-wrap">
-																<div class="sBotMenu__ellipsis">
-																	<svg class="icon icon-dots ">
-																		<use xlink:href="img/svg/sprite.svg#dots"></use>
-																	</svg>
-																</div><img src="img/food.jpg" alt="" loading="lazy"/>
+															<div class="sBotMenu__product-wrap"><img src="img/food.jpg" alt="" loading="lazy"/>
 																<a class="sBotMenu__headline-link" href="#">Фиш&Чипс с соусом Чеддер и овощным салатом третья строка названия
 																</a>
 															</div>
@@ -495,13 +502,15 @@
 														</td>
 													</tr>
 													<tr>
+														<td class="td-small"> 
+															<div class="sBotMenu__ellipsis my-handle">
+																<svg class="icon icon-dots ">
+																	<use xlink:href="img/svg/sprite.svg#dots"></use>
+																</svg>
+															</div>
+														</td>
 														<td> 
-															<div class="sBotMenu__product-wrap">
-																<div class="sBotMenu__ellipsis">
-																	<svg class="icon icon-dots ">
-																		<use xlink:href="img/svg/sprite.svg#dots"></use>
-																	</svg>
-																</div><img src="img/food.jpg" alt="" loading="lazy"/>
+															<div class="sBotMenu__product-wrap"><img src="img/food.jpg" alt="" loading="lazy"/>
 																<a class="sBotMenu__headline-link" href="#">Фиш&Чипс с соусом Чеддер и овощным салатом третья строка названия
 																</a>
 															</div>
@@ -540,13 +549,15 @@
 														</td>
 													</tr>
 													<tr>
+														<td class="td-small"> 
+															<div class="sBotMenu__ellipsis my-handle">
+																<svg class="icon icon-dots ">
+																	<use xlink:href="img/svg/sprite.svg#dots"></use>
+																</svg>
+															</div>
+														</td>
 														<td> 
-															<div class="sBotMenu__product-wrap">
-																<div class="sBotMenu__ellipsis">
-																	<svg class="icon icon-dots ">
-																		<use xlink:href="img/svg/sprite.svg#dots"></use>
-																	</svg>
-																</div><img src="img/food.jpg" alt="" loading="lazy"/>
+															<div class="sBotMenu__product-wrap"><img src="img/food.jpg" alt="" loading="lazy"/>
 																<a class="sBotMenu__headline-link" href="#">Фиш&Чипс с соусом Чеддер и овощным салатом третья строка названия
 																</a>
 															</div>
@@ -585,13 +596,15 @@
 														</td>
 													</tr>
 													<tr>
+														<td class="td-small"> 
+															<div class="sBotMenu__ellipsis my-handle">
+																<svg class="icon icon-dots ">
+																	<use xlink:href="img/svg/sprite.svg#dots"></use>
+																</svg>
+															</div>
+														</td>
 														<td> 
-															<div class="sBotMenu__product-wrap">
-																<div class="sBotMenu__ellipsis">
-																	<svg class="icon icon-dots ">
-																		<use xlink:href="img/svg/sprite.svg#dots"></use>
-																	</svg>
-																</div><img src="img/food.jpg" alt="" loading="lazy"/>
+															<div class="sBotMenu__product-wrap"><img src="img/food.jpg" alt="" loading="lazy"/>
 																<a class="sBotMenu__headline-link" href="#">Фиш&Чипс с соусом Чеддер и овощным салатом третья строка названия
 																</a>
 															</div>
@@ -630,13 +643,15 @@
 														</td>
 													</tr>
 													<tr>
+														<td class="td-small"> 
+															<div class="sBotMenu__ellipsis my-handle">
+																<svg class="icon icon-dots ">
+																	<use xlink:href="img/svg/sprite.svg#dots"></use>
+																</svg>
+															</div>
+														</td>
 														<td> 
-															<div class="sBotMenu__product-wrap">
-																<div class="sBotMenu__ellipsis">
-																	<svg class="icon icon-dots ">
-																		<use xlink:href="img/svg/sprite.svg#dots"></use>
-																	</svg>
-																</div><img src="img/food.jpg" alt="" loading="lazy"/>
+															<div class="sBotMenu__product-wrap"><img src="img/food.jpg" alt="" loading="lazy"/>
 																<a class="sBotMenu__headline-link" href="#">Фиш&Чипс с соусом Чеддер и овощным салатом третья строка названия
 																</a>
 															</div>

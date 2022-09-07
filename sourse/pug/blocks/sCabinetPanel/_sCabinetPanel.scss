@@ -318,7 +318,7 @@
 			margin-right: em(6);
 			background-color: currentColor;
 			position: relative;
-			top: em(6);
+			top: em(8);
 			position: absolute;
 			left: 0;
 		}
@@ -378,9 +378,15 @@
 
 .table {
 	tr {
+		td{
+			@include mt;
+		}
 		@include mt;
 		&:hover {
 			box-shadow: 0px 0px 15px rgba(25, 28, 31, 0.1);
+			td{
+
+			}
 		}
 	}
 	th,

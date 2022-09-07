@@ -214,6 +214,117 @@
 					<div class="container-fluid container-main">
 						<!-- start sMailing-->
 						<div class="sMailing section" id="sMailing">
+							<div class="sMailing__head-row row">
+								<div class="col-auto d-none d-md-block">
+									<div class="sMailing__all-goods">
+										<div class="sMailing__input-wrap form-group">
+											<select class="sMailing__input form-select custom-select-js" name="select">
+												<option value="Все товары">Все товары</option>
+												<option value=" placeholder 1">placeholder 1</option>
+												<option value=" placeholder 2">placeholder 2</option>
+												<option value=" placeholder 3">placeholder 3</option>
+												<option value=" placeholder 4">placeholder 4</option>
+											</select>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+								</div>
+								<div class="col-auto col-md order-2">
+									<div class="sMailing__search d-none d-sm-block">
+										<div class="sMailing__input-wrap form-group"><input class="sMailing__input form-control" name="text" type="text" placeholder="Поиск по товарам"/>
+										</div>
+										<!-- +e.input-wrap-->
+										<button>
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="sMailing__search d-block d-sm-none">
+										<button class="toggle-search">
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</button>
+										<div class="sMailing__wrap search search--js">
+											<div class="sMailing__cross toggle-search">
+											</div>
+											<div class="h2">Поиск</div>
+											<div class="sMailing__inner-search">
+												<div class="sMailing__input-wrap form-group"><input class="sMailing__input form-control" name="text" type="text" placeholder="Поиск по товарам"/>
+												</div>
+												<!-- +e.input-wrap-->
+												<button>
+													<svg class="icon icon-search ">
+														<use xlink:href="img/svg/sprite.svg#search"></use>
+													</svg>
+												</button>
+											</div><a class="btn btn-orange" href="#">Показать товары</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-auto d-none d-md-block order-md-3">
+									<div class="sMailing__show-switch">
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="switch" type="radio" checked="checked"/>
+											<svg class="icon icon-category ">
+												<use xlink:href="img/svg/sprite.svg#category"></use>
+											</svg>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="switch" type="radio"/>
+											<svg class="icon icon-list ">
+												<use xlink:href="img/svg/sprite.svg#list"></use>
+											</svg>
+										</label>
+									</div>
+								</div>
+								<div class="col col-md-auto order-1 order-md-4">
+									<a class="sMailing__categories-btn btn btn-primary" href="#">
+										<svg class="icon icon-telegram ">
+											<use xlink:href="img/svg/sprite.svg#telegram"></use>
+										</svg><span>Запустить рассылку</span>
+									</a>
+								</div>
+								<div class="col-auto order-last d-block d-md-none">
+									<div class="sMailing__filter toggle-filter">
+										<svg class="icon icon-filter ">
+											<use xlink:href="img/svg/sprite.svg#filter"></use>
+										</svg>
+									</div>
+									<div class="sMailing__wrap filter filter--js">
+										<div class="sMailing__cross toggle-filter">
+										</div>
+										<div class="h2">Сортировать</div>
+										<div class="sMailing__inputs">
+											<div class="sMailing__headline">По категориям товаров
+											</div>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">Все товары</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">🍔 Бургеры</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">🥘 Основные блюда</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">🍳 Завтраки</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">🥓 Закуски</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">🥗 Салаты</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">🥐 Круассаны</span>
+											</label>
+										</div>
+										<div class="sMailing__inputs">
+											<div class="sMailing__headline">По типу товаров
+											</div>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="show" type="radio"/><span class="custom-input__text form-check-label">Показывать все</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="show" type="radio"/><span class="custom-input__text form-check-label">Только активные</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="show" type="radio"/><span class="custom-input__text form-check-label">Только неактивные</span>
+											</label>
+										</div><a class="btn btn-orange toggle-filter" href="#">Закрыть</a>
+									</div>
+								</div>
+							</div>
 							<div class="sMailing__row row">
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="sMailing__card card">

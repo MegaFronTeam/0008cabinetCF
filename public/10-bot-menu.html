@@ -229,7 +229,7 @@
 										<!-- +e.input-wrap-->
 									</div>
 								</div>
-								<div class="col-auto col-sm-12 col-md order-3 order-sm-last order-lg-2">
+								<div class="col-auto col-sm-12 col-lg order-3 order-sm-last order-lg-2">
 									<div class="sBotMenu__search d-none d-sm-block">
 										<div class="sBotMenu__input-wrap form-group"><input class="sBotMenu__input form-control" name="text" type="text" placeholder="Поиск по товарам"/>
 										</div>
@@ -240,14 +240,14 @@
 											</svg>
 										</button>
 									</div>
-									<div class="sBotMenu__search sBotMenu__search--toggle d-block d-sm-none">
-										<button>
+									<div class="sBotMenu__search d-block d-sm-none">
+										<button class="toggle-search">
 											<svg class="icon icon-search ">
 												<use xlink:href="img/svg/sprite.svg#search"></use>
 											</svg>
 										</button>
-										<div class="sBotMenu__wrap sBotMenu__wrap--search">
-											<div class="sBotMenu__cross">
+										<div class="sBotMenu__wrap search search--js">
+											<div class="sBotMenu__cross toggle-search">
 											</div>
 											<div class="h2">Поиск</div>
 											<div class="sBotMenu__inner-search">
@@ -277,7 +277,7 @@
 										<!-- +e.input-wrap-->
 									</div>
 								</div>
-								<div class="col-auto order-sm-5 order-lg-4 d-none d-md-block">
+								<div class="col-auto order-sm-5 order-lg-4 d-none d-lg-block">
 									<div class="sBotMenu__show-switch">
 										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="switch" type="radio" checked="checked"/>
 											<svg class="icon icon-category ">
@@ -292,27 +292,27 @@
 									</div>
 								</div>
 								<div class="col col-lg-auto order-2 order-sm-3 order-lg-4">
-									<a class="sBotMenu__categories-btn btn" href="#">
+									<a class="sBotMenu__btn-head sBotMenu__btn-head--categories btn btn-outline-gray" href="#">
 										<svg class="icon icon-shopping-bag ">
 											<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-										</svg><span class="d-none d-sm-inline-block">Категории меню</span><span class="d-inline-block d-sm-none">Категории</span>
+										</svg>Категории <span class="d-none d-sm-inline">меню</span>
 									</a>
 								</div>
 								<div class="col col-lg-auto order-1 order-sm-4 order-lg-6">
-									<a class="sBotMenu__more-btn btn btn-orange" href="#">
+									<a class="sBotMenu__btn-head sBotMenu__btn-head--more-btn btn btn-orange" href="#">
 										<svg class="icon icon-more ">
 											<use xlink:href="img/svg/sprite.svg#more"></use>
-										</svg><span class="d-none d-sm-inline-block">Добавить товар</span><span class="d-inline-block d-sm-none">Добавить</span>
+										</svg> Добавить <span class="d-none d-sm-inline">товар</span>
 									</a>
 								</div>
 								<div class="col-auto order-last d-block d-sm-none">
-									<div class="sBotMenu__filter">
+									<div class="sBotMenu__filter toggle-filter">
 										<svg class="icon icon-filter ">
 											<use xlink:href="img/svg/sprite.svg#filter"></use>
 										</svg>
 									</div>
-									<div class="sBotMenu__wrap sBotMenu__wrap--filter">
-										<div class="sBotMenu__cross">
+									<div class="sBotMenu__wrap filter filter--js">
+										<div class="sBotMenu__cross toggle-filter">
 										</div>
 										<div class="h2">Сортировать</div>
 										<div class="sBotMenu__inputs">
@@ -342,12 +342,12 @@
 											</label>
 											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="show" type="radio"/><span class="custom-input__text form-check-label">Только неактивные</span>
 											</label>
-										</div><a class="btn btn-orange" href="#">Закрыть</a>
+										</div><a class="btn btn-orange toggle-filter" href="#">Закрыть</a>
 									</div>
 								</div>
 							</div>
-							<div class="sBotMenu__row row">
-								<div class="sBotMenu__colCard col-sm-6 col-xxl-auto">
+							<div class="sBotMenu__row row drug-wrap-block-js">
+								<div class="sBotMenu__colCard col-sm-6 col-xl-3 drug-item-js">
 									<div class="order-card card">
 										<div class="order-card__row row">
 											<div class="col">
@@ -368,44 +368,50 @@
 											<div class="order-card__type">1350 -13350 ₽
 											</div>
 										</div>
-										<div class="row">
+										<div class="row align-items-center">
 											<div class="col">
 												<label class="form-check form-switch">
 													<input class="form-check-input" name="model" type="checkbox" role="switch"/>
 													<div class="form-check-label">Видимость</div>
 												</label>
 											</div>
-											<div class="order-card__tooltips col-auto"><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
-														<svg class="icon icon-copy ">
-															<use xlink:href="img/svg/sprite.svg#copy"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
-														<svg class="icon icon-edit ">
-															<use xlink:href="img/svg/sprite.svg#edit"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
-														<svg class="icon icon-delete ">
-															<use xlink:href="img/svg/sprite.svg#delete"></use>
-														</svg>
-													</div></a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-up ">
-														<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
-													</svg>
-												</a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-down ">
-														<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-													</svg>
-												</a>
+											<div class="order-card__tooltips col-auto mb-2">
+												<div class="row gx-2 align-items-center"><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
+															<svg class="icon icon-copy ">
+																<use xlink:href="img/svg/sprite.svg#copy"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
+															<svg class="icon icon-edit ">
+																<use xlink:href="img/svg/sprite.svg#edit"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
+															<svg class="icon icon-delete ">
+																<use xlink:href="img/svg/sprite.svg#delete"></use>
+															</svg>
+														</div></a>
+													<div class="d-sm-none col-auto">
+														<a class="order-card__sort drop-top-js" href="#">
+															<svg class="icon icon-chevron-up ">
+																<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+															</svg>
+														</a>
+													</div>
+													<div class="d-sm-none col-auto ps-0 drop-down-js">
+														<a class="order-card__sort" href="#">
+															<svg class="icon icon-chevron-down ">
+																<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+															</svg>
+														</a>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="sBotMenu__colCard col-sm-6 col-xxl-auto">
+								<div class="sBotMenu__colCard col-sm-6 col-xl-3 drug-item-js">
 									<div class="order-card card">
 										<div class="order-card__row row">
 											<div class="col">
@@ -426,44 +432,50 @@
 											<div class="order-card__type">1350 -13350 ₽
 											</div>
 										</div>
-										<div class="row">
+										<div class="row align-items-center">
 											<div class="col">
 												<label class="form-check form-switch">
 													<input class="form-check-input" name="model" type="checkbox" role="switch"/>
 													<div class="form-check-label">Видимость</div>
 												</label>
 											</div>
-											<div class="order-card__tooltips col-auto"><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
-														<svg class="icon icon-copy ">
-															<use xlink:href="img/svg/sprite.svg#copy"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
-														<svg class="icon icon-edit ">
-															<use xlink:href="img/svg/sprite.svg#edit"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
-														<svg class="icon icon-delete ">
-															<use xlink:href="img/svg/sprite.svg#delete"></use>
-														</svg>
-													</div></a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-up ">
-														<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
-													</svg>
-												</a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-down ">
-														<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-													</svg>
-												</a>
+											<div class="order-card__tooltips col-auto mb-2">
+												<div class="row gx-2 align-items-center"><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
+															<svg class="icon icon-copy ">
+																<use xlink:href="img/svg/sprite.svg#copy"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
+															<svg class="icon icon-edit ">
+																<use xlink:href="img/svg/sprite.svg#edit"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
+															<svg class="icon icon-delete ">
+																<use xlink:href="img/svg/sprite.svg#delete"></use>
+															</svg>
+														</div></a>
+													<div class="d-sm-none col-auto">
+														<a class="order-card__sort drop-top-js" href="#">
+															<svg class="icon icon-chevron-up ">
+																<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+															</svg>
+														</a>
+													</div>
+													<div class="d-sm-none col-auto ps-0 drop-down-js">
+														<a class="order-card__sort" href="#">
+															<svg class="icon icon-chevron-down ">
+																<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+															</svg>
+														</a>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="sBotMenu__colCard col-sm-6 col-xxl-auto d-none d-sm-block">
+								<div class="sBotMenu__colCard col-sm-6 col-xl-3 drug-item-js">
 									<div class="order-card card">
 										<div class="order-card__row row">
 											<div class="col">
@@ -484,44 +496,50 @@
 											<div class="order-card__type">1350 -13350 ₽
 											</div>
 										</div>
-										<div class="row">
+										<div class="row align-items-center">
 											<div class="col">
 												<label class="form-check form-switch">
 													<input class="form-check-input" name="model" type="checkbox" role="switch"/>
 													<div class="form-check-label">Видимость</div>
 												</label>
 											</div>
-											<div class="order-card__tooltips col-auto"><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
-														<svg class="icon icon-copy ">
-															<use xlink:href="img/svg/sprite.svg#copy"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
-														<svg class="icon icon-edit ">
-															<use xlink:href="img/svg/sprite.svg#edit"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
-														<svg class="icon icon-delete ">
-															<use xlink:href="img/svg/sprite.svg#delete"></use>
-														</svg>
-													</div></a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-up ">
-														<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
-													</svg>
-												</a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-down ">
-														<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-													</svg>
-												</a>
+											<div class="order-card__tooltips col-auto mb-2">
+												<div class="row gx-2 align-items-center"><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
+															<svg class="icon icon-copy ">
+																<use xlink:href="img/svg/sprite.svg#copy"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
+															<svg class="icon icon-edit ">
+																<use xlink:href="img/svg/sprite.svg#edit"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
+															<svg class="icon icon-delete ">
+																<use xlink:href="img/svg/sprite.svg#delete"></use>
+															</svg>
+														</div></a>
+													<div class="d-sm-none col-auto">
+														<a class="order-card__sort drop-top-js" href="#">
+															<svg class="icon icon-chevron-up ">
+																<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+															</svg>
+														</a>
+													</div>
+													<div class="d-sm-none col-auto ps-0 drop-down-js">
+														<a class="order-card__sort" href="#">
+															<svg class="icon icon-chevron-down ">
+																<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+															</svg>
+														</a>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="sBotMenu__colCard col-sm-6 col-xxl-auto d-none d-sm-block">
+								<div class="sBotMenu__colCard col-sm-6 col-xl-3 drug-item-js">
 									<div class="order-card card">
 										<div class="order-card__row row">
 											<div class="col">
@@ -542,44 +560,50 @@
 											<div class="order-card__type">1350 -13350 ₽
 											</div>
 										</div>
-										<div class="row">
+										<div class="row align-items-center">
 											<div class="col">
 												<label class="form-check form-switch">
 													<input class="form-check-input" name="model" type="checkbox" role="switch"/>
 													<div class="form-check-label">Видимость</div>
 												</label>
 											</div>
-											<div class="order-card__tooltips col-auto"><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
-														<svg class="icon icon-copy ">
-															<use xlink:href="img/svg/sprite.svg#copy"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
-														<svg class="icon icon-edit ">
-															<use xlink:href="img/svg/sprite.svg#edit"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
-														<svg class="icon icon-delete ">
-															<use xlink:href="img/svg/sprite.svg#delete"></use>
-														</svg>
-													</div></a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-up ">
-														<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
-													</svg>
-												</a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-down ">
-														<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-													</svg>
-												</a>
+											<div class="order-card__tooltips col-auto mb-2">
+												<div class="row gx-2 align-items-center"><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
+															<svg class="icon icon-copy ">
+																<use xlink:href="img/svg/sprite.svg#copy"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
+															<svg class="icon icon-edit ">
+																<use xlink:href="img/svg/sprite.svg#edit"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
+															<svg class="icon icon-delete ">
+																<use xlink:href="img/svg/sprite.svg#delete"></use>
+															</svg>
+														</div></a>
+													<div class="d-sm-none col-auto">
+														<a class="order-card__sort drop-top-js" href="#">
+															<svg class="icon icon-chevron-up ">
+																<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+															</svg>
+														</a>
+													</div>
+													<div class="d-sm-none col-auto ps-0 drop-down-js">
+														<a class="order-card__sort" href="#">
+															<svg class="icon icon-chevron-down ">
+																<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+															</svg>
+														</a>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="sBotMenu__colCard col-sm-6 col-xxl-auto d-none d-md-block">
+								<div class="sBotMenu__colCard col-sm-6 col-xl-3 drug-item-js">
 									<div class="order-card card">
 										<div class="order-card__row row">
 											<div class="col">
@@ -600,44 +624,50 @@
 											<div class="order-card__type">1350 -13350 ₽
 											</div>
 										</div>
-										<div class="row">
+										<div class="row align-items-center">
 											<div class="col">
 												<label class="form-check form-switch">
 													<input class="form-check-input" name="model" type="checkbox" role="switch"/>
 													<div class="form-check-label">Видимость</div>
 												</label>
 											</div>
-											<div class="order-card__tooltips col-auto"><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
-														<svg class="icon icon-copy ">
-															<use xlink:href="img/svg/sprite.svg#copy"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
-														<svg class="icon icon-edit ">
-															<use xlink:href="img/svg/sprite.svg#edit"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
-														<svg class="icon icon-delete ">
-															<use xlink:href="img/svg/sprite.svg#delete"></use>
-														</svg>
-													</div></a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-up ">
-														<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
-													</svg>
-												</a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-down ">
-														<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-													</svg>
-												</a>
+											<div class="order-card__tooltips col-auto mb-2">
+												<div class="row gx-2 align-items-center"><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
+															<svg class="icon icon-copy ">
+																<use xlink:href="img/svg/sprite.svg#copy"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
+															<svg class="icon icon-edit ">
+																<use xlink:href="img/svg/sprite.svg#edit"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
+															<svg class="icon icon-delete ">
+																<use xlink:href="img/svg/sprite.svg#delete"></use>
+															</svg>
+														</div></a>
+													<div class="d-sm-none col-auto">
+														<a class="order-card__sort drop-top-js" href="#">
+															<svg class="icon icon-chevron-up ">
+																<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+															</svg>
+														</a>
+													</div>
+													<div class="d-sm-none col-auto ps-0 drop-down-js">
+														<a class="order-card__sort" href="#">
+															<svg class="icon icon-chevron-down ">
+																<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+															</svg>
+														</a>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="sBotMenu__colCard col-sm-6 col-xxl-auto d-none d-md-block">
+								<div class="sBotMenu__colCard col-sm-6 col-xl-3 drug-item-js">
 									<div class="order-card card">
 										<div class="order-card__row row">
 											<div class="col">
@@ -658,44 +688,50 @@
 											<div class="order-card__type">1350 -13350 ₽
 											</div>
 										</div>
-										<div class="row">
+										<div class="row align-items-center">
 											<div class="col">
 												<label class="form-check form-switch">
 													<input class="form-check-input" name="model" type="checkbox" role="switch"/>
 													<div class="form-check-label">Видимость</div>
 												</label>
 											</div>
-											<div class="order-card__tooltips col-auto"><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
-														<svg class="icon icon-copy ">
-															<use xlink:href="img/svg/sprite.svg#copy"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
-														<svg class="icon icon-edit ">
-															<use xlink:href="img/svg/sprite.svg#edit"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
-														<svg class="icon icon-delete ">
-															<use xlink:href="img/svg/sprite.svg#delete"></use>
-														</svg>
-													</div></a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-up ">
-														<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
-													</svg>
-												</a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-down ">
-														<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-													</svg>
-												</a>
+											<div class="order-card__tooltips col-auto mb-2">
+												<div class="row gx-2 align-items-center"><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
+															<svg class="icon icon-copy ">
+																<use xlink:href="img/svg/sprite.svg#copy"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
+															<svg class="icon icon-edit ">
+																<use xlink:href="img/svg/sprite.svg#edit"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
+															<svg class="icon icon-delete ">
+																<use xlink:href="img/svg/sprite.svg#delete"></use>
+															</svg>
+														</div></a>
+													<div class="d-sm-none col-auto">
+														<a class="order-card__sort drop-top-js" href="#">
+															<svg class="icon icon-chevron-up ">
+																<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+															</svg>
+														</a>
+													</div>
+													<div class="d-sm-none col-auto ps-0 drop-down-js">
+														<a class="order-card__sort" href="#">
+															<svg class="icon icon-chevron-down ">
+																<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+															</svg>
+														</a>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="sBotMenu__colCard col-sm-6 col-xxl-auto d-none d-md-block">
+								<div class="sBotMenu__colCard col-sm-6 col-xl-3 drug-item-js">
 									<div class="order-card card">
 										<div class="order-card__row row">
 											<div class="col">
@@ -716,44 +752,50 @@
 											<div class="order-card__type">1350 -13350 ₽
 											</div>
 										</div>
-										<div class="row">
+										<div class="row align-items-center">
 											<div class="col">
 												<label class="form-check form-switch">
 													<input class="form-check-input" name="model" type="checkbox" role="switch"/>
 													<div class="form-check-label">Видимость</div>
 												</label>
 											</div>
-											<div class="order-card__tooltips col-auto"><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
-														<svg class="icon icon-copy ">
-															<use xlink:href="img/svg/sprite.svg#copy"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
-														<svg class="icon icon-edit ">
-															<use xlink:href="img/svg/sprite.svg#edit"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
-														<svg class="icon icon-delete ">
-															<use xlink:href="img/svg/sprite.svg#delete"></use>
-														</svg>
-													</div></a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-up ">
-														<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
-													</svg>
-												</a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-down ">
-														<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-													</svg>
-												</a>
+											<div class="order-card__tooltips col-auto mb-2">
+												<div class="row gx-2 align-items-center"><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
+															<svg class="icon icon-copy ">
+																<use xlink:href="img/svg/sprite.svg#copy"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
+															<svg class="icon icon-edit ">
+																<use xlink:href="img/svg/sprite.svg#edit"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
+															<svg class="icon icon-delete ">
+																<use xlink:href="img/svg/sprite.svg#delete"></use>
+															</svg>
+														</div></a>
+													<div class="d-sm-none col-auto">
+														<a class="order-card__sort drop-top-js" href="#">
+															<svg class="icon icon-chevron-up ">
+																<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+															</svg>
+														</a>
+													</div>
+													<div class="d-sm-none col-auto ps-0 drop-down-js">
+														<a class="order-card__sort" href="#">
+															<svg class="icon icon-chevron-down ">
+																<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+															</svg>
+														</a>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="sBotMenu__colCard col-sm-6 col-xxl-auto d-none d-md-block">
+								<div class="sBotMenu__colCard col-sm-6 col-xl-3 drug-item-js">
 									<div class="order-card card">
 										<div class="order-card__row row">
 											<div class="col">
@@ -774,44 +816,50 @@
 											<div class="order-card__type">1350 -13350 ₽
 											</div>
 										</div>
-										<div class="row">
+										<div class="row align-items-center">
 											<div class="col">
 												<label class="form-check form-switch">
 													<input class="form-check-input" name="model" type="checkbox" role="switch"/>
 													<div class="form-check-label">Видимость</div>
 												</label>
 											</div>
-											<div class="order-card__tooltips col-auto"><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
-														<svg class="icon icon-copy ">
-															<use xlink:href="img/svg/sprite.svg#copy"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
-														<svg class="icon icon-edit ">
-															<use xlink:href="img/svg/sprite.svg#edit"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
-														<svg class="icon icon-delete ">
-															<use xlink:href="img/svg/sprite.svg#delete"></use>
-														</svg>
-													</div></a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-up ">
-														<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
-													</svg>
-												</a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-down ">
-														<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-													</svg>
-												</a>
+											<div class="order-card__tooltips col-auto mb-2">
+												<div class="row gx-2 align-items-center"><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
+															<svg class="icon icon-copy ">
+																<use xlink:href="img/svg/sprite.svg#copy"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
+															<svg class="icon icon-edit ">
+																<use xlink:href="img/svg/sprite.svg#edit"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
+															<svg class="icon icon-delete ">
+																<use xlink:href="img/svg/sprite.svg#delete"></use>
+															</svg>
+														</div></a>
+													<div class="d-sm-none col-auto">
+														<a class="order-card__sort drop-top-js" href="#">
+															<svg class="icon icon-chevron-up ">
+																<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+															</svg>
+														</a>
+													</div>
+													<div class="d-sm-none col-auto ps-0 drop-down-js">
+														<a class="order-card__sort" href="#">
+															<svg class="icon icon-chevron-down ">
+																<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+															</svg>
+														</a>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="sBotMenu__colCard col-sm-6 col-xxl-auto d-none d-xl-block">
+								<div class="sBotMenu__colCard col-sm-6 col-xl-3 drug-item-js">
 									<div class="order-card card">
 										<div class="order-card__row row">
 											<div class="col">
@@ -832,44 +880,50 @@
 											<div class="order-card__type">1350 -13350 ₽
 											</div>
 										</div>
-										<div class="row">
+										<div class="row align-items-center">
 											<div class="col">
 												<label class="form-check form-switch">
 													<input class="form-check-input" name="model" type="checkbox" role="switch"/>
 													<div class="form-check-label">Видимость</div>
 												</label>
 											</div>
-											<div class="order-card__tooltips col-auto"><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
-														<svg class="icon icon-copy ">
-															<use xlink:href="img/svg/sprite.svg#copy"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
-														<svg class="icon icon-edit ">
-															<use xlink:href="img/svg/sprite.svg#edit"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
-														<svg class="icon icon-delete ">
-															<use xlink:href="img/svg/sprite.svg#delete"></use>
-														</svg>
-													</div></a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-up ">
-														<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
-													</svg>
-												</a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-down ">
-														<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-													</svg>
-												</a>
+											<div class="order-card__tooltips col-auto mb-2">
+												<div class="row gx-2 align-items-center"><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
+															<svg class="icon icon-copy ">
+																<use xlink:href="img/svg/sprite.svg#copy"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
+															<svg class="icon icon-edit ">
+																<use xlink:href="img/svg/sprite.svg#edit"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
+															<svg class="icon icon-delete ">
+																<use xlink:href="img/svg/sprite.svg#delete"></use>
+															</svg>
+														</div></a>
+													<div class="d-sm-none col-auto">
+														<a class="order-card__sort drop-top-js" href="#">
+															<svg class="icon icon-chevron-up ">
+																<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+															</svg>
+														</a>
+													</div>
+													<div class="d-sm-none col-auto ps-0 drop-down-js">
+														<a class="order-card__sort" href="#">
+															<svg class="icon icon-chevron-down ">
+																<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+															</svg>
+														</a>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="sBotMenu__colCard col-sm-6 col-xxl-auto d-none d-xl-block">
+								<div class="sBotMenu__colCard col-sm-6 col-xl-3 drug-item-js">
 									<div class="order-card card">
 										<div class="order-card__row row">
 											<div class="col">
@@ -890,39 +944,45 @@
 											<div class="order-card__type">1350 -13350 ₽
 											</div>
 										</div>
-										<div class="row">
+										<div class="row align-items-center">
 											<div class="col">
 												<label class="form-check form-switch">
 													<input class="form-check-input" name="model" type="checkbox" role="switch"/>
 													<div class="form-check-label">Видимость</div>
 												</label>
 											</div>
-											<div class="order-card__tooltips col-auto"><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
-														<svg class="icon icon-copy ">
-															<use xlink:href="img/svg/sprite.svg#copy"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
-														<svg class="icon icon-edit ">
-															<use xlink:href="img/svg/sprite.svg#edit"></use>
-														</svg>
-													</div></a><a href="#">
-													<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
-														<svg class="icon icon-delete ">
-															<use xlink:href="img/svg/sprite.svg#delete"></use>
-														</svg>
-													</div></a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-up ">
-														<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
-													</svg>
-												</a>
-												<a class="order-card__sort d-sm-none" href="#">
-													<svg class="icon icon-chevron-down ">
-														<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-													</svg>
-												</a>
+											<div class="order-card__tooltips col-auto mb-2">
+												<div class="row gx-2 align-items-center"><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
+															<svg class="icon icon-copy ">
+																<use xlink:href="img/svg/sprite.svg#copy"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
+															<svg class="icon icon-edit ">
+																<use xlink:href="img/svg/sprite.svg#edit"></use>
+															</svg>
+														</div></a><a class="col-auto" href="#">
+														<div class="order-card__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
+															<svg class="icon icon-delete ">
+																<use xlink:href="img/svg/sprite.svg#delete"></use>
+															</svg>
+														</div></a>
+													<div class="d-sm-none col-auto">
+														<a class="order-card__sort drop-top-js" href="#">
+															<svg class="icon icon-chevron-up ">
+																<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+															</svg>
+														</a>
+													</div>
+													<div class="d-sm-none col-auto ps-0 drop-down-js">
+														<a class="order-card__sort" href="#">
+															<svg class="icon icon-chevron-down ">
+																<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+															</svg>
+														</a>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>

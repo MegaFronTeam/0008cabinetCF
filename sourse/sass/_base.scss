@@ -1137,8 +1137,9 @@ cursor:no-drop;
 
 
 	.ghost {
-		opacity: .05;
-		background: $primary;
+		opacity: .32;
+		// border: 1px  dashed $primary;
+		// border-radius: rem(20);
 	}
 	
 	[type="checkbox"] {
@@ -1323,4 +1324,47 @@ cursor:no-drop;
 	.form-control.is-valid{
 		background-image: url(../img/checkmark.svg);
 		border-color: #EBEBEB;
+	}
+
+	.table-wrap-js{
+		th{
+			&::before,
+			&::after{
+				display: none !important;
+			}
+			span{
+				position: relative;
+				padding-right: rem(30);
+				&:before{
+					bottom: 50%;
+					content: "▴";
+					position: absolute;
+					display: block;
+					opacity: .125;
+					right: 10px;
+					line-height: 9px;
+					font-size: .9em;
+				}
+				&::after{
+					top: 50%;
+					content: "▾";
+					position: absolute;
+					display: block;
+					opacity: .125;
+					right: 10px;
+					line-height: 9px;
+					font-size: .9em;
+				}
+			}
+		}
+	}
+
+
+	table.dataTable thead>tr>th.sorting_asc span:before, table.dataTable thead>tr>th.sorting_desc span:after, table.dataTable thead>tr>td.sorting_asc span:before, table.dataTable thead>tr>td.sorting_desc span:after{
+		opacity: .6;
+	}
+
+	.form-switch .form-check-input {
+		height: rem(20);
+		background-size: rem(18) rem(18);
 	}

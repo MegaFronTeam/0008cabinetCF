@@ -919,7 +919,7 @@ $form-check-inline-margin-end:    1rem !default;
 
 // scss-docs-start form-switch-variables
 $form-switch-color:               $gray-600 !default;
-$form-switch-width:               1.75rem !default;
+$form-switch-width:               rem(36) !default;
 $form-switch-padding-start:       $form-switch-width + .5rem !default;
 $form-switch-bg-image:            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E") !default;
 $form-switch-border-radius:       $form-switch-width !default;
@@ -1319,7 +1319,7 @@ $tooltip-bg:                        $body-color !default;
 $tooltip-border-radius:             $border-radius !default;
 $tooltip-opacity:                   .8 !default;
 $tooltip-padding-y:                 $spacer * .25 !default;
-$tooltip-padding-x:                 $spacer !default;
+$tooltip-padding-x:                 rem(10) !default;
 $tooltip-margin:                    null !default; // TODO: remove this in v6
 
 $tooltip-arrow-width:               .8rem !default;

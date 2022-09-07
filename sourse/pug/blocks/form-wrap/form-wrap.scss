@@ -67,7 +67,6 @@
 			content: '';
 			z-index: -1;
 			background-color: #fff;
-			box-shadow: 0px 0px 15px rgba(25, 28, 31, 0.1);
 			opacity: var(--op, 0);
 			@include mt;
 			width: calc(100%  );
@@ -76,9 +75,26 @@
 			left: 0;
 			position: absolute;
 		}
-		.form-wrap__btn-drug:hover ~ .form-wrap__group{
-			--op:1;
-		}
+		// .form-wrap__btn-drug:hover ~ .form-wrap__group{
+		// 	--op:1;
+		// }
+	}
+	.form-wrap__drug-inner.sortable-chosen{
+		// border-radius: rem(20);
+		// &::before{
+		// 	content: '';
+		// 	z-index: -1;
+		// 	background-color: #fff;
+		// 	opacity: var(--op, 0);
+		// 	@include mt;
+		// 	width: calc(100%  );
+		// 	height: calc(100%);
+		// 	top: 0;
+		// 	left: 0;
+		// 	position: absolute;
+		// }
+		background-color: #fff;
+		box-shadow: 0px 0px 15px rgba(25, 28, 31, 0.1);
 	}
 	&__btn-drug,
 	&__btn-delete{

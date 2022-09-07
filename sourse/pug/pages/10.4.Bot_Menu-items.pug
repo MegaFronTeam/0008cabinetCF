@@ -31,9 +31,9 @@ block pagecontent
 			p.small Используйте эмоджи для каждого раздела, чтобы они выглядели интереснее.
 		+e.body
 			+form-wrap
-				.drug-wrap-block
+				.drug-wrap-block.drug-wrap-block-js
 					mixin  dr-item(x, v, v2)
-						+e.drug-inner
+						+e.drug-inner.drug-item-js
 							+e.btn-drug.text-secondary.my-handle
 								+icon("dots") 
 							+e.group
@@ -43,9 +43,9 @@ block pagecontent
 										//- .col-auto
 										.col-auto.d-sm-none
 											+e.btns
-												+e.btn-circle--top
+												+e.btn-circle--top.drop-top-js
 													+icon("chevron-up")
-												+e.btn-circle--down
+												+e.btn-circle--down.drop-down-js
 													+icon("chevron-up")
 										.col-auto
 											+e.btn-delete(data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Удалить").text-danger

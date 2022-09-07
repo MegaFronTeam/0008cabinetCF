@@ -5,14 +5,14 @@ mixin sBotMenu(table)
 			.col-xl.order-sm-1.order-lg-1.d-none.d-sm-block
 				+e.all-goods
 					+input("Все товары",'select').custom-select-js
-			.col-auto.col-sm-12.col-md.order-3.order-sm-last.order-lg-2
+			.col-auto.col-sm-12.col-lg.order-3.order-sm-last.order-lg-2
 				+e.search.d-none.d-sm-block
 					+input("Поиск по товарам",'text')
 					button: +icon('search')
-				+e.search--toggle.d-block.d-sm-none
-					button: +icon('search')
-					+e.wrap--search
-						+e.cross
+				+e.search.d-block.d-sm-none
+					button.toggle-search: +icon('search')
+					+e.wrap.search--js
+						+e.cross.toggle-search
 						.h2 Поиск
 						+e.inner-search
 							+input("Поиск по товарам",'text')
@@ -21,26 +21,27 @@ mixin sBotMenu(table)
 			.col-auto.order-sm-2.order-lg-3.d-none.d-sm-block
 				+e.sort
 					+input("Показывать все",'select').custom-select-js.sort
-			.col-auto.order-sm-5.order-lg-4.d-none.d-md-block
+			.col-auto.order-sm-5.order-lg-4.d-none.d-lg-block
 				+e.show-switch
 					+in-c('radio', '', 'switch')(checked)
 						+icon('category')
 					+in-c('radio', '', 'switch')
 						+icon('list')
 			.col.col-lg-auto.order-2.order-sm-3.order-lg-4
-				+e.categories-btn(href="#").btn
+				+e.btn-head--categories(href="#").btn.btn-outline-gray
 					+icon("shopping-bag")
-					span.d-none.d-sm-inline-block Категории меню
-					span.d-inline-block.d-sm-none Категории
+					| Категории 
+					span.d-none.d-sm-inline меню
+					//- span.d-inline-block.d-sm-none Категории
 			.col.col-lg-auto.order-1.order-sm-4.order-lg-6
-				+e.more-btn(href="#").btn.btn-orange
+				+e.btn-head--more-btn(href="#").btn.btn-orange
 					+icon("more")
-					span.d-none.d-sm-inline-block Добавить товар
-					span.d-inline-block.d-sm-none Добавить
+					|  Добавить 
+					span.d-none.d-sm-inline товар
 			.col-auto.order-last.d-block.d-sm-none
-				+e.filter: +icon('filter')
-				+e.wrap--filter
-					+e.cross
+				+e.filter.toggle-filter: +icon('filter')
+				+e.wrap.filter--js
+					+e.cross.toggle-filter
 					.h2 Сортировать
 					+e.inputs
 						+e.headline По категориям товаров
@@ -56,25 +57,27 @@ mixin sBotMenu(table)
 						+in-c('radio', 'Показывать все', 'show')
 						+in-c('radio', 'Только активные', 'show')
 						+in-c('radio', 'Только неактивные', 'show')
-					a(href="#").btn.btn-orange Закрыть
+					a(href="#").btn.btn-orange.toggle-filter Закрыть
 		if table 
 			.table-wrap-js
 				table.table.table-js#table-5
 					thead
 						tr
-							th Товар
-							th Категория
-							th Цена
-							th Рейтинг
-							th Заказы
-							th Видимость
-					tbody
+							th.td-small
+							th: span Товар
+							th: span Категория
+							th: span Цена
+							th: span Рейтинг
+							th: span Заказы
+							th: span Видимость
+					tbody.drug-wrap-block-js
 						mixin tr(title)
 							tr
+								td.td-small 
+										+e.ellipsis.my-handle
+											+icon('dots')
 								td 
 									+e.product-wrap
-										+e.ellipsis
-											+icon('dots')
 										+img(`img/food.jpg`)
 										+e.headline-link(href="#")!= title
 								td 🥘 Основные блюда
@@ -100,26 +103,26 @@ mixin sBotMenu(table)
 						- for (var x = 0; x < 7; x++)
 							+tr('Фиш&Чипс с соусом Чеддер и овощным салатом третья строка названия')
 		else
-			+e.row.row
-				+e.colCard.col-sm-6.col-xxl-auto
+			+e.row.row.drug-wrap-block-js
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
 					+orderCard
-				+e.colCard.col-sm-6.col-xxl-auto
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
 					+orderCard
-				+e.colCard.col-sm-6.col-xxl-auto.d-none.d-sm-block
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
 					+orderCard
-				+e.colCard.col-sm-6.col-xxl-auto.d-none.d-sm-block
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
 					+orderCard('Фиш&Чипс с соусом Чеддер и овощным салатом третья строка названия')
-				+e.colCard.col-sm-6.col-xxl-auto.d-none.d-md-block
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
 					+orderCard
-				+e.colCard.col-sm-6.col-xxl-auto.d-none.d-md-block
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
 					+orderCard
-				+e.colCard.col-sm-6.col-xxl-auto.d-none.d-md-block
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
 					+orderCard
-				+e.colCard.col-sm-6.col-xxl-auto.d-none.d-md-block
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
 					+orderCard
-				+e.colCard.col-sm-6.col-xxl-auto.d-none.d-xl-block
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
 					+orderCard
-				+e.colCard.col-sm-6.col-xxl-auto.d-none.d-xl-block
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
 					+orderCard
 	// end sBotMenu
 

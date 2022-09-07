@@ -158,10 +158,14 @@ mixin sCabinetPanel(empty)
 						table.table.table-js#table-1
 							thead
 								tr
-									th Дата
-									th Сумма
-									th Адрес
-									th.text-end Статус
+									th
+										span Дата
+									th
+										span Сумма
+									th
+										span Адрес
+									th.text-end
+										span Статус
 							tbody
 								mixin tr()
 									tr
@@ -193,12 +197,12 @@ mixin sCabinetPanel(empty)
 						table.table.table-js#table-2
 							thead
 								tr
-									th Дата регистрации
-									th Email
-									th Статус
-									th Кол-во чат-ботов
-									th Оплачено до
-									th.text-end Начисления
+									th: span Дата регистрации
+									th: span Email
+									th: span Статус
+									th: span Кол-во чат-ботов
+									th: span Оплачено до
+									th.text-end: span Начисления
 							tbody
 								mixin tr()
 									tr
@@ -232,9 +236,9 @@ mixin sCabinetPanel(empty)
 						table.table.table-js#table-3
 							thead
 								tr
-									th Дата создания
-									th Промокод
-									th Кол-во активаций
+									th: span  Дата создания
+									th: span  Промокод
+									th: span  Кол-во активаций
 									th.text-end 
 							tbody
 								mixin tr()

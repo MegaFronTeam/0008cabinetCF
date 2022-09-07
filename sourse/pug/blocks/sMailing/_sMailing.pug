@@ -1,6 +1,53 @@
 mixin sMailing(data)
 	// start sMailing
 	+b.sMailing.section#sMailing&attributes(attributes)
+		+e.head-row.row
+			.col-auto.d-none.d-md-block
+				+e.all-goods
+					+input("Все товары",'select').custom-select-js
+			.col-auto.col-md.order-2
+				+e.search.d-none.d-sm-block
+					+input("Поиск по товарам",'text')
+					button: +icon('search')
+				+e.search.d-block.d-sm-none
+					button.toggle-search: +icon('search')
+					+e.wrap.search--js
+						+e.cross.toggle-search
+						.h2 Поиск
+						+e.inner-search
+							+input("Поиск по товарам",'text')
+							button: +icon('search')
+						a(href="#").btn.btn-orange Показать товары
+			.col-auto.d-none.d-md-block.order-md-3
+				+e.show-switch
+					+in-c('radio', '', 'switch')(checked)
+						+icon('category')
+					+in-c('radio', '', 'switch')
+						+icon('list')
+			.col.col-md-auto.order-1.order-md-4
+				+e.categories-btn(href="#").btn.btn-primary
+					+icon("telegram")
+					span Запустить рассылку
+			.col-auto.order-last.d-block.d-md-none
+				+e.filter.toggle-filter: +icon('filter')
+				+e.wrap.filter--js
+					+e.cross.toggle-filter
+					.h2 Сортировать
+					+e.inputs
+						+e.headline По категориям товаров
+						+in-c('radio', 'Все товары', 'food')
+						+in-c('radio', '🍔 Бургеры', 'food')
+						+in-c('radio', '🥘 Основные блюда', 'food')
+						+in-c('radio', '🍳 Завтраки', 'food')
+						+in-c('radio', '🥓 Закуски', 'food')
+						+in-c('radio', '🥗 Салаты', 'food')
+						+in-c('radio', '🥐 Круассаны', 'food')
+					+e.inputs
+						+e.headline По типу товаров
+						+in-c('radio', 'Показывать все', 'show')
+						+in-c('radio', 'Только активные', 'show')
+						+in-c('radio', 'Только неактивные', 'show')
+					a(href="#").btn.btn-orange.toggle-filter Закрыть
 		+e.row.row
 			mixin card(title="Майские праздники", status="Завершена", bg='#4BB14B', color="#009FE3")
 				+e.card.card

@@ -414,7 +414,7 @@
 	}
 }
 .card{
-
+	background-color: #fff;
 	display: flex;
 	flex-direction: column;
 	border: 1px solid #EBEBEB;
@@ -648,6 +648,17 @@
 .order-card {
 	padding: rem(20);
 	position: relative;
+	.form-check{
+		// display: flex;
+		display: inline-flex;
+		align-items: center;
+		padding-left: 0;
+		input{
+			margin-right: 10px;
+			float: none;
+			margin-left: 0;
+		}
+	}
 	@include media-breakpoint-up(xxl) {
 		padding: rem(20);
 	}
@@ -723,7 +734,7 @@
 			background-color: #C2C2C2;
 			border-color: #C2C2C2;
 			outline: none;
-			top: 4.5px;
+			// top: 4.5px;
 			&:focus {
 				box-shadow: none;
 			}
@@ -746,7 +757,7 @@
 				opacity: .5;
 			}
 			&:not(:last-child) {
-				margin-right: rem(15);
+				// margin-right: rem(15);
 			}
 			.icon {
 				font-size: 20px;
@@ -863,4 +874,21 @@ font-size: 14px;
 			}
 		}
 	}
+}
+
+.drug-wrap-block-js{
+	> :first-child{
+		.drop-top-js{
+			opacity: 0.4;
+			pointer-events: none;
+		}
+	}
+	
+	> :last-of-type{
+		.drop-down-js{
+			opacity: 0.4;
+			pointer-events: none;
+		}
+	}
+
 }

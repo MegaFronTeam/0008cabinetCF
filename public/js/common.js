@@ -415,6 +415,12 @@ function eventHandler() {
 		})
 	}
 
+	let removeSideMenu = function() {
+		$(".toggle-menu-mobile--js")[0].classList.remove("on");
+		document.body.classList.remove("show-sidebar");
+		document.querySelector("aside").classList.remove("active");
+	};
+
 	try {
 		
 		$(".toggle-menu-mobile--js").click(function(){
@@ -426,10 +432,10 @@ function eventHandler() {
 			let menu = event.target.closest("aside.active");
 			let toggle = event.target.closest(".toggle-menu-mobile--js");
 			if(!menu && !toggle && document.body.classList.contains('show-sidebar')) {
-				$(".toggle-menu-mobile--js")[0].classList.remove("on");
-				document.body.classList.remove("show-sidebar")
-				document.querySelector("aside").classList.remove("active")
-	
+				// $(".toggle-menu-mobile--js")[0].classList.remove("on");
+				// document.body.classList.remove("show-sidebar")
+				// document.querySelector("aside").classList.remove("active")
+				removeSideMenu();
 			}
 			
 		})
@@ -586,23 +592,27 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
   }
 });
 
-	$('.sBotMenu__search--toggle button').on('click', function() {
-		$('.sBotMenu__wrap--search').addClass('active');
-		$('body').addClass('fixed');
-	});
-	$('.sBotMenu__cross').on('click', function() {
-		$('.sBotMenu__wrap--search').removeClass('active');
-		$('body').removeClass('fixed');
-	});
+	// $('.sBotMenu__search--toggle button').on('click', function() {
+	// 	$('.sBotMenu__wrap--search').addClass('active');
+	// 	$('body').addClass('fixed');
+	// });
+	// $('.sBotMenu__cross').on('click', function() {
+	// 	$('.sBotMenu__wrap--search').removeClass('active');
+	// 	$('body').removeClass('fixed');
+	// });
 
-	$('.sBotMenu__filter').on('click', function() {
-		$('.sBotMenu__wrap--filter').addClass('active');
-		$('body').addClass('fixed');
+	$('.toggle-filter').on('click', function() {
+		$('.filter--js').toggleClass('active');
+		$('body').toggleClass('fixed');
 	});
-	$('.sBotMenu__cross').on('click', function() {
-		$('.sBotMenu__wrap--filter').removeClass('active');
-		$('body').removeClass('fixed');
+	$('.toggle-search').on('click', function() {
+		$('.search--js').toggleClass('active');
+		$('body').toggleClass('fixed');
 	});
+	// $('.sBotMenu__cross').on('click', function() {
+	// 	$('.sBotMenu__wrap--filter').removeClass('active');
+	// 	$('body').removeClass('fixed');
+	// });
 
 	$('.topLine__btn--cabinet').on('click', function() {
 		$('.topLine__btn--cabinet').toggleClass('active');
@@ -625,33 +635,58 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 		});
 	}
 
-	let drugWrap = document.querySelector(".drug-wrap-block");
+	let drugWrap = document.querySelector(".drug-wrap-block-js");
 
 	if(drugWrap) {
 
 		function getListIndex(){
 			let itemsTitle = document.querySelectorAll(".form-wrap__col-title" );
 			let index = 0
-			for (const itemTitle of itemsTitle) {
-				itemTitle.innerHTML = `Категория ${++index}`
+			if(itemsTitle) {
+
+				for (const itemTitle of itemsTitle) {
+					itemTitle.innerHTML = `Категория ${++index}`
+				}
 			}
 		}
-		var sortable = new Sortable(drugWrap, {
-			handle: ".my-handle",
-			direction: 'vertical',
-			ghostClass: 'ghost',
-			onEnd: function (/**Event*/evt) {
-				var itemEl = evt.item;  // dragged HTMLElement
-				getListIndex(); 
-			},
-			
-		})
-		drugWrap.addEventListener("click", function(event){
-			let btnUp = event.target.closest(".form-wrap__btn-circle--top") 
-			let btnUDown = event.target.closest(".form-wrap__btn-circle--down") 
+
+		let handle = drugWrap.querySelector('.my-handle')
+
+		if(handle) {
+			console.log(1);
+			var sortable = new Sortable(drugWrap, {
+				handle: '.my-handle',
+				direction: 'vertical',
+				ghostClass: 'ghost',
+				onEnd: function (/**Event*/evt) {
+					var itemEl = evt.item;  // dragged HTMLElement
+					getListIndex(); 
+					
+				},
+				
+			})
+		}
+		else{
+			console.log(0);
+			var sortable = new Sortable(drugWrap, { 
+				ghostClass: 'ghost',
+				onEnd: function (/**Event*/evt) {
+					var itemEl = evt.item;  // dragged HTMLElement
+					getListIndex(); 
+					
+				},
+				
+			})
+
+		}
+			drugWrap.addEventListener("click", function(event){
+
+			let btnUp = event.target.closest(".drop-top-js") 
+			let btnUDown = event.target.closest(".drop-down-js") 
 			
 			if(btnUDown) {
-				let parent = btnUDown.closest(".form-wrap__drug-inner");
+				event.preventDefault();
+				let parent = btnUDown.closest(".drug-item-js");
 				let clone = parent.cloneNode(true); 
 				let nextEl = parent.nextElementSibling;
 				if (!nextEl) return;
@@ -661,8 +696,9 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 			}
 			
 			 if(btnUp) {
+				event.preventDefault();
 				// console.log(btnUp);
-				let parent = btnUp.closest(".form-wrap__drug-inner");
+				let parent = btnUp.closest(".drug-item-js");
 				let clone = parent.cloneNode(true); 
 				let prevEl = parent.previousElementSibling;
 				if (!prevEl) return; 
@@ -691,9 +727,10 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 			
 	function checkDirection() {
 		if (touchendX < touchstartX) {
-			$('aside').removeClass('active');
-			$('body').removeClass('show-sidebar');
-			$('.toggle-menu-mobile--js').removeClass('on');
+			// $('aside').removeClass('active');
+			// $('body').removeClass('show-sidebar');
+			// $('.toggle-menu-mobile--js').removeClass('on');
+			removeSideMenu();
 		}
 	}
 	

@@ -9,10 +9,10 @@ mixin sBotMenu(table)
 				+e.search.d-none.d-sm-block
 					+input("Поиск по товарам",'text')
 					button: +icon('search')
-				+e.search--toggle.d-block.d-sm-none
-					button: +icon('search')
-					+e.wrap--search
-						+e.cross
+				+e.search.d-block.d-sm-none
+					button.toggle-search: +icon('search')
+					+e.wrap.search--js
+						+e.cross.toggle-search
 						.h2 Поиск
 						+e.inner-search
 							+input("Поиск по товарам",'text')
@@ -38,9 +38,9 @@ mixin sBotMenu(table)
 					span.d-none.d-sm-inline-block Добавить товар
 					span.d-inline-block.d-sm-none Добавить
 			.col-auto.order-last.d-block.d-sm-none
-				+e.filter: +icon('filter')
-				+e.wrap--filter
-					+e.cross
+				+e.filter.toggle-filter: +icon('filter')
+				+e.wrap.filter--js
+					+e.cross.toggle-filter
 					.h2 Сортировать
 					+e.inputs
 						+e.headline По категориям товаров
@@ -56,7 +56,7 @@ mixin sBotMenu(table)
 						+in-c('radio', 'Показывать все', 'show')
 						+in-c('radio', 'Только активные', 'show')
 						+in-c('radio', 'Только неактивные', 'show')
-					a(href="#").btn.btn-orange Закрыть
+					a(href="#").btn.btn-orange.toggle-filter Закрыть
 		if table 
 			.table-wrap-js
 				table.table.table-js#table-5

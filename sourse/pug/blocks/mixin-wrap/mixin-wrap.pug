@@ -119,10 +119,10 @@ mixin aside(second)
 							+e.id #13405
 						+icon("setting")
 
-mixin main(t='Мои чат-боты', badge, avatar)
+mixin main(t='Мои чат-боты', badge, avatar, mailingList)
 	.main-center-wrap
 		main
-			+topLine(t, badge, avatar)
+			+topLine(t, badge, avatar, mailingList)
 			.container-fluid.container-main
 				block
 			+footer()

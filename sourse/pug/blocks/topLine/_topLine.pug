@@ -1,4 +1,4 @@
-mixin topLine(t, badge, avatar)
+mixin topLine(t, badge, avatar, mailingList)
 	// start topLine
 	+b.topLine.section#topLine&attributes(attributes)
 		.container-fluid
@@ -9,6 +9,14 @@ mixin topLine(t, badge, avatar)
 						+e.counter 8
 				if block
 					block
+				else if mailingList
+					.col-auto
+						+e.back.d-none.d-sm-inline-flex(href='#')
+							+icon('chevron-left')
+							| Список рассылок 
+							span - 
+						+e.title
+							| Рассылка #234
 				else
 					.col-auto
 						+e.title= t

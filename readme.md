@@ -21,4 +21,5 @@
 17. <https://megafronteam.github.io/0008cabinetCF/public/13-3-mailing.html>
 18. <https://megafronteam.github.io/0008cabinetCF/public/14-promo.html>
 19. <https://megafronteam.github.io/0008cabinetCF/public/15.Settings.html>
+19. <https://megafronteam.github.io/0008cabinetCF/public/16-manager.html>
 20. <https://megafronteam.github.io/0008cabinetCF/public/17-statistic.html>

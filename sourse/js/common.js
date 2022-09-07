@@ -415,6 +415,12 @@ function eventHandler() {
 		})
 	}
 
+	let removeSideMenu = function() {
+		$(".toggle-menu-mobile--js")[0].classList.remove("on");
+		document.body.classList.remove("show-sidebar");
+		document.querySelector("aside").classList.remove("active");
+	};
+
 	try {
 		
 		$(".toggle-menu-mobile--js").click(function(){
@@ -426,10 +432,10 @@ function eventHandler() {
 			let menu = event.target.closest("aside.active");
 			let toggle = event.target.closest(".toggle-menu-mobile--js");
 			if(!menu && !toggle && document.body.classList.contains('show-sidebar')) {
-				$(".toggle-menu-mobile--js")[0].classList.remove("on");
-				document.body.classList.remove("show-sidebar")
-				document.querySelector("aside").classList.remove("active")
-	
+				// $(".toggle-menu-mobile--js")[0].classList.remove("on");
+				// document.body.classList.remove("show-sidebar")
+				// document.querySelector("aside").classList.remove("active")
+				removeSideMenu();
 			}
 			
 		})
@@ -695,9 +701,10 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 			
 	function checkDirection() {
 		if (touchendX < touchstartX) {
-			$('aside').removeClass('active');
-			$('body').removeClass('show-sidebar');
-			$('.toggle-menu-mobile--js').removeClass('on');
+			// $('aside').removeClass('active');
+			// $('body').removeClass('show-sidebar');
+			// $('.toggle-menu-mobile--js').removeClass('on');
+			removeSideMenu();
 		}
 	}
 	

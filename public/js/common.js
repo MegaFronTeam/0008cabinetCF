@@ -446,7 +446,7 @@ function eventHandler() {
 			if (FileReader && files && files.length) {
 			fr.onload = function () {
 				document.querySelector('.avatar-block img').src = fr.result;
-				document.querySelector('.avatar-block').classList.add("active");
+				document.querySelector('.avatar-block-wrap').classList.add("active");
 			}
 			fr.readAsDataURL(files[0]); 
 		}

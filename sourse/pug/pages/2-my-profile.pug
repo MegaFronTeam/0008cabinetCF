@@ -32,17 +32,18 @@ block pagecontent
 					+icon("close")
 		+e.body
 			+form-wrap
-				+b.LABEL.avatar-block
-					input(type="file", name="")
-					+e.img-wrap.bg-wrap
-						+e.btn-delete
-							+icon("trash-can")
-						img(src="#", alt="").img-bg
-						+icon("avatar")
-					+e.caption.small
-						.strong.mb-1 Загрузить фото
-						.text-secondary.mb-3 Изображение в формате jpeg, png, gif весом не более 5 мб.
-						span.btn.btn-sm.btn-outline-primary  Выбрать файл
+				+b.avatar-block-wrap
+					+e.btn-delete
+						+icon("trash-can")
+					+b.LABEL.avatar-block
+						input(type="file", name="")
+						+e.img-wrap.bg-wrap
+							img(src="#", alt="").img-bg
+							+icon("avatar")
+						+e.caption.small
+							.strong.mb-1 Загрузить фото
+							.text-secondary.mb-3 Изображение в формате jpeg, png, gif весом не более 5 мб.
+							span.btn.btn-sm.btn-outline-primary  Выбрать файл
 				mixin gr(t)
 					+e.group
 						+e.group-title= t

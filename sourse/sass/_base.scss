@@ -1363,8 +1363,18 @@ cursor:no-drop;
 	table.dataTable thead>tr>th.sorting_asc span:before, table.dataTable thead>tr>th.sorting_desc span:after, table.dataTable thead>tr>td.sorting_asc span:before, table.dataTable thead>tr>td.sorting_desc span:after{
 		opacity: .6;
 	}
+	.form-check-input,
+	.form-check{
+		cursor: pointer;
+	}
 
 	.form-switch .form-check-input {
 		height: rem(20);
 		background-size: rem(18) rem(18);
+	}
+
+	a[class^="text-"]{
+		&:hover{
+			opacity: 0.8;
+		}
 	}

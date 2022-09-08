@@ -318,6 +318,15 @@
 													</div>
 												</div>
 												<div class="accordion-item__body dd-content-js">
+													<ol>
+														<li>Зайдите в Telegram и запустите чат-бота <a href="#">@BotFather</a>.</li>
+														<li>Отправьте ему команду ‘<strong>/mybots</strong>’, что означает <strong>“мои боты”</strong>.</li>
+														<li>Далее в новом сообщении со списком ваших чат-ботов выберите нужный и нажмите на него.</li>
+														<li>Далее в новом сообщении со списком действий для вашего чат-бота выберите пункт <strong>“Edit bot”</strong>.</li>
+														<li>Далее выберите из сообщения пункт меню <strong>“Edit Description”</strong>.</li>
+														<li>Далее отправьте чат-боту новое описание чат-бота, вы также можете использовать эмоджи. Например, <strong>“Ресторан азиатской и европейской кухни приветствует вас! 👋 В нашем чат-боте вы можете зказывать доставку блюд🍕, накапливать бонусные рубли и расплачиваться ими! 💸”</strong>.</li>
+														<li>Если вы все сделали правильно, бот  <a href="#">@BotFather</a> напишет вам сообщение <strong>“Success! Description updated.”</strong> Теперь новое название применено.</li>
+													</ol>
 												</div>
 											</div>
 										</div>
@@ -335,7 +344,7 @@
 										<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Редактируемое приветственное сообщение" style="height: 10rem;"></textarea>
 										</div>
 										<!-- +e.input-wrap-->
-										<div class="message-prev">
+										<div class="message-prev small">
 											<div class="strong">Пример:</div>{name}, приветствуем вас в нашем чат-боте 👋🏻
 											<br> 🔸 Для навигации в чат-боте используйте кнопку "Меню". 🔸<br>  🎁 Вам начислено 100 бонусных баллов за регистрацию в чат-боте 🎁. <br> Заказывайте доставку блюд через чат-бота и получайте бонусные баллы, которыми сможете оплачивать заказы.
 										</div>
@@ -351,11 +360,11 @@
 										<p class="small">Выберите наиболее подходящий для вас режим отображения товаров в разделах меню.</p>
 										<div class="row gy-3">
 											<div class="col-auto">
-												<label class="custom-input-block form-check"><input class="custom-input-block__input form-check-input" name="var" type="radio" checked="checked"/><span class="custom-input-block__row row"><span class="col-auto"><img src="img/icon-ryd.svg" alt=""/></span></span><span class="text-center">1 в ряд</span>
+												<label class="custom-input-block form-check"><input class="custom-input-block__input form-check-input" name="var" type="radio" checked="checked"/><span class="custom-input-block__row row"><span class="col-auto"><img src="img/icon-ryd.svg" alt=""/></span></span><small class="text-center">1 в ряд</small>
 												</label>
 											</div>
 											<div class="col-auto">
-												<label class="custom-input-block form-check"><input class="custom-input-block__input form-check-input" name="var" type="radio"/><span class="custom-input-block__row row"><span class="col-auto"><img src="img/icon-ryd.svg" alt=""/></span><span class="col-auto"><img src="img/icon-ryd.svg" alt=""/></span></span><span class="text-center">2 в ряд</span>
+												<label class="custom-input-block form-check"><input class="custom-input-block__input form-check-input" name="var" type="radio"/><span class="custom-input-block__row row"><span class="col-auto"><img src="img/icon-ryd.svg" alt=""/></span><span class="col-auto"><img src="img/icon-ryd.svg" alt=""/></span></span><small class="text-center">2 в ряд</small>
 												</label>
 											</div>
 										</div>
@@ -376,7 +385,9 @@
 											var map = new ymaps.Map('map', {
 												center,
 												zoom: 16,
-												controls: ['zoomControl']
+												controls: ['zoomControl'],
+												//- draggable: 
+												scroll: false
 											}),
 												myPlacemark = new ymaps.Placemark(center, {
 														hintContent: 'Собственный значок метки',
@@ -395,6 +406,7 @@
 												});
 												map.geoObjects
 												.add(myPlacemark)
+												map.behaviors.disable('scrollZoom')
 											};
 											
 											ymaps.ready(init);
@@ -474,7 +486,7 @@
 									</div>
 									<div class="form-wrap__group">
 										<div class="alert alert-primary small d-md-flex text-md-start text-center align-items-center" role="alert"><img class="me-md-2 mb-md-0 mb-1 img-to-svg text-primary" src="img/svg/info_square_icon.svg" alt=""/>
-											<div class="text-body flex-grow-1 me-md-2 mb-md-0 mb-1">Читайте инструкцию о том, как <a class="tdu" href="#">подключить онлайн-оплату</a> для вашего чат-бота.</div>
+											<div class="text-body flex-grow-1 me-md-2 mb-md-0 mb-1">Читайте инструкцию о том, как <a href="#">подключить онлайн-оплату</a> для вашего чат-бота.</div>
 										</div>
 									</div>
 									<div class="form-wrap__group">
@@ -541,7 +553,7 @@
 									</div>
 									<div class="form-wrap__group">
 										<div class="alert alert-orange small d-md-flex text-md-start text-center align-items-center" role="alert"><img class="me-md-2 mb-md-0 mb-1 img-to-svg" src="img/svg/info_square_icon.svg" alt=""/>
-											<div class="text-body flex-grow-1 me-md-2 mb-md-0 mb-1">Чат-бот с текущим тарифом не имеет возможности предоставления API. Перейдите на другой тариф, чтобы открыть API. <br><a class="strong text-orange" href="#">Перейти в тарифы</a></div>
+											<div class="text-body flex-grow-1 me-md-2 mb-md-0 mb-1">Чат-бот с текущим тарифом не имеет возможности предоставления API. Перейдите на другой тариф, чтобы открыть API. <br><a class="text-orange strong" href="#">Перейти в тарифы</a></div>
 										</div>
 									</div>
 									<div class="form-wrap__group">
@@ -559,7 +571,7 @@
 										</div>
 									</div>
 									<div class="form-wrap__group">
-										<div class="row align-items-center">
+										<div class="row align-items-center gy-2">
 											<div class="col-auto">
 												<button class="btn btn-orange"> 
 													<svg class="icon icon-reload  me-2">

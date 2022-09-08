@@ -199,13 +199,20 @@
 		padding: rem(8);
 	}
 }
-
+.form-control{
+	@include media-breakpoint-down(sm) {
+		padding-left: 15px;
+	}
+}
 .link-block{
 	@extend .form-control;
 	display: flex;
 	justify-content: space-between;
 	font-size: 14px;
 	padding: rem(8) rem(10) rem(8) rem(20);
+	@include media-breakpoint-down(sm) {
+		padding-left: 15px;
+	}
 	input{
 		position: relative;
 		border: none !important;

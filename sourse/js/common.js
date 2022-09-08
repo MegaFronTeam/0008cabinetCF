@@ -712,14 +712,19 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 	}
 
  
-	let aside = document.querySelector('aside');
-	if (aside) {
-		aside.addEventListener("mouseleave", function(){
-			$(aside).find(".nav-main__ddgroup-wrap").slideUp(function(){
+	let aside = document.querySelector('.nav-main');
 
-				$(aside).find(".nav-main__ddgroup-wrap, .nav-main__link--js").removeClass('active')
-			});
+	if (aside) {
+		$(aside).hover(function(){
+			$(this).toggleClass("hover")
 		})
+		// aside.addEventListener("mouseleave", function(){
+		// 	if(!aside.classList.contains("hover"))
+		// 	$(aside).find(".nav-main__ddgroup-wrap").slideUp(function(){
+
+		// 		$(aside).find(".nav-main__ddgroup-wrap, .nav-main__link--js").removeClass('active')
+		// 	});
+		// })
 	}
 
 	let touchstartX = 0
@@ -742,6 +747,10 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 		touchendX = e.changedTouches[0].screenX
 		checkDirection()
 	})
+
+
+
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

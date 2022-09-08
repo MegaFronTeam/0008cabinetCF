@@ -164,8 +164,8 @@
  		cursor: pointer;
  	}
  	label{
- 		width: 100%;
- 		display: block;
+ 		// width: 100%;
+ 		// display: block;
  	}
 	&__group-title{
 		font-weight: bold;
@@ -441,7 +441,10 @@ input::-webkit-inner-spin-button {
 }
 
 .choices{
-	text-align: start
+	text-align: start;
+	&.is-open{
+		z-index: 202;
+	}
 }
 .choices__inner{
 	

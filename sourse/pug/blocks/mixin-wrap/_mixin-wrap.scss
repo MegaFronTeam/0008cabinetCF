@@ -215,10 +215,15 @@
 			pointer-events: none;
 		}
 	}
-	@include media-breakpoint-up(xl){
+	@include media-breakpoint-only(xl){
 
 		position: absolute;
-		&:hover{
+		&:not(.hover) {
+			.nav-main__ddgroup-wrap{
+				display: none !important;
+			}
+		}
+		&.hover{
 			--tr:0;
 			--link-small: var(--link-w);
 			.icon-chevron-down {
@@ -597,6 +602,7 @@
 }
 
 .qr-code {
+	font-size: 14px;
 	@include media-breakpoint-up(lg) {
 		margin-top: rem(20);
 	}

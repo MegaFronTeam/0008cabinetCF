@@ -1,6 +1,17 @@
 // start .sMailing
 .sMailing {
 	--sPT: #{rem(0)};
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	&__center{
+		flex-grow: 1;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	// @include media-breakpoint-up(md) {
@@ -32,7 +43,10 @@
 		margin-bottom: rem(15);
 		@include media-breakpoint-up(sm) {
 			margin-bottom: rem(40);
+			&--item{
+				margin-bottom: rem(20);
 
+			}
 		}
 		@include media-breakpoint-down(md) {
 			justify-content: space-between;
@@ -44,6 +58,8 @@
 		border-radius: 35px;
 		font-weight: 700;
 		color: #fff;
+		white-space: nowrap;
+		display: inline-block;
 		font-size: 12px;
 		@include media-breakpoint-up(xxl) {
 			font-size: 14px;
@@ -439,13 +455,44 @@
 	&__labels{
 		display: flex;
 		@include roww(10px, m);
+		flex-wrap: wrap;
 	}
 	&__card-label{ 
-		margin-bottom: 10px;
+		margin-bottom: 5px;
 		font-size: 14px;
 		padding: rem(4) rem(10);
 		background: #F6F6F6;
 		border-radius: 6px; 
+		position: relative;
+		z-index: 4;
+	}
+
+
+	table{
+		.icon-stars{
+			font-size: 14px;
+			color: $orange;
+			margin-right: 5px;
+		}
+	}
+
+	&__head-row{
+		.btn-outline-mobile{
+			padding: rem(7) rem(28);
+			font-size: 12px;
+			width: 100%;
+			@include media-breakpoint-down(sm) {
+				padding: rem(7) rem(8);
+				.icon{
+					color: $orange;
+
+				}
+				font-weight: normal;
+				border: 1px solid #EBEBEB !important;
+				color: $body-color !important;
+				background-color: #fff !important;
+			}
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -570,6 +617,7 @@
 		font-weight: 700;
 		color: #fff;
 		font-size: 12px;
+		white-space: nowrap;
 		max-width: max-content;
 		margin-left: auto;
 		@include media-breakpoint-up(xxl) {

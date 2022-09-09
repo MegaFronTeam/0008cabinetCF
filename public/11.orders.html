@@ -315,7 +315,7 @@
 							<div class="sMailing__row row">
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="sMailing__card card">
-										<div class="sMailing__head-row row">
+										<div class="sMailing__head-row sMailing__head-row--item row">
 											<div class="col-auto">
 												<div class="sMailing__status" style="--bg: #F5B04D">В процессе
 												</div>
@@ -345,7 +345,7 @@
 								</div>
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="sMailing__card card">
-										<div class="sMailing__head-row row">
+										<div class="sMailing__head-row sMailing__head-row--item row">
 											<div class="col-auto">
 												<div class="sMailing__status" style="--bg: #4BB14B">Завершена
 												</div>
@@ -375,7 +375,7 @@
 								</div>
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="sMailing__card card">
-										<div class="sMailing__head-row row">
+										<div class="sMailing__head-row sMailing__head-row--item row">
 											<div class="col-auto">
 												<div class="sMailing__status" style="--bg: #4BB14B">Завершена
 												</div>
@@ -405,7 +405,7 @@
 								</div>
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="sMailing__card card">
-										<div class="sMailing__head-row row">
+										<div class="sMailing__head-row sMailing__head-row--item row">
 											<div class="col-auto">
 												<div class="sMailing__status" style="--bg: #4BB14B">Завершена
 												</div>
@@ -435,7 +435,7 @@
 								</div>
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="sMailing__card card">
-										<div class="sMailing__head-row row">
+										<div class="sMailing__head-row sMailing__head-row--item row">
 											<div class="col-auto">
 												<div class="sMailing__status" style="--bg: #4BB14B">Завершена
 												</div>
@@ -465,7 +465,7 @@
 								</div>
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="sMailing__card card">
-										<div class="sMailing__head-row row">
+										<div class="sMailing__head-row sMailing__head-row--item row">
 											<div class="col-auto">
 												<div class="sMailing__status" style="--bg: #4BB14B">Завершена
 												</div>
@@ -495,7 +495,7 @@
 								</div>
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="sMailing__card card">
-										<div class="sMailing__head-row row">
+										<div class="sMailing__head-row sMailing__head-row--item row">
 											<div class="col-auto">
 												<div class="sMailing__status" style="--bg: #4BB14B">Завершена
 												</div>
@@ -525,7 +525,7 @@
 								</div>
 								<div class="col-md-6 col-lg-4 col-xl-3">
 									<div class="sMailing__card card">
-										<div class="sMailing__head-row row">
+										<div class="sMailing__head-row sMailing__head-row--item row">
 											<div class="col-auto">
 												<div class="sMailing__status" style="--bg: #4BB14B">Завершена
 												</div>
@@ -906,11 +906,12 @@
 		<script src="libs/sortablejs/Sortable.min.js"> </script>
 		<script src="js/common.js"></script>
 		<script>
+			const url = 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json';
 			try {
 			
 			var table = $('#table-1').DataTable({
 			language: {
-				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				url,
 				},
 				"lengthChange": false, 
 				info: false,
@@ -928,7 +929,7 @@
 				
 			var table2 = $('#table-2').DataTable({
 			language: {
-				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				url,
 				},
 				"lengthChange": false, 
 				info: false,
@@ -946,7 +947,7 @@
 			
 			var table3 = $('#table-3').DataTable({
 			language: {
-				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				url,
 				},
 				"lengthChange": false, 
 				info: false,
@@ -964,7 +965,7 @@
 			
 			var table4 = $('#table-4').DataTable({
 			language: {
-				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				url,
 				},
 				"lengthChange": false, 
 				info: false,
@@ -982,7 +983,7 @@
 			try { 
 			var table5 = $('#table-5').DataTable({
 			language: {
-				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				url,
 				},
 				"lengthChange": false, 
 				info: false,

@@ -130,7 +130,8 @@ mixin sMailingNewsletter(data)
 									a(href="#") #1127
 								td
 									+e.avatar
-										+img(`img/avatar-${i}.png`)
+										+e.avatar-img
+											+img(`img/avatar-${i}.png`)
 										!= name
 								td.d-none.d-lg-table-cell 
 									a(href="#") @arts_man
@@ -148,7 +149,7 @@ mixin sMailingNewsletter(data)
 				| Загрузить еще
 			+save-alert()
 
-mixin sMailing11(data)
+mixin sMailing11Body()
 	// start sMailing
 	+b.sMailing.section#sMailing&attributes(attributes)
 		+e.head-row.row
@@ -192,10 +193,14 @@ mixin sMailing11(data)
 						+in-c('radio', 'Выполнен', 'food')
 						+in-c('radio', 'Отменен', 'food')
 					a(href="#").btn.btn-orange.toggle-filter Закрыть
+		block
+	// end sMailing
+mixin sMailing11(data)
+	+sMailing11Body()
 		+e.row.row
 			mixin card11(title="Майские праздники", status="Завершена", bg='#4BB14B', color="#009FE3")
 				+e.card.card
-					+e.head-row.row
+					+e.head-row--item.row
 						.col-auto
 							+e.status(style=`--bg: ${bg}`)!= status
 						.col-auto
@@ -227,4 +232,187 @@ mixin sMailing11(data)
 		button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-1
 			+icon("reload")
 			| Загрузить еще 
+	
+mixin sMailing11-1(data)
+	+sMailing11Body()
+		.table-wrap-js
+			table.table.table-js#table-11
+				thead
+					tr
+						th
+							span №
+						th
+							span Время заказа
+						th
+							span Статус заказа
+						th
+							span Сумма заказа
+						th
+							span Способ оплаты
+						th
+							span Вид доставки
+						th.text-end
+							span Оценка заказа
+				tbody
+					mixin tr()
+						tr
+							td
+								a(href="#").txt #1127 
+							td 17:34 01.02.2022
+							td
+								block
+							td 1260 ₽
+							td Наличными на месте
+							td Самовывоз
+							td.text-end
+								.d-flex
+								+icon('stars').me-1
+								| 5
+					- for (var x = 0; x < 30; x++)
+						+tr()
+							+e.status(style="--bg:#F5B04D") В обработке
+			button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-11
+				+icon("reload")
+				| Загрузить еще 
+mixin sMailing11-2(data)
+	+sMailing11Body()
+		+e.center
+			+img('img/love-letter_1f48c 1.png')
+			.h1.strong У вас пока нет заказов
+			p.mb-3 Запустите своего чат-бота, чтобы начать получать заказы.
+			+e.btn(href="#").btn.btn-orange Перейти в настройки
+mixin sMailing11-3(data)
+	// start sMailing
+	+b.sMailingNewsletter.section&attributes(attributes)
+		+e.row.row
+			+e.col.col-lg-6.order-2.order-lg-1
+				+e.title.h2 Рассылка
+				p Давно выяснено, 😂
+				p что при оценке дизайна и&nbsp;композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а&nbsp;также реальное распределение букв и&nbsp;пробелов в&nbsp;абзацах, которое не&nbsp;получается при простой дубликации &laquo;Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст..&raquo; 👌🏻
+				p Многие программы электронной вёрстки и&nbsp;редакторы HTML используют Lorem Ipsum в&nbsp;качестве текста по&nbsp;умолчанию, так что поиск по&nbsp;ключевым словам &laquo;lorem ipsum&raquo; сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За&nbsp;прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по&nbsp;ошибке, некоторые&nbsp;&mdash; намеренно (например, юмористические варианты). ❤️
+			.col-lg-6.order-1.order-lg-2
+				+e.title.h2 Данные о рассылке
+				table
+					tr
+						th Дата создания
+						th 16:58, 13.07.2021
+					tr
+						td Пользователи
+						td 1 / 3	(33%)
+					tr
+						td Статус
+						td
+							+e.status(style=`--bg: #F5B04D`) В процессе
+		+e.footer-row 
+			+e.title.h2 Получатели
+				span.badge.bg-light 3
+			.table-wrap-js
+				table.table.table-js#table-4
+					thead
+						tr
+							th ID
+							th Имя
+							th.d-none.d-lg-table-cell Никнейм
+							th Статус
+					tbody
+						mixin tr(i, name, bg='#8C8D8F', text='Не доставлено')
+							tr
+								td 
+									a(href="#") #1127
+								td
+									+e.avatar
+										+e.avatar-img
+											+img(`img/avatar-${i}.png`)
+										!= name
+								td.d-none.d-lg-table-cell 
+									a(href="#") @arts_man
+								td
+									+e.wrap.d-flex
+										+e.status(style=`--bg: ${bg}`)!= text
+										+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Пользователь отключил чат-бота") ?
+											//- +icon("check_star") 
+						- for (var x = 0; x < 3; x++)
+							+tr(1, 'Михаил', '#4BB14B', 'Доставлено')
+							+tr(2, 'Ольга')
+							+tr(3, 'Александр')
+			button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-4
+				+icon("reload")
+				| Загрузить еще
+			+save-alert()
+
+
+
+
+
+mixin sMailing15Body()
+	// start sMailing
+	+b.sMailing.section#sMailing&attributes(attributes)
+		+e.head-row.row
+			.col-sm-auto.col.order-md-last
+				button.btn.btn-orange.btn-outline-mobile
+					+icon('add-more').me-2
+					| Добавить пользователя
+			.col-auto.d-none.d-md-block
+				+e.all-goods
+					+input("Все пользователи",'select').custom-select-js
+			.col-auto.col-sm.order-2
+				+e.search.d-none.d-sm-block
+					+input("Поиск по пользователям")
+					button: +icon('search')
+				+e.search.d-block.d-sm-none
+					button.toggle-search: +icon('search')
+					+e.wrap.search--js
+						+e.cross.toggle-search
+						.h2 Поиск
+						+e.inner-search
+							+input("Поиск по товарам",'text')
+							button: +icon('search')
+						a(href="#").btn.btn-orange Показать товары
+			.col-auto.order-last.d-block.d-md-none
+				+e.filter.toggle-filter: +icon('filter')
+				+e.wrap.filter--js
+					+e.cross.toggle-filter
+					.h2 Сортировать
+					+e.inputs
+						+e.headline По статусу
+						+in-c('radio', 'Все пользователи', 'food')
+						+in-c('radio', 'Новый', 'food')
+						+in-c('radio', 'В работе', 'food')
+						+in-c('radio', 'В пути/готов', 'food')
+						+in-c('radio', 'Выполнен', 'food')
+						+in-c('radio', 'Отменен', 'food')
+					a(href="#").btn.btn-orange.toggle-filter Закрыть
+		block
 	// end sMailing
+mixin sMailing15(data)
+	+sMailing15Body()
+		+b.table-people.table-wrap-js
+				table.table.table-js#table-4
+					thead
+						tr
+							th ID
+							th.d-none.d-md-table-cell  Имя
+							th Роль
+							th Статус
+					tbody
+						mixin tr(i, name, bg='#8C8D8F', text='Не доставлено')
+							tr
+								td 
+									a(href="mailto:m@chatfood.ru").txt m@chatfood.ru
+									
+								td.d-none.d-md-table-cell 
+									+e.avatar
+										+e.avatar-img
+											if i
+												+img(`img/avatar-${i}.png`)
+										!= name
+								td Администратор
+								td
+									+e.wrap.d-flex
+										+e.status(style=`--bg: ${bg}`)!= text
+										//- +e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Пользователь отключил чат-бота") ?
+											//- +icon("check_star") 
+						- for (var x = 0; x < 3; x++)
+							+tr(1, 'Михаил', '#4BB14B', 'Доставлено')
+							+tr(2, 'Ольга')
+							+tr('', 'Александр')

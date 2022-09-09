@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>3. Create bot</title>
+		<title> 15.9. Settings</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0">
@@ -17,7 +17,7 @@
 		<div class="main-wrapper">
 			<div class="cabinet-block section">
 				<div class="cabinet-block__head row">
-					<div class="col-sm-auto h1 strong mb-0">Создание чат-бота</div>
+					<div class="col-sm-auto h1 strong mb-0">arts.man@mail.ru</div>
 					<div class="col p-0 m-0"></div>
 					<div class="col-auto m-0">
 						<a class="link-close" href="#">
@@ -30,25 +30,53 @@
 				<div class="cabinet-block__body">
 					<div class="form-wrap">
 						<form>
-							<div class="form-wrap__group">
-								<div class="form-wrap__group-title">Введите токен
+							<div class="avatar-block-wrap">
+								<div class="avatar-block-wrap__btn-delete">
+									<svg class="icon icon-trash-can ">
+										<use xlink:href="img/svg/sprite.svg#trash-can"></use>
+									</svg>
 								</div>
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="5467484101:AAFmsPni4fqS38OCh8Z0KWWhPCIW5dRElTc"/>
+								<div class="avatar-block">
+									<div class="avatar-block__img-wrap bg-wrap"><img class="img-bg" src="#" alt="">
+										<svg class="icon icon-avatar ">
+											<use xlink:href="img/svg/sprite.svg#avatar"></use>
+										</svg>
+									</div>
+									<div class="avatar-block__caption small">
+										<div class="strong mb-2">Михаил</div>
+										<button class="btn btn-sm btn-outline-danger">Удалить пользователя</button>
+									</div>
+								</div>
+							</div>
+							<div class="form-wrap__group">
+								<div class="form-wrap__group-title">Группа
+								</div>
+								<div class="form-wrap__input-wrap form-group">
+									<select class="form-wrap__input form-select custom-select-js" name="select">
+										<option value="Менеджер">Менеджер</option>
+										<option value=" placeholder 1">placeholder 1</option>
+										<option value=" placeholder 2">placeholder 2</option>
+										<option value=" placeholder 3">placeholder 3</option>
+										<option value=" placeholder 4">placeholder 4</option>
+									</select>
 								</div>
 								<!-- +e.input-wrap-->
 							</div>
 							<div class="form-wrap__group">
-								<div class="form-wrap__group-title">Как получить токен?
+								<div class="form-wrap__group-title">Статус
 								</div>
-								<ol class="small">
-									<li>Зайдите в&nbsp;Telegram и&nbsp;запустите чат-бота <a href="#"> @BotFather</a>.</li>
-									<li>Отправьте ему команду ‘<em class="strong">/newbot</em>’, что означает “создать бота”.</li>
-									<li>Далее отправьте ему название вашего чат-бота, как правило это название заведения, вы&nbsp;также можете использовать эмоджи. Например, &lsquo;<em class="strong">Хорошая пицца</em> 🍕&rsquo;. В&nbsp;будущем вы&nbsp;сможете вернуться к&nbsp;редактированию названия чат-бота.</li>
-									<li>Далее отправьте ему юзернейм вашего чат-бота на&nbsp;латинице, например &lsquo;<em class="strong"> moyrestoran_bot</em>&rsquo; или &lsquo;<em class="strong">moyrestoranbot</em>&rsquo;. Помните что в&nbsp;конце названия чат-бота должно фигурировать слово &lsquo;<em class="strong">bot</em>&rsquo;, также имя бота должно быть уникальным. В&nbsp;противном случае попытка регистрации чат-бота будет неудачна. Внимание: юзернейм чат-бота нельзя будет изменить в&nbsp;будущем.</li>
-									<li>Если вы&nbsp;все сделали правильно, бот <a href="#">@BotFather </a>отправит вам сообщение в&nbsp;котором будет ваш API TOKEN, например: &lsquo;<em class="strong">5467484101:AAFmsPni4fqS38OCh8Z0KWWhPCIW5dRElTc</em>&rsquo;.</li>
-								</ol>
+								<div class="form-wrap__input-wrap form-group">
+									<select class="form-wrap__input form-select custom-select-js" name="select">
+										<option value="Активен">Активен</option>
+										<option value=" placeholder 1">placeholder 1</option>
+										<option value=" placeholder 2">placeholder 2</option>
+										<option value=" placeholder 3">placeholder 3</option>
+										<option value=" placeholder 4">placeholder 4</option>
+									</select>
+								</div>
+								<!-- +e.input-wrap-->
 							</div><br>
-							<button class="btn btn-orange btn-200 btn-mob-100 btn-save-js" type="button">Продолжить</button>
+							<button class="btn btn-orange btn-mob-100 px-20 btn-save-js" type="button">Сохранить изменения</button>
 						</form>
 					</div>
 				</div>

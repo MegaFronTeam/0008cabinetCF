@@ -158,8 +158,7 @@
 									<a class="topLine__back d-none d-sm-inline-flex" href="#">
 										<svg class="icon icon-chevron-left ">
 											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-										</svg>Список рассылок 
-										 <span>- </span>
+										</svg>Список рассылок <span>- </span>
 									</a>
 									<div class="topLine__title">Рассылка #234
 									</div>
@@ -266,7 +265,9 @@
 														<tr>
 															<td> <a href="#">#1127</a></td>
 															<td>
-																<div class="sMailingNewsletter__avatar"><img src="img/avatar-1.png" alt="" loading="lazy"/>Михаил
+																<div class="sMailingNewsletter__avatar">
+																	<div class="sMailingNewsletter__avatar-img"><img src="img/avatar-1.png" alt="" loading="lazy"/>
+																	</div>Михаил
 																</div>
 															</td>
 															<td class="d-none d-lg-table-cell"> <a href="#">@arts_man</a></td>
@@ -282,7 +283,9 @@
 														<tr>
 															<td> <a href="#">#1127</a></td>
 															<td>
-																<div class="sMailingNewsletter__avatar"><img src="img/avatar-2.png" alt="" loading="lazy"/>Ольга
+																<div class="sMailingNewsletter__avatar">
+																	<div class="sMailingNewsletter__avatar-img"><img src="img/avatar-2.png" alt="" loading="lazy"/>
+																	</div>Ольга
 																</div>
 															</td>
 															<td class="d-none d-lg-table-cell"> <a href="#">@arts_man</a></td>
@@ -298,7 +301,9 @@
 														<tr>
 															<td> <a href="#">#1127</a></td>
 															<td>
-																<div class="sMailingNewsletter__avatar"><img src="img/avatar-3.png" alt="" loading="lazy"/>Александр
+																<div class="sMailingNewsletter__avatar">
+																	<div class="sMailingNewsletter__avatar-img"><img src="img/avatar-3.png" alt="" loading="lazy"/>
+																	</div>Александр
 																</div>
 															</td>
 															<td class="d-none d-lg-table-cell"> <a href="#">@arts_man</a></td>
@@ -314,7 +319,9 @@
 														<tr>
 															<td> <a href="#">#1127</a></td>
 															<td>
-																<div class="sMailingNewsletter__avatar"><img src="img/avatar-1.png" alt="" loading="lazy"/>Михаил
+																<div class="sMailingNewsletter__avatar">
+																	<div class="sMailingNewsletter__avatar-img"><img src="img/avatar-1.png" alt="" loading="lazy"/>
+																	</div>Михаил
 																</div>
 															</td>
 															<td class="d-none d-lg-table-cell"> <a href="#">@arts_man</a></td>
@@ -330,7 +337,9 @@
 														<tr>
 															<td> <a href="#">#1127</a></td>
 															<td>
-																<div class="sMailingNewsletter__avatar"><img src="img/avatar-2.png" alt="" loading="lazy"/>Ольга
+																<div class="sMailingNewsletter__avatar">
+																	<div class="sMailingNewsletter__avatar-img"><img src="img/avatar-2.png" alt="" loading="lazy"/>
+																	</div>Ольга
 																</div>
 															</td>
 															<td class="d-none d-lg-table-cell"> <a href="#">@arts_man</a></td>
@@ -346,7 +355,9 @@
 														<tr>
 															<td> <a href="#">#1127</a></td>
 															<td>
-																<div class="sMailingNewsletter__avatar"><img src="img/avatar-3.png" alt="" loading="lazy"/>Александр
+																<div class="sMailingNewsletter__avatar">
+																	<div class="sMailingNewsletter__avatar-img"><img src="img/avatar-3.png" alt="" loading="lazy"/>
+																	</div>Александр
 																</div>
 															</td>
 															<td class="d-none d-lg-table-cell"> <a href="#">@arts_man</a></td>
@@ -362,7 +373,9 @@
 														<tr>
 															<td> <a href="#">#1127</a></td>
 															<td>
-																<div class="sMailingNewsletter__avatar"><img src="img/avatar-1.png" alt="" loading="lazy"/>Михаил
+																<div class="sMailingNewsletter__avatar">
+																	<div class="sMailingNewsletter__avatar-img"><img src="img/avatar-1.png" alt="" loading="lazy"/>
+																	</div>Михаил
 																</div>
 															</td>
 															<td class="d-none d-lg-table-cell"> <a href="#">@arts_man</a></td>
@@ -378,7 +391,9 @@
 														<tr>
 															<td> <a href="#">#1127</a></td>
 															<td>
-																<div class="sMailingNewsletter__avatar"><img src="img/avatar-2.png" alt="" loading="lazy"/>Ольга
+																<div class="sMailingNewsletter__avatar">
+																	<div class="sMailingNewsletter__avatar-img"><img src="img/avatar-2.png" alt="" loading="lazy"/>
+																	</div>Ольга
 																</div>
 															</td>
 															<td class="d-none d-lg-table-cell"> <a href="#">@arts_man</a></td>
@@ -394,7 +409,9 @@
 														<tr>
 															<td> <a href="#">#1127</a></td>
 															<td>
-																<div class="sMailingNewsletter__avatar"><img src="img/avatar-3.png" alt="" loading="lazy"/>Александр
+																<div class="sMailingNewsletter__avatar">
+																	<div class="sMailingNewsletter__avatar-img"><img src="img/avatar-3.png" alt="" loading="lazy"/>
+																	</div>Александр
 																</div>
 															</td>
 															<td class="d-none d-lg-table-cell"> <a href="#">@arts_man</a></td>
@@ -775,11 +792,12 @@
 		<script src="libs/sortablejs/Sortable.min.js"> </script>
 		<script src="js/common.js"></script>
 		<script>
+			const url = 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json';
 			try {
 			
 			var table = $('#table-1').DataTable({
 			language: {
-				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				url,
 				},
 				"lengthChange": false, 
 				info: false,
@@ -797,7 +815,7 @@
 				
 			var table2 = $('#table-2').DataTable({
 			language: {
-				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				url,
 				},
 				"lengthChange": false, 
 				info: false,
@@ -815,7 +833,7 @@
 			
 			var table3 = $('#table-3').DataTable({
 			language: {
-				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				url,
 				},
 				"lengthChange": false, 
 				info: false,
@@ -833,7 +851,7 @@
 			
 			var table4 = $('#table-4').DataTable({
 			language: {
-				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				url,
 				},
 				"lengthChange": false, 
 				info: false,
@@ -851,7 +869,7 @@
 			try { 
 			var table5 = $('#table-5').DataTable({
 			language: {
-				url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json',
+				url,
 				},
 				"lengthChange": false, 
 				info: false,

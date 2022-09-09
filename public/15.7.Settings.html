@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>3. Create bot</title>
+		<title>2-my-profile</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0">
@@ -17,7 +17,7 @@
 		<div class="main-wrapper">
 			<div class="cabinet-block section">
 				<div class="cabinet-block__head row">
-					<div class="col-sm-auto h1 strong mb-0">Создание чат-бота</div>
+					<div class="col-sm-auto h1 strong mb-0">Добавление пользователя</div>
 					<div class="col p-0 m-0"></div>
 					<div class="col-auto m-0">
 						<a class="link-close" href="#">
@@ -31,24 +31,34 @@
 					<div class="form-wrap">
 						<form>
 							<div class="form-wrap__group">
-								<div class="form-wrap__group-title">Введите токен
+								<div class="form-wrap__group-title">Email
 								</div>
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="5467484101:AAFmsPni4fqS38OCh8Z0KWWhPCIW5dRElTc"/>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="Введите email"/>
 								</div>
 								<!-- +e.input-wrap-->
+								<div class="alert alert-primary small d-md-flex text-md-start text-center align-items-center" role="alert"><img class="me-md-2 mb-md-0 mb-1 img-to-svg text-primary" src="img/svg/info_square_icon.svg" alt="">
+									<div class="text-body flex-grow-1 me-md-2 mb-md-0 mb-1">Если приглашаемый пользователь уже зарегистрирован в нашем сервисе, ему на почту прийдет ссылка-приглашение для управления этим чат-ботом. Если приглашаемый пользователь не зарегистрирован, то аккаунт создадится автоматически, а также ему на почту прийдет пароль и ссылка-приглашение для управления этим чат-ботом.</div>
+								</div>
 							</div>
 							<div class="form-wrap__group">
-								<div class="form-wrap__group-title">Как получить токен?
+								<div class="form-wrap__group-title">Группа
 								</div>
-								<ol class="small">
-									<li>Зайдите в&nbsp;Telegram и&nbsp;запустите чат-бота <a href="#"> @BotFather</a>.</li>
-									<li>Отправьте ему команду ‘<em class="strong">/newbot</em>’, что означает “создать бота”.</li>
-									<li>Далее отправьте ему название вашего чат-бота, как правило это название заведения, вы&nbsp;также можете использовать эмоджи. Например, &lsquo;<em class="strong">Хорошая пицца</em> 🍕&rsquo;. В&nbsp;будущем вы&nbsp;сможете вернуться к&nbsp;редактированию названия чат-бота.</li>
-									<li>Далее отправьте ему юзернейм вашего чат-бота на&nbsp;латинице, например &lsquo;<em class="strong"> moyrestoran_bot</em>&rsquo; или &lsquo;<em class="strong">moyrestoranbot</em>&rsquo;. Помните что в&nbsp;конце названия чат-бота должно фигурировать слово &lsquo;<em class="strong">bot</em>&rsquo;, также имя бота должно быть уникальным. В&nbsp;противном случае попытка регистрации чат-бота будет неудачна. Внимание: юзернейм чат-бота нельзя будет изменить в&nbsp;будущем.</li>
-									<li>Если вы&nbsp;все сделали правильно, бот <a href="#">@BotFather </a>отправит вам сообщение в&nbsp;котором будет ваш API TOKEN, например: &lsquo;<em class="strong">5467484101:AAFmsPni4fqS38OCh8Z0KWWhPCIW5dRElTc</em>&rsquo;.</li>
-								</ol>
+								<div class="form-wrap__input-wrap form-group">
+									<select class="form-wrap__input form-select custom-select-js" name="select">
+										<option value="Менеджер">Менеджер</option>
+										<option value=" placeholder 1">placeholder 1</option>
+										<option value=" placeholder 2">placeholder 2</option>
+										<option value=" placeholder 3">placeholder 3</option>
+										<option value=" placeholder 4">placeholder 4</option>
+									</select>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="border-orange border-start border-2 small ps-20 mb-20">
+									<p><strong>Роль Администратор</strong> - предоставляет полный доступ к личному кабинету, будьте осторожны.</p>
+									<p><strong>Роль Менеджер</strong> - предоставляет права на просмотр и управление заказами, управление пользователями, рассылке, редактированию меню блюд, просмотру статистики, раздел настроек скрыт для этой роли.</p>
+								</div>
 							</div><br>
-							<button class="btn btn-orange btn-200 btn-mob-100 btn-save-js" type="button">Продолжить</button>
+							<button class="btn btn-orange btn-mob-100 px-20 btn-save-js" type="button">Добавить пользователя</button>
 						</form>
 					</div>
 				</div>

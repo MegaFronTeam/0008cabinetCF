@@ -1,0 +1,51 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= '2-my-profile'
+	title= title
+block pagecontent
+	+b.cabinet-block.section
+		+e.head.row
+			.col-sm-auto.h1.strong.mb-0 Добавление пользователя
+			.col.p-0.m-0
+			.col-auto.m-0
+				+b.link-close(href="#")
+					+icon("close")
+		+e.body
+			+form-wrap
+				
+				+gr(`Email`)
+					+input("Введите email",'email')
+
+					.alert.alert-primary.small(class="d-md-flex text-md-start text-center align-items-center" role="alert")
+						img(src="img/svg/info_square_icon.svg", alt="").me-md-2.mb-md-0.mb-1.img-to-svg.text-primary
+						.text-body.flex-grow-1.me-md-2.mb-md-0.mb-1 Если приглашаемый пользователь уже зарегистрирован в нашем сервисе, ему на почту прийдет ссылка-приглашение для управления этим чат-ботом. Если приглашаемый пользователь не зарегистрирован, то аккаунт создадится автоматически, а также ему на почту прийдет пароль и ссылка-приглашение для управления этим чат-ботом.
+
+				+gr(`Группа`)
+					+input("Менеджер",'select').custom-select-js
+
+					.border-orange.border-start.border-2.small.ps-20.mb-20
+						p #[strong Роль Администратор] - предоставляет полный доступ к личному кабинету, будьте осторожны.
+						p #[strong Роль Менеджер] - предоставляет права на просмотр и управление заказами, управление пользователями, рассылке, редактированию меню блюд, просмотру статистики, раздел настроек скрыт для этой роли.
+
+				br
+				button.btn.btn-orange.btn-mob-100.px-20.btn-save-js(type="button") Добавить пользователя
+
+		+save-alert()

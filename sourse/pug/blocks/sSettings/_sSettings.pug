@@ -86,8 +86,8 @@ mixin sSettings(data)
 					.mb-1 #[strong {namemybot}] - вывести название вашего заведения из  #[a(href="#") Общих настроек].
 			+gr('Отображение товаров')
 				p.small Выберите наиболее подходящий для вас режим отображения товаров в разделах меню.
-				.row.gy-3
-					.col-auto
+				.row.gy-3.gx-sm-3.gx-2
+					.col-sm-auto.col-6
 						+b.LABEL.custom-input-block.form-check
 							+e.INPUT.input.form-check-input(name='var', type='radio' checked)
 							+e.SPAN.row.row
@@ -95,7 +95,7 @@ mixin sSettings(data)
 									img(src="img/icon-ryd.svg", alt="")
 							small.text-center 1 в ряд
 							
-					.col-auto
+					.col-sm-auto.col-6
 						+b.LABEL.custom-input-block.form-check
 							+e.INPUT.input.form-check-input(name='var', type='radio')
 							+e.SPAN.row.row
@@ -191,7 +191,7 @@ mixin sSettings(data)
 					.col-sm-3
 						+input("Процент",'select').custom-select-js
 			+gr("Понедельник")
-				.row.gy-3
+				.row
 					.col-sm-6
 						+input("8:00",'select').custom-select-js 
 					.col-sm-6

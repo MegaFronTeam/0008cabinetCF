@@ -31,7 +31,7 @@
 		--bs-gutter-y: #{rem(15)};
 		margin-bottom: rem(15);
 		@include media-breakpoint-up(sm) {
-			margin-bottom: rem(20);
+			margin-bottom: rem(40);
 
 		}
 		@include media-breakpoint-down(md) {
@@ -433,6 +433,19 @@
 				}
 			}
 		}
+	}
+
+
+	&__labels{
+		display: flex;
+		@include roww(10px, m);
+	}
+	&__card-label{ 
+		margin-bottom: 10px;
+		font-size: 14px;
+		padding: rem(4) rem(10);
+		background: #F6F6F6;
+		border-radius: 6px; 
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

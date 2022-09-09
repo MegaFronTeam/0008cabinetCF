@@ -1208,6 +1208,8 @@ cursor:no-drop;
 		&__head{
 			padding-top: rem(20);
 			padding-bottom: rem(20);
+			padding-right: rem(40);
+			line-height: 1.2;
 			font-size: 14px;
 			font-weight: bold;
 			position: relative;
@@ -1282,6 +1284,7 @@ cursor:no-drop;
 		position: fixed;
 		bottom: 0;
 		right: 0;
+		z-index: 300;
 		background-color: #fff;
 		box-shadow: 0px 0px 15px rgba(25, 28, 31, 0.1);
 		width: 100%;
@@ -1293,9 +1296,18 @@ cursor:no-drop;
 		position: relative;
 		border: 1px solid #EBEBEB;
 		border-radius: 8px;
-		width: 180px !important;
+		background-color: #fff;
+		&__row{
+			
+		}
+		@include media-breakpoint-up(sm){
+
+			width: 180px !important;
+			padding: rem(20);
+		}
+		padding: rem(20) rem(15);
+		width: 100% !important;
 		display: block;
-		padding: rem(20);
 		text-align: center;
 		input{
 			position: absolute;
@@ -1304,6 +1316,9 @@ cursor:no-drop;
 		}
 		.row{
 			justify-content: center;
+			@include media-breakpoint-down(sm){
+				--bs-gutter-x: 5px
+			}
 		}
 		.text-center{
 			width: 100%;

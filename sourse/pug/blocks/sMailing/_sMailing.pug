@@ -147,3 +147,84 @@ mixin sMailingNewsletter(data)
 				+icon("reload")
 				| Загрузить еще
 			+save-alert()
+
+mixin sMailing11(data)
+	// start sMailing
+	+b.sMailing.section#sMailing&attributes(attributes)
+		+e.head-row.row
+			.col-sm-auto.col.pt-2
+				label.form-check.form-switch
+					input.form-check-input(name='model' type='checkbox' checked role='switch')
+					.form-check-label Только за сегодня
+			.col-auto.d-none.d-md-block
+				+e.all-goods
+					+input("Все заказы",'select').custom-select-js
+			.col-auto.col-md.order-2
+				+e.search.d-none.d-sm-block
+					+input("Поиск по заказам",'text')
+					button: +icon('search')
+				+e.search.d-block.d-sm-none
+					button.toggle-search: +icon('search')
+					+e.wrap.search--js
+						+e.cross.toggle-search
+						.h2 Поиск
+						+e.inner-search
+							+input("Поиск по товарам",'text')
+							button: +icon('search')
+						a(href="#").btn.btn-orange Показать товары
+			.col-auto.d-none.d-md-block.order-md-3
+				+e.show-switch
+					+in-c('radio', '', 'switch')(checked)
+						+icon('category')
+					+in-c('radio', '', 'switch')
+						+icon('list')
+			.col-auto.order-last.d-block.d-md-none
+				+e.filter.toggle-filter: +icon('filter')
+				+e.wrap.filter--js
+					+e.cross.toggle-filter
+					.h2 Сортировать
+					+e.inputs
+						+e.headline По статусу
+						+in-c('radio', 'Все заказы', 'food')
+						+in-c('radio', 'Новый', 'food')
+						+in-c('radio', 'В работе', 'food')
+						+in-c('radio', 'В пути/готов', 'food')
+						+in-c('radio', 'Выполнен', 'food')
+						+in-c('radio', 'Отменен', 'food')
+					a(href="#").btn.btn-orange.toggle-filter Закрыть
+		+e.row.row
+			mixin card11(title="Майские праздники", status="Завершена", bg='#4BB14B', color="#009FE3")
+				+e.card.card
+					+e.head-row.row
+						.col-auto
+							+e.status(style=`--bg: ${bg}`)!= status
+						.col-auto
+							+e.prcent.strong 1260 ₽
+					+e.labels
+						+e.card-label Оплата картой на месте
+						+e.card-label Самовывоз
+					+e.body-row.row
+						.col
+							+e.time 18:24 01.02.2022
+						.col-auto
+							+e.id(href="#" style=`--color: ${color}`) #84
+			.col-md-6.col-lg-4.col-xl-3
+				+card11('Мини кейки', 'В процессе', '#F5B04D')
+			.col-md-6.col-lg-4.col-xl-3
+				+card11()
+			.col-md-6.col-lg-4.col-xl-3
+				+card11()
+			.col-md-6.col-lg-4.col-xl-3
+				+card11()
+			.col-md-6.col-lg-4.col-xl-3
+				+card11()
+			.col-md-6.col-lg-4.col-xl-3
+				+card11()
+			.col-md-6.col-lg-4.col-xl-3
+				+card11('Майские праздники длинное название рассылки в две строки, врятли будет длиньше')
+			.col-md-6.col-lg-4.col-xl-3
+				+card11()
+		button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-1
+			+icon("reload")
+			| Загрузить еще 
+	// end sMailing

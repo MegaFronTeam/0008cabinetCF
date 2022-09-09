@@ -10,7 +10,7 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sForm/_sForm.pug
-include ../blocks/sBotMenu/_sBotMenu.pug
+include ../blocks/sMailing/_sMailing.pug
 include ../blocks/footer/_footer.pug
 
 block variables
@@ -18,10 +18,10 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= '11. Orders '
+	- let  title= '11. Orders'
 	title= title
 block pagecontent
 	+aside('true')
-	+main('Список товаров', 'true', 'true')
-		+sBotMenu
+	+main('Заказы', 'true', 'true')
+		+sMailing11
 		

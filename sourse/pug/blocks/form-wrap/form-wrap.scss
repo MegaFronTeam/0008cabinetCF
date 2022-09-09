@@ -133,6 +133,9 @@
 	}
  	&__input-wrap{
 			// @extend .form-group;
+			label{
+				display: block;
+			}
 			margin-bottom: rem(20);
 			position: relative;
 			.text-after{

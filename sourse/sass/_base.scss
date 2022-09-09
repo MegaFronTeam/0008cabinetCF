@@ -1393,3 +1393,12 @@ cursor:no-drop;
 			opacity: 0.8;
 		}
 	}
+
+
+	.input-group .choices .choices__inner,
+	.link-block,
+	.form-control{
+		@include media-breakpoint-down(sm) {
+			padding-left: 15px;
+		}
+	}

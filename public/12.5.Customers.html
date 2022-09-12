@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Главная</title>
+		<title>12.5. Customers</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0">
@@ -15,290 +15,40 @@
 	</head>
 	<body class="main-page">
 		<div class="main-wrapper">
-			<aside>
-				<div class="nav-chat">
-					<ul>
-						<li><a class="btn active" href="#"><img src="img/svg/main.svg" alt=""/></a></li>
-						<li><a class="btn" href="#"> 
-								<div class="nav-chat__counter">1
-								</div><img src="img/svg/praga.png" alt=""/></a></li>
-						<li><a class="btn" href="#"><img src="img/svg/bgr.png" alt=""/></a></li>
-						<li><a class="btn" href="#" style="--bs-btn-bg:#6F64EC; --bs-btn-color: #fff; --bs-btn-hover-color: #fff; --bs-btn-hover-bg:#6F64EC"> С</a></li>
-						<li><a class="btn btn-orange" href="#">+</a></li>
-					</ul>
-				</div>
-				<div class="nav-main-wrap">
-					<div class="nav-main">
-						<ul>
-								<li>
-									<a class="nav-main__link active" href="#">
-										<div class="nav-main__icon-wrap">
-											<svg class="icon icon-shop ">
-												<use xlink:href="img/svg/sprite.svg#shop"></use>
-											</svg>
-										</div>
-										<div class="nav-main__text">Мои чат-боты
-										</div>
-									</a>
-								</li>
-								<li>
-									<a class="nav-main__link" href="#">
-										<div class="nav-main__icon-wrap">
-											<svg class="icon icon-star ">
-												<use xlink:href="img/svg/sprite.svg#star"></use>
-											</svg>
-										</div>
-										<div class="nav-main__text">Тарифы
-										</div>
-									</a>
-								</li>
-								<li>
-									<a class="nav-main__link" href="#">
-										<div class="nav-main__icon-wrap">
-											<svg class="icon icon-gift ">
-												<use xlink:href="img/svg/sprite.svg#gift"></use>
-											</svg>
-										</div>
-										<div class="nav-main__text">Акции
-											<div class="badge bg-success">скоро</div>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a class="nav-main__link" href="#">
-										<div class="nav-main__icon-wrap">
-											<svg class="icon icon-currency-rub ">
-												<use xlink:href="img/svg/sprite.svg#currency-rub"></use>
-											</svg>
-										</div>
-										<div class="nav-main__text">Кабинет партнера
-										</div>
-									</a>
-								</li>
-								<li>
-									<a class="nav-main__link" href="#">
-										<div class="nav-main__icon-wrap">
-											<svg class="icon icon-faqs ">
-												<use xlink:href="img/svg/sprite.svg#faqs"></use>
-											</svg>
-										</div>
-										<div class="nav-main__text">Техподдержка
-										</div>
-									</a>
-								</li>
-								<li>
-									<a class="nav-main__link" href="#">
-										<div class="nav-main__icon-wrap">
-											<svg class="icon icon-document ">
-												<use xlink:href="img/svg/sprite.svg#document"></use>
-											</svg>
-										</div>
-										<div class="nav-main__text">API
-											<div class="badge bg-success">скоро</div>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a class="nav-main__link" href="#">
-										<div class="nav-main__icon-wrap">
-											<svg class="icon icon-newspaper ">
-												<use xlink:href="img/svg/sprite.svg#newspaper"></use>
-											</svg>
-										</div>
-										<div class="nav-main__text">Блог
-											<div class="badge bg-success">скоро</div>
-										</div>
-									</a>
-								</li>
-						</ul>
-						<a class="cabinet-btn" href="#">
-							<div class="cabinet-btn__icon-wrap">
-								<svg class="icon icon-avatar ">
-									<use xlink:href="img/svg/sprite.svg#avatar"></use>
-								</svg>
-							</div>
-							<div class="cabinet-btn__text"> 
-								<div class="cabinet-btn__name">Валентин Ковалентин
-								</div>
-								<div class="cabinet-btn__id">#13405
-								</div>
-							</div>
-							<svg class="icon icon-setting ">
-								<use xlink:href="img/svg/sprite.svg#setting"></use>
+			<div class="cabinet-block section">
+				<div class="cabinet-block__head row">
+					<div class="col-sm-auto h1 strong mb-0">История рассылки</div>
+					<div class="col p-0 m-0"></div>
+					<div class="col-auto m-0">
+						<a class="link-close" href="#">
+							<svg class="icon icon-close ">
+								<use xlink:href="img/svg/sprite.svg#close"></use>
 							</svg>
 						</a>
 					</div>
 				</div>
-			</aside>
-			<div class="main-center-wrap">
-				<main>
-					<!-- start topLine-->
-					<div class="topLine section" id="topLine">
-						<div class="container-fluid">
-							<div class="row">
-								<div class="col-auto d-xl-none">
-									<div class="toggle-menu-mobile toggle-menu-mobile--js d-xl-none"><span></span>
-										<div class="toggle-menu-mobile__counter">8
-										</div>
-									</div>
-								</div>
-								<div class="col-auto">
-									<div class="topLine__title">Мои чат-боты
-									</div>
-								</div>
-								<div class="col p-0"></div>
-								<div class="col-auto">
-									<a class="topLine__btn topLine__btn--balance" href="#">
-										<div class="toggle-text">
-											<svg class="icon icon-wallet ">
-												<use xlink:href="img/svg/sprite.svg#wallet"></use>
-											</svg><span class="d-none d-xl-block me-1"> Баланс: </span> <strong>777 ₽</strong>
-										</div>
-										<div class="toggle-text toggle-text--hover d-none d-xl-flex">
-											<svg class="icon icon-wallet ">
-												<use xlink:href="img/svg/sprite.svg#wallet"></use>
-											</svg>Пополнить
-										</div>
-									</a>
-								</div>
-								<div class="col-auto">
-									<a class="topLine__btn topLine__btn--alarm topLine__btn--new link-modal-aside-js" href="#modal-alarm">
-										<svg class="icon icon-alarm ">
-											<use xlink:href="img/svg/sprite.svg#alarm"></use>
-										</svg>
-									</a>
-								</div>
-							</div>
-						</div>
+				<div class="cabinet-block__body">
+					<div class="bg-light p-20 rounded mb-2">
+						<p class="small">А у нас новинка!!! Теперь наши тортики в мини формате! Прага, Морковный, Красный бархат, Клубника-лайм и Медовый. Вес 200 гр., Цена 350 руб.</p>
+						<div class="text-end text-secondary small">17:19, 02.05.2022</div>
 					</div>
-					<!-- end topLine-->
-					<div class="container-fluid container-main">
-						<div class="alert alert-orange d-md-flex text-md-start text-center align-items-center" role="alert"><img class="me-md-2 mb-md-0 mb-2" src="img/svg/info_square_icon.svg" alt="">
-							<div class="text-body flex-grow-1 me-md-2">Необходимо пополнить баланс, чтобы возобновить работу чат-ботов с подключенными платными тарифами.</div><a class="link-orange strong" href="#">Пополнить баланс </a>
-						</div>
-						<div class="row gy-md-4 gy-3">
-							<div class="col-xl-3 col-sm-6">
-								<div class="chat-item">
-									<div class="chat-item__head row">
-										<div class="col text-start">
-											<div class="chat-item__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Вы владелец этого чат-бота">
-												<svg class="icon icon-check_star ">
-													<use xlink:href="img/svg/sprite.svg#check_star"></use>
-												</svg>
-											</div>
-										</div>
-										<div class="col-auto text-end small">
-											<div>Тариф Start</div><a class="strong small" href="#">Включить</a>
-										</div>
-									</div>
-									<div class="chat-item__body"> <a class="btn btn-center" href="#">  <img src="img/svg/praga.png" alt=""/></a>
-									</div>
-									<div class="chat-item__footer">
-										<div class="strong">Прага | Доставка ❤️</div><a class="strong" href="#">@prahacafebot</a>
-									</div>
-									<div class="chat-item__btn-wrap">
-										<a class="chat-item__btn btn btn-success disabled" href="#">Новых заказов нет
-										</a>
-										<a class="chat-item__btn btn btn-primary" href="#">Перейти
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-3 col-sm-6">
-								<div class="chat-item">
-									<div class="chat-item__head row">
-										<div class="col text-start">
-											<div class="chat-item__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Вы владелец этого чат-бота">
-												<svg class="icon icon-check_star ">
-													<use xlink:href="img/svg/sprite.svg#check_star"></use>
-												</svg>
-											</div>
-										</div>
-										<div class="col-auto text-end small">
-											<div>Тариф Start</div>
-											<div class="strong small" style="color: var(--bs-success)">Активен</div>
-										</div>
-									</div>
-									<div class="chat-item__body"><a class="btn btn-center" href="#"><img src="img/svg/bgr.png" alt=""/></a>
-									</div>
-									<div class="chat-item__footer">
-										<div class="strong">ЕДРЁН-БАТОН Доставка | Уфа 🥖</div><a class="strong" href="#">@prahacafebot</a>
-									</div>
-									<div class="chat-item__btn-wrap">
-										<a class="chat-item__btn btn btn-success" href="#">1 новый заказ
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-3 col-sm-6">
-								<div class="chat-item">
-									<div class="chat-item__head row">
-										<div class="col text-start">
-											<div class="chat-item__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Вы владелец этого чат-бота">
-												<svg class="icon icon-check_star ">
-													<use xlink:href="img/svg/sprite.svg#check_star"></use>
-												</svg>
-											</div>
-										</div>
-										<div class="col-auto text-end small">
-											<div>Тариф Start</div>
-											<div class="strong small" style="color: var(--bs-success)">Активен</div>
-										</div>
-									</div>
-									<div class="chat-item__body"><a class="btn btn-center" href="#" style="--bs-btn-bg:#6F64EC; --bs-btn-color: #fff; --bs-btn-hover-color: #fff; --bs-btn-hover-bg:#6F64EC"> С</a>
-									</div>
-									<div class="chat-item__footer">
-										<div class="strong">Сантоку Доставка | Сочи 🍣</div><a class="strong" href="#">@prahacafebot</a>
-									</div>
-									<div class="chat-item__btn-wrap">
-										<a class="chat-item__btn btn btn-success disabled" href="#">Новых заказов нет
-										</a>
-										<a class="chat-item__btn btn btn-primary" href="#">Перейти
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-3 col-sm-6">
-								<div class="chat-item">
-									<div class="chat-item__head row">
-										<div class="col text-start">
-											<div class="chat-item__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Вы владелец этого чат-бота">
-												<svg class="icon icon-check_star ">
-													<use xlink:href="img/svg/sprite.svg#check_star"></use>
-												</svg>
-											</div>
-										</div>
-										<div class="col-auto text-end small">
-											<div>Тариф Start</div>
-											<div class="strong small" style="color: var(--bs-success)">Активен</div>
-										</div>
-									</div>
-									<div class="chat-item__body"><a class="btn btn-center" href="#">  <img src="img/svg/praga.png" alt=""/></a>
-									</div>
-									<div class="chat-item__footer">
-										<div class="strong">Прага | Доставка ❤️</div><a class="strong" href="#">@prahacafebot</a>
-									</div>
-									<div class="chat-item__btn-wrap">
-										<a class="chat-item__btn btn btn-success disabled" href="#">Новых заказов нет
-										</a>
-										<a class="chat-item__btn btn btn-primary" href="#">Перейти
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-3 col-sm-6">
-								<div class="chat-item chat-item--add-chart">
-									<div class="chat-item__center"><a class="btn btn-orange btn-center" href="#"> +</a>
-										<div class="strong">Создать чат-бота</div>
-									</div>
-								</div>
-							</div>
-						</div>
+					<div class="bg-light p-20 rounded mb-2">
+						<p class="small">А у нас новинка!!! Теперь наши тортики в мини формате! Прага, Морковный, Красный бархат, Клубника-лайм и Медовый. Вес 200 гр., Цена 350 руб.</p>
+						<div class="text-end text-secondary small">17:19, 02.05.2022</div>
 					</div>
-					<footer class="footer">
-						<div class="container-fluid">ChatFood v 3.1</div>
-					</footer>
-				</main>
+					<div class="bg-light p-20 rounded mb-2">
+						<p class="small">А у нас новинка!!! Теперь наши тортики в мини формате! Прага, Морковный, Красный бархат, Клубника-лайм и Медовый. Вес 200 гр., Цена 350 руб.</p>
+						<div class="text-end text-secondary small">17:19, 02.05.2022</div>
+					</div>
+					<div class="bg-light p-20 rounded mb-2">
+						<p class="small">А у нас новинка!!! Теперь наши тортики в мини формате! Прага, Морковный, Красный бархат, Клубника-лайм и Медовый. Вес 200 гр., Цена 350 руб.</p>
+						<div class="text-end text-secondary small">17:19, 02.05.2022</div>
+					</div>
+					<div class="bg-light p-20 rounded mb-2">
+						<p class="small">А у нас новинка!!! Теперь наши тортики в мини формате! Прага, Морковный, Красный бархат, Клубника-лайм и Медовый. Вес 200 гр., Цена 350 руб.</p>
+						<div class="text-end text-secondary small">17:19, 02.05.2022</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!--  start modals-->

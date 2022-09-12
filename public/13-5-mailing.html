@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Главная</title>
+		<title>13.5 Mailing</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0">
@@ -31,82 +31,94 @@
 					<div class="nav-main">
 						<ul>
 								<li>
-									<a class="nav-main__link active" href="#">
+									<a class="nav-main__link" href="#">
 										<div class="nav-main__icon-wrap">
-											<svg class="icon icon-shop ">
-												<use xlink:href="img/svg/sprite.svg#shop"></use>
+											<svg class="icon icon-wallet ">
+												<use xlink:href="img/svg/sprite.svg#wallet"></use>
 											</svg>
 										</div>
-										<div class="nav-main__text">Мои чат-боты
+										<div class="nav-main__text">Заказы
 										</div>
 									</a>
 								</li>
 								<li>
 									<a class="nav-main__link" href="#">
 										<div class="nav-main__icon-wrap">
-											<svg class="icon icon-star ">
-												<use xlink:href="img/svg/sprite.svg#star"></use>
+											<svg class="icon icon-training ">
+												<use xlink:href="img/svg/sprite.svg#training"></use>
 											</svg>
 										</div>
-										<div class="nav-main__text">Тарифы
+										<div class="nav-main__text">Клиенты
 										</div>
 									</a>
 								</li>
 								<li>
-									<a class="nav-main__link" href="#">
+									<a class="nav-main__link nav-main__link--js active" href="#">
 										<div class="nav-main__icon-wrap">
-											<svg class="icon icon-gift ">
-												<use xlink:href="img/svg/sprite.svg#gift"></use>
+											<svg class="icon icon-pizza ">
+												<use xlink:href="img/svg/sprite.svg#pizza"></use>
 											</svg>
 										</div>
-										<div class="nav-main__text">Акции
-											<div class="badge bg-success">скоро</div>
+										<div class="nav-main__text">Меню товаров
 										</div>
+										<svg class="icon icon-chevron-down ">
+											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+										</svg>
 									</a>
+									<div class="nav-main__ddgroup-wrap active"><a class="active" href="#">Список товаров</a><a href="#">Категории меню</a><a href="#">Добавить товар</a>
+									</div>
 								</li>
 								<li>
 									<a class="nav-main__link" href="#">
 										<div class="nav-main__icon-wrap">
-											<svg class="icon icon-currency-rub ">
-												<use xlink:href="img/svg/sprite.svg#currency-rub"></use>
+											<svg class="icon icon-growth ">
+												<use xlink:href="img/svg/sprite.svg#growth"></use>
 											</svg>
 										</div>
-										<div class="nav-main__text">Кабинет партнера
+										<div class="nav-main__text">Статистика
 										</div>
 									</a>
 								</li>
 								<li>
-									<a class="nav-main__link" href="#">
+									<a class="nav-main__link nav-main__link--js" href="#">
 										<div class="nav-main__icon-wrap">
-											<svg class="icon icon-faqs ">
-												<use xlink:href="img/svg/sprite.svg#faqs"></use>
+											<svg class="icon icon-tg ">
+												<use xlink:href="img/svg/sprite.svg#tg"></use>
 											</svg>
 										</div>
-										<div class="nav-main__text">Техподдержка
+										<div class="nav-main__text">Рассылки
 										</div>
+										<svg class="icon icon-chevron-down ">
+											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+										</svg>
 									</a>
+									<div class="nav-main__ddgroup-wrap"><a class="active" href="#">Список товаров</a><a href="#">Категории меню</a><a href="#">Добавить товар</a>
+									</div>
+								</li>
+								<li>
+									<a class="nav-main__link nav-main__link--js" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-setting ">
+												<use xlink:href="img/svg/sprite.svg#setting"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Настройки
+										</div>
+										<svg class="icon icon-chevron-down ">
+											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+										</svg>
+									</a>
+									<div class="nav-main__ddgroup-wrap"><a class="active" href="#">Список товаров</a><a href="#">Категории меню</a><a href="#">Добавить товар</a>
+									</div>
 								</li>
 								<li>
 									<a class="nav-main__link" href="#">
 										<div class="nav-main__icon-wrap">
-											<svg class="icon icon-document ">
-												<use xlink:href="img/svg/sprite.svg#document"></use>
+											<svg class="icon icon-rocket ">
+												<use xlink:href="img/svg/sprite.svg#rocket"></use>
 											</svg>
 										</div>
-										<div class="nav-main__text">API
-											<div class="badge bg-success">скоро</div>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a class="nav-main__link" href="#">
-										<div class="nav-main__icon-wrap">
-											<svg class="icon icon-newspaper ">
-												<use xlink:href="img/svg/sprite.svg#newspaper"></use>
-											</svg>
-										</div>
-										<div class="nav-main__text">Блог
-											<div class="badge bg-success">скоро</div>
+										<div class="nav-main__text">Продвижение
 										</div>
 									</a>
 								</li>
@@ -143,7 +155,12 @@
 									</div>
 								</div>
 								<div class="col-auto">
-									<div class="topLine__title">Мои чат-боты
+									<a class="topLine__back d-none d-sm-inline-flex" href="#">
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>Список рассылок <span>- </span>
+									</a>
+									<div class="topLine__title">Рассылка #234
 									</div>
 								</div>
 								<div class="col p-0"></div>
@@ -168,128 +185,264 @@
 										</svg>
 									</a>
 								</div>
+								<div class="col-auto">
+									<div class="topLine__btn-wrap">
+										<div class="topLine__btn topLine__btn--cabinet"><img src="img/svg/praga.png" alt="" loading="lazy"/>
+											<svg class="icon icon-chevron-down ">
+												<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+											</svg>
+										</div>
+										<div class="topLine__btn-toggle">
+											<div class="topLine__headline">Прага | Доставка
+											</div>
+											<div class="topLine__rate">
+												<svg class="icon icon-stars ">
+													<use xlink:href="img/svg/sprite.svg#stars"></use>
+												</svg>4.7
+											</div>
+											<div class="topLine__tarif">
+												<p>Тариф “Standart”</p>
+												<p class="timeout">Средств хватит до 22.06.2022</p>
+											</div>
+											<a class="topLine__goto" href="#">Перейти в тарифы
+											</a>
+											<a class="topLine__logout" href="#">Выйти
+											</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 					<!-- end topLine-->
 					<div class="container-fluid container-main">
-						<div class="alert alert-orange d-md-flex text-md-start text-center align-items-center" role="alert"><img class="me-md-2 mb-md-0 mb-2" src="img/svg/info_square_icon.svg" alt="">
-							<div class="text-body flex-grow-1 me-md-2">Необходимо пополнить баланс, чтобы возобновить работу чат-ботов с подключенными платными тарифами.</div><a class="link-orange strong" href="#">Пополнить баланс </a>
-						</div>
-						<div class="row gy-md-4 gy-3">
-							<div class="col-xl-3 col-sm-6">
-								<div class="chat-item">
-									<div class="chat-item__head row">
-										<div class="col text-start">
-											<div class="chat-item__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Вы владелец этого чат-бота">
-												<svg class="icon icon-check_star ">
-													<use xlink:href="img/svg/sprite.svg#check_star"></use>
-												</svg>
-											</div>
-										</div>
-										<div class="col-auto text-end small">
-											<div>Тариф Start</div><a class="strong small" href="#">Включить</a>
-										</div>
+						<!-- start sMailing-->
+						<div class="sMailingNewsletter section">
+							<div class="sMailingNewsletter__row row">
+								<div class="sMailingNewsletter__col col-lg-6 order-2 order-lg-1">
+									<div class="sMailingNewsletter__title h2">Рассылка
 									</div>
-									<div class="chat-item__body"> <a class="btn btn-center" href="#">  <img src="img/svg/praga.png" alt=""/></a>
+									<p>Давно выяснено, 😂</p>
+									<p>что при оценке дизайна и&nbsp;композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а&nbsp;также реальное распределение букв и&nbsp;пробелов в&nbsp;абзацах, которое не&nbsp;получается при простой дубликации &laquo;Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст..&raquo; 👌🏻</p>
+									<p>Многие программы электронной вёрстки и&nbsp;редакторы HTML используют Lorem Ipsum в&nbsp;качестве текста по&nbsp;умолчанию, так что поиск по&nbsp;ключевым словам &laquo;lorem ipsum&raquo; сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За&nbsp;прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по&nbsp;ошибке, некоторые&nbsp;&mdash; намеренно (например, юмористические варианты). ❤️</p>
+								</div>
+								<div class="col-lg-6 order-1 order-lg-2">
+									<div class="sMailingNewsletter__title h2">Данные о рассылке
 									</div>
-									<div class="chat-item__footer">
-										<div class="strong">Прага | Доставка ❤️</div><a class="strong" href="#">@prahacafebot</a>
-									</div>
-									<div class="chat-item__btn-wrap">
-										<a class="chat-item__btn btn btn-success disabled" href="#">Новых заказов нет
-										</a>
-										<a class="chat-item__btn btn btn-primary" href="#">Перейти
-										</a>
-									</div>
+									<table>
+										<tr>
+											<th>Дата создания</th>
+											<th>16:58, 13.07.2021</th>
+										</tr>
+										<tr>
+											<td>Пользователи</td>
+											<td>1 / 3	(33%)</td>
+										</tr>
+										<tr>
+											<td>Статус</td>
+											<td>
+												<div class="sMailingNewsletter__status" style="--bg: #F5B04D">В процессе
+												</div>
+											</td>
+										</tr>
+									</table>
 								</div>
 							</div>
-							<div class="col-xl-3 col-sm-6">
-								<div class="chat-item">
-									<div class="chat-item__head row">
-										<div class="col text-start">
-											<div class="chat-item__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Вы владелец этого чат-бота">
-												<svg class="icon icon-check_star ">
-													<use xlink:href="img/svg/sprite.svg#check_star"></use>
-												</svg>
-											</div>
-										</div>
-										<div class="col-auto text-end small">
-											<div>Тариф Start</div>
-											<div class="strong small" style="color: var(--bs-success)">Активен</div>
-										</div>
-									</div>
-									<div class="chat-item__body"><a class="btn btn-center" href="#"><img src="img/svg/bgr.png" alt=""/></a>
-									</div>
-									<div class="chat-item__footer">
-										<div class="strong">ЕДРЁН-БАТОН Доставка | Уфа 🥖</div><a class="strong" href="#">@prahacafebot</a>
-									</div>
-									<div class="chat-item__btn-wrap">
-										<a class="chat-item__btn btn btn-success" href="#">1 новый заказ
-										</a>
-									</div>
+							<div class="sMailingNewsletter__footer-row"> 
+								<div class="sMailingNewsletter__title h2">Получатели<span class="badge bg-light">3</span>
 								</div>
-							</div>
-							<div class="col-xl-3 col-sm-6">
-								<div class="chat-item">
-									<div class="chat-item__head row">
-										<div class="col text-start">
-											<div class="chat-item__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Вы владелец этого чат-бота">
-												<svg class="icon icon-check_star ">
-													<use xlink:href="img/svg/sprite.svg#check_star"></use>
-												</svg>
-											</div>
-										</div>
-										<div class="col-auto text-end small">
-											<div>Тариф Start</div>
-											<div class="strong small" style="color: var(--bs-success)">Активен</div>
-										</div>
-									</div>
-									<div class="chat-item__body"><a class="btn btn-center" href="#" style="--bs-btn-bg:#6F64EC; --bs-btn-color: #fff; --bs-btn-hover-color: #fff; --bs-btn-hover-bg:#6F64EC"> С</a>
-									</div>
-									<div class="chat-item__footer">
-										<div class="strong">Сантоку Доставка | Сочи 🍣</div><a class="strong" href="#">@prahacafebot</a>
-									</div>
-									<div class="chat-item__btn-wrap">
-										<a class="chat-item__btn btn btn-success disabled" href="#">Новых заказов нет
-										</a>
-										<a class="chat-item__btn btn btn-primary" href="#">Перейти
-										</a>
-									</div>
+								<div class="table-wrap-js">
+									<table class="table table-js" id="table-4">
+										<thead>
+											<tr>
+												<th>ID</th>
+												<th>Имя</th>
+												<th class="d-none d-lg-table-cell">Никнейм</th>
+												<th>Статус</th>
+											</tr>
+										</thead>
+										<tbody>
+														<tr>
+															<td> <a href="#">#1127</a></td>
+															<td>
+																<div class="sMailingNewsletter__avatar">
+																	<div class="sMailingNewsletter__avatar-img"><img src="img/avatar-1.png" alt="" loading="lazy"/>
+																	</div>Михаил
+																</div>
+															</td>
+															<td class="d-none d-lg-table-cell"> <a href="#">@arts_man</a></td>
+															<td>
+																<div class="sMailingNewsletter__wrap d-flex">
+																	<div class="sMailingNewsletter__status" style="--bg: #4BB14B">Доставлено
+																	</div>
+																	<div class="sMailingNewsletter__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Пользователь отключил чат-бота">?
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td> <a href="#">#1127</a></td>
+															<td>
+																<div class="sMailingNewsletter__avatar">
+																	<div class="sMailingNewsletter__avatar-img"><img src="img/avatar-2.png" alt="" loading="lazy"/>
+																	</div>Ольга
+																</div>
+															</td>
+															<td class="d-none d-lg-table-cell"> <a href="#">@arts_man</a></td>
+															<td>
+																<div class="sMailingNewsletter__wrap d-flex">
+																	<div class="sMailingNewsletter__status" style="--bg: #8C8D8F">Не доставлено
+																	</div>
+																	<div class="sMailingNewsletter__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Пользователь отключил чат-бота">?
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td> <a href="#">#1127</a></td>
+															<td>
+																<div class="sMailingNewsletter__avatar">
+																	<div class="sMailingNewsletter__avatar-img"><img src="img/avatar-3.png" alt="" loading="lazy"/>
+																	</div>Александр
+																</div>
+															</td>
+															<td class="d-none d-lg-table-cell"> <a href="#">@arts_man</a></td>
+															<td>
+																<div class="sMailingNewsletter__wrap d-flex">
+																	<div class="sMailingNewsletter__status" style="--bg: #8C8D8F">Не доставлено
+																	</div>
+																	<div class="sMailingNewsletter__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Пользователь отключил чат-бота">?
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td> <a href="#">#1127</a></td>
+															<td>
+																<div class="sMailingNewsletter__avatar">
+																	<div class="sMailingNewsletter__avatar-img"><img src="img/avatar-1.png" alt="" loading="lazy"/>
+																	</div>Михаил
+																</div>
+															</td>
+															<td class="d-none d-lg-table-cell"> <a href="#">@arts_man</a></td>
+															<td>
+																<div class="sMailingNewsletter__wrap d-flex">
+																	<div class="sMailingNewsletter__status" style="--bg: #4BB14B">Доставлено
+																	</div>
+																	<div class="sMailingNewsletter__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Пользователь отключил чат-бота">?
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td> <a href="#">#1127</a></td>
+															<td>
+																<div class="sMailingNewsletter__avatar">
+																	<div class="sMailingNewsletter__avatar-img"><img src="img/avatar-2.png" alt="" loading="lazy"/>
+																	</div>Ольга
+																</div>
+															</td>
+															<td class="d-none d-lg-table-cell"> <a href="#">@arts_man</a></td>
+															<td>
+																<div class="sMailingNewsletter__wrap d-flex">
+																	<div class="sMailingNewsletter__status" style="--bg: #8C8D8F">Не доставлено
+																	</div>
+																	<div class="sMailingNewsletter__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Пользователь отключил чат-бота">?
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td> <a href="#">#1127</a></td>
+															<td>
+																<div class="sMailingNewsletter__avatar">
+																	<div class="sMailingNewsletter__avatar-img"><img src="img/avatar-3.png" alt="" loading="lazy"/>
+																	</div>Александр
+																</div>
+															</td>
+															<td class="d-none d-lg-table-cell"> <a href="#">@arts_man</a></td>
+															<td>
+																<div class="sMailingNewsletter__wrap d-flex">
+																	<div class="sMailingNewsletter__status" style="--bg: #8C8D8F">Не доставлено
+																	</div>
+																	<div class="sMailingNewsletter__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Пользователь отключил чат-бота">?
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td> <a href="#">#1127</a></td>
+															<td>
+																<div class="sMailingNewsletter__avatar">
+																	<div class="sMailingNewsletter__avatar-img"><img src="img/avatar-1.png" alt="" loading="lazy"/>
+																	</div>Михаил
+																</div>
+															</td>
+															<td class="d-none d-lg-table-cell"> <a href="#">@arts_man</a></td>
+															<td>
+																<div class="sMailingNewsletter__wrap d-flex">
+																	<div class="sMailingNewsletter__status" style="--bg: #4BB14B">Доставлено
+																	</div>
+																	<div class="sMailingNewsletter__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Пользователь отключил чат-бота">?
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td> <a href="#">#1127</a></td>
+															<td>
+																<div class="sMailingNewsletter__avatar">
+																	<div class="sMailingNewsletter__avatar-img"><img src="img/avatar-2.png" alt="" loading="lazy"/>
+																	</div>Ольга
+																</div>
+															</td>
+															<td class="d-none d-lg-table-cell"> <a href="#">@arts_man</a></td>
+															<td>
+																<div class="sMailingNewsletter__wrap d-flex">
+																	<div class="sMailingNewsletter__status" style="--bg: #8C8D8F">Не доставлено
+																	</div>
+																	<div class="sMailingNewsletter__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Пользователь отключил чат-бота">?
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td> <a href="#">#1127</a></td>
+															<td>
+																<div class="sMailingNewsletter__avatar">
+																	<div class="sMailingNewsletter__avatar-img"><img src="img/avatar-3.png" alt="" loading="lazy"/>
+																	</div>Александр
+																</div>
+															</td>
+															<td class="d-none d-lg-table-cell"> <a href="#">@arts_man</a></td>
+															<td>
+																<div class="sMailingNewsletter__wrap d-flex">
+																	<div class="sMailingNewsletter__status" style="--bg: #8C8D8F">Не доставлено
+																	</div>
+																	<div class="sMailingNewsletter__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Пользователь отключил чат-бота">?
+																	</div>
+																</div>
+															</td>
+														</tr>
+										</tbody>
+									</table>
 								</div>
-							</div>
-							<div class="col-xl-3 col-sm-6">
-								<div class="chat-item">
-									<div class="chat-item__head row">
-										<div class="col text-start">
-											<div class="chat-item__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Вы владелец этого чат-бота">
-												<svg class="icon icon-check_star ">
-													<use xlink:href="img/svg/sprite.svg#check_star"></use>
-												</svg>
-											</div>
-										</div>
-										<div class="col-auto text-end small">
-											<div>Тариф Start</div>
-											<div class="strong small" style="color: var(--bs-success)">Активен</div>
-										</div>
+								<button class="btn btn-light w-100 btn-example-load-more" id="btn-example-load-more-4">
+									<svg class="icon icon-reload ">
+										<use xlink:href="img/svg/sprite.svg#reload"></use>
+									</svg>Загрузить еще
+								</button>
+								<div class="save-alert">
+									<svg class="icon icon-square_checked ">
+										<use xlink:href="img/svg/sprite.svg#square_checked"></use>
+									</svg>
+									<div class="small strong">Изменения сохранены</div>
+									<div class="save-alert__close">
+										<svg class="icon icon-close ">
+											<use xlink:href="img/svg/sprite.svg#close"></use>
+										</svg>
 									</div>
-									<div class="chat-item__body"><a class="btn btn-center" href="#">  <img src="img/svg/praga.png" alt=""/></a>
-									</div>
-									<div class="chat-item__footer">
-										<div class="strong">Прага | Доставка ❤️</div><a class="strong" href="#">@prahacafebot</a>
-									</div>
-									<div class="chat-item__btn-wrap">
-										<a class="chat-item__btn btn btn-success disabled" href="#">Новых заказов нет
-										</a>
-										<a class="chat-item__btn btn btn-primary" href="#">Перейти
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-3 col-sm-6">
-								<div class="chat-item chat-item--add-chart">
-									<div class="chat-item__center"><a class="btn btn-orange btn-center" href="#"> +</a>
-										<div class="strong">Создать чат-бота</div>
+									<div class="save-alert__progress">
 									</div>
 								</div>
 							</div>

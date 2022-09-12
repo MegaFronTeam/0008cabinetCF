@@ -463,46 +463,46 @@ mixin sMailing12Body()
 mixin sMailing12(data)
 	+sMailing12Body()
 		+b.table-people--users.table-wrap-js
-				table.table.table-js#table-4
-					thead
+			table.table.table-js#table-4
+				thead
+					tr
+						th
+							+in-c()
+						th: span ID
+						th
+							span Имя
+						th.d-none.d-xl-table-cell: span  Никнейм
+						th.d-none.d-xl-table-cell: span  Телефон
+						th.d-none.d-sm-table-cell: span  Кол-во заказов
+						th.text-end
+							span  Сумма заказов
+				tbody
+					mixin tr(i, name, bg='#8C8D8F', text='Не доставлено')
 						tr
-							th
+							td 
 								+in-c()
-							th: span ID
-							th.d-none.d-md-table-cell
-								span Имя
-							th: span  Никнейм
-							th: span  Телефон
-							th: span  Кол-во заказов
-							th.text-end
-								span  Сумма заказов
-					tbody
-						mixin tr(i, name, bg='#8C8D8F', text='Не доставлено')
-							tr
-								td 
-									+in-c()
-								td 
-									a(href="mailto:m@chatfood.ru").txt m@chatfood.ru
-									
-								td.d-none.d-md-table-cell 
-									+e.avatar
-										+e.avatar-img
-											if i
-												+img(`img/avatar-${i}.png`)
-										!= name
-								td
-									a(href="#").txt @arts_man
-								td  
-									a(href="tel:89198112848").text-body 89198112848
-								td 18
-								td.text-end 22 730 ₽
-						- for (var x = 0; x < 13; x++)
-							+tr(1, 'Михаил', '#4BB14B', 'Доставлено')
-							+tr(2, 'Ольга')
-							+tr('', 'Александр')
-				button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-4
-						+icon("reload")
-						| Загрузить еще 
+							td 
+								a(href="#").txt #1127
+								
+							td 
+								+e.avatar
+									+e.avatar-img.d-block
+										if i
+											+img(`img/avatar-${i}.png`)
+									!= name
+							td.d-none.d-xl-table-cell
+								a(href="#").txt @arts_man
+							td.d-none.d-xl-table-cell
+								a(href="tel:89198112848").text-body 89198112848
+							td.d-none.d-sm-table-cell 18
+							td.text-end 22 730 ₽
+					- for (var x = 0; x < 13; x++)
+						+tr(1, 'Михаил', '#4BB14B', 'Доставлено')
+						+tr(2, 'Ольга')
+						+tr('', 'Александр')
+		button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-4
+				+icon("reload")
+				| Загрузить еще 
 		
 		+b.footer-line
 			.container-fluid
@@ -511,7 +511,7 @@ mixin sMailing12(data)
 						.topLine__title.small Выбрано
 							.badge.bg-light.d-flex 2344
 					.col-auto.small
-						+e.link-icon.text-body(href="#") 
+						+e.link-icon.text-body(href="#modal-add-bonus").link-modal-js 
 							+img('img/coin_icon_188044.svg')
 							span.d-none.d-sm-inline.ms-1 Начислить бонусы
 					.col-auto.small.d-none.d-md-block
@@ -519,6 +519,180 @@ mixin sMailing12(data)
 							+img('img/microsoft_excel_icon_132212.svg').me-1
 							| Экспортировать в xls
 					.col-auto
-						button.btn.btn-primary
+						button.btn.btn-primary(data-src="modal-mail" data-fancybox="modal")
 							+icon("telegram")
 							| Запустить рассылку
+mixin sMailing12-1(data)
+	+sMailing12Body()
+		+e.center
+			+img('img/money-with-wings_1f4b8.png')
+			.h1.strong У вас пока нет клиентов
+			p.mb-3 Ваши клиенты появятся здесь после того, как пользователи присоединяться к&nbsp;вашему чат-боту.
+mixin sMailing12-3(data)
+	// start sMailing
+	+b.sMailingNewsletter.pt-0.section#sMailing&attributes(attributes)
+		.row.row-lg
+			.col-xl-6.col-head.pt-20
+				+e.head.row
+					.col.h2.strong Данные о клиенте
+					.col-auto
+						button.btn.btn-outline-danger.btn-sm Заблокировать пользователя
+				+e.body
+					table.table(style="--bs-table-border-color: transparent")
+						mixin tr(t)
+							tr
+								td= t
+								td.text-end
+									block
+						+tr('Имя')
+							+e.avatar.justify-content-end
+								+e.avatar-img
+									+img(`img/avatar-1.png`)
+								| Михаил
+						+tr('Дата регистрации')
+							| 16:58, 13.07.2021
+						+tr('Потраченное время')
+							| 135 мин
+						+tr('Бонусы')
+
+							| 143 ₽
+							button.btn.btn-outline-gray.btn-sm.ms-2
+								+img('img/coin_icon_188044.svg').me-1
+								| Начислить бонусы
+						+tr('Никнейм')
+							a.txt(href="#")  @arts_man
+						+tr('Рефералы')
+							| 6
+				.row.align-items-center.d-xl-none
+					.col-auto
+						button.btn-tg(data-src="modal-massage" data-fancybox="modal")
+							+icon("telegram")
+							| Отправить сообщение
+					.col-auto
+						a.small.text-secondary(href="#")  История сообщений
+			.col-xl-6.d-none.d-xl-block.pt-20
+				+e.head.row
+					.col.h2.strong Рассылка
+					.col-auto
+						a.small.text-secondary(href="#") История сообщений
+				.modal-win.modal-win--mail#modal-massage()
+					+e.body
+						+input("Начните писать сообщение...",'textarea')
+					+e.footer
+						.row.mt-2.gy-2
+							.col.small.text-secondary.align-self-end 0/1600 символов
+							.col-auto
+								button.btn-tg.disabled
+									+icon("telegram")
+									| Отправить сообщение
+			.col-xl-12
+				+e.footer-row--base
+					+e.title.h2 Заказы клиента
+						span.badge.bg-light 3
+					.table-wrap-js
+						table.table.table-js#table-4.table-mob-flex
+							thead
+								tr
+									th: span ID
+									th: span Время заказа
+									th: span Статус
+									th: span Сумма заказа
+									th.d-none.w-0.p-0
+									th: span Способ оплаты
+									th: span Вид доставки
+									th.d-none.w-0.p-0
+									th: span Оценка заказа
+							tbody
+								mixin tr(i, name, bg='#8C8D8F', text='Не доставлено')
+									tr
+										td 
+											a(href="#") #1127
+										td 17:34 01.02.2022
+
+										td
+											+e.status(style=`--bg: ${bg}`).ms-0!= text
+
+										td 900 ₽
+										td.w-100.d-xl-none.p-0
+										td
+											.mob-label Онлайн-оплата
+										td
+											.mob-label Курьером 
+										td.w-100.d-xl-none.p-0
+										td.text-end
+											.d-inline-flex.align-items-center
+												+icon('stars').me-1
+												| 5
+								- for (var x = 0; x < 35; x++)
+									+tr(1, 'Михаил', '#4BB14B', 'Доставлено')
+									+tr(2, 'Ольга')
+									+tr(3, 'Александр')
+					button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-4
+						+icon("reload")
+						| Загрузить еще
+					+save-alert()
+	// end sMailing
+mixin sMailing12-4(data)
+	// start sMailing
+	+b.sMailingNewsletter.pt-0.section#sMailing&attributes(attributes)
+		.row.row-lg
+			.col-xl-6.col-head.pt-20
+				+e.head.row
+					.col.h2.strong Данные о клиенте
+					.col-auto
+						button.btn.btn-outline-success.btn-sm Разблокировать пользователя
+				+e.body
+					table.table(style="--bs-table-border-color: transparent")
+						mixin tr(t)
+							tr
+								td= t
+								td.text-end
+									block
+						+tr('Имя')
+							+e.avatar.justify-content-end
+								+e.avatar-img
+									+img(`img/avatar-1.png`)
+								| Михаил
+						+tr('Дата регистрации')
+							| 16:58, 13.07.2021
+						+tr('Потраченное время')
+							| 135 мин
+						+tr('Бонусы')
+
+							| 143 ₽
+							button.btn.btn-outline-gray.btn-sm.ms-2
+								+img('img/coin_icon_188044.svg').me-1
+								| Начислить бонусы
+						+tr('Никнейм')
+							a.txt(href="#")  @arts_man
+						+tr('Рефералы')
+							| 6
+				.row.align-items-center.d-xl-none
+					.col-auto
+						button.btn-tg(data-src="modal-massage" data-fancybox="modal")
+							+icon("telegram")
+							| Отправить сообщение
+					.col-auto
+						a.small.text-secondary(href="#")  История сообщений
+			.col-xl-6.d-none.d-xl-block.pt-20
+				+e.head.row
+					.col.h2.strong Рассылка
+					.col-auto
+						a.small.text-secondary(href="#") История сообщений
+				.modal-win.modal-win--mail#modal-massage()
+					+e.body
+						+input("Начните писать сообщение...",'textarea')
+					+e.footer
+						.row.mt-2.gy-2
+							.col.small.text-secondary.align-self-end 0/1600 символов
+							.col-auto
+								button.btn-tg
+									+icon("telegram")
+									| Отправить сообщение
+			.col-xl-12
+				+e.footer-row--base
+					+e.title.h2 Заказы клиента
+						span.badge.bg-light 0
+					p.small У выбранного клиента нет заказов.
+					+save-alert() 
+	// end sMailing

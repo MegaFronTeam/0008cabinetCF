@@ -1,0 +1,35 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= '12.5. Customers'
+	title= title
+block pagecontent
+	+b.cabinet-block.section
+		+e.head.row
+			.col-sm-auto.h1.strong.mb-0 История рассылки
+			.col.p-0.m-0
+			.col-auto.m-0
+				+b.link-close(href="#")
+					+icon("close")
+		+e.body
+			- for (var x = 0; x < 5; x++)
+				.bg-light.p-20.rounded.mb-2
+					p.small А у нас новинка!!! Теперь наши тортики в мини формате! Прага, Морковный, Красный бархат, Клубника-лайм и Медовый. Вес 200 гр., Цена 350 руб.
+					.text-end.text-secondary.small 17:19, 02.05.2022

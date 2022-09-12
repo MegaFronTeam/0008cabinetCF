@@ -547,7 +547,12 @@ iframe {
 	}
 }
 .btn-primary{
+	--bs-btn-disabled-bg: #F6F6F6;
+  --bs-btn-disabled-border-color: #F6F6F6;
+	&.disabled{
+		color: #8C8D8F;
 
+	}
 }
 .btn
 // ,
@@ -1621,3 +1626,153 @@ cursor:no-drop;
 				}
 			}
 		}
+
+		.btn-sm{
+			font-weight: normal;
+		}
+
+		.row-lg{
+			--bs-gutter-x: 80px
+		}
+
+
+	
+		
+.btn-tg{
+	@extend .btn, .btn-primary;
+	.icon{
+		font-size: rem(20);
+		margin-right: rem(10);
+		position: relative;
+		top: rem(-1);
+	}
+	
+}
+
+.sMailingNewsletter{
+	.modal-win{
+		@include media-breakpoint-up(xl){
+				display: block !important;
+				padding: 0 !important;
+				border: none !important;
+				box-shadow: none !important;
+				width: 100%;
+		}
+	}
+	.col-head{
+		@include media-breakpoint-up(xl){
+
+			border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)
+		}
+		
+		@include media-breakpoint-down(xl){
+			padding-bottom: 40px;
+			
+		}
+
+	}
+}
+
+.sMailingNewsletter__footer-row--base{
+	position: relative;
+	padding-top: rem(40);
+	&::after{
+		content: '';
+		position: absolute;
+		left: -50vw;
+		width: 200vw;
+		height: 1px;
+		background-color: var(--bs-border-color);
+		top: 0;
+	}
+}
+
+.sMailingNewsletter.pt-0{
+	margin-top: rem(-20);
+}
+
+
+td { 
+	.icon-stars {
+		font-size: rem(14);
+		color: $orange;
+		margin-right: rem(5);
+	} 
+}
+
+
+body .table-wrap-js .table-mob-flex{
+	width: 100% !important;
+	tbody{
+		@include media-breakpoint-down(sm){
+
+			grid-template-columns: repeat(1, 1fr);
+		}
+
+	}
+	@include media-breakpoint-down(xl){
+		display: block;
+		thead{
+			display: none;
+		}
+		tbody{
+			display: flex;
+			flex-wrap: wrap;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 20px;
+			tr{
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				border: 1px solid #EBEBEB;
+				border-radius: 12px;
+				padding: 20px;
+				align-items: center;
+			}
+			td{
+				display: block;
+				border: none !important;
+				padding: 0;
+				order: 4;
+				padding-bottom: 20px;
+				&:first-child{
+					padding: 0;
+					order: 10;
+					text-align: right;
+					width: 40%;
+					padding-bottom: 0;
+				}
+				&:nth-child(3){
+					order: 1;
+					margin-right: 10px;
+				}
+				&:nth-child(4){
+					order: 2;
+					flex-grow: 1;
+				}
+				&:last-of-type{
+					order: 3;
+					
+				}
+				
+				&:nth-child(2){
+					order: 9;
+					color: #8C8D8F;
+					flex-grow: 1;
+					width: 60%;
+					padding-bottom: 0;
+				}
+
+			}
+			 
+		}
+		.mob-label{
+			display: inline-block;
+			background: #F6F6F6;
+			border-radius: 6px;
+			padding: 4px 10px;
+			margin-right: 5px;
+		}
+	}
+}

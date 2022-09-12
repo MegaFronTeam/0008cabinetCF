@@ -50,8 +50,37 @@ mixin modal()
 					
 				.col-6
 					button.btn.btn-orange.modal-close-js.w-100 Отменить
+	// #modal-call
+	
+	div(id="modal-add-bonus"  style="display: none" )
+		+b.modal-win.text-center
+			.h2.strong.mb-3 Подтвердите начисление бонусов
+			p.small.mb-4 Выбрано 3 клиента(-ов).
+			+form-wrap
+				+input("Например, 250")
+					span.text-after  ₽
+				.row
+					.col-6
+						button.btn.btn-outline-orange.w-100 Отменить
+						
+					.col-6
+						button.btn.btn-orange Начислить
+			
+	// #modal-add-bonus
+	div(id="modal-mail"  style="display: none" )
+		+b.modal-win--mail
+			.h2.strong.mb-3 Рассылка
+			+form-wrap
+				+input("Начните писать сообщение...",'textarea')
+				.row.gy-2
+					.col.text-secondary.align-self-end.text-sm-start.text-center.small 0/1600 символов
+						
+					.col-sm-auto
+						button.btn.btn-primary.w-100(data-src="modal-mail" data-fancybox="modal")
+							+icon("telegram")
+							| Отправить сообщение
 
 			
-	// #modal-call
+	// #modal-mail
 	
 	// end modals

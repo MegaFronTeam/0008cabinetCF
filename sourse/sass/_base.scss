@@ -1598,3 +1598,26 @@ cursor:no-drop;
 		th{
 			font-weight: bold;
 		}
+
+
+		body .table-people--users{
+			.custom-input{
+				margin: 0;
+			}
+			th{
+				vertical-align: middle;
+			}
+			th,
+			td{
+				&:first-child{
+					padding-right: 0 !important;
+					span{
+						&::before,
+						&::after{
+							display: none;
+						}
+					}
+					width: rem(50) !important;
+				}
+			}
+		}

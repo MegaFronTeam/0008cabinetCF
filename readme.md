@@ -22,16 +22,19 @@
     
 18. <https://megafronteam.github.io/0008cabinetCF/public/11.orders.html>
 19. <https://megafronteam.github.io/0008cabinetCF/public/11.1.orders.html>
+  
+20. <https://megafronteam.github.io/0008cabinetCF/public/12.Customers.html>
 
-20. <https://megafronteam.github.io/0008cabinetCF/public/13-mailing.html>
-21. <https://megafronteam.github.io/0008cabinetCF/public/13-2-mailing.html>
-22. <https://megafronteam.github.io/0008cabinetCF/public/13-3-mailing.html>
+21. <https://megafronteam.github.io/0008cabinetCF/public/13-mailing.html>
+22. <https://megafronteam.github.io/0008cabinetCF/public/13-2-mailing.html>
+23. <https://megafronteam.github.io/0008cabinetCF/public/13-3-mailing.html>
     
-23. <https://megafronteam.github.io/0008cabinetCF/public/14-promo.html>
+24. <https://megafronteam.github.io/0008cabinetCF/public/14-promo.html>
 
-24. <https://megafronteam.github.io/0008cabinetCF/public/15.Settings.html>
-25. <https://megafronteam.github.io/0008cabinetCF/public/15.7.Settings.html>
-26. <https://megafronteam.github.io/0008cabinetCF/public/15.8.Settings.html>
+25. <https://megafronteam.github.io/0008cabinetCF/public/15.Settings.html>
+26. <https://megafronteam.github.io/0008cabinetCF/public/15.7.Settings.html>
+27. <https://megafronteam.github.io/0008cabinetCF/public/15.8.Settings.html>
+28. <https://megafronteam.github.io/0008cabinetCF/public/15.9.Settings.html>
 
-27. <https://megafronteam.github.io/0008cabinetCF/public/16-manager.html>
-28. <https://megafronteam.github.io/0008cabinetCF/public/17-statistic.html>
+29. <https://megafronteam.github.io/0008cabinetCF/public/16-manager.html>
+30. <https://megafronteam.github.io/0008cabinetCF/public/17-statistic.html>

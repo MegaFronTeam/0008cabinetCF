@@ -365,7 +365,7 @@ mixin sMailing15Body()
 						+e.cross.toggle-search
 						.h2 Поиск
 						+e.inner-search
-							+input("Поиск по товарам",'text')
+							+input("Поиск по пользователям",'text')
 							button: +icon('search')
 						a(href="#").btn.btn-orange Показать товары
 			.col-auto.order-last.d-block.d-md-none
@@ -416,3 +416,109 @@ mixin sMailing15(data)
 							+tr(1, 'Михаил', '#4BB14B', 'Доставлено')
 							+tr(2, 'Ольга')
 							+tr('', 'Александр')
+
+
+
+mixin sMailing12Body()
+	// start sMailing
+	+b.sMailing.section#sMailing&attributes(attributes)
+		+e.head-row.row
+			//- .col-sm-auto.col.order-md-last
+			//- 	button.btn.btn-orange.btn-outline-mobile
+			//- 		+icon('add-more').me-2
+			//- 		| Добавить пользователя
+			.col.d-sm-none
+			.col-auto.d-none.d-md-block
+				+e.all-goods
+					+input("Все клиенты",'select').custom-select-js
+			.col-auto.col-sm.order-2
+				+e.search.d-none.d-sm-block
+					+input("Поиск по клиентам")
+					button: +icon('search')
+				+e.search.d-block.d-sm-none
+					button.toggle-search: +icon('search')
+					+e.wrap.search--js
+						+e.cross.toggle-search
+						.h2 Поиск
+						+e.inner-search
+							+input("Поиск по клиентам",'text')
+							button: +icon('search')
+						a(href="#").btn.btn-orange Показать товары
+			.col-auto.order-last.d-block.d-md-none
+				+e.filter.toggle-filter: +icon('filter')
+				+e.wrap.filter--js
+					+e.cross.toggle-filter
+					.h2 Сортировать
+					+e.inputs
+						+e.headline По статусу
+						+in-c('radio', 'Все пользователи', 'food')
+						+in-c('radio', 'Новый', 'food')
+						+in-c('radio', 'В работе', 'food')
+						+in-c('radio', 'В пути/готов', 'food')
+						+in-c('radio', 'Выполнен', 'food')
+						+in-c('radio', 'Отменен', 'food')
+					a(href="#").btn.btn-orange.toggle-filter Закрыть
+		block
+	// end sMailing
+mixin sMailing12(data)
+	+sMailing12Body()
+		+b.table-people--users.table-wrap-js
+				table.table.table-js#table-4
+					thead
+						tr
+							th
+								+in-c()
+							th: span ID
+							th.d-none.d-md-table-cell
+								span Имя
+							th: span  Никнейм
+							th: span  Телефон
+							th: span  Кол-во заказов
+							th.text-end
+								span  Сумма заказов
+					tbody
+						mixin tr(i, name, bg='#8C8D8F', text='Не доставлено')
+							tr
+								td 
+									+in-c()
+								td 
+									a(href="mailto:m@chatfood.ru").txt m@chatfood.ru
+									
+								td.d-none.d-md-table-cell 
+									+e.avatar
+										+e.avatar-img
+											if i
+												+img(`img/avatar-${i}.png`)
+										!= name
+								td
+									a(href="#").txt @arts_man
+								td  
+									a(href="tel:89198112848").text-body 89198112848
+								td 18
+								td.text-end 22 730 ₽
+						- for (var x = 0; x < 13; x++)
+							+tr(1, 'Михаил', '#4BB14B', 'Доставлено')
+							+tr(2, 'Ольга')
+							+tr('', 'Александр')
+				button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-4
+						+icon("reload")
+						| Загрузить еще 
+		
+		+b.footer-line
+			.container-fluid
+				.row
+					.col
+						.topLine__title.small Выбрано
+							.badge.bg-light.d-flex 2344
+					.col-auto.small
+						+e.link-icon.text-body(href="#") 
+							+img('img/coin_icon_188044.svg')
+							span.d-none.d-sm-inline.ms-1 Начислить бонусы
+					.col-auto.small.d-none.d-md-block
+						a.text-body(href="#") 
+							+img('img/microsoft_excel_icon_132212.svg').me-1
+							| Экспортировать в xls
+					.col-auto
+						button.btn.btn-primary
+							+icon("telegram")
+							| Запустить рассылку

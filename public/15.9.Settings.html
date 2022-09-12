@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>2-my-profile</title>
+		<title> 15.9. Settings</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0">
@@ -17,7 +17,7 @@
 		<div class="main-wrapper">
 			<div class="cabinet-block section">
 				<div class="cabinet-block__head row">
-					<div class="col-sm-auto h1 strong mb-0">Добавление пользователя</div>
+					<div class="col-sm-auto h1 strong mb-0">arts.man@mail.ru</div>
 					<div class="col p-0 m-0"></div>
 					<div class="col-auto m-0">
 						<a class="link-close" href="#">
@@ -30,14 +30,22 @@
 				<div class="cabinet-block__body">
 					<div class="form-wrap">
 						<form>
-							<div class="form-wrap__group">
-								<div class="form-wrap__group-title">Email
+							<div class="avatar-block-wrap">
+								<div class="avatar-block-wrap__btn-delete">
+									<svg class="icon icon-trash-can ">
+										<use xlink:href="img/svg/sprite.svg#trash-can"></use>
+									</svg>
 								</div>
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="Введите email"/>
-								</div>
-								<!-- +e.input-wrap-->
-								<div class="alert alert-primary small d-md-flex text-md-start text-center align-items-center" role="alert"><img class="me-md-2 mb-md-0 mb-1 img-to-svg text-primary" src="img/svg/info_square_icon.svg" alt="">
-									<div class="text-body flex-grow-1 me-md-2 mb-md-0 mb-1">Если приглашаемый пользователь уже зарегистрирован в нашем сервисе, ему на почту прийдет ссылка-приглашение для управления этим чат-ботом. Если приглашаемый пользователь не зарегистрирован, то аккаунт создадится автоматически, а также ему на почту прийдет пароль и ссылка-приглашение для управления этим чат-ботом.</div>
+								<div class="avatar-block">
+									<div class="avatar-block__img-wrap bg-wrap"><img class="img-bg" src="#" alt="">
+										<svg class="icon icon-avatar ">
+											<use xlink:href="img/svg/sprite.svg#avatar"></use>
+										</svg>
+									</div>
+									<div class="avatar-block__caption small">
+										<div class="strong mb-2">Михаил</div>
+										<button class="btn btn-sm btn-outline-danger">Удалить пользователя</button>
+									</div>
 								</div>
 							</div>
 							<div class="form-wrap__group">
@@ -53,12 +61,22 @@
 									</select>
 								</div>
 								<!-- +e.input-wrap-->
-								<div class="border-orange border-start border-2 small ps-20 mb-20">
-									<p><strong>Роль Администратор</strong> - предоставляет полный доступ к личному кабинету, будьте осторожны.</p>
-									<p><strong>Роль Менеджер</strong> - предоставляет права на просмотр и управление заказами, управление пользователями, рассылке, редактированию меню блюд, просмотру статистики, раздел настроек скрыт для этой роли.</p>
+							</div>
+							<div class="form-wrap__group">
+								<div class="form-wrap__group-title">Статус
 								</div>
+								<div class="form-wrap__input-wrap form-group">
+									<select class="form-wrap__input form-select custom-select-js" name="select">
+										<option value="Активен">Активен</option>
+										<option value=" placeholder 1">placeholder 1</option>
+										<option value=" placeholder 2">placeholder 2</option>
+										<option value=" placeholder 3">placeholder 3</option>
+										<option value=" placeholder 4">placeholder 4</option>
+									</select>
+								</div>
+								<!-- +e.input-wrap-->
 							</div><br>
-							<button class="btn btn-orange btn-mob-100 px-20 btn-save-js" type="button">Добавить пользователя</button>
+							<button class="btn btn-orange btn-mob-100 px-20 btn-save-js" type="button">Сохранить изменения</button>
 						</form>
 					</div>
 				</div>

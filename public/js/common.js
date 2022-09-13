@@ -495,9 +495,10 @@ function eventHandler() {
 			itemSelectText: '',
 			searchEnabled: false,
     searchChoices: false,
+    shouldSort: false,
 		});
 	}
-
+	 
 
 
 	const convertImages = (query, callback) => {
@@ -751,6 +752,24 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 
 
 
+	// var wrapper = document.querySelector(".top-nav");
+	var nav = priorityNav.init({
+		mainNavWrapper: ".js-priorityNav",
+		// mainnav wrapper selector (must be direct parent from mainNav)
+		mainNav: ".labels",
+		// mainnav selector. (must be inline-block)
+		navDropdownLabel: 'Еще',
+		navDropdownBreakpointLabel: 'Еще',
+		navDropdownClassName: "menu__dropdown",
+		// class used for the dropdown.
+		navDropdownToggleClassName: "menu__dropdown-toggle",
+		// class used for the dropdown toggle.
+		// navDropdownBreakpointLabel: "Выбрать", //button label for navDropdownToggle when the breakPoint is reached.
+		breakPoint: 0 // moved: function () { scrolldrop()}, // executed when item is moved to dropdown
+		// movedBack: function () { scrolldrop()} // executed when item is moved back to main menu
+
+	}); 
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
@@ -775,3 +794,7 @@ if (document.readyState !== 'loading') {
 		image.src = URL.createObjectURL(event.target.files[0]);
 	}; 
 
+
+
+
+	

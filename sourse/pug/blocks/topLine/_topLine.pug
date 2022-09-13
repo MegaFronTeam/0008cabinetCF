@@ -13,10 +13,10 @@ mixin topLine(t, badge, avatar, mailingList)
 					.col-auto
 						+e.back.d-none.d-sm-inline-flex(href='#')
 							+icon('chevron-left')
-							| Список рассылок 
+							= t || 'Список рассылок' 
 							span - 
 						+e.title
-							| Рассылка #234
+							= (mailingList== true ? 'Рассылка #234' : mailingList)
 				else
 					.col-auto
 						+e.title= t

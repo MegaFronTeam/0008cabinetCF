@@ -42,6 +42,7 @@
     "sass": "^1.54.1"
   },
   "dependencies": {
+    "@baseonmars/priority-nav": "^1.4.0",
     "@fancyapps/ui": "^4.0.31",
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.0",

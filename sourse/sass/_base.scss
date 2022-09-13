@@ -1961,3 +1961,22 @@ body .table-wrap-js .table-mob-flex{
 		}
 	}
 }
+
+
+
+.spin{
+
+}
+
+
+.spin{
+  animation: 2s linear 0s normal none infinite running rot; 
+}
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+} 

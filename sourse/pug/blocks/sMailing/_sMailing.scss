@@ -505,6 +505,7 @@
 
 .sMailingNewsletter {
 	#map{
+		// @include media-breakpoint-up(md) {
 		margin-bottom: 60px;
 	}
 	flex-grow: 1;

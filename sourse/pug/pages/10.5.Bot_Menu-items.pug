@@ -59,8 +59,8 @@ block pagecontent
 					+gr(` Тип товара`)
 						//- +input("Введите имя и фамилию")
 						.tabs__caption.tabs__caption--variant.btn-group
-							.tabs__btn.btn.btn-outline-gray.active Простой
-							.tabs__btn.btn.btn-outline-gray Вариативный
+							.tabs__btn.btn.btn-outline-gray.small.active Простой
+							.tabs__btn.btn.btn-outline-gray.small Вариативный
 						.tabs__wrap
 							.tabs__content
 						
@@ -98,7 +98,7 @@ block pagecontent
 									+input("Например, Большая") 
 									.text-end
 										a.text-secondary.small(href="#") Добавить значение
-								button.btn-add.btn.btn-outline-gray(type="button")
+								button.btn-add.btn.btn-outline-gray(type="button").small
 									+icon("add-more")
 									| Добавить свойство
 								br 
@@ -139,7 +139,7 @@ block pagecontent
 								+in-c("checkbox",'Включить по умолчанию')
 								//- +in-c("checkbox",'Включить по умолчанию')
 				
-			button.btn-add.btn.btn-outline-gray(type="button")
+			button.btn-add.btn.btn-outline-gray(type="button").btn-add.small
 				+icon("add-more")
 				| Добавить опцию
 			br 

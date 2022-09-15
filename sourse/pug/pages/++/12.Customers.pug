@@ -24,4 +24,31 @@ block pagecontent
 	+aside('true')
 	+main('Пользователи', 'true', 'true')
 		+sMailing12
-		
+block scripts
+	script.
+			let checkHead = document.querySelector("th .custom-input__input");
+			let checkTd = document.querySelectorAll("td .custom-input__input");
+
+		function getCheck(){
+
+			if (checkHead.checked) {
+				console.log(1)
+				for (const check of checkTd) {
+					check.checked = true
+				}
+			}
+			else {
+				console.log(0)
+				for (const check of checkTd) {
+					check.checked = false
+				} 
+			}
+		}
+
+		getCheck()
+		checkHead.addEventListener('change', function(){
+			getCheck()
+		});
+		document.queryCommandValue(".btn-example-load-more").addEventListener('click', function(){
+			getCheck()
+		});

@@ -234,24 +234,24 @@
 	}
 	&__btn-head--more-btn  {
 	
-		--bs-btn-hover-border-color: #{$orange};
-		--bs-btn-hover-bg: #{$orange};
-		--bs-btn-hover-color: #fff;
+		// --bs-btn-hover-border-color: #{$orange};
+		// --bs-btn-hover-bg: #{$orange};
+		// --bs-btn-hover-color: #fff;
 		font-weight: 700;  
 		@include media-breakpoint-down(sm) { 
 			font-weight: normal;
 
-			--bs-btn-border-color: #EBEBEB;
+			// --bs-btn-border-color: #EBEBEB;
 
-			--bs-btn-color: #{$gray-900};
-			--bs-btn-bg: #fff;
-			--bs-btn-border-color: #EBEBEB;
-			--bs-btn-hover-border-color: #{$orange};
-			--bs-btn-hover-bg: #{$orange};
-			--bs-btn-hover-color: #fff;
-			--bs-btn-active-border-color: #{$orange};
-			--bs-btn-active-bg: #{$orange};
-			--bs-btn-active-color: #fff;
+			// --bs-btn-color: #{$gray-900};
+			// --bs-btn-bg: #fff;
+			// --bs-btn-border-color: #EBEBEB;
+			// --bs-btn-hover-border-color: #{$orange};
+			// --bs-btn-hover-bg: #{$orange};
+			// --bs-btn-hover-color: #fff;
+			// --bs-btn-active-border-color: #{$orange};
+			// --bs-btn-active-bg: #{$orange};
+			// --bs-btn-active-color: #fff;
 		}
 		@include media-breakpoint-up(xxl) {
 			// font-size: rem(14);
@@ -371,8 +371,9 @@
 	// head menu end
 	&__colCard {
 		@media (min-width: 1862px) {
-			flex: 0 0 auto;
-    	width: auto;
+			// flex: 0 0 auto;
+    	// width: auto;
+			width: calc(100% / 5);
 		}
 		@include media-breakpoint-up(xxl) {
 			// flex: 1 0 auto;

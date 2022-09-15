@@ -2,7 +2,7 @@ mixin sCabinetPanel(empty)
 	// start sCabinetPanel
 	+b.sCabinetPanel&attributes(attributes)
 		+e.group
-			+e.slider--js.swiper
+			+e.slider.tabs-slide-js.swiper
 				.swiper-wrapper
 					mixin item(t)
 						+e.slide.swiper-slide
@@ -112,7 +112,7 @@ mixin sCabinetPanel(empty)
 										span.d-sm-none Выплата
 								.col-6
 									button.btn.btn-light.w-100 Договор №8975
-				.swiper-pagination.d-none.d-sm-block.d-lg-none
+				.swiper-pagination.d-none.d-sm-block.d-xxl-none
 			mixin gr(t, l, tab)
 				+e.group
 					.row

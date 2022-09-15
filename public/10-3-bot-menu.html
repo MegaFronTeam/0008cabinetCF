@@ -11,6 +11,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet"/>
 		<link href="css/dataTables.bootstrap5.min.css" rel="stylesheet"/>
+		<link href="libs/@baseonmars/priority-nav/priority-nav-core.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page">
@@ -215,7 +216,7 @@
 						<!-- start sBotMenu-->
 						<div class="sBotMenu sBotMenu--empty section" id="sBotMenu">
 							<div class="sBotMenu__head-row row">
-								<div class="col-auto order-sm-1 order-lg-1 d-none d-sm-block">
+								<div class="col-xl order-sm-1 order-lg-1 d-none d-sm-block">
 									<div class="sBotMenu__all-goods">
 										<div class="sBotMenu__input-wrap form-group">
 											<select class="sBotMenu__input form-select custom-select-js" name="select">
@@ -229,7 +230,7 @@
 										<!-- +e.input-wrap-->
 									</div>
 								</div>
-								<div class="col-auto order-3 order-sm-last order-lg-2">
+								<div class="col-auto col-sm-12 col-lg order-3 order-sm-last order-lg-2">
 									<div class="sBotMenu__search d-none d-sm-block">
 										<div class="sBotMenu__input-wrap form-group"><input class="sBotMenu__input form-control" name="text" type="text" placeholder="Поиск по товарам"/>
 										</div>
@@ -240,14 +241,14 @@
 											</svg>
 										</button>
 									</div>
-									<div class="sBotMenu__search sBotMenu__search--toggle d-block d-sm-none">
-										<button>
+									<div class="sBotMenu__search d-block d-sm-none">
+										<button class="toggle-search">
 											<svg class="icon icon-search ">
 												<use xlink:href="img/svg/sprite.svg#search"></use>
 											</svg>
 										</button>
-										<div class="sBotMenu__wrap sBotMenu__wrap--search">
-											<div class="sBotMenu__cross">
+										<div class="sBotMenu__wrap search search--js">
+											<div class="sBotMenu__cross toggle-search">
 											</div>
 											<div class="h2">Поиск</div>
 											<div class="sBotMenu__inner-search">
@@ -277,7 +278,7 @@
 										<!-- +e.input-wrap-->
 									</div>
 								</div>
-								<div class="col-auto order-sm-5 order-lg-4 d-none d-sm-block">
+								<div class="col-auto order-sm-5 order-lg-4 d-none d-lg-block">
 									<div class="sBotMenu__show-switch">
 										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="switch" type="radio" checked="checked"/>
 											<svg class="icon icon-category ">
@@ -291,28 +292,28 @@
 										</label>
 									</div>
 								</div>
-								<div class="col col-lg-auto order-2 order-sm-3 order-lg-5">
-									<a class="sBotMenu__categories-btn btn" href="#">
-										<svg class="icon icon-shopping-bag ">
+								<div class="col col-lg-auto order-2 order-sm-3 order-lg-4">
+									<a class="sBotMenu__btn-head sBotMenu__btn-head--categories btn btn-outline-gray" href="#">
+										<svg class="icon icon-shopping-bag  text-orange">
 											<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
-										</svg><span class="d-none d-sm-inline-block">Категории меню</span><span class="d-inline-block d-sm-none">Категории</span>
+										</svg>Категории <span class="d-none d-sm-inline">меню</span>
 									</a>
 								</div>
 								<div class="col col-lg-auto order-1 order-sm-4 order-lg-6">
-									<a class="sBotMenu__more-btn btn btn-orange" href="#">
+									<a class="sBotMenu__btn-head sBotMenu__btn-head--more-btn btn btn-orange" href="#">
 										<svg class="icon icon-more ">
 											<use xlink:href="img/svg/sprite.svg#more"></use>
-										</svg><span class="d-none d-sm-inline-block">Добавить товар</span><span class="d-inline-block d-sm-none">Добавить</span>
+										</svg> Добавить <span class="d-none d-sm-inline">товар</span>
 									</a>
 								</div>
 								<div class="col-auto order-last d-block d-sm-none">
-									<div class="sBotMenu__filter">
+									<div class="sBotMenu__filter toggle-filter">
 										<svg class="icon icon-filter ">
 											<use xlink:href="img/svg/sprite.svg#filter"></use>
 										</svg>
 									</div>
-									<div class="sBotMenu__wrap sBotMenu__wrap--filter active">
-										<div class="sBotMenu__cross">
+									<div class="sBotMenu__wrap filter filter--js">
+										<div class="sBotMenu__cross toggle-filter">
 										</div>
 										<div class="h2">Сортировать</div>
 										<div class="sBotMenu__inputs">
@@ -342,14 +343,14 @@
 											</label>
 											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="show" type="radio"/><span class="custom-input__text form-check-label">Только неактивные</span>
 											</label>
-										</div><a class="btn btn-orange" href="#">Закрыть</a>
+										</div><a class="btn btn-orange toggle-filter" href="#">Закрыть</a>
 									</div>
 								</div>
 							</div>
 							<div class="sBotMenu__empty"><img src="img/robot_1f916 1.png" alt="" loading="lazy"/>
 								<div class="h1">Созданных товаров нет</div>
 								<p>Создайте категории меню и добавьте товары.</p>
-								<a class="sBotMenu__btn btn btn-orange" href="#"> 
+								<a class="sBotMenu__btn btn btn-orange" href="#" style="--bs-btn-padding-y: .75rem"> 
 									<svg class="icon icon-plus ">
 										<use xlink:href="img/svg/sprite.svg#plus"></use>
 									</svg>Добавить товар
@@ -688,6 +689,51 @@
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<div id="modal-add-bonus" style="display: none">
+			<div class="modal-win text-center">
+				<div class="h2 strong mb-3">Подтвердите начисление бонусов</div>
+				<p class="small mb-4">Выбрано 3 клиента(-ов).</p>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Например, 250"/><span class="text-after"> ₽</span>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="row">
+							<div class="col-6">
+								<button class="btn btn-outline-orange w-100">Отменить</button>
+							</div>
+							<div class="col-6">
+								<button class="btn btn-orange w-100">Начислить</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-add-bonus-->
+		<div id="modal-mail" style="display: none">
+			<div class="modal-win modal-win--mail">
+				<div class="h2 strong mb-3">Рассылка</div>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Начните писать сообщение..."></textarea>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="row gy-2">
+							<div class="col text-secondary align-self-end text-sm-start text-center small">0/1600 символов</div>
+							<div class="col-sm-auto">
+								<button class="btn btn-primary w-100" data-src="modal-mail" data-fancybox="modal">
+									<svg class="icon icon-telegram ">
+										<use xlink:href="img/svg/sprite.svg#telegram"></use>
+									</svg>Отправить сообщение
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-mail-->
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/datatables.net-dt/js/dataTables.dataTables.min.js"> </script>
@@ -766,7 +812,7 @@
 				"lengthChange": false, 
 				info: false,
 				searching: false,
-				pageLength: 3,
+				pageLength: 4,
 				// ajax: 'https://gyrocode.github.io/files/jquery-datatables/arrays.json',
 						drawCallback: function(){ 
 							$('#btn-example-load-more-4').toggle(this.api().page.hasMore());

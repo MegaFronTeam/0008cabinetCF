@@ -4,6 +4,13 @@
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
+	@include media-breakpoint-down(sm){
+
+		table.dataTable{
+			margin-top: 0 !important;
+			padding-top: 0 !important;
+		}
+	}
 	&__center{
 		flex-grow: 1;
 		text-align: center;
@@ -40,7 +47,7 @@
 	&__head-row {
 		align-items: center;
 		--bs-gutter-y: #{rem(15)};
-		margin-bottom: rem(15);
+		margin-bottom: rem(10);
 		@include media-breakpoint-up(sm) {
 			margin-bottom: rem(40);
 			&--item{
@@ -224,7 +231,8 @@
 			justify-content: center;
 			.icon {
 				@include mt;
-				font-size: rem(18);
+				font-size: 18px;
+				flex: 0 0 auto;
 			}
 		}
 	}
@@ -377,7 +385,7 @@
 		height: 100vh;
 		background-color: #fff;
 		z-index: 1000;
-		padding: 30px 15px;
+		padding: 30px 15px calc(env(safe-area-inset-bottom, 0px) + 30px);
 		display: flex;
 		flex-direction: column;
 		transform: translateX(-100%);
@@ -425,7 +433,7 @@
 	}
 	&__headline {
 		font-weight: 700;
-		font-size: 12px;
+		font-size: 14px;
 		margin-bottom: 15px;
 	}
 	&__inputs {
@@ -504,6 +512,17 @@
 } // end.sMailing
 
 .sMailingNewsletter {
+	&__body{
+		td{
+			vertical-align: middle;
+		}
+	}
+	&__head{
+		@include media-breakpoint-up(md) {
+		margin-bottom: rem(40);
+	}
+	margin-bottom: 15px;
+	}
 	#map{
 		// @include media-breakpoint-up(md) {
 		margin-bottom: 60px;
@@ -599,11 +618,11 @@
 			}
 		}
 		th, td {
-			font-size: 12px;
+			// font-size: 12px;
 			font-weight: 400;
 			padding: rem(15) 0;
+			font-size: 14px;
 			@include media-breakpoint-up(md) {
-				font-size: 14px;
 			}
 			&:last-child {
 				text-align: right;
@@ -653,11 +672,17 @@
 	}
 	&__footer-row {
 		.h2 {
+			@include media-breakpoint-up(md) {
 			margin-bottom: rem(20);
+		}
+		margin-bottom: rem(0);
 		}
 	}
 	.table-wrap-js {
-		margin-bottom: rem(20);
+		@include media-breakpoint-up(md) {
+		// margin-bottom: rem(20);
+	}
+	margin-bottom: rem(20);
 		position: relative;
 		overflow: auto;
 		.dataTables_wrapper {
@@ -818,6 +843,23 @@
 			align-items: center;
 			.icon{
 
+			}
+		}
+	}
+}
+
+.table-people--users{
+	@include media-breakpoint-down(sm){
+		.dataTables_wrapper{
+			min-width: 1px !important;
+		}
+		.table{
+			width: 100% !important;
+		}
+		td,th{
+			&:last-child{
+				width: 130px !important;
+				padding-right: 10px;
 			}
 		}
 	}

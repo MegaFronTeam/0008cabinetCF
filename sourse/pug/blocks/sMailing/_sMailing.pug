@@ -127,14 +127,14 @@ mixin sMailingNewsletter(data)
 						mixin tr(i, name, bg='#8C8D8F', text='Не доставлено')
 							tr
 								td 
-									a(href="#") #1127
+									a(href="#").txt #1127
 								td
 									+e.avatar
 										+e.avatar-img
 											+img(`img/avatar-${i}.png`)
 										!= name
 								td.d-none.d-lg-table-cell 
-									a(href="#") @arts_man
+									a(href="#").txt @arts_man
 								td
 									+e.wrap.d-flex
 										+e.status(style=`--bg: ${bg}`)!= text
@@ -203,8 +203,11 @@ mixin sMailing11(data)
 					+e.head-row--item.row
 						.col-auto
 							+e.status(style=`--bg: ${bg}`)!= status
-						.col-auto
+						.col
 							+e.prcent.strong 1260 ₽
+						.col-auto.d-inline-flex.align-items-center.rate-label.bg-white.mb-1
+							+icon('stars').me-1
+							| 5
 					+e.labels
 						+e.card-label Оплата картой на месте
 						+e.card-label Самовывоз
@@ -214,13 +217,13 @@ mixin sMailing11(data)
 						.col-auto
 							+e.id(href="#" style=`--color: ${color}`) #84
 			.col-md-6.col-lg-4.col-xl-3
-				+card11('Мини кейки', 'В процессе', '#F5B04D')
+				+card11('Мини кейки', 'В работе', '#F5B04D')
 			.col-md-6.col-lg-4.col-xl-3
-				+card11()
+				+card11('Мини кейки', 'В пути/готов', '#6F64EC')
 			.col-md-6.col-lg-4.col-xl-3
-				+card11()
+				+card11('Мини кейки', 'Выполнен', '#009FE3')
 			.col-md-6.col-lg-4.col-xl-3
-				+card11()
+				+card11('Мини кейки', 'Отменен', '#8C8D8F')
 			.col-md-6.col-lg-4.col-xl-3
 				+card11()
 			.col-md-6.col-lg-4.col-xl-3
@@ -235,7 +238,7 @@ mixin sMailing11(data)
 	
 mixin sMailing11-1(data)
 	+sMailing11Body()
-		.table-wrap-js
+		.table-wrap-js.table-wrap--orders
 			table.table.table-js#table-11
 				thead
 					tr
@@ -527,15 +530,15 @@ mixin sMailing12-1(data)
 		+e.center
 			+img('img/money-with-wings_1f4b8.png')
 			.h1.strong У вас пока нет клиентов
-			p.mb-3 Ваши клиенты появятся здесь после того, как пользователи присоединяться к&nbsp;вашему чат-боту.
+			p.small.mb-3 Ваши клиенты появятся здесь после того, как пользователи присоединяться к&nbsp;вашему чат-боту.
 mixin sMailing12-3(data)
 	// start sMailing
 	+b.sMailingNewsletter.pt-0.section#sMailing&attributes(attributes)
 		.row.row-lg
 			.col-xl-6.col-head.pt-20
-				+e.head.row
+				+e.head.row.gy-2
 					.col.h2.strong Данные о клиенте
-					.col-auto
+					.col-sm-auto
 						button.btn.btn-outline-danger.btn-sm Заблокировать пользователя
 				+e.body
 					table.table(style="--bs-table-border-color: transparent")
@@ -606,7 +609,7 @@ mixin sMailing12-3(data)
 								mixin tr(i, name, bg='#8C8D8F', text='Не доставлено')
 									tr
 										td 
-											a(href="#") #1127
+											a(href="#").txt #1127
 										td 17:34 01.02.2022
 
 										td
@@ -637,9 +640,9 @@ mixin sMailing12-4(data)
 	+b.sMailingNewsletter.pt-0.section#sMailing&attributes(attributes)
 		.row.row-lg
 			.col-xl-6.col-head.pt-20
-				+e.head.row
+				+e.head.row.gy-2
 					.col.h2.strong Данные о клиенте
-					.col-auto
+					.col-sm-auto
 						button.btn.btn-outline-success.btn-sm Разблокировать пользователя
 				+e.body
 					table.table(style="--bs-table-border-color: transparent")
@@ -713,11 +716,12 @@ mixin sMailingNewsletter11-3(data)
 							+e.item.mb-20
 								.row
 									.col-auto
-										+e.img-wrap
+										+e.img-wrap(href="#").d-block
 											+img("img/food.jpg")
 									.col
 										.mb-1.d-sm-flex.align-items-center
-											.strong.me-2.mb-1 Пицца Пепперони
+											.strong.me-2.mb-1
+												a(href="#").text-body  Пицца Пепперони
 											.rate-label.bg-white.p-0.d-flex.align-items-center.mb-1
 												+icon('stars')
 												| 4.7
@@ -744,7 +748,8 @@ mixin sMailingNewsletter11-3(data)
 						+tr("Сумма доставки")
 							| 192 ₽
 						+tr("")
-							.h2.strong Итого: 3 342 ₽
+							.h2.strong.mb-0 Итого: 3 342 ₽
+					br
 					div(class="btn-group btn-group--status" role="group")
 						button.btn.btn-outline-gray( style="--bg:#4BB14B").active
 							+img("img/svg/btn-i-1.svg")
@@ -759,6 +764,24 @@ mixin sMailingNewsletter11-3(data)
 							+img("img/svg/btn-i-4.svg")
 							span Выполнен
 						button.btn.btn-outline-gray( style="--bg:#8C8D8F") 
+							+img("img/svg/btn-i-5.svg")
+							span Отменен
+
+					.pb-20
+					div(class="btn-group btn-group--status" role="group")
+						button.btn.btn-outline-gray( style="--bg:#4BB14B").active
+							+img("img/svg/btn-i-1.svg")
+							span Новый
+						button.btn.btn-outline-gray( style="--bg:#F5B04D").active
+							+img("img/svg/btn-i-2.svg")
+							span В работе
+						button.btn.btn-outline-gray( style="--bg:#6F64EC").active
+							+img("img/svg/btn-i-3.svg")
+							span В пути/готов
+						button.btn.btn-outline-gray( style="--bg:#009FE3").active
+							+img("img/svg/btn-i-4.svg")
+							span Выполнен
+						button.btn.btn-outline-gray( style="--bg:#8C8D8F").active
 							+img("img/svg/btn-i-5.svg")
 							span Отменен
 			.col-xl-6.pt-20
@@ -795,9 +818,12 @@ mixin sMailingNewsletter11-3(data)
 							a.text-body(href="tel:89276931476") 89276931476
 						+tr('Адрес')
 							| ул. Юбилейная, 36, 33
+					//- br
 					a.btn.btn-sm.btn-outline-gray.d-sm-none.mb-5(href="#") 
 							+icon("download").text-orange
 							span.ms-1 Скачать PDF
+					br
+				
 					#map
 				
 					script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')

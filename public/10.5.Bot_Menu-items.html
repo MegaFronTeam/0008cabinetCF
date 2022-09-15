@@ -11,6 +11,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet"/>
 		<link href="css/dataTables.bootstrap5.min.css" rel="stylesheet"/>
+		<link href="libs/@baseonmars/priority-nav/priority-nav-core.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page">
@@ -82,8 +83,8 @@
 									<div class="form-wrap__group-title"> Тип товара
 									</div>
 									<div class="tabs__caption tabs__caption--variant btn-group">
-										<div class="tabs__btn btn btn-outline-gray active">Простой</div>
-										<div class="tabs__btn btn btn-outline-gray">Вариативный</div>
+										<div class="tabs__btn btn btn-outline-gray small active">Простой</div>
+										<div class="tabs__btn btn btn-outline-gray small">Вариативный</div>
 									</div>
 									<div class="tabs__wrap">
 										<div class="tabs__content">
@@ -140,7 +141,7 @@
 												<!-- +e.input-wrap-->
 												<div class="text-end"><a class="text-secondary small" href="#">Добавить значение</a></div>
 											</div>
-											<button class="btn-add btn btn-outline-gray" type="button">
+											<button class="btn-add btn btn-outline-gray small" type="button">
 												<svg class="icon icon-add-more ">
 													<use xlink:href="img/svg/sprite.svg#add-more"></use>
 												</svg>Добавить свойство
@@ -207,7 +208,7 @@
 							</div>
 						</form>
 					</div>
-					<button class="btn-add btn btn-outline-gray" type="button">
+					<button class="btn-add btn btn-outline-gray btn-add small" type="button">
 						<svg class="icon icon-add-more ">
 							<use xlink:href="img/svg/sprite.svg#add-more"></use>
 						</svg>Добавить опцию
@@ -553,6 +554,51 @@
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<div id="modal-add-bonus" style="display: none">
+			<div class="modal-win text-center">
+				<div class="h2 strong mb-3">Подтвердите начисление бонусов</div>
+				<p class="small mb-4">Выбрано 3 клиента(-ов).</p>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Например, 250"/><span class="text-after"> ₽</span>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="row">
+							<div class="col-6">
+								<button class="btn btn-outline-orange w-100">Отменить</button>
+							</div>
+							<div class="col-6">
+								<button class="btn btn-orange w-100">Начислить</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-add-bonus-->
+		<div id="modal-mail" style="display: none">
+			<div class="modal-win modal-win--mail">
+				<div class="h2 strong mb-3">Рассылка</div>
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Начните писать сообщение..."></textarea>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="row gy-2">
+							<div class="col text-secondary align-self-end text-sm-start text-center small">0/1600 символов</div>
+							<div class="col-sm-auto">
+								<button class="btn btn-primary w-100" data-src="modal-mail" data-fancybox="modal">
+									<svg class="icon icon-telegram ">
+										<use xlink:href="img/svg/sprite.svg#telegram"></use>
+									</svg>Отправить сообщение
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-mail-->
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/datatables.net-dt/js/dataTables.dataTables.min.js"> </script>
@@ -631,7 +677,7 @@
 				"lengthChange": false, 
 				info: false,
 				searching: false,
-				pageLength: 3,
+				pageLength: 4,
 				// ajax: 'https://gyrocode.github.io/files/jquery-datatables/arrays.json',
 						drawCallback: function(){ 
 							$('#btn-example-load-more-4').toggle(this.api().page.hasMore());

@@ -11,6 +11,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet"/>
 		<link href="css/dataTables.bootstrap5.min.css" rel="stylesheet"/>
+		<link href="libs/@baseonmars/priority-nav/priority-nav-core.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page">
@@ -1351,7 +1352,7 @@
 								<button class="btn btn-outline-orange w-100">Отменить</button>
 							</div>
 							<div class="col-6">
-								<button class="btn btn-orange">Начислить</button>
+								<button class="btn btn-orange w-100">Начислить</button>
 							</div>
 						</div>
 					</form>
@@ -1484,6 +1485,34 @@
 				table5.page.loadMore();
 			}); 
 			} catch (error) { 	}
+		</script>
+		<script>
+				let checkHead = document.querySelector("th .custom-input__input");
+				let checkTd = document.querySelectorAll("td .custom-input__input");
+			
+			function getCheck(){
+			
+				if (checkHead.checked) {
+					console.log(1)
+					for (const check of checkTd) {
+						check.checked = true
+					}
+				}
+				else {
+					console.log(0)
+					for (const check of checkTd) {
+						check.checked = false
+					} 
+				}
+			}
+			
+			getCheck()
+			checkHead.addEventListener('change', function(){
+				getCheck()
+			});
+			document.queryCommandValue(".btn-example-load-more").addEventListener('click', function(){
+				getCheck()
+			});
 		</script>
 	</body>
 </html>

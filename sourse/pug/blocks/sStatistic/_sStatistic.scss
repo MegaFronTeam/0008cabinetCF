@@ -34,7 +34,7 @@
 					border-color: transparent;
 					&:hover {
 						box-shadow: none;
-						opacity: .7;
+						// opacity: .7;
 					}
 				}
 			}
@@ -85,9 +85,10 @@
 			margin-top: auto;
 		}
 		&__footer {
-			min-width: calc(rem(300) );
-			margin-left: 0;
-			margin-right: 0;
+			--bs-gutter-x: 30px
+			// min-width: calc(rem(300) );
+			// margin-left: 0;
+			// margin-right: 0;
 		}
 	}
 	&__cross {

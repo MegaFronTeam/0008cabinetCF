@@ -381,10 +381,11 @@ function eventHandler() {
 		watchOverflow: true
 	});
 	
-	const swiper4 = new Swiper('.sCabinetPanel__slider--js', { 
+	const swiper4 = new Swiper('.tabs-slide-js', { 
 		slidesPerView: 'auto',
 		freeMode: true,
 		spaceBetween: 20,
+		watchOverflow: true,
 		// loopFillGroupWithBlank: true,
 		// touchRatio: 0.2,
 		// slideToClickedSlide: true,
@@ -669,16 +670,40 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 		}
 		else{
 			console.log(0);
-			var sortable = new Sortable(drugWrap, { 
-				ghostClass: 'ghost',
-				onEnd: function (/**Event*/evt) {
-					var itemEl = evt.item;  // dragged HTMLElement
+			function drubAdaptive(){
+				if (window.matchMedia("(min-width: 576px)").matches) {
+					
+					var sortable = new Sortable(drugWrap, { 
+						ghostClass: 'ghost',
+						// handle: '.my-handle',
+						onEnd: function (/**Event*/evt) {
+							var itemEl = evt.item;  // dragged HTMLElement
 					getListIndex(); 
 					
 				},
 				
 			})
+		}
+		else{
+			var sortable = new Sortable(drugWrap, { 
+				ghostClass: 'ghost',
+				handle: '.my-handle',
+				onEnd: function (/**Event*/evt) {
+					var itemEl = evt.item;  // dragged HTMLElement
+			getListIndex(); 
+			
+		},
+		
+	})
 
+		}
+
+			}
+			drubAdaptive()
+			window.addEventListener('resize', () => {
+				drubAdaptive();
+	}, { passive: true });
+			
 		}
 			drugWrap.addEventListener("click", function(event){
 
@@ -750,25 +775,7 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 	})
 
 
-
-
-	// var wrapper = document.querySelector(".top-nav");
-	var nav = priorityNav.init({
-		mainNavWrapper: ".js-priorityNav",
-		// mainnav wrapper selector (must be direct parent from mainNav)
-		mainNav: ".labels",
-		// mainnav selector. (must be inline-block)
-		navDropdownLabel: 'Еще',
-		navDropdownBreakpointLabel: 'Еще',
-		navDropdownClassName: "menu__dropdown",
-		// class used for the dropdown.
-		navDropdownToggleClassName: "menu__dropdown-toggle",
-		// class used for the dropdown toggle.
-		// navDropdownBreakpointLabel: "Выбрать", //button label for navDropdownToggle when the breakPoint is reached.
-		breakPoint: 0 // moved: function () { scrolldrop()}, // executed when item is moved to dropdown
-		// movedBack: function () { scrolldrop()} // executed when item is moved back to main menu
-
-	}); 
+ 
 
 };
 if (document.readyState !== 'loading') {
@@ -791,10 +798,18 @@ if (document.readyState !== 'loading') {
 		var image = document.querySelector('.img-preview');
 		image.classList.add("active")
 		document.querySelector(".add-photo-wrap__btn-delete").classList.remove("d-none")
+		document.querySelector(".add-photo").classList.add("border-0")
 		image.src = URL.createObjectURL(event.target.files[0]);
+		document.querySelector(".add-photo-wrap__btn-delete").addEventListener("click", function(){
+			
+			image.classList.remove("active")
+			this.classList.add("d-none")
+			document.querySelector(".add-photo").classList.remove("border-0")
+		})
 	}; 
 
 
 
 
 	
+

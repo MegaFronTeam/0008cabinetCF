@@ -216,12 +216,18 @@
 						<!-- start sMailing-->
 						<div class="sMailing section" id="sMailing">
 							<div class="sMailing__head-row row">
-								<div class="col d-sm-none"></div>
+								<div class="col-sm-auto col order-md-last">
+									<button class="btn btn-orange btn-outline-mobile">
+										<svg class="icon icon-add-more  me-2">
+											<use xlink:href="img/svg/sprite.svg#add-more"></use>
+										</svg>Добавить пользователя
+									</button>
+								</div>
 								<div class="col-auto d-none d-md-block">
 									<div class="sMailing__all-goods">
 										<div class="sMailing__input-wrap form-group">
 											<select class="sMailing__input form-select custom-select-js" name="select">
-												<option value="Все клиенты">Все клиенты</option>
+												<option value="Все пользователи">Все пользователи</option>
 												<option value=" placeholder 1">placeholder 1</option>
 												<option value=" placeholder 2">placeholder 2</option>
 												<option value=" placeholder 3">placeholder 3</option>
@@ -233,7 +239,7 @@
 								</div>
 								<div class="col-auto col-sm order-2">
 									<div class="sMailing__search d-none d-sm-block">
-										<div class="sMailing__input-wrap form-group"><input class="sMailing__input form-control" name="text" type="text" placeholder="Поиск по клиентам"/>
+										<div class="sMailing__input-wrap form-group"><input class="sMailing__input form-control" name="text" type="text" placeholder="Поиск по пользователям"/>
 										</div>
 										<!-- +e.input-wrap-->
 										<button>
@@ -253,7 +259,7 @@
 											</div>
 											<div class="h2">Поиск</div>
 											<div class="sMailing__inner-search">
-												<div class="sMailing__input-wrap form-group"><input class="sMailing__input form-control" name="text" type="text" placeholder="Поиск по клиентам"/>
+												<div class="sMailing__input-wrap form-group"><input class="sMailing__input form-control" name="text" type="text" placeholder="Поиск по пользователям"/>
 												</div>
 												<!-- +e.input-wrap-->
 												<button>
@@ -294,716 +300,163 @@
 									</div>
 								</div>
 							</div>
-							<div class="table-people table-people--users table-wrap-js">
+							<div class="table-people table-wrap-js">
 								<table class="table table-js" id="table-4">
 									<thead>
 										<tr>
-											<th>
-												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-												</label>
-											</th>
-											<th><span>ID</span></th>
-											<th><span>Имя</span></th>
-											<th class="d-none d-xl-table-cell"><span> Никнейм</span></th>
-											<th class="d-none d-xl-table-cell"><span> Телефон</span></th>
-											<th class="d-none d-sm-table-cell"><span> Кол-во заказов</span></th>
-											<th class="text-end"><span> Сумма заказов</span></th>
+											<th>ID</th>
+											<th class="d-none d-md-table-cell"> Имя</th>
+											<th>Роль</th>
+											<th>Статус</th>
 										</tr>
 									</thead>
 									<tbody>
 												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
+													<td> <a class="txt" href="mailto:m@chatfood.ru">m@chatfood.ru</a></td>
+													<td class="d-none d-md-table-cell"> 
 														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-1.png" alt="" loading="lazy"/>
+															<div class="table-people__avatar-img"><img src="img/avatar-1.png" alt="" loading="lazy"/>
 															</div>Михаил
 														</div>
 													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
+													<td>Администратор</td>
+													<td>
+														<div class="table-people__wrap d-flex">
+															<div class="table-people__status" style="--bg: #4BB14B">Доставлено
+															</div>
+														</div>
+													</td>
 												</tr>
 												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
+													<td> <a class="txt" href="mailto:m@chatfood.ru">m@chatfood.ru</a></td>
+													<td class="d-none d-md-table-cell"> 
 														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-2.png" alt="" loading="lazy"/>
+															<div class="table-people__avatar-img"><img src="img/avatar-2.png" alt="" loading="lazy"/>
 															</div>Ольга
 														</div>
 													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
+													<td>Администратор</td>
+													<td>
+														<div class="table-people__wrap d-flex">
+															<div class="table-people__status" style="--bg: #8C8D8F">Не доставлено
+															</div>
+														</div>
+													</td>
 												</tr>
 												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
+													<td> <a class="txt" href="mailto:m@chatfood.ru">m@chatfood.ru</a></td>
+													<td class="d-none d-md-table-cell"> 
 														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block">
+															<div class="table-people__avatar-img">
 															</div>Александр
 														</div>
 													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
+													<td>Администратор</td>
+													<td>
+														<div class="table-people__wrap d-flex">
+															<div class="table-people__status" style="--bg: #8C8D8F">Не доставлено
+															</div>
+														</div>
+													</td>
 												</tr>
 												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
+													<td> <a class="txt" href="mailto:m@chatfood.ru">m@chatfood.ru</a></td>
+													<td class="d-none d-md-table-cell"> 
 														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-1.png" alt="" loading="lazy"/>
+															<div class="table-people__avatar-img"><img src="img/avatar-1.png" alt="" loading="lazy"/>
 															</div>Михаил
 														</div>
 													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
+													<td>Администратор</td>
+													<td>
+														<div class="table-people__wrap d-flex">
+															<div class="table-people__status" style="--bg: #4BB14B">Доставлено
+															</div>
+														</div>
+													</td>
 												</tr>
 												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
+													<td> <a class="txt" href="mailto:m@chatfood.ru">m@chatfood.ru</a></td>
+													<td class="d-none d-md-table-cell"> 
 														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-2.png" alt="" loading="lazy"/>
+															<div class="table-people__avatar-img"><img src="img/avatar-2.png" alt="" loading="lazy"/>
 															</div>Ольга
 														</div>
 													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
+													<td>Администратор</td>
+													<td>
+														<div class="table-people__wrap d-flex">
+															<div class="table-people__status" style="--bg: #8C8D8F">Не доставлено
+															</div>
+														</div>
+													</td>
 												</tr>
 												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
+													<td> <a class="txt" href="mailto:m@chatfood.ru">m@chatfood.ru</a></td>
+													<td class="d-none d-md-table-cell"> 
 														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block">
+															<div class="table-people__avatar-img">
 															</div>Александр
 														</div>
 													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
+													<td>Администратор</td>
+													<td>
+														<div class="table-people__wrap d-flex">
+															<div class="table-people__status" style="--bg: #8C8D8F">Не доставлено
+															</div>
+														</div>
+													</td>
 												</tr>
 												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
+													<td> <a class="txt" href="mailto:m@chatfood.ru">m@chatfood.ru</a></td>
+													<td class="d-none d-md-table-cell"> 
 														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-1.png" alt="" loading="lazy"/>
+															<div class="table-people__avatar-img"><img src="img/avatar-1.png" alt="" loading="lazy"/>
 															</div>Михаил
 														</div>
 													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
+													<td>Администратор</td>
+													<td>
+														<div class="table-people__wrap d-flex">
+															<div class="table-people__status" style="--bg: #4BB14B">Доставлено
+															</div>
+														</div>
+													</td>
 												</tr>
 												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
+													<td> <a class="txt" href="mailto:m@chatfood.ru">m@chatfood.ru</a></td>
+													<td class="d-none d-md-table-cell"> 
 														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-2.png" alt="" loading="lazy"/>
+															<div class="table-people__avatar-img"><img src="img/avatar-2.png" alt="" loading="lazy"/>
 															</div>Ольга
 														</div>
 													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
+													<td>Администратор</td>
+													<td>
+														<div class="table-people__wrap d-flex">
+															<div class="table-people__status" style="--bg: #8C8D8F">Не доставлено
+															</div>
+														</div>
+													</td>
 												</tr>
 												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
+													<td> <a class="txt" href="mailto:m@chatfood.ru">m@chatfood.ru</a></td>
+													<td class="d-none d-md-table-cell"> 
 														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block">
+															<div class="table-people__avatar-img">
 															</div>Александр
 														</div>
 													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-1.png" alt="" loading="lazy"/>
-															</div>Михаил
+													<td>Администратор</td>
+													<td>
+														<div class="table-people__wrap d-flex">
+															<div class="table-people__status" style="--bg: #8C8D8F">Не доставлено
+															</div>
 														</div>
 													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-2.png" alt="" loading="lazy"/>
-															</div>Ольга
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block">
-															</div>Александр
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-1.png" alt="" loading="lazy"/>
-															</div>Михаил
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-2.png" alt="" loading="lazy"/>
-															</div>Ольга
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block">
-															</div>Александр
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-1.png" alt="" loading="lazy"/>
-															</div>Михаил
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-2.png" alt="" loading="lazy"/>
-															</div>Ольга
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block">
-															</div>Александр
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-1.png" alt="" loading="lazy"/>
-															</div>Михаил
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-2.png" alt="" loading="lazy"/>
-															</div>Ольга
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block">
-															</div>Александр
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-1.png" alt="" loading="lazy"/>
-															</div>Михаил
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-2.png" alt="" loading="lazy"/>
-															</div>Ольга
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block">
-															</div>Александр
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-1.png" alt="" loading="lazy"/>
-															</div>Михаил
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-2.png" alt="" loading="lazy"/>
-															</div>Ольга
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block">
-															</div>Александр
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-1.png" alt="" loading="lazy"/>
-															</div>Михаил
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-2.png" alt="" loading="lazy"/>
-															</div>Ольга
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block">
-															</div>Александр
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-1.png" alt="" loading="lazy"/>
-															</div>Михаил
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-2.png" alt="" loading="lazy"/>
-															</div>Ольга
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block">
-															</div>Александр
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-1.png" alt="" loading="lazy"/>
-															</div>Михаил
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-2.png" alt="" loading="lazy"/>
-															</div>Ольга
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block">
-															</div>Александр
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-1.png" alt="" loading="lazy"/>
-															</div>Михаил
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block"><img src="img/avatar-2.png" alt="" loading="lazy"/>
-															</div>Ольга
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
-												</tr>
-												<tr>
-													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
-														</label>
-													</td>
-													<td> <a class="txt" href="#">#1127</a></td>
-													<td> 
-														<div class="table-people__avatar">
-															<div class="table-people__avatar-img d-block">
-															</div>Александр
-														</div>
-													</td>
-													<td class="d-none d-xl-table-cell"><a class="txt" href="#">@arts_man</a></td>
-													<td class="d-none d-xl-table-cell"><a class="text-body" href="tel:89198112848">89198112848</a></td>
-													<td class="d-none d-sm-table-cell">18</td>
-													<td class="text-end">22 730 ₽</td>
 												</tr>
 									</tbody>
 								</table>
-							</div>
-							<button class="btn btn-light w-100 btn-example-load-more" id="btn-example-load-more-4">
-								<svg class="icon icon-reload ">
-									<use xlink:href="img/svg/sprite.svg#reload"></use>
-								</svg>Загрузить еще 
-							</button>
-							<div class="footer-line">
-								<div class="container-fluid">
-									<div class="row">
-										<div class="col">
-											<div class="topLine__title small">Выбрано
-												<div class="badge bg-light d-flex">2344</div>
-											</div>
-										</div>
-										<div class="col-auto small">
-											<a class="footer-line__link-icon text-body link-modal-js" href="#modal-add-bonus"> <img src="img/coin_icon_188044.svg" alt="" loading="lazy"/><span class="d-none d-sm-inline ms-1">Начислить бонусы</span>
-											</a>
-										</div>
-										<div class="col-auto small d-none d-md-block"><a class="text-body" href="#"> <img class="me-1" src="img/microsoft_excel_icon_132212.svg" alt="" loading="lazy"/>Экспортировать в xls</a></div>
-										<div class="col-auto">
-											<button class="btn btn-primary" data-src="modal-mail" data-fancybox="modal">
-												<svg class="icon icon-telegram ">
-													<use xlink:href="img/svg/sprite.svg#telegram"></use>
-												</svg>Запустить рассылку
-											</button>
-										</div>
-									</div>
-								</div>
 							</div>
 						</div>
 						<!-- end sMailing-->
@@ -1352,7 +805,7 @@
 								<button class="btn btn-outline-orange w-100">Отменить</button>
 							</div>
 							<div class="col-6">
-								<button class="btn btn-orange">Начислить</button>
+								<button class="btn btn-orange w-100">Начислить</button>
 							</div>
 						</div>
 					</form>
@@ -1394,7 +847,6 @@
 		<script src="libs/choices.js/public/assets/scripts/choices.min.js"> </script>
 		<script src="libs/@popperjs/core/umd/popper.min.js"> </script>
 		<script src="libs/bootstrap/js/bootstrap.min.js"> </script>
-		<script src="libs/@baseonmars/priority-nav/priority-nav.min.js"> </script>
 		<script src="libs/sortablejs/Sortable.min.js"> </script>
 		<script src="js/common.js"></script>
 		<script>

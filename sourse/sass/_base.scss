@@ -627,9 +627,10 @@ aside{
 	list-style: none;
 	z-index: 1000;
 	left: 0;
+	height: 100%;
 	top: 0;
-	height: 100vh;
 	@include media-breakpoint-up(xl) {
+		height: 100vh;
 		transform: none !important;
 		position: sticky;
 	}

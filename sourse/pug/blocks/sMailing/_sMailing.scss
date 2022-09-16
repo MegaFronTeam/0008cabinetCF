@@ -209,7 +209,7 @@
 			&:hover {
 				background-color: $orange;
 				border-color: $orange;
-				.icon {
+				.toggle-search .icon {
 					color: #fff;
 				}
 			}
@@ -382,10 +382,10 @@
 		top: 0;
 		left: 0;
 		width: 100vw;
-		height: 100vh;
+		height: 100%;
 		background-color: #fff;
 		z-index: 1000;
-		padding: 30px 15px calc(env(safe-area-inset-bottom) + 30px);
+		padding: calc(env(safe-area-inset-bottom) + 30px) 15px calc(env(safe-area-inset-bottom) + 30px);
 		display: flex;
 		flex-direction: column;
 		transform: translateX(-100%);

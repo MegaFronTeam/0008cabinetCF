@@ -27,9 +27,9 @@
     
 =======
 
-1. <https://megafronteam.github.io/0008cabinetCF/public/11.Orders.html>
-1. <https://megafronteam.github.io/0008cabinetCF/public/11.1.Orders.html>
-1. <https://megafronteam.github.io/0008cabinetCF/public/11.2.Orders.html>
+1. <https://megafronteam.github.io/0008cabinetCF/public/11.orders.html>
+1. <https://megafronteam.github.io/0008cabinetCF/public/11.1.orders.html>
+1. <https://megafronteam.github.io/0008cabinetCF/public/11.2.orders.html>
 1. <https://megafronteam.github.io/0008cabinetCF/public/11.3.Orders.html>
 
 =======

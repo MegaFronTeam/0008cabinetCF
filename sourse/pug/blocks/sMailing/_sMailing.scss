@@ -614,6 +614,7 @@
 			margin-bottom: rem(15);
 		}
 		tr {
+			box-shadow: none !important;
 			&:not(:last-child) {
 				th, td {
 					border-bottom: 1px dashed #EBEBEB;

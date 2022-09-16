@@ -486,9 +486,10 @@
 
 	&__head-row{
 		.btn-outline-mobile{
-			padding: rem(7) rem(28);
+			padding: rem(7) rem(18);
 			font-size: 12px;
 			width: 100%;
+			max-width: 220px;
 			@include media-breakpoint-down(sm) {
 				padding: rem(7) rem(8);
 				.icon{

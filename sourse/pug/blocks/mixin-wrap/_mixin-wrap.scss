@@ -794,12 +794,15 @@
 
 
 .add-photo{
-	display: block;
-	text-align: center; 
-	border: 1px dashed #EBEBEB;
-	@include block(640, 354);
-	overflow: hidden;
-	cursor: pointer;
+	&--label{
+
+		display: block;
+		text-align: center; 
+		border: 1px dashed #EBEBEB;
+		@include block(640, 354);
+		overflow: hidden;
+		cursor: pointer;
+	}
 	&__inner{
 		@include a-cent;
 		width: 100%;

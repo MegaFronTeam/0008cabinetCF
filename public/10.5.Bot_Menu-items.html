@@ -33,14 +33,22 @@
 						<form>
 							<div class="form-wrap__group">
 								<div class="add-photo-wrap">
-									<label class="add-photo preview-image-instruction">
+									<label class="add-photo add-photo--label preview-image-instruction">
 										<input type="file" name="" onchange="loadFile(event)"><span class="add-photo__inner"><img class="mb-2" src="img/hamburger_1f354 1.png" alt="" loading="lazy"/>
-										<div class="strong mb-1">Изображение товара</div><span class="add-photo__text">Для корректного отображения фотографии товара рекомендуем использовать пропорции 1:1, размер не менее 600х600 px. Изображение в формате jpeg и png весом не более 5 мб.</span><span class="add-photo__text text-danger"> Это изображение не подходит. Загрузите новое изображение.</span><span class="add-photo__btn">Выбрать файл</span><img class="img-preview" src="#" alt=""></span>
+										<div class="strong mb-1">Изображение товара</div>
+										<div class="d-none d-lg-block"><span class="add-photo__text">Для корректного отображения фотографии товара рекомендуем использовать пропорции 1:1, размер не менее 600х600 px. Изображение в формате jpeg и png весом не более 5 мб.</span><span class="add-photo__text text-danger"> Это изображение не подходит. Загрузите новое изображение.</span>
+										</div><span class="add-photo__btn">Выбрать файл</span><img class="img-preview" src="#" alt=""></span>
 									</label>
 									<div class="add-photo-wrap__btn-delete d-none">
 										<svg class="icon icon-delete ">
 											<use xlink:href="img/svg/sprite.svg#delete"></use>
 										</svg>
+									</div>
+								</div>
+								<div class="add-photo d-lg-none pt-4 text-center">
+									<div class="add-photo__text">Для корректного отображения фотографии товара рекомендуем использовать пропорции 1:1, размер не менее 600х600 px. Изображение в формате jpeg и png весом не более 5 мб.
+									</div>
+									<div class="add-photo__text text-danger"> Это изображение не подходит. Загрузите новое изображение.
 									</div>
 								</div>
 							</div>

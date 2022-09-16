@@ -120,7 +120,7 @@
 	overflow-y: auto;
 	font-size: 14px;
 	background-color: #fff;
-	padding-bottom: calc(env(safe-area-inset-bottom, 0px) + #{rem(20)});
+	padding-bottom: calc(env(safe-area-inset-bottom, 30px) + #{rem(20)});
 	li{
 		margin: rem(15) rem(15);
 		list-style: none;

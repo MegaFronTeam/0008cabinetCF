@@ -21,11 +21,13 @@
 2.  <https://megafronteam.github.io/0008cabinetCF/public/10-2-bot-menu.html>
 3.  <https://megafronteam.github.io/0008cabinetCF/public/10-3-bot-menu.html>
 4.  <https://megafronteam.github.io/0008cabinetCF/public/10.4.Bot_Menu-items.html>
+5.  <https://megafronteam.github.io/0008cabinetCF/public/10.5.Bot_Menu-items.html>
     
 =======
 18. <https://megafronteam.github.io/0008cabinetCF/public/11.Orders.html>
 19. <https://megafronteam.github.io/0008cabinetCF/public/11.1.Orders.html>
-20. <https://megafronteam.github.io/0008cabinetCF/public/11.3.Orders.html>
+20. <https://megafronteam.github.io/0008cabinetCF/public/11.2.Orders.html>
+21. <https://megafronteam.github.io/0008cabinetCF/public/11.3.Orders.html>
 =======
 1.  <https://megafronteam.github.io/0008cabinetCF/public/12.Customers.html>
 2.  <https://megafronteam.github.io/0008cabinetCF/public/12.1.Customers.html>

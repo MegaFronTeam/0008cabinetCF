@@ -120,7 +120,7 @@
 	overflow-y: auto;
 	font-size: 14px;
 	background-color: #fff;
-	padding-bottom: calc(env(safe-area-inset-bottom, 30px) + #{rem(20)});
+	padding-bottom: env(safe-area-inset-bottom) ;
 	li{
 		margin: rem(15) rem(15);
 		list-style: none;
@@ -197,7 +197,7 @@
 	flex-direction: column;
 	--sp-x: #{rem(20)};
 	--link-w: calc(var(--nav-main-w) - var(--sp-x) * 2);
-	padding: rem(15) rem(20) calc(env(safe-area-inset-bottom, 0px) + #{rem(15)});
+	padding: rem(15) rem(20)  env(safe-area-inset-bottom);
 	border-right: 1px solid #EBEBEB;
 	overflow-y: auto;
 	overflow-x: hidden;

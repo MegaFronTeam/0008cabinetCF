@@ -385,7 +385,7 @@
 		height: 100vh;
 		background-color: #fff;
 		z-index: 1000;
-		padding: 30px 15px calc(env(safe-area-inset-bottom, 30px) + 30px);
+		padding: 30px 15px calc(env(safe-area-inset-bottom) + 30px);
 		display: flex;
 		flex-direction: column;
 		transform: translateX(-100%);

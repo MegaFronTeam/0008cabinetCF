@@ -1,5 +1,6 @@
 // start .sMailing
 .sMailing {
+	
 	--sPT: #{rem(0)};
 	flex-grow: 1;
 	display: flex;
@@ -513,6 +514,7 @@
 } // end.sMailing
 
 .sMailingNewsletter {
+	--bs-border-color: #EBEBEB;
 	&__body{
 		td{
 			vertical-align: middle;

@@ -11,12 +11,14 @@
 1.  <https://megafronteam.github.io/0008cabinetCF/public/5.3-balance.html>
     
 =======
+
 1. <https://megafronteam.github.io/0008cabinetCF/public/6-partner.html>
 1. <https://megafronteam.github.io/0008cabinetCF/public/6-2-partner.html>
 1. <https://megafronteam.github.io/0008cabinetCF/public/6.3-partner.html>
 1. <https://megafronteam.github.io/0008cabinetCF/public/6.4-partner.html>
     
 =======
+
 1.  <https://megafronteam.github.io/0008cabinetCF/public/10-bot-menu.html>
 1.  <https://megafronteam.github.io/0008cabinetCF/public/10-2-bot-menu.html>
 1.  <https://megafronteam.github.io/0008cabinetCF/public/10-3-bot-menu.html>
@@ -24,31 +26,37 @@
 1.  <https://megafronteam.github.io/0008cabinetCF/public/10.5.Bot_Menu-items.html>
     
 =======
+
 1. <https://megafronteam.github.io/0008cabinetCF/public/11.Orders.html>
 1. <https://megafronteam.github.io/0008cabinetCF/public/11.1.Orders.html>
 1. <https://megafronteam.github.io/0008cabinetCF/public/11.2.Orders.html>
 1. <https://megafronteam.github.io/0008cabinetCF/public/11.3.Orders.html>
+
 =======
+
 1.  <https://megafronteam.github.io/0008cabinetCF/public/12.Customers.html>
-1.  <https://megafronteam.github.io/0008cabinetCF/public/12.1.Customers.html>
-1.  <https://megafronteam.github.io/0008cabinetCF/public/12.3.Customers.html>
-1.  <https://megafronteam.github.io/0008cabinetCF/public/12.4.Customers.html>
-1.  <https://megafronteam.github.io/0008cabinetCF/public/12.5.Customers.html>
+2.  <https://megafronteam.github.io/0008cabinetCF/public/12.1.Customers.html>
+3.  <https://megafronteam.github.io/0008cabinetCF/public/12.3.Customers.html>
+4.  <https://megafronteam.github.io/0008cabinetCF/public/12.4.Customers.html>
+5.  <https://megafronteam.github.io/0008cabinetCF/public/12.5.Customers.html>
 
 =======
 1.  <https://megafronteam.github.io/0008cabinetCF/public/13-mailing.html>
 1.  <https://megafronteam.github.io/0008cabinetCF/public/13-2-mailing.html>
 1.  <https://megafronteam.github.io/0008cabinetCF/public/13-5-mailing.html>
+ 
 =======
     
 1.  <https://megafronteam.github.io/0008cabinetCF/public/14-promo.html>
 
 =======
+
 1.  <https://megafronteam.github.io/0008cabinetCF/public/15.Settings.html>
 1.  <https://megafronteam.github.io/0008cabinetCF/public/15.7.Settings.html>
 1.  <https://megafronteam.github.io/0008cabinetCF/public/15.8.Settings.html>
 1.  <https://megafronteam.github.io/0008cabinetCF/public/15.9.Settings.html>
+  
 =======
 
 1.  <https://megafronteam.github.io/0008cabinetCF/public/16-manager.html>
-1.  <https://megafronteam.github.io/0008cabinetCF/public/17-statistic.html>
+2.  <https://megafronteam.github.io/0008cabinetCF/public/17-statistic.html>

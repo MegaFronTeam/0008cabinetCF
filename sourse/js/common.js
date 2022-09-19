@@ -741,9 +741,16 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 	let aside = document.querySelector('.nav-main');
 
 	if (aside) {
-		$(aside).hover(function(){
-			$(this).toggleClass("hover")
-		})
+		$(aside).hover(
+			function(){
+				$(this).addClass("hover")
+			},
+			
+			function(){
+				$(this).removeClass("hover")
+			}
+
+		)
 		// aside.addEventListener("mouseleave", function(){
 		// 	if(!aside.classList.contains("hover"))
 		// 	$(aside).find(".nav-main__ddgroup-wrap").slideUp(function(){

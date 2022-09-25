@@ -811,7 +811,8 @@ if (document.readyState !== 'loading') {
 			
 			image.classList.remove("active")
 			this.classList.add("d-none")
-			document.querySelector(".add-photo").classList.remove("border-0")
+			document.querySelector(".add-photo").classList.remove("border-0");
+			image.src = "";
 		})
 	}; 
 

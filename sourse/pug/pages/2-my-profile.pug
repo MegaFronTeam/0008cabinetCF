@@ -33,12 +33,12 @@ block pagecontent
 		+e.body
 			+form-wrap
 				+b.avatar-block-wrap
-					+e.btn-delete
+					+e.btn-delete.photo-file-delete-js
 						+icon("trash-can")
 					+b.LABEL.avatar-block
 						input(type="file", name="")
 						+e.img-wrap.bg-wrap
-							img(src="#", alt="").img-bg
+							img(src="img/avatar-1.png", alt="").img-bg
 							+icon("avatar")
 						+e.caption.small
 							.strong.mb-1 Загрузить фото

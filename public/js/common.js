@@ -457,18 +457,15 @@ function eventHandler() {
 			}
 			fr.readAsDataURL(files[0]); 
 		}
-			
-			document.querySelector('.avatar-block').addEventListener("click", function(event){
-				let target = event.target.closest(".avatar-block__img-wrap")
-				if(this.classList.contains("active") && target) {
-					console.log(1);
-					event.stopPropagation();
-					this.classList.remove("active")
-				} 
-
-			})
-
+				
 	}
+	
+	document.querySelector('.photo-file-delete-js').addEventListener("click", function(event){
+		let target = event.target.closest(".avatar-block__img-wrap")
+		document.querySelector('.avatar-block img').src = '';
+		document.querySelector('.avatar-block-wrap').classList.remove("active");
+
+	})
 	} catch (error) {
 		
 	}
@@ -800,23 +797,26 @@ if (document.readyState !== 'loading') {
 // }
 
 
- 
+ const btnDel = document.querySelector(".photo-file-delete-js")
+ var image = document.querySelector('.img-preview');
 	var loadFile = function(event) {
-		var image = document.querySelector('.img-preview');
 		image.classList.add("active")
-		document.querySelector(".add-photo-wrap__btn-delete").classList.remove("d-none")
+		btnDel.classList.remove("d-none")
 		document.querySelector(".add-photo").classList.add("border-0")
 		image.src = URL.createObjectURL(event.target.files[0]);
-		document.querySelector(".add-photo-wrap__btn-delete").addEventListener("click", function(){
+	}; 
+	
+	if(btnDel) {
+
+		btnDel.addEventListener("click", function(){
 			
 			image.classList.remove("active")
 			this.classList.add("d-none")
 			document.querySelector(".add-photo").classList.remove("border-0");
 			image.src = "";
 		})
-	}; 
-
-
+		
+	}
 
 
 	

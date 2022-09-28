@@ -961,7 +961,11 @@ cursor:no-drop;
 	&__btn-delete{
 		color: #fff;
 		@include a-cent1(y);
-		left: rem(35);
+		@include media-breakpoint-up(xxl) {
+
+			left: rem(35);
+		}
+		left: rem(15);
 		// margin-left: rem();
 		background-color: rgba($body-color, 0.3);
 		border-radius: 50%;

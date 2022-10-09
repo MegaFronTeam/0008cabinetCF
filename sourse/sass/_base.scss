@@ -953,18 +953,24 @@ cursor:no-drop;
 .avatar-block-wrap{
 	position: relative;
 	&:not(.active){
-		.avatar-block-wrap__btn-delete,
-		img{
-			display: none;
-		} 
+		// .avatar-block-wrap__btn-delete,
+		// img{
+		// 	display: none;
+		// } 
 	}
 	&__btn-delete{
 		color: #fff;
 		@include a-cent1(y);
-		@include media-breakpoint-up(xxl) {
+		@include media-breakpoint-up(xl) {
 
 			left: rem(35);
 		}
+		
+		@include media-breakpoint-up(lg) {
+
+			left: rem(35);
+		}
+		
 		left: rem(15);
 		// margin-left: rem();
 		background-color: rgba($body-color, 0.3);

@@ -445,30 +445,30 @@ function eventHandler() {
 	}
 
 
-	try {
-		document.querySelector('.avatar-block input').onchange = function (evt) {
-			var tgt = evt.target || window.event.srcElement,
-			files = tgt.files; 
-			var fr = new FileReader();
-			if (FileReader && files && files.length) {
-			fr.onload = function () {
-				document.querySelector('.avatar-block img').src = fr.result;
-				document.querySelector('.avatar-block-wrap').classList.add("active");
-			}
-			fr.readAsDataURL(files[0]); 
-		}
+	// try {
+	// 	document.querySelector('.avatar-block input').onchange = function (evt) {
+	// 		var tgt = evt.target || window.event.srcElement,
+	// 		files = tgt.files; 
+	// 		var fr = new FileReader();
+	// 		if (FileReader && files && files.length) {
+	// 		fr.onload = function () {
+	// 			document.querySelector('.avatar-block img').src = fr.result;
+	// 			document.querySelector('.avatar-block-wrap').classList.add("active");
+	// 		}
+	// 		fr.readAsDataURL(files[0]); 
+	// 	}
 				
-	}
+	// }
 	
-	document.querySelector('.photo-file-delete-js').addEventListener("click", function(event){
-		let target = event.target.closest(".avatar-block__img-wrap")
-		document.querySelector('.avatar-block img').src = '';
-		document.querySelector('.avatar-block-wrap').classList.remove("active");
+	// document.querySelector('.photo-file-delete-js').addEventListener("click", function(event){
+	// 	let target = event.target.closest(".avatar-block__img-wrap")
+	// 	document.querySelector('.avatar-block img').src = '';
+	// 	document.querySelector('.avatar-block-wrap').classList.remove("active");
 
-	})
-	} catch (error) {
+	// })
+	// } catch (error) {
 		
-	}
+	// }
 	$(".save-alert__progress").removeClass("active");
 
 	$(".btn-save-js").click(function(){
@@ -811,7 +811,8 @@ if (document.readyState !== 'loading') {
 		btnDel.addEventListener("click", function(){
 			
 			image.classList.remove("active")
-			this.classList.add("d-none")
+			this.classList.add("d-none");
+			document.querySelector('[onchange="loadFile(event)"]').value = '';  
 			document.querySelector(".add-photo").classList.remove("border-0");
 			image.src = "";
 		})

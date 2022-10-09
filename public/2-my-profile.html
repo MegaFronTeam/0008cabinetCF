@@ -33,13 +33,13 @@
 					<div class="form-wrap">
 						<form>
 							<div class="avatar-block-wrap">
-								<div class="avatar-block-wrap__btn-delete photo-file-delete-js">
+								<div class="avatar-block-wrap__btn-delete photo-file-delete-js d-none">
 									<svg class="icon icon-trash-can ">
 										<use xlink:href="img/svg/sprite.svg#trash-can"></use>
 									</svg>
 								</div>
-								<label class="avatar-block">
-									<input type="file" name=""><span class="avatar-block__img-wrap bg-wrap"><img class="img-bg" src="img/avatar-1.png" alt="">
+								<label class="avatar-block add-photo">
+									<input type="file" name="" onchange="loadFile(event)"><span class="avatar-block__img-wrap bg-wrap"><img class="img-bg img-preview" src="" alt="">
 									<svg class="icon icon-avatar ">
 										<use xlink:href="img/svg/sprite.svg#avatar"></use>
 									</svg></span><span class="avatar-block__caption small">

@@ -8,10 +8,11 @@
 		@include media-breakpoint-up(xl) {
 
 			font-size: 14px;
+			margin-bottom: rem(20); 
 		}
 		font-size: 14px;
 		--sPB: #{rem(15)};
-		margin-bottom: rem(20); 
+		margin-bottom: rem(15); 
 		.row{
 			align-items: center;
 			--bs-gutter-x: 10px;
@@ -292,6 +293,12 @@
 			font-size: 14px;
 			@include media-breakpoint-up(sm) {
 				font-size: 14px;
+			}
+			@include media-breakpoint-down(xl) {
+				display: none;
+			}
+			@include media-breakpoint-down(md) {
+				padding: 0 rem(15);
 			}
 			.badge{
 				font-weight: normal;

@@ -10,6 +10,14 @@
 	text-align: center;
 	h1{
 		@include rfs(24px);
+		font-weight: 700;
+	}
+	.h2 {
+		text-align: left;
+		font-weight: 700;
+		font-size: rem(24);
+		margin-bottom: rem(15);
+		line-height: 1.2;
 	}
 	.form-wrap{ 
 		margin-bottom: 20px;
@@ -104,7 +112,77 @@
 	&__item{
 
 	}
-
+	&__pay-method {
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(40);
+		}
+		.row {
+			--bs-gutter-x: #{rem(10)};
+		}
+		p {
+			margin-bottom: rem(15);
+			font-weight: 400;
+		}
+		.custom-input {
+			@include block(180, 135);
+			width: rem(180);
+			max-width: 100%;
+			padding-left: 0;
+			margin-bottom: 0;
+			border: 1px solid #E4E4E4;
+			border-radius: 8px;
+			&__input {
+				position: absolute;
+				top: rem(10);
+				right: rem(10);
+				width: rem(24);
+				height: rem(24);
+				border-radius: 50%;
+				border: 1px solid #E4E4E4;
+				&:before {
+					content: '';
+					position: absolute;
+					display: block;
+					width: rem(12);
+					height: rem(12);
+					top: 50%;
+					left: 50%;
+					transform: translateX(-50%) translateY(-50%);
+					border-radius: 50%;
+					background-color: transparent;
+				}
+				&:checked {
+					background-image: none;
+					&:before {
+						background-color: $orange;
+					}
+				}
+			}
+			&__wrap {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				align-items: center;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;	
+				height: 100%;
+				padding: rem(20);
+				img {
+					width: 100%;
+					max-width: rem(80);
+					margin-bottom: rem(22);
+				}
+			}
+		}
+	}
+	&__title {
+		font-weight: 700;
+		line-height: 1.43;
+		margin-bottom: rem(10);
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

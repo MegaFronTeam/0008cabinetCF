@@ -1,15 +1,26 @@
 mixin sReplenishment(data)
 	// start sReplenishment
 	+b.sReplenishment#sReplenishment&attributes(attributes) 
+		.h2.d-xl-none Пополнить баланс
 		h1 Сумма для пополнения ₽
+		p.small.mb-2 Минимальная сумма платежа 500₽ . После нажатия на&nbsp;кнопку &laquo;Пополнить&raquo; вы&nbsp;будете переведены на&nbsp;страницу оплаты и&nbsp;ввода реквизитов.
 		+form-wrap 
 				//- +input("Введите сумму",'number')(class="is-invalid")
 				label(class="form-wrap__input-wrap form-group")
-					input(type="number" class="form-wrap__input form-control " step="any" placeholder="Введите сумму ₽")
+					input(type="number" class="form-wrap__input form-control " step="any" placeholder="Введите сумму")
 					span.form-wrap__input-wrap-border
 				button.btn.btn-orange
 					+icon("wallet")
 					| Пополнить
-		p.small.text-secondary После нажатия на кнопку “Пополнить” вы будете переведены на страницу оплаты и ввода реквизитов.
+		+e.pay-method
+			+e.title.small Способ оплаты
+			p.small Выберите наиболее удобный для вас способ оплаты.
+			.row
+				.col-auto
+					+in-c()
+						+e.wrap
+							+img('img/svg/card.svg')
+							span.small Картой онлайн
+		//- p.small.text-secondary После нажатия на кнопку “Пополнить” вы будете переведены на страницу оплаты и ввода реквизитов.
 		a.small(href="#") Истоия пополнений 
 	// end sReplenishment

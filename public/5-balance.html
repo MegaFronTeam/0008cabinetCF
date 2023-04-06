@@ -141,6 +141,7 @@
 									<div class="toggle-menu-mobile toggle-menu-mobile--js d-xl-none"><span></span>
 										<div class="toggle-menu-mobile__counter">8
 										</div>
+										<div class="text">Меню</div>
 									</div>
 								</div>
 								<div class="col-auto">
@@ -176,11 +177,13 @@
 					<div class="container-fluid container-main">
 						<!-- start sReplenishment-->
 						<div class="sReplenishment" id="sReplenishment"> 
+							<div class="h2 d-xl-none">Пополнить баланс</div>
 							<h1>Сумма для пополнения ₽</h1>
+							<p class="small mb-2">Минимальная сумма платежа 500₽ . После нажатия на&nbsp;кнопку &laquo;Пополнить&raquo; вы&nbsp;будете переведены на&nbsp;страницу оплаты и&nbsp;ввода реквизитов.</p>
 							<div class="form-wrap">
 								<form> 
 									<label class="form-wrap__input-wrap form-group">
-										<input class="form-wrap__input form-control " type="number" step="any" placeholder="Введите сумму ₽"/><span class="form-wrap__input-wrap-border"></span>
+										<input class="form-wrap__input form-control " type="number" step="any" placeholder="Введите сумму"/><span class="form-wrap__input-wrap-border"></span>
 									</label>
 									<button class="btn btn-orange">
 										<svg class="icon icon-wallet ">
@@ -189,7 +192,17 @@
 									</button>
 								</form>
 							</div>
-							<p class="small text-secondary">После нажатия на кнопку “Пополнить” вы будете переведены на страницу оплаты и ввода реквизитов.</p><a class="small" href="#">Истоия пополнений </a>
+							<div class="sReplenishment__pay-method">
+								<div class="sReplenishment__title small">Способ оплаты
+								</div>
+								<p class="small">Выберите наиболее удобный для вас способ оплаты.</p>
+								<div class="row">
+									<div class="col-auto">
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__wrap"><img src="img/svg/card.svg" alt="" loading="lazy"/><span class="small">Картой онлайн</span></span>
+										</label>
+									</div>
+								</div>
+							</div><a class="small" href="#">Истоия пополнений </a>
 						</div>
 						<!-- end sReplenishment-->
 					</div>

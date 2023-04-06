@@ -55,7 +55,8 @@
 		--position: 0; 
 		--rotate: 45deg;
 	}
-	display: block;
+	display: flex;
+	align-items: center;
 	height: calc(var(--h)* 12);
 	position: relative; 
 	font-size: 20px;
@@ -93,6 +94,11 @@
 		bottom: var(--position);
 		transform: rotate3d(0,0,1, calc(-1 * var(--rotate,0)));
 		background-color: #{$body-color};
+	}
+	.text {
+		margin-left: 35px;
+    font-size: 12px;
+    font-weight: 700;
 	}
 }
 @include media-breakpoint-down(lg) {

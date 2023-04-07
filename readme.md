@@ -1,5 +1,15 @@
 ## Первая линия
 
+======= 06.04.2023
+
+1. <https://megafronteam.github.io/0008cabinetCF/public/1.2-empty.html>
+2. <https://megafronteam.github.io/0008cabinetCF/public/3-create-bot.html>
+3. <https://megafronteam.github.io/0008cabinetCF/public/5-balance.html>
+4. <https://megafronteam.github.io/0008cabinetCF/public/18-activate-promocode.html>
+5. <https://megafronteam.github.io/0008cabinetCF/public/19-support.html>
+
+=======
+
 1.  <https://megafronteam.github.io/0008cabinetCF/public/00-modal.html>
 2.  <https://megafronteam.github.io/0008cabinetCF/public/>
 3.  <https://megafronteam.github.io/0008cabinetCF/public/1.2-empty.html>
@@ -62,11 +72,3 @@
 
 1.  <https://megafronteam.github.io/0008cabinetCF/public/16-manager.html>
 2.  <https://megafronteam.github.io/0008cabinetCF/public/17-statistic.html>
-
-======= 06.04.2023
-
-1. <https://megafronteam.github.io/0008cabinetCF/public/1.2-empty.html>
-2. <https://megafronteam.github.io/0008cabinetCF/public/3-create-bot.html>
-3. <https://megafronteam.github.io/0008cabinetCF/public/5-balance.html>
-4. <https://megafronteam.github.io/0008cabinetCF/public/18-activate-promocode.html>
-5. <https://megafronteam.github.io/0008cabinetCF/public/19-support.html>

@@ -65,5 +65,8 @@
 
 ======= 06.04.2023
 
-1. <https://megafronteam.github.io/0008cabinetCF/public/3-create-bot.html>
-2. <https://megafronteam.github.io/0008cabinetCF/public/5-balance.html>
+1. <https://megafronteam.github.io/0008cabinetCF/public/1.2-empty.html>
+2. <https://megafronteam.github.io/0008cabinetCF/public/3-create-bot.html>
+3. <https://megafronteam.github.io/0008cabinetCF/public/5-balance.html>
+4. <https://megafronteam.github.io/0008cabinetCF/public/18-activate-promocode.html>
+5. <https://megafronteam.github.io/0008cabinetCF/public/19-support.html>

@@ -12,10 +12,10 @@ mixin topLine(t, badge, avatar, mailingList)
 					block
 				else if mailingList
 					.col-auto
-						+e.back.d-none.d-sm-inline-flex(href='#')
+						+e.back.d-none.d-xl-inline-flex(href='#')
 							+icon('chevron-left')
 							= t || 'Список рассылок' 
-							span - 
+							span &mdash;
 						+e.title
 							= (mailingList== true ? 'Рассылка #234' : mailingList)
 				else

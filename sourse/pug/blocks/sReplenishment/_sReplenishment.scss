@@ -4,20 +4,9 @@
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	max-width: rem(710);
-	@include media-breakpoint-up(sm) {
-		text-align: left; 
-	}
-	text-align: center;
 	h1{
 		@include rfs(24px);
 		font-weight: 700;
-	}
-	.h2 {
-		text-align: left;
-		font-weight: 700;
-		font-size: rem(24);
-		margin-bottom: rem(15);
-		line-height: 1.2;
 	}
 	.form-wrap{ 
 		margin-bottom: 20px;
@@ -59,15 +48,13 @@
 			padding: 0;
 			padding-bottom: rem(10);
 			padding-right: rem(40);
-			padding-left: rem(40);
+			// padding-left: rem(40);
 			position: relative;
 			
 			@include media-breakpoint-up(sm) { 
 				padding-right: rem(260);
-				text-align: left;
 				padding-left: 0;
 			} 
-			text-align: center;
 			box-shadow: none !important;
 			@include rfs(40px);
 			font-weight: bold;
@@ -75,9 +62,14 @@
 				// border-color: $orange;
 			}
 			&::placeholder{
-				color: #EBEBEB;
+				color: #F6F7FA;
 
 			}
+		}
+		.invalid-feedback, .valid-feedback {
+			display: block;
+			font-size: rem(14);
+			margin-bottom: rem(10);
 		}
 	}
 	.btn{
@@ -112,6 +104,10 @@
 	&__item{
 
 	}
+	&__wrap {
+		@include roww('10px', m);
+		display: flex;
+	}
 	&__pay-method {
 		margin-bottom: rem(20);
 		@include media-breakpoint-up(lg) {
@@ -125,13 +121,17 @@
 			font-weight: 400;
 		}
 		.custom-input {
-			@include block(180, 135);
-			width: rem(180);
-			max-width: 100%;
+			@include block(160, 135);
+			width: 100%;
+			max-width: rem(160);
 			padding-left: 0;
 			margin-bottom: 0;
 			border: 1px solid #E4E4E4;
 			border-radius: 8px;
+			@include media-breakpoint-up(sm) {
+				--ratio: 135/180;
+				max-width: rem(180);
+			}
 			&__input {
 				position: absolute;
 				top: rem(10);
@@ -169,11 +169,18 @@
 				left: 0;
 				width: 100%;	
 				height: 100%;
-				padding: rem(20);
+				padding: rem(16);
+				@include media-breakpoint-up(sm) {
+					padding: rem(20);
+				}
 				img {
 					width: 100%;
-					max-width: rem(80);
-					margin-bottom: rem(22);
+					max-width: rem(60);
+					margin-bottom: rem(16);
+					@include media-breakpoint-up(sm) {
+						margin-bottom: rem(22);
+						max-width: rem(80);
+					}
 				}
 			}
 		}
@@ -182,6 +189,63 @@
 		font-weight: 700;
 		line-height: 1.43;
 		margin-bottom: rem(10);
+	}
+	&__autopayment {
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(40);
+		}
+	}
+	.alert {
+		--bs-alert-padding-x: #{rem(20)};
+    --bs-alert-padding-y: #{rem(15)};
+		--bs-alert-margin-bottom: #{rem(30)};
+
+		display: flex;
+    align-items: center;
+		@include media-breakpoint-up(md) {
+			--bs-alert-margin-bottom: #{rem(40)};
+		}
+		svg {
+			margin-right: rem(10);
+			font-size: rem(24);
+			@include media-breakpoint-up(md) {
+				font-size: rem(30);
+			}
+		}
+		p {
+			margin-bottom: 0;
+			text-align: left;
+		}
+	}
+	&__link-row {
+		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(5)};
+		.col-auto:not(:last-child) {
+			a {
+				position: relative;
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: calc(var(--bs-gutter-x) / -2);
+					height: 100%;
+					width: 1px;
+					background-color: #E4E4E4;
+				}
+			}
+		}
+	}
+
+	&__head-title {
+		margin-bottom: rem(20);
+	}
+	.topLine {
+		border: none;
+		&__title {
+			display: inline-flex;
+			padding: 0;
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

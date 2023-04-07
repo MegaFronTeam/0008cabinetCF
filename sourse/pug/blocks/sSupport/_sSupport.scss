@@ -1,0 +1,120 @@
+// start .sSupport
+.sSupport {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(0)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(20)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: #{rem(15)};
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-y: #{rem(20)};
+		}
+	}
+	&__wrap {
+		max-width: rem(710);
+	}
+	.alert {
+		--bs-alert-padding-x: #{rem(15)};
+    --bs-alert-padding-y: #{rem(10)};
+		--bs-alert-margin-bottom: 0;
+
+		display: flex;
+    align-items: center;
+		@include media-breakpoint-up(md) {
+			--bs-alert-margin-bottom: #{rem(20)};
+			--bs-alert-padding-x: #{rem(20)};
+		}
+		svg {
+			margin-right: rem(10);
+			font-size: rem(24);
+			@include media-breakpoint-up(md) {
+				font-size: rem(30);
+			}
+		}
+		p {
+			margin-bottom: 0;
+			text-align: left;
+			@include media-breakpoint-down(md) {
+				font-size: 12px;
+			}
+		}
+	}
+	&__item {
+		border: 1px solid #E4E4E4;
+		border-radius: 8px;
+		padding: rem(15);
+		@include media-breakpoint-up(lg) {
+			padding: rem(20);	
+			border-radius: 12px;
+		}
+		span {
+			font-weight: 700;
+			margin-bottom: rem(10);
+			line-height: 1.43;
+			font-size: rem(12);
+			display: block;
+			@include media-breakpoint-up(lg) {
+				font-size: rem(14);
+			}
+		}
+		p {
+			margin-bottom: rem(10);
+			line-height: 1.33;
+			font-size: rem(12);
+			@include media-breakpoint-up(lg) {
+        font-size: rem(14);
+				margin-bottom: rem(15);
+      }
+		}
+		a {
+			display: inline-flex;
+			align-items: center;
+			font-size: rem(18);
+			font-weight: 700;
+			margin-bottom: rem(10);
+			&:not(:hover) {
+				color: $body-color;
+			}
+			@include media-breakpoint-up(lg) {
+        font-size: rem(20);
+				margin-bottom: rem(15);
+      }
+		}
+	}
+	&__icon-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: rem(24);
+		height: rem(24);
+		border-radius: 50%;
+		flex: 0 0 auto;
+		margin-right: rem(10);
+		background-color: var(--bgColor, #{$primary});
+		.icon {
+			font-size: rem(16);
+			color: #fff;
+		}
+	}
+	&__footer {
+		font-size: rem(12);
+		line-height: 1.33;
+		color: $gray-600;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(14);
+		}
+	}
+	.topLine {
+		border: none;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSupport

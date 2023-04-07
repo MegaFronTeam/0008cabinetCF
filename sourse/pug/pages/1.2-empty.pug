@@ -29,9 +29,9 @@ block pagecontent
 			.text-body.flex-grow-1.me-md-2.mb-md-0.mb-1 Мы отправили письмо на вашу эл. почту #[strong example@yandex.ru] для подтверждения регистрации. После подтверждения регистрации вам будет доступен функционал личного кабинета.
 			.strong.text-secondary.w-sp Отправить еще раз через 4:59
 		div.centered-block.text-center
-			div.my-2
-				+img("img/robot.png").mb-20
-				.h1.strong У вас пока нет созданных чат-ботов
+			+b.empty-chat-bot
+				+e.img-wrap(data-json="json/hero_right.json")
+				.h2.strong У вас пока нет созданных чат-ботов
 				.small.mb-4 Создайте своего первого чат-бота и начните пользоваться сервисом ChatFood.
 				a.btn.btn-orange.px-4(href="#modal-confirm" style="--bs-btn-padding-y: .75rem").link-modal-js 
 					<svg class="me-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

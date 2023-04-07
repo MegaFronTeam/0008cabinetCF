@@ -283,7 +283,8 @@
 			}
 			span {
 				color: $gray-500;
-				margin-left: 3px;
+				margin-left: rem(10);
+				margin-right: rem(10);
 			}
 		}
 		&__title{
@@ -316,6 +317,13 @@
 				padding: 0 rem(7.200);
 			}
 		}
+	.h2 {
+		text-align: left;
+		font-weight: 700;
+		font-size: rem(24);
+		margin-bottom: rem(15);
+		line-height: 1.2;
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

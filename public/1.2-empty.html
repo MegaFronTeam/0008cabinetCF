@@ -90,6 +90,17 @@
 								<li>
 									<a class="nav-main__link" href="#">
 										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-book ">
+												<use xlink:href="img/svg/sprite.svg#book"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">База знаний
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="nav-main__link" href="#">
+										<div class="nav-main__icon-wrap">
 											<svg class="icon icon-document ">
 												<use xlink:href="img/svg/sprite.svg#document"></use>
 											</svg>
@@ -180,8 +191,10 @@
 							<div class="strong text-secondary w-sp">Отправить еще раз через 4:59</div>
 						</div>
 						<div class="centered-block text-center">
-							<div class="my-2"><img class="mb-20" src="img/robot.png" alt="" loading="lazy"/>
-								<div class="h1 strong">У вас пока нет созданных чат-ботов</div>
+							<div class="empty-chat-bot">
+								<div class="empty-chat-bot__img-wrap" data-json="json/hero_right.json">
+								</div>
+								<div class="h2 strong">У вас пока нет созданных чат-ботов</div>
 								<div class="small mb-4">Создайте своего первого чат-бота и начните пользоваться сервисом ChatFood.</div><a class="btn btn-orange px-4 link-modal-js" href="#modal-confirm" style="--bs-btn-padding-y: .75rem">
 									 <svg class="me-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8 1.25V14.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -574,6 +587,7 @@
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/choices.js/public/assets/scripts/choices.min.js"> </script>
+		<script src="libs/lottie-web/build/player/lottie.min.js"> </script>
 		<script src="libs/@popperjs/core/umd/popper.min.js"> </script>
 		<script src="libs/bootstrap/js/bootstrap.min.js"> </script>
 		<script src="libs/sortablejs/Sortable.min.js"> </script>

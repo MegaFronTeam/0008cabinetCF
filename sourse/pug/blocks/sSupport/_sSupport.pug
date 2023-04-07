@@ -1,0 +1,28 @@
+mixin sSupport(data)
+	// start sSupport
+	+b.SECTION.sSupport.section#sSupport&attributes(attributes)
+		+b.topLine.d-xl-none
+			.h2 Техподдержка
+		+e.wrap
+			+e.row.row 
+				.col-12
+					.alert.alert-primary 
+						img(src="img/svg/info_square_icon.svg", alt="").img-to-svg.text-primary
+						p.small Ваш ID #13, укажите его при обращении в техподдержку.
+				.col-12
+					+e.item
+						span.small Telegram
+						p.small Технические проблемы и оперативная связь с поддержкой
+						a(href='t.me/chatfood' target='_blank')
+							+e.icon-wrap: +icon('telegram')
+							| t.me/chatfood
+						+e.footer Отвечаем каждый день с 10:00 до 18:00
+				.col-12
+					+e.item(style='--bgColor: #F5B04D;')
+						span.small Почта
+						p.small Технические проблемы и оперативная связь с поддержкой
+						a(href='mailto:info@chatfood.ru')
+							+e.icon-wrap: +icon('mail')
+							| info@chatfood.ru
+						+e.footer Отвечаем каждый день с 10:00 до 18:00
+	// end sSupport

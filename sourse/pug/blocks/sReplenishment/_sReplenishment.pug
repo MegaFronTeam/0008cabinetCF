@@ -1,7 +1,8 @@
 mixin sReplenishment(data)
 	// start sReplenishment
 	+b.sReplenishment#sReplenishment&attributes(attributes) 
-		.h2.d-xl-none Пополнить баланс
+		+b.topLine.d-xl-none
+			.h2 Пополнить баланс
 		h1 Сумма для пополнения ₽
 		p.small.mb-2 Минимальная сумма платежа 500₽ . После нажатия на&nbsp;кнопку &laquo;Пополнить&raquo; вы&nbsp;будете переведены на&nbsp;страницу оплаты и&nbsp;ввода реквизитов.
 		+form-wrap 
@@ -15,12 +16,48 @@ mixin sReplenishment(data)
 		+e.pay-method
 			+e.title.small Способ оплаты
 			p.small Выберите наиболее удобный для вас способ оплаты.
-			.row
-				.col-auto
-					+in-c()
-						+e.wrap
-							+img('img/svg/card.svg')
-							span.small Картой онлайн
-		//- p.small.text-secondary После нажатия на кнопку “Пополнить” вы будете переведены на страницу оплаты и ввода реквизитов.
-		a.small(href="#") Истоия пополнений 
+			+e.wrap
+				+in-c('radio')
+					+e.wrap
+						+img('img/svg/card.svg')
+						span.small Картой онлайн
+				+in-c('radio')
+					+e.wrap
+						+img('img/svg/sbp.svg')
+						span.small СБП
+		+e.autopayment
+			+e.title.small Автоплатеж
+			p.small Активируя автоплатеж, вы соглашаетесь с #[a(href='#') публичной офертой] об использовании услуги.
+			.form-check.form-switch
+				input.form-check-input(type="checkbox" role="switch" id="allowAutopayment" checked)
+				label.form-check-label(for="allowAutopayment") Разрешить автоплатеж
+		.alert.alert-primary 
+			img(src="img/svg/info_square_icon.svg", alt="").img-to-svg.text-primary
+			p.small Для оплаты по безналичному расчету, обратитесь на почту #[a(href="mailto:n@chatfood.ru") n@chatfood.ru.]
+		+e.link-row.row
+			.col-auto
+				a.small(href="#") Истоия пополнений 
+			.col-auto
+				a.small(href="#") История списаний
+			.col-auto
+				a.small(href="#") История списаний
 	// end sReplenishment
+
+mixin sReplenishment2(data)
+	// start sReplenishment
+	+b.sReplenishment#sReplenishment&attributes(attributes) 
+		+b.topLine.d-xl-none
+			+e.back.d-inline-flex(href='#')
+				+icon('chevron-left')
+				| Назад
+				span &mdash;
+			+e.title Активировать промокод
+		+e.H1.head-title Активировать промокод
+		+form-wrap
+			//- +input("Введите сумму",'number')(class="is-invalid")
+			label(class="form-wrap__input-wrap form-group")
+				input(type="text" class="form-wrap__input form-control " step="any" placeholder="Введите промокод")
+				span.form-wrap__input-wrap-border
+			button.btn.btn-orange Активировать
+			.invalid-feedback Промокод введен неверно.
+			.valid-feedback Промокод успешно активирован.

@@ -779,7 +779,18 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 	})
 
 
- 
+	let animateBlocks = document.querySelectorAll('[data-json]');
+  if (animateBlocks) {
+    for (const animateBlock of animateBlocks) {
+      lottie.loadAnimation({
+        container: animateBlock, // the dom element that will contain the animation
+        renderer: 'canvas',
+        loop: true,
+        autoplay: true,
+        path: animateBlock.dataset.json, // the path to the animation json
+      });
+    }
+  }
 
 };
 if (document.readyState !== 'loading') {

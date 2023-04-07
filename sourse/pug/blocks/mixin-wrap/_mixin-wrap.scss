@@ -972,3 +972,37 @@ font-size: 14px;
 		}
 	}
 }
+
+.empty-chat-bot {
+	width: 100%;
+	max-width: rem(732);
+	border: 1px solid #E4E4E4;
+	border-radius: 12px;
+	padding: rem(32) rem(15) rem(28) rem(15);
+	@include media-breakpoint-up(md) {
+		padding: rem(40);
+	}
+	.h2 {
+		@include media-breakpoint-down(md) {
+			font-size: rem(18);
+		}
+	}
+	&__img-wrap {
+		@include block(1,1);
+		max-width: rem(100);
+		margin-bottom: rem(10);
+		margin-left: auto;
+		margin-right: auto;
+		@include media-breakpoint-up(md) {
+			max-width: rem(150);
+			margin-bottom: rem(20);
+		}
+		& > * {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

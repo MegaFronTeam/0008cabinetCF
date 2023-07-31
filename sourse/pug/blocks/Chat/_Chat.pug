@@ -1,0 +1,86 @@
+mixin emty(t="Выберите клиента, которому хотите написать сообщение." )
+	+b.ifEmtyChat.text-center.p-3
+		div(class="empty-chat-bot__img-wrap" data-json="json/mailing.json")
+		.small= t
+
+mixin Chat(empty)
+	// start Chat
+	+b.Chat.section&attributes(attributes)
+		.container-fluid
+			.topLine.d-xl-none.mb-0.border-0
+				.h2.mb-0 Сообщения
+		+e.row.row
+			+b.Chat-aside.col-lg-auto
+				+e.head
+					
+					+input('Поиск по всем клиентам')(autocomplete="off")
+						button
+							+icon("search")
+						+e.close.active
+							+icon("close")
+				+e.body
+					if empty
+						.small.pt-3.text-center У вас пока нет клиентов.
+					else
+						mixin item(i, t)
+							+e.item&attributes(attributes)
+								+e.avatar(style="background:  #009FE3; color: #fff")
+									+e.avatar-text A
+									if i
+										img(src=`img/avatar-${i}.png`, alt="")
+								+e.title= t
+								
+						+item(`1`,`Михаил`).active
+						- for (var x = 0; x < 3; x++)
+							+item(``,`Антон Иванов`)
+							+item(`2`,`Николай`)
+							+item(`3`,`Михаил`)
+			+b.Chat-main.col-lg
+					if empty
+						+emty()
+					else
+						+b.Chat-main-head
+							.row
+								.col-auto.d-lg-none
+									+e.back
+										+icon('chevron-left')
+								.col-auto
+									+e.avatar(style="background:  #009FE3; color: #fff")
+											+e.avatar-text A 
+											img(src=`img/avatar-1.png`, alt="")
+								+e.title.col-auto Михаил
+								.col-auto
+									+e.link(href="#") #84 
+								.col-auto
+									.badge.bg-success Активен
+								.col.d-none.d-xl-block
+								.col-auto.d-none.d-xl-block
+									| Заказов: 
+									strong 5
+									
+								.col-auto.d-none.d-xl-block
+									| Сумма:
+									strong  22 730 ₽
+								.col-auto.d-none.d-xl-block
+									| Последний:
+									strong  15:33, 21 дек 23
+						if block
+							block
+						else
+							+b.Chat-main-body
+								+emty("Сообщений с этим пользователем пока нет." )
+						+b.Chat-main-footer
+							+b.dropdown-chat
+								+e.toggle
+									+icon("file")
+								+e.body
+									+e.item Прикрепить фото
+									+e.item Ссылка 2
+									+e.item Ссылка 3
+							+input('Введите сообщение...','textarea')(autocomplete="off")
+								+e.btns
+									+e.BUTTON.btn--emoji(type="button")
+										+icon("emoji")
+									+e.BUTTON.btn--send
+										+icon("send")
+	// end Chat

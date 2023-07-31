@@ -1,0 +1,332 @@
+// start .Chat
+.chat-page{
+	.container-main{
+		padding-left: 0;
+		padding-right: 0; 
+	}
+	.topLine{
+		@include media-breakpoint-up(xl) {
+			margin-bottom: 0;
+		}
+	}
+}
+.Chat {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(0)}; 
+	&__row{
+		--bs-gutter-x: #{rem(0)}; 
+		flex-wrap: nowrap;
+		@include media-breakpoint-down(lg) {
+		transform: translateX(-100%);
+		}
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {
+		// overflow: hidden;
+	}
+	--sp-start: 15px; 
+	@include media-breakpoint-up(md) {
+
+		--sp-start: #{rem(40)}; 
+	}
+} // end.Chat
+
+.Chat-aside,.Chat-main{
+	height: calc(var(--vh, 1vh) * 100 -  var(--topLine-h));
+	display: flex;
+	flex-direction: column;
+
+}
+.Chat-aside{
+	background-color: #fff;
+	z-index: 5;
+	@include media-breakpoint-up(lg) {
+		
+		border-right: 1px solid #E4E4E4;
+		width: rem(370);
+	}
+	&__close{
+		@include a-cent1(y);
+		right: calc(var(--sp-start) - rem(5));
+		padding: rem(5);
+		cursor: pointer;
+		color: #c2c2c2;
+		.icon{
+			font-size: 1rem;
+		}
+		&:not(.active) {
+			display: none;
+		}
+	}
+	&__body{
+		flex-grow: 1;
+		overflow-y: auto;
+		position: relative;
+		height: calc(100% - #{rem(62)});
+		backface-visibility: hidden;
+	}
+	&__head{
+		@include media-breakpoint-down(md) {
+			padding: var(--sp-start);
+		}
+		position: relative;
+		button{
+			@include a-cent1(y);
+			left: calc(var(--sp-start) - rem(15));
+
+			background: none !important;
+			box-shadow:  none !important;
+			border: none !important;
+			color: $orange;
+			padding: rem(10px);
+			.icon{
+				font-size: rem(20);
+			}
+		}
+	}
+	&__input-wrap{
+		@include media-breakpoint-down(md){
+			position: relative;
+		}
+	}
+	&__input{
+		padding-left: calc(var(--sp-start)  + #{rem(30)}) !important;
+		padding-right: calc(var(--sp-start) + rem(5) + 1.2rem);
+		@include media-breakpoint-up(md){
+			
+			padding-top: rem(20);
+			padding-bottom: rem(20);
+			border-radius: 0;
+			border-top: none !important;
+			border-right: none !important;
+			border-left: none!important;
+			// box-shadow: none !important;
+		}
+	}
+	&__item{
+		display: flex;
+		align-items: center;
+		padding: rem(10);
+		padding-left: calc(var(--sp-start) );
+		padding-right: 10px;
+		border-bottom: 1px solid #E4E4E4;
+		@include mt;
+		cursor: pointer;
+		&:hover,
+		&.active{
+					background: #F6F7FA;
+				}
+	}
+	&__avatar{
+		// padding-bottom: 100%;
+		overflow: hidden;
+		border-radius: 50%;
+		width: rem(40);
+		position: relative;
+		height: 40px;
+		margin-right: rem(10);
+		
+		img{
+			@include a-cent;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__avatar-text{
+		@include a-cent1;
+		font-size: $small;
+		font-weight: bold;
+	}
+}
+
+.Chat-main{
+	display: flex;
+	flex-direction: column;
+	@include media-breakpoint-up(lg) {
+
+	}
+
+}
+
+.Chat-main-head{
+	font-size: rem(14);
+	width: 100%;
+	&__back{
+		cursor: pointer;
+		.icon{
+			font-size: 16px;
+		}
+	}
+	&__link{
+		border-bottom: 1px solid ;
+		line-height: 1;
+		&:hover{
+			border-color: transparent;
+		}
+	}
+	.badge{
+		font-size: 12px;
+	}
+	.row{
+		align-items: center;
+		--bs-gutter-x: 10px
+	}  
+		padding: rem(10);
+		padding-left: calc(var(--sp-start) );
+		padding-right:rem(20);
+		border-bottom: 1px solid #E4E4E4;
+		@include media-breakpoint-up(lg) {
+
+			box-shadow: 0px 0px 15px 0px rgba(25, 28, 31, 0.10); 
+		}
+	&__avatar{
+		// padding-bottom: 100%;
+		overflow: hidden;
+		border-radius: 50%;
+		width: rem(40);
+		position: relative;
+		height: 40px; 
+		
+		img{
+			@include a-cent;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__avatar-text{
+		@include a-cent1;
+		font-size: $small;
+		font-weight: bold;
+	}
+}
+
+	.ifEmtyChat{
+		// align-self:center;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		max-height: 100%;
+		// margin-top: 600px;
+		// margin-bottom: 600px;
+		.empty-chat-bot__img-wrap{
+			width: 100%;
+			// flex-grow: 1;
+			flex: 0 0 auto;
+		}
+	}
+.Chat-main-body{
+	flex-grow: 1;
+	display: flex;
+	overflow-y: auto;
+	position: relative;
+	height: calc(100% - #{rem(62)} * 2);
+	backface-visibility: hidden;
+}
+
+.Chat-main-footer{
+	background: var(--primary-white, #FFF);
+	box-shadow: 0px 0px 15px 0px rgba(25, 28, 31, 0.10);
+	position: relative;
+
+	&__btns{
+		position: absolute;
+		@include a-cent1(y);
+		right: calc(var(--sp-start) );
+	}
+	&__input{
+		border-radius: 0;
+		padding-left: calc(var(--sp-start)  + #{rem(30)}) !important;
+		padding-right: calc(var(--sp-start) + rem(5) + 4.2rem);
+		border-right: none !important;
+		border-left: none!important;
+		padding-top: rem(20);
+		padding-bottom: rem(5);
+		border-bottom: none !important;
+		min-height: 1px !important;
+		height: rem(60);
+	}
+	&__btn{
+		border-radius: 0;
+			border: none !important;
+			box-shadow: none !important;
+			background: none !important;
+			@include mt;
+			.icon{
+				font-size: rem(20);
+			}
+			&--send{
+				color: $primary;
+			}
+			&--emoji{
+				color: #8C8D8F;
+				&:hover{
+					color: $orange;
+				}
+			}
+	}
+}
+.dropdown-chat{
+	left: calc(var(--sp-start) );
+	@include a-cent1(y);
+	position: absolute;
+	&__toggle{
+		color: #8C8D8F; 
+		cursor: pointer;
+	}
+	&__body{
+		position: absolute;
+		// top: 100%;
+		bottom: 100%;
+		overflow: hidden;
+		width: max-content;
+		left: 0;
+		visibility: var(--op, hidden);
+		opacity: var(--op,0);
+		// display: none;
+		// --op:1;
+		border-radius: 8px;
+		border: 1px solid var(--primary-gray-lines, #E4E4E4);
+		background: var(--primary-white, #FFF);
+		box-shadow: 0px 5px 15px 0px rgba(25, 28, 31, 0.10);
+	}
+	&__item{
+		cursor: pointer;
+		min-width: rem(184);
+		padding: rem(10) rem(18);
+		&:not(:last-child) {
+			border-bottom: 1px solid #E4E4E4;
+		}
+		&:hover{
+			background: rgba(246, 247, 250, .5);
+		}
+	}
+	&:hover {
+
+		--op: 1;
+	}
+	&:hover &__toggle{
+		color: $orange;
+	}
+}

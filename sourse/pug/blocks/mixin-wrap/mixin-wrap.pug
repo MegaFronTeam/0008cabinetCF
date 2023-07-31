@@ -120,13 +120,14 @@ mixin aside(second)
 							+e.id #13405
 						+icon("setting")
 
-mixin main(t='Мои чат-боты', badge, avatar, mailingList)
+mixin main(t='Мои чат-боты', badge, avatar, mailingList, hide)
 	.main-center-wrap
 		main
 			+topLine(t, badge, avatar, mailingList)
 			.container-fluid.container-main
 				block
-			+footer()
+			if !hide
+				+footer()
 
 
 mixin chat-item(t, btn, a)

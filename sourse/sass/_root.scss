@@ -14,6 +14,10 @@
 	--sPT: 30px;
 	--sPB: 30px;
 	--sTPB: #{rem(40)};
+	@include media-breakpoint-up(xl){
+		--topLine-h: #{rem(71)};
+	}
+	--topLine-h: #{rem(71 + 30 + 15 )};
 	
 	// --sPT: #{rem(80 * .5)};
 	// --sPB: #{rem(90 * .5)};

@@ -792,6 +792,22 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
     }
   }
 
+
+	let btnSlider = document.querySelectorAll(".btns-slider-wrapper");
+
+	for (const item of btnSlider) {
+		new Swiper(item.querySelector('.btns-slider--js'), {
+			slidesPerView: 'auto',
+			spaceBetween: 10, 
+			navigation: {
+				nextEl: item.querySelector('.swiper-button-next'),
+				prevEl: item.querySelector('.swiper-button-prev'),
+			},
+		});
+	}
+
+
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

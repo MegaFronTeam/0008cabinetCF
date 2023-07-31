@@ -325,6 +325,7 @@ ul {
 		background-color: var(--swiperBgDefHover);
 		border-color: var(--swiperBorderColorDefHover);
 		color: var(--swiperColorDefHover);
+		box-shadow: 0px 0px 15px 0px rgba(25, 28, 31, 0.10);
 	}
 
 	.icon {
@@ -2071,3 +2072,90 @@ a.text-body{
 		opacity: 0.8;
 	}
 }
+
+
+.btns-slider-wrapper{
+	position: relative;
+	.swiper-button-prev,
+	.swiper-button-next{
+		border: none;
+		// z-index: auto;
+		@include media-breakpoint-down(md) {
+			display: none !important;
+		}
+		&::after{
+			content: '';
+			display: block;
+			position: absolute;
+			border-radius: 50%;
+			@include a-cent;
+			background-color: #fff;
+			@include mt;
+			border: 1px solid #E4E4E4;
+		}
+		&:hover{
+			&::after{
+				box-shadow: 0px 0px 15px 0px rgba(25, 28, 31, 0.10);
+			}
+		}
+		.icon{
+			z-index: 10;
+			position: relative;
+		}
+		&::before{
+			content: '';
+			position: absolute;
+			pointer-events: none;
+			width: rem(220);
+			height: calc(100%  + 2px);
+			top: -1px;
+			z-index: -1;
+		}
+	}
+	.swiper-button-prev{
+		&::before{
+			background: linear-gradient(270deg,hsla(0,0%,100%,0),#fff);
+			left: -2px;
+		}
+		}
+		
+	.swiper-button-next{
+		&::before{
+			background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+			right: -2px;
+		}
+
+	}
+	.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
+		opacity: 0;
+	}
+}
+
+.btns-slider{
+		@include media-breakpoint-down(md){
+			overflow: visible;
+		}
+	&__slide{
+		width: auto;
+	}
+	&__btn{
+		--bs-btn-padding-x: #{rem(19)};
+		--bs-btn-padding-y: #{rem(7)};
+	}
+}
+
+.btn-outline-secondary{
+	--bs-btn-color: var(--bs-body-color);
+	--bs-btn-border-color: #E4E4E4;
+	--bs-btn-hover-color: #000;
+	--bs-btn-hover-bg: #F6F7FA;
+	--bs-btn-hover-border-color: #E4E4E4;
+	--bs-btn-focus-shadow-rgb: 140,141,143;
+	--bs-btn-active-color: #fff;
+	--bs-btn-active-bg: #{$orange};
+	--bs-btn-active-border-color: #{$orange};
+	// --bs-btn-disabled-color: #E4E4E4;
+	// --bs-btn-disabled-bg: transparent;
+	// --bs-btn-disabled-border-color: #E4E4E4;
+	// --bs-gradient: none;
+} 

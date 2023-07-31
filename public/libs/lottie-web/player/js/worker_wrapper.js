@@ -434,6 +434,12 @@ function workerContent() {
             id: payload.id,
             totalFrames: animation.totalFrames,
             frameRate: animation.frameRate,
+            firstFrame: animation.firstFrame,
+            currentFrame: animation.currentFrame,
+            playDirection: animation.playDirection,
+            isSubframeEnabled: animation.isSubframeEnabled,
+            currentRawFrame: animation.currentRawFrame,
+            timeCompleted: animation.timeCompleted,
           },
         });
       });
@@ -473,9 +479,9 @@ function workerContent() {
       if (animations[payload.id]) {
         animations[payload.id].animation.setDirection(payload.value);
       }
-    } else if (type === 'setDirection') {
+    } else if (type === 'setLoop') {
       if (animations[payload.id]) {
-        animations[payload.id].animation.setDirection(payload.value);
+        animations[payload.id].animation.setLoop(payload.value);
       }
     } else if (type === 'goToAndPlay') {
       if (animations[payload.id]) {
@@ -597,6 +603,13 @@ var lottie = (function () {
       });
       animation.animInstance.totalFrames = payload.totalFrames;
       animation.animInstance.frameRate = payload.frameRate;
+      animation.animInstance.firstFrame = payload.firstFrame;
+      animation.animInstance.playDirection = payload.playDirection;
+      animation.animInstance.currentFrame = payload.isSubframeEnabled ? payload.currentRawFrame : ~~payload.currentRawFrame; // eslint-disable-line no-bitwise
+
+      if (payload.timeCompleted !== payload.totalFrames && payload.currentFrame > payload.timeCompleted) {
+        animation.animInstance.currentFrame = payload.timeCompleted;
+      }
     };
   }());
 
@@ -818,6 +831,15 @@ var lottie = (function () {
       setDirection: function (value) {
         workerInstance.postMessage({
           type: 'setDirection',
+          payload: {
+            id: animationId,
+            value: value,
+          },
+        });
+      },
+      setLoop: function (value) {
+        workerInstance.postMessage({
+          type: 'setLoop',
           payload: {
             id: animationId,
             value: value,

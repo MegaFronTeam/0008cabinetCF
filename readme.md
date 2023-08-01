@@ -1,9 +1,9 @@
 ## Первая линия
 
 1. <https://megafronteam.github.io/0008cabinetCF/public/20-d-tabs-1.html>
-2. <https://megafronteam.github.io/0008cabinetCF/public/d-chat-1.html>
-3. <https://megafronteam.github.io/0008cabinetCF/public/d-chat-1-1.html>
-4. <https://megafronteam.github.io/0008cabinetCF/public/d-chat-1-6.html>
+2. <https://megafronteam.github.io/0008cabinetCF/public/21-d-chat-1.html>
+3. <https://megafronteam.github.io/0008cabinetCF/public/21-d-chat-1-1.html>
+4. <https://megafronteam.github.io/0008cabinetCF/public/21-d-chat-1-6.html>
 
 
 ======= 06.04.2023

@@ -290,3 +290,17 @@ a {
 		padding-right: rem(8);
 	}
 }
+
+
+.modal-win--file{
+	.add-photo-wrap{
+		// display: inline-block;
+		margin-bottom: rem(20);
+	}
+  .img-preview{
+		max-width: 203px;
+		max-height: 203px;
+		object-fit: contain;
+		border-radius: 12px;
+	}
+}

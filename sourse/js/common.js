@@ -806,8 +806,12 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 		});
 	}
 
+	$(".Chat-aside__item, .Chat-main-head__back").click(function() {
+		$(".Chat-main").toggleClass("active");
+		$("body").toggleClass("fixed-chat");
+	})
 
-
+	
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -3,7 +3,7 @@ mixin emty(t="Выберите клиента, которому хотите н�
 		div(class="empty-chat-bot__img-wrap" data-json="json/mailing.json")
 		.small= t
 
-mixin Chat(empty)
+mixin Chat(empty, varn)
 	// start Chat
 	+b.Chat.section&attributes(attributes)
 		.container-fluid
@@ -24,13 +24,26 @@ mixin Chat(empty)
 					else
 						mixin item(i, t)
 							+e.item&attributes(attributes)
-								+e.avatar(style="background:  #009FE3; color: #fff")
-									+e.avatar-text A
-									if i
-										img(src=`img/avatar-${i}.png`, alt="")
-								+e.title= t
+								+e.row.row
+									.col-auto
+
+										+e.avatar(style="background:  #009FE3; color: #fff")
+											+e.avatar-text A
+											if i
+												img(src=`img/avatar-${i}.png`, alt="")
+									+e.caption.col
+										.row
+											+e.title.fw-600.col= t
+											+e.time.col-auto.text-secondary 13:55, 23 дек 23
+										.row
+											+e.col.col
+												+e.text Забыл добавить в заказ(  Забыл добавить в заказ(
+											block
 								
+						+item(`1`,`Михаил`).current
 						+item(`1`,`Михаил`).active
+							.col-auto
+								.badge.bg-success 99
 						- for (var x = 0; x < 3; x++)
 							+item(``,`Антон Иванов`)
 							+item(`2`,`Николай`)
@@ -40,47 +53,85 @@ mixin Chat(empty)
 						+emty()
 					else
 						+b.Chat-main-head
-							.row
-								.col-auto.d-lg-none
-									+e.back
-										+icon('chevron-left')
-								.col-auto
-									+e.avatar(style="background:  #009FE3; color: #fff")
-											+e.avatar-text A 
-											img(src=`img/avatar-1.png`, alt="")
-								+e.title.col-auto Михаил
-								.col-auto
-									+e.link(href="#") #84 
-								.col-auto
-									.badge.bg-success Активен
-								.col.d-none.d-xl-block
-								.col-auto.d-none.d-xl-block
-									| Заказов: 
-									strong 5
-									
-								.col-auto.d-none.d-xl-block
-									| Сумма:
-									strong  22 730 ₽
-								.col-auto.d-none.d-xl-block
-									| Последний:
-									strong  15:33, 21 дек 23
-						if block
-							block
-						else
+							.container
+								.row
+									.col-auto.d-lg-none
+										+e.back
+											+icon('chevron-left')
+									.col-auto
+										+e.avatar(style="background:  #009FE3; color: #fff")
+												+e.avatar-text A 
+												img(src=`img/avatar-1.png`, alt="")
+									+e.title.col-auto Михаил
+									.col-auto
+										+e.link(href="#") #84 
+									.col-auto
+										.badge.bg-success Активен
+									.col.d-none.d-xl-block
+									.col-auto.d-none.d-xl-block
+										| Заказов: 
+										strong 5
+										
+									.col-auto.d-none.d-xl-block
+										| Сумма:
+										strong  22 730 ₽
+									.col-auto.d-none.d-xl-block
+										| Последний:
+										strong  15:33, 21 дек 23
+						.Chat-main-body-wrap
+
 							+b.Chat-main-body
-								+emty("Сообщений с этим пользователем пока нет." )
+								
+								if block
+									.container
+										block
+								else
+									+emty("Сообщений с этим пользователем пока нет." )
+						
 						+b.Chat-main-footer
-							+b.dropdown-chat
-								+e.toggle
-									+icon("file")
-								+e.body
-									+e.item Прикрепить фото
-									+e.item Ссылка 2
-									+e.item Ссылка 3
-							+input('Введите сообщение...','textarea')(autocomplete="off")
-								+e.btns
-									+e.BUTTON.btn--emoji(type="button")
-										+icon("emoji")
-									+e.BUTTON.btn--send
-										+icon("send")
+							if varn
+								.alert.alert-danger
+									.container
+										<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M26.5625 14.9999C26.5625 23.6711 23.6712 26.5624 15 26.5624C6.32875 26.5624 3.4375 23.6711 3.4375 14.9999C3.4375 6.32863 6.32875 3.43738 15 3.43738C23.6712 3.43738 26.5625 6.32863 26.5625 14.9999Z" stroke="#FF2C2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M15.0059 19.2437V14.375" stroke="#FF2C2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M15.0117 10H15.0005" stroke="#FF2C2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>
+										| Вы&nbsp;больше не&nbsp;можете отправлять этому пользователю сообщение, так как он&nbsp;отключил бота.
+							else
+								.container
+									+b.dropdown-chat
+										+e.toggle
+											+icon("file")
+										+e.body
+											+e.LABEL.item
+												input(type="file")
+												| Прикрепить фото
+											+e.item(data-fancybox data-src="#modal-file") Вызов модалки фото
+											+e.item Ссылка 3
+									+input('Введите сообщение...','textarea')(autocomplete="off")
+										+e.btns
+											+e.BUTTON.btn--emoji(type="button")
+												+icon("emoji")
+											+e.BUTTON.btn--send
+												+icon("send")
 	// end Chat
+	script.
+		function ScrollDown() {
+			var nestedElement = document.querySelector(".Chat-main-body-wrap");
+			let scrollToBottom =  new Promise(resolve => {
+					nestedElement.scrollTo(0, nestedElement.scrollHeight)
+				}) ;
+			scrollToBottom.then( nestedElement.classList.add("show"))
+			
+		}
+		document.addEventListener('DOMContentLoaded', ()=> {
+			
+			ScrollDown();
+			let btnChat = document.querySelectorAll(".Chat-aside__item");
+			for (const item of btnChat) {
+				item.addEventListener("click", function() { 
+					ScrollDown()
+				})
+			}
+		});

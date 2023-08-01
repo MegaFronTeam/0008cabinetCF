@@ -1,0 +1,56 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCabinetPanel/_sCabinetPanel.pug
+include ../blocks/footer/_footer.pug
+include ../blocks/Chat/_Chat.pug
+
+block variables
+	- let  mainPage= 'chat-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'd-tabs-1-1'
+	title= title
+block pagecontent
+	+aside()
+	+main('Сообщения','','','', 'hide')
+		+Chat('','asas')
+			- for (var x = 0; x < 3; x++)
+				.text-center.m-1
+					+e.time  23 дек 23
+				+e.message
+					+e.text
+						| Здравствуйте! Можно добавить колу к заказу? Спасибо
+						+e.time 17:55
+				+e.message
+					+e.text
+						| Забыл добавить в заказ(
+						+e.time 17:55
+				+e.message--down
+					+e.text
+						| Здравствуйте, конечно! Сейчас добавим в заказ и пришлем счет на оплату 🫶
+						+e.time 17:55
+				.text-center.m-1
+					+e.time  23 дек 23
+				+e.message--down
+					+e.text
+						| Отправляю
+						+e.time 17:55
+				+e.message--down
+					+e.img-wrap
+						img(src="img/avatar-1.png", alt="") 
+						+e.time 17:55
+				+e.message
+					+e.img-wrap
+						img(src="img/@2x/slide-25.jpg", alt="")  
+						+e.time 17:55

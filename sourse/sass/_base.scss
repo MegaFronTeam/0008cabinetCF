@@ -75,7 +75,22 @@ body {
 		overflow: hidden;
 
 	}
-
+	@include media-breakpoint-down(lg) {
+		&.fixed-chat{
+			overflow: hidden;
+			position: absolute;
+			width: 100%;
+			left: 0;
+			top: 0;
+			z-index: 999;
+			height: 100%;
+			touch-action: none;
+			-webkit-overflow-scrolling: none;
+			overflow: hidden;
+			/* Other browsers */
+			overscroll-behavior: none;
+		}
+	}
 	&.fixed {
 		overflow: hidden;
 		position: absolute;

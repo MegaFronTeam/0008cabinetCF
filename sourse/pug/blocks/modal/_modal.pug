@@ -68,7 +68,7 @@ mixin modal()
 			
 	// #modal-add-bonus
 	div(id="modal-mail"  style="display: none" )
-		+b.modal-win--mail
+		+b.modal-win.text-center 
 			.h2.strong.mb-3 Рассылка
 			+form-wrap
 				+input("Начните писать сообщение...",'textarea')
@@ -83,4 +83,16 @@ mixin modal()
 			
 	// #modal-mail
 	
+	#modal-file(style="display: none")
+		+b.modal-win--file.text-center 
+			.h2.strong.mb-3 Отправить фото
+			+b.add-photo-wrap
+						img(src="img/avatar-1.png", alt="").img-preview.active 
+			.row
+				.col-6
+					button.btn.btn-outline-orange.w-100 Отменить
+					
+				.col-6
+					button.btn.btn-orange.modal-close-js.w-100 Отправить
+	// #modal-file
 	// end modals

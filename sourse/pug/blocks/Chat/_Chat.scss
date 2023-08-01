@@ -154,9 +154,13 @@
 					background: #F6F7FA;
 				}
 	}
+
+	&__foot-row{
+	}
 	&__caption{
 		.row{
 			// white-space: nowrap;
+			margin-top: rem(2);
 			flex-wrap: nowrap; 
 		}
 		flex-grow: 1;   

@@ -1,4 +1,4 @@
-mixin topLine(t, badge, avatar, mailingList)
+mixin topLine(t, badge, avatar, mailingList,alarmHide)
 	// start topLine
 	+b.topLine.section#topLine&attributes(attributes)
 		.container-fluid
@@ -34,9 +34,10 @@ mixin topLine(t, badge, avatar, mailingList)
 						+b.toggle-text--hover.d-none.d-xl-flex
 							+icon("wallet")
 							| Пополнить
-				.col-auto
-					+e.btn--alarm.--new(href="#modal-alarm").link-modal-aside-js
-						+icon("alarm")
+				//- if !alarmHide
+				//- 	.col-auto
+				//- 		+e.btn--alarm.--new(href="#modal-alarm").link-modal-aside-js
+				//- 			+icon("alarm")
 				if avatar
 					.col-auto
 						+e.btn-wrap

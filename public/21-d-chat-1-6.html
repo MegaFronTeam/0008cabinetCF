@@ -175,13 +175,6 @@
 									</a>
 								</div>
 								<div class="col-auto">
-									<a class="topLine__btn topLine__btn--alarm topLine__btn--new link-modal-aside-js" href="#modal-alarm">
-										<svg class="icon icon-alarm ">
-											<use xlink:href="img/svg/sprite.svg#alarm"></use>
-										</svg>
-									</a>
-								</div>
-								<div class="col-auto">
 									<div class="topLine__btn-wrap">
 										<div class="topLine__btn topLine__btn--cabinet"><img src="img/svg/praga.png" alt="" loading="lazy"/>
 											<svg class="icon icon-chevron-down ">
@@ -697,24 +690,26 @@
 						</div>
 						<!-- end Chat-->
 						<script>
-							function ScrollDown() {
-								var nestedElement = document.querySelector(".Chat-main-body-wrap");
-								let scrollToBottom =  new Promise(resolve => {
-										nestedElement.scrollTo(0, nestedElement.scrollHeight)
-									}) ;
-								scrollToBottom.then( nestedElement.classList.add("show"))
-								
-							}
-							document.addEventListener('DOMContentLoaded', ()=> {
-								
-								ScrollDown();
-								let btnChat = document.querySelectorAll(".Chat-aside__item");
-								for (const item of btnChat) {
-									item.addEventListener("click", function() { 
-										ScrollDown()
-									})
-								}
-							});
+	async function ScrollDown()  {  
+		const nestedElement = document.querySelector(".Chat-main-body-wrap");
+		let promise = new Promise((resolve, reject) => {
+			setTimeout(() => resolve(nestedElement.scrollTo({ left: 0, top: nestedElement.scrollHeight})),3000)
+		});
+
+		let result = await promise;
+		nestedElement.classList.add("show")
+	};
+	ScrollDown()
+document.addEventListener('DOMContentLoaded', () => {
+
+	ScrollDown();
+	let btnChat = document.querySelectorAll(".Chat-aside__item");
+	for (const item of btnChat) {
+		item.addEventListener("click", function () {
+			ScrollDown()
+		})
+	}
+});
 						</script>
 					</div>
 				</main>

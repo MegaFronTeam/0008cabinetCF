@@ -5,7 +5,7 @@
 		<title>10. Bot_Menu </title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0, viewport-fit=cover">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
@@ -174,13 +174,6 @@
 												<use xlink:href="img/svg/sprite.svg#wallet"></use>
 											</svg>Пополнить
 										</div>
-									</a>
-								</div>
-								<div class="col-auto">
-									<a class="topLine__btn topLine__btn--alarm topLine__btn--new link-modal-aside-js" href="#modal-alarm">
-										<svg class="icon icon-alarm ">
-											<use xlink:href="img/svg/sprite.svg#alarm"></use>
-										</svg>
 									</a>
 								</div>
 								<div class="col-auto">
@@ -1050,7 +1043,7 @@
 		</div>
 		<!-- #modal-add-bonus-->
 		<div id="modal-mail" style="display: none">
-			<div class="modal-win modal-win--mail">
+			<div class="modal-win text-center"> 
 				<div class="h2 strong mb-3">Рассылка</div>
 				<div class="form-wrap">
 					<form>
@@ -1072,6 +1065,22 @@
 			</div>
 		</div>
 		<!-- #modal-mail-->
+		<div id="modal-file" style="display: none">
+			<div class="modal-win modal-win--file text-center"> 
+				<div class="h2 strong mb-3">Отправить фото</div>
+				<div class="add-photo-wrap"><img class="img-preview active" src="img/avatar-1.png" alt=""/>
+				</div>
+				<div class="row">
+					<div class="col-6">
+						<button class="btn btn-outline-orange w-100">Отменить</button>
+					</div>
+					<div class="col-6">
+						<button class="btn btn-orange modal-close-js w-100">Отправить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-file-->
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/datatables.net-dt/js/dataTables.dataTables.min.js"> </script>

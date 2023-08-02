@@ -134,22 +134,5 @@ mixin Chat(empty, varn, s)
 											+e.BUTTON.btn--send
 												+icon("send")
 	// end Chat
-	script.
-		function ScrollDown() {
-			var nestedElement = document.querySelector(".Chat-main-body-wrap");
-			let scrollToBottom =  new Promise(resolve => {
-					nestedElement.scrollTo(0, nestedElement.scrollHeight)
-				}) ;
-			scrollToBottom.then( nestedElement.classList.add("show"))
-			
-		}
-		document.addEventListener('DOMContentLoaded', ()=> {
-			
-			ScrollDown();
-			let btnChat = document.querySelectorAll(".Chat-aside__item");
-			for (const item of btnChat) {
-				item.addEventListener("click", function() { 
-					ScrollDown()
-				})
-			}
-		});
+	script
+		include script.js

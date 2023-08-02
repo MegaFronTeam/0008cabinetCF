@@ -325,6 +325,7 @@
 	.icon-setting{
 		@include mt;
 		position: relative;
+		color: $secondary;
 		// transform: translateX(var(--tr, 50px));
 		@include media-breakpoint-up(xxl){
 			--tr:0;

@@ -251,13 +251,12 @@
 		// @include mt(.6s);
 		position: fixed;
 		left: 0;
-		top: 0;
-		bottom: 0;
+		top: 0; 
 		right: 0;
 		background-color: #fff;
 		z-index: 300;
-		height: 100vh;
-		padding-bottom: calc(env(safe-area-inset-bottom, 0px));
+		height: 100%;
+		padding-bottom: calc(100vh - var(--vh, 1vh) * 100);
 	}
 
 }

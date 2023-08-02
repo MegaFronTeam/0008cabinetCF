@@ -125,7 +125,7 @@ mixin Chat(empty, varn, s)
 											+e.LABEL.item
 												input(type="file")
 												| Прикрепить фото
-											+e.item(data-fancybox data-src="#modal-file") Вызов модалки фото
+											+e.item(data-fancybox="modal" data-src="#modal-file") Вызов модалки фото
 											+e.item Ссылка 3
 									+input('Введите сообщение...','textarea')(autocomplete="off")
 										+e.btns

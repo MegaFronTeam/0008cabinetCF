@@ -46,7 +46,10 @@ const JSCCommon = {
 				PREV: "Назад",
 			},
 		});
-
+		
+		// Fancybox.defaults = {
+		// 	autoFocus: false,
+		// };
 		document.querySelectorAll(".modal-close-js").forEach(el=>{
 			el.addEventListener("click", ()=>{
 				Fancybox.close();

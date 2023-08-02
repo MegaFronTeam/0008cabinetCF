@@ -3,11 +3,11 @@ mixin emty(t="Выберите клиента, которому хотите н�
 		div(class="empty-chat-bot__img-wrap" data-json="json/mailing.json")
 		.small= t
 
-mixin Chat(empty, varn)
+mixin Chat(empty, varn, s)
 	// start Chat
 	+b.Chat.section&attributes(attributes)
 		.container-fluid
-			.topLine.d-xl-none.mb-0.border-0
+			.topLine.d-xl-none.border-0
 				.h2.mb-0 Сообщения
 		+e.row.row
 			+b.Chat-aside.col-lg-auto
@@ -22,23 +22,37 @@ mixin Chat(empty, varn)
 					if empty
 						.small.pt-3.text-center У вас пока нет клиентов.
 					else
-						mixin item(i, t)
-							+e.item&attributes(attributes)
-								+e.row.row
-									.col-auto
+						if !s
+							mixin item(i, t)
+								+e.item&attributes(attributes)
+									+e.row.row
+										.col-auto
 
-										+e.avatar(style="background:  #009FE3; color: #fff")
-											+e.avatar-text A
-											if i
-												img(src=`img/avatar-${i}.png`, alt="")
-									+e.caption.col
-										.row
-											+e.title.fw-600.col= t
-											+e.time.col-auto.text-secondary 13:55, 23 дек 23
-										+e.foot-row.row
-											+e.col.col
-												+e.text Забыл добавить в заказ(  Забыл добавить в заказ(
-											block
+											+e.avatar(style="background:  #009FE3; color: #fff")
+												+e.avatar-text A
+												if i
+													img(src=`img/avatar-${i}.png`, alt="")
+										+e.caption.col
+											.row
+												+e.title.fw-600.col= t
+												+e.time.col-auto.text-secondary 13:55, 23 дек 23
+											+e.foot-row.row
+												+e.col.col
+													+e.text Забыл добавить в заказ(  Забыл добавить в заказ(
+												block 
+						else
+							mixin item(i, t)
+								+e.item&attributes(attributes)
+									+e.row.row
+										.col-auto
+
+											+e.avatar(style="background:  #009FE3; color: #fff")
+												+e.avatar-text A
+												if i
+													img(src=`img/avatar-${i}.png`, alt="")
+										+e.caption.col
+											.row
+												+e.title.fw-600.col= t
 								
 						+item(`1`,`Михаил`).current
 						+item(`1`,`Михаил`).active
@@ -59,14 +73,18 @@ mixin Chat(empty, varn)
 										+e.back
 											+icon('chevron-left')
 									.col-auto
-										+e.avatar(style="background:  #009FE3; color: #fff")
-												+e.avatar-text A 
-												img(src=`img/avatar-1.png`, alt="")
-									+e.title.col-auto Михаил
-									.col-auto
-										+e.link(href="#") #84 
-									.col-auto
-										.badge.bg-success Активен
+										a(href="#").text-body
+											.row
+												.col-auto
+													+e.avatar(style="background:  #009FE3; color: #fff")
+															+e.avatar-text A 
+															img(src=`img/avatar-1.png`, alt="")
+												+e.title.col-auto Михаил
+												.col-auto
+													+e.link() #84 
+												.col-auto
+													.badge.bg-danger Отключен
+													// .badge.bg-success Активен
 									.col.d-none.d-xl-block
 									.col-auto.d-none.d-xl-block
 										| Заказов: 

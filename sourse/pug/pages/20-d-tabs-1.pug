@@ -22,7 +22,9 @@ block title
 	title= title
 block pagecontent
 	+aside()
-	+main('Внешний вид')
+	+main('Внешний вид', '', 'true') 
+		.topLine.d-xl-none.border-0
+			.h2.mb-0 Сообщения
 		+b.btns-slider-wrapper
 			+b.btns-slider--js.swiper
 				.swiper-wrapper

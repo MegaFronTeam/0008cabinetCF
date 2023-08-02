@@ -798,7 +798,7 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 	for (const item of btnSlider) {
 		new Swiper(item.querySelector('.btns-slider--js'), {
 			slidesPerView: 'auto',
-			spaceBetween: 10, 
+			// spaceBetween: 10, 
 			navigation: {
 				nextEl: item.querySelector('.swiper-button-next'),
 				prevEl: item.querySelector('.swiper-button-prev'),

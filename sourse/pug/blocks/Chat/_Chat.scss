@@ -33,11 +33,23 @@
 	}
 
 	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(lg) {
+		&__row{
+			border-left: 1px solid #E4E4E4;
+			margin-left: -1px;
+			margin-right: -1px;
+			border-right: 1px solid #E4E4E4;
+			overflow: hidden;
+		}	
+	}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-only(lg) {
+		&__row{
+			border-top: 1px solid #E4E4E4;
+		}
+	}
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {
 		// overflow: hidden;
@@ -50,7 +62,11 @@
 } // end.Chat
 
 .Chat-aside,.Chat-main{
-	height: calc(var(--vh, 1vh) * 100 -  var(--topLine-h));
+	@include media-breakpoint-up(xl) {
+
+		height: calc(var(--vh, 1vh) * 100 -  var(--topLine-h));
+	}
+	height: calc(var(--vh, 1vh) * 100 -  var(--topLine-h) - #{rem(15)});
 	display: flex;
 	flex-direction: column;
 
@@ -58,6 +74,10 @@
 .Chat-aside{
 	background-color: #fff;
 	z-index: 5;
+	@include media-breakpoint-up(lg) {
+
+		
+	}
 	@include media-breakpoint-up(lg) {
 		
 		border-right: 1px solid #E4E4E4;
@@ -69,6 +89,7 @@
 		padding: rem(5);
 		cursor: pointer;
 		color: #c2c2c2;
+		z-index: 3;
 		.icon{
 			font-size: 1rem;
 		}
@@ -86,7 +107,9 @@
 	&__head{
 		@include media-breakpoint-down(md) {
 			padding: var(--sp-start);
+			padding-top: 0;
 		}
+		
 		position: relative;
 		button{
 			@include a-cent1(y);
@@ -97,6 +120,7 @@
 			border: none !important;
 			color: $orange;
 			padding: rem(10px);
+			z-index: 3;
 			.icon{
 				font-size: rem(20);
 			}
@@ -110,10 +134,13 @@
 	&__input{
 		padding-left: calc(var(--sp-start)  + #{rem(30)}) !important;
 		padding-right: calc(var(--sp-start) + rem(5) + 1.2rem);
+		border-color: #ebebeb !important;
+		position: relative;
+		z-index: 2;
 		@include media-breakpoint-up(md){
 			
-			padding-top: rem(20);
-			padding-bottom: rem(20);
+			padding-top: rem(19.5);
+			padding-bottom: rem(19.5);
 			border-radius: 0;
 			border-top: none !important;
 			border-right: none !important;
@@ -143,8 +170,10 @@
 				font-size: 12px;
 				position: relative;
 				padding-left: 5px;
+				text-align: center;
 				padding-right: 5px;
 				top: em(-4);
+				min-width: rem(20.38);
 		}
 		&.active{
 			background: rgba(75, 177, 75, 0.12);
@@ -185,8 +214,12 @@
 		height: rem(40px); 
 		
 		img{
-			@include a-cent;
+			// @include a-cent;
+			position: absolute;
+			left: 0;
+			top: 0;
 			object-fit: cover;
+			border-radius: 50%;
 			width: 100%;
 			height: 100%;
 		}
@@ -200,7 +233,7 @@
 
 .Chat-main{
 	display: flex;
-	flex-direction: column;
+	flex-direction: column; 
 	.container{
 		@include media-breakpoint-up(lg) {
 		padding-left: 40px;
@@ -228,6 +261,9 @@
 .Chat-main-head{
 	font-size: rem(14);
 	width: 100%;
+	// a.text-body{
+
+	// }
 	&__back{
 		cursor: pointer;
 		.icon{
@@ -237,8 +273,10 @@
 	&__link{
 		border-bottom: 1px solid ;
 		line-height: 1;
+		color: $primary;
 		&:hover{
 			border-color: transparent;
+			color: $orange;
 		}
 	}
 	.badge{
@@ -303,6 +341,7 @@
 .Chat-main-footer{
 	background: var(--primary-white, #FFF);
 	box-shadow: 0px 0px 15px 0px rgba(25, 28, 31, 0.10);
+	border-top: 1px solid #E4E4E4;
 	.alert{
 		border-radius: 0;
 		padding: 0;
@@ -342,9 +381,16 @@
 		@include a-cent1(y);
 		right: calc(var(--sp-start) );
 	}
+	&__input-wrap{
+		&::after{
+			content: '';
+			position: absolute;
+
+		}
+	}
 	&__input{
 		border-radius: 0;
-		padding-left: calc(  #{rem(30)}) !important;
+		padding-left: calc(  #{rem(42)}) !important;
 		padding-right: calc(  rem(5) + 4.2rem);
 		border-right: none !important;
 		border-left: none!important;
@@ -355,6 +401,7 @@
 		height: rem(60);
 		resize: none;
 		border-top: none !important;
+		box-shadow: none !important;
 	}
 	&__btn{
 		border-radius: 0;
@@ -403,12 +450,15 @@
 		border: 1px solid var(--primary-gray-lines, #E4E4E4);
 		background: var(--primary-white, #FFF);
 		box-shadow: 0px 5px 15px 0px rgba(25, 28, 31, 0.10);
+		@include mt;
 	}
 	&__item{
 		cursor: pointer;
 		min-width: rem(184);
 		padding: rem(10) rem(18);
 		position: relative;
+		font-size: rem(14);
+		width: 100%;
 		[type="file"]{
 			@extend .invisible;
 			@include a-cent;

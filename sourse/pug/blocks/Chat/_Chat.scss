@@ -111,6 +111,7 @@
 		@include media-breakpoint-down(md) {
 			padding: var(--sp-start);
 			padding-top: 0;
+			padding-bottom: 22px;
 		}
 		
 		position: relative;
@@ -247,7 +248,7 @@
 		&:not(.active) {
 			transform: translateX(100%);
 		}
-		@include mt(.6s);
+		// @include mt(.6s);
 		position: fixed;
 		left: 0;
 		top: 0;

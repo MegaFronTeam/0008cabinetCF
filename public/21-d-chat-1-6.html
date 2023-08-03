@@ -524,11 +524,11 @@
 																<div class="Chat-main-head__link">#84 
 																</div>
 															</div>
-															<div class="col-auto">
-																<div class="badge bg-danger">Отключен</div>
-																<!-- .badge.bg-success Активен-->
-															</div>
 														</div></a></div>
+												<div class="col-auto">
+													<div class="badge bg-danger">Отключен</div>
+													<!-- .badge.bg-success Активен-->
+												</div>
 												<div class="col d-none d-xl-block"></div>
 												<div class="col-auto d-none d-xl-block">Заказов: <strong>5</strong></div>
 												<div class="col-auto d-none d-xl-block">Сумма:<strong> 22 730 ₽</strong></div>
@@ -693,7 +693,7 @@
 	async function ScrollDown()  {  
 		const nestedElement = document.querySelector(".Chat-main-body-wrap");
 		let promise = new Promise((resolve, reject) => {
-			setTimeout(() => resolve(nestedElement.scrollTo({ left: 0, top: nestedElement.scrollHeight})),3000)
+			resolve(nestedElement.scrollTo({ left: 0, top: nestedElement.scrollHeight}))
 		});
 
 		let result = await promise;

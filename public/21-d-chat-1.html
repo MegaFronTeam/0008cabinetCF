@@ -246,7 +246,7 @@
 	async function ScrollDown()  {  
 		const nestedElement = document.querySelector(".Chat-main-body-wrap");
 		let promise = new Promise((resolve, reject) => {
-			setTimeout(() => resolve(nestedElement.scrollTo({ left: 0, top: nestedElement.scrollHeight})),3000)
+			resolve(nestedElement.scrollTo({ left: 0, top: nestedElement.scrollHeight}))
 		});
 
 		let result = await promise;

@@ -321,11 +321,14 @@
 			font-size: rem(12); 
 		}
 	}
+	.icon-setting{
+
+		color: $secondary;
+	}
 	&__text,
 	.icon-setting{
 		@include mt;
 		position: relative;
-		color: $secondary;
 		// transform: translateX(var(--tr, 50px));
 		@include media-breakpoint-up(xxl){
 			--tr:0;

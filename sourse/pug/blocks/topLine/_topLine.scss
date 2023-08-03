@@ -1,11 +1,14 @@
 
 	// start .topLine
+	main > .topLine{
+
+		z-index: 11;
+	}
 	.topLine {
 		border-bottom: 1px solid #EBEBEB;
 		background-color: #fff;
 		z-index: 5;
 		--sPT: #{rem(15)};
-		z-index: 10;
 		position: relative;
 		@include media-breakpoint-up(xl) {
 
@@ -24,8 +27,14 @@
 			 font-weight: normal;
 			display: flex;
 			justify-content: center;
-			min-width: rem(40);
-			height: rem(40);
+
+				@include media-breakpoint-up(sm) {
+
+					min-width: rem(40);
+					height: rem(40);
+				}
+				min-width: 34px;
+				height: 34px;
 			border-radius: 100px;
 			padding: 0;
 			display: flex;
@@ -35,15 +44,14 @@
 			--bs-btn-border-color: #{$gray-500};
 			font-size: 14px;
 			@include media-breakpoint-down(xl) {
-				&--alarm,
-				&--balance{
+				&--alarm {
 					padding: 0;
 					background: none !important;
 					border: none !important;
 					min-width: 1px;
 				}
 
-				border: none !important;
+				border: none ;
 			}
 			&--cabinet{
 				padding: rem(5);
@@ -79,8 +87,14 @@
 				}
 			}
 			&--balance{
-				padding-left: rem(27);
-				padding-right: rem(27);  
+				@include media-breakpoint-up(xl) {
+
+					padding-left: rem(27);
+					padding-right: rem(27);  
+				}
+				padding-left: rem(12);
+				padding-right: rem(12);  
+				border: 1px solid #ebebeb!important;
 				.toggle-text{
 					display: flex;
 					justify-content: center;

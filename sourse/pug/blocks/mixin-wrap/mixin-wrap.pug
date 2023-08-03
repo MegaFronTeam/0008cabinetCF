@@ -64,12 +64,14 @@ mixin aside(second)
 			+b.nav-main
 				if second
 					ul
-						mixin a2(i,t, dropDown, activeClasses)
+						mixin a2(i,t, dropDown, activeClasses, b)
 							li
 								+e.link(href="#")&attributes(attributes)
 									+e.icon-wrap
 										+icon(i)
 									+e.text= t
+										if b
+											.badge.bg-success 99
 									block
 								if dropDown
 									+e.ddgroup-wrap(class=`${activeClasses}`)
@@ -79,7 +81,9 @@ mixin aside(second)
 									
 						+a2('wallet',`Заказы`, false, '')
 						+a2('training',`Клиенты`, false, '')
-						+a2('pizza', 'Меню товаров', true, 'active').--js.active
+						+a2('chat', 'Сообщения','','','sds').active
+							
+						+a2('pizza', 'Меню товаров', true).--js
 							+icon('chevron-down')
 						+a2('growth',`Статистика`, false, '')
 						+a2('tg', 'Рассылки', true, '').--js

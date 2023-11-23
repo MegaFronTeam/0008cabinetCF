@@ -1,0 +1,48 @@
+:root{
+  --black-line-h: 60px;
+}
+@media (max-width: 992px){
+
+  :root{
+    --black-line-h: 64px;
+  }
+}
+
+.black-line{
+  color: #fff;
+  background: var(--primary-black, #191C1F);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%; 
+  padding-top: .8em;
+  padding-bottom: .8em;
+  
+}
+.black-line .container{
+  position: relative;
+  /* max-width: 1128px; */
+  padding-top: 0 !important;
+}
+.black-line__close{
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  translate: 0 -50%;
+  cursor: pointer;
+}
+.black-line__text{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.black-line__date{
+  color: #FF7A00;
+  font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  .black-line{
+    font-size: 12px;
+  }
+}

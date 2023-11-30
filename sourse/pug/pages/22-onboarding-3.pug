@@ -1,0 +1,66 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCabinetPanel/_sCabinetPanel.pug
+include ../blocks/footer/_footer.pug
+//- include ../blocks/Chat/_Chat.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= '22-onboarding-2.jpg'
+
+block title
+	- let  title= 'Onboarding-2'
+	title= title
+block pagecontent
+	+b.blank-page.section
+		+img('img/svg/logo.svg').logo
+		+e.body
+			+e.questions 11 вопросов
+			.progress
+				.progress-bar(role="progressbar" aria-label="Basic example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")
+			+e.title Прежде чем продолжить, пожалуйста, ответьте на вопросы
+			+form-wrap
+				+input('Введите название компании', 'text', 'Название компании').is-invalid
+					.invalid-feedback Обязательно к заполнению
+				+input('Введите вашу должность', 'text', 'Должность в компании').is-invalid
+					.invalid-feedback Обязательно к заполнению
+				+gr(`Сфера деятельности`).is-invalid
+					+input("Выберите из списка",'select').custom-select-js
+						.invalid-feedback Обязательно к заполнению
+				+gr(`Сфера деятельности`).is-invalid
+					+input("Выберите из списка",'select').custom-select-js
+						.invalid-feedback Обязательно к заполнению
+				+input('Иванов Иван Иванович', 'text', 'ФИО').is-invalid
+					.invalid-feedback Обязательно к заполнению
+				+input('Введите телефон', 'tel', 'Телефон для связи').is-invalid
+					.invalid-feedback Обязательно к заполнению
+				+input('Введите Telegram для связи', 'text', 'Telegram для связи').is-invalid.--telegrem
+					.invalid-feedback Обязательно к заполнению
+				+input('Введите email', 'email', 'Email для связи').is-invalid
+					.invalid-feedback Обязательно к заполнению
+				+gr(`Сфера деятельности`).is-invalid
+					+input("Выберите из списка",'select').custom-select-js
+						.invalid-feedback Обязательно к заполнению
+				.form-wrap__input-wrap.form-group
+					.form-wrap__input-title Используете ChatFood впервые?
+					.row
+						.col-auto: +in-c('radio', '✌ Впервые', 'from')
+						.col-auto: +in-c('radio', '😎 Пробовали ранее', 'from')
+					.invalid-feedback Обязательно к заполнению
+				+gr(`Сфера деятельности`).is-invalid
+					+input("Выберите из списка",'select').custom-select-js
+						.invalid-feedback Обязательно к заполнению
+				+e.btn.btn.btn-orange(href='#') Продолжить
+	//- +aside('true')
+	//- +main('Сообщения', '', 'true','', 'hide')
+		//- +Chat('emty')

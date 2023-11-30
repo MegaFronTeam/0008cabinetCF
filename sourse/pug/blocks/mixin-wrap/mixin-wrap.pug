@@ -180,7 +180,7 @@ mixin chat-items()
 
 
 mixin gr(t)
-	+e.group
+	+e.group&attributes(attributes)
 		if t
 			+e.group-title= t
 		block

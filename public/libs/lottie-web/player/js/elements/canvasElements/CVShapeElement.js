@@ -295,19 +295,13 @@ CVShapeElement.prototype.drawLayer = function () {
       renderer.save();
       elems = currentStyle.elements;
       if (type === 'st' || type === 'gs') {
-        renderer.ctxStrokeStyle(type === 'st' ? currentStyle.co : currentStyle.grd);
-        // ctx.strokeStyle = type === 'st' ? currentStyle.co : currentStyle.grd;
-        renderer.ctxLineWidth(currentStyle.wi);
-        // ctx.lineWidth = currentStyle.wi;
-        renderer.ctxLineCap(currentStyle.lc);
-        // ctx.lineCap = currentStyle.lc;
-        renderer.ctxLineJoin(currentStyle.lj);
-        // ctx.lineJoin = currentStyle.lj;
-        renderer.ctxMiterLimit(currentStyle.ml || 0);
-        // ctx.miterLimit = currentStyle.ml || 0;
+        ctx.strokeStyle = type === 'st' ? currentStyle.co : currentStyle.grd;
+        ctx.lineWidth = currentStyle.wi;
+        ctx.lineCap = currentStyle.lc;
+        ctx.lineJoin = currentStyle.lj;
+        ctx.miterLimit = currentStyle.ml || 0;
       } else {
-        renderer.ctxFillStyle(type === 'fl' ? currentStyle.co : currentStyle.grd);
-        // ctx.fillStyle = type === 'fl' ? currentStyle.co : currentStyle.grd;
+        ctx.fillStyle = type === 'fl' ? currentStyle.co : currentStyle.grd;
       }
       renderer.ctxOpacity(currentStyle.coOp);
       if (type !== 'st' && type !== 'gs') {
@@ -336,16 +330,14 @@ CVShapeElement.prototype.drawLayer = function () {
           }
         }
         if (type === 'st' || type === 'gs') {
-          // ctx.stroke();
-          renderer.ctxStroke();
+          ctx.stroke();
           if (currentStyle.da) {
             ctx.setLineDash(this.dashResetter);
           }
         }
       }
       if (type !== 'st' && type !== 'gs') {
-        // ctx.fill(currentStyle.r);
-        this.globalData.renderer.ctxFill(currentStyle.r);
+        ctx.fill(currentStyle.r);
       }
       renderer.restore();
     }

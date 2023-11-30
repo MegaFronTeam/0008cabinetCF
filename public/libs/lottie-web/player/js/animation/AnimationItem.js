@@ -20,7 +20,7 @@ import BaseEvent from '../utils/BaseEvent';
 import dataManager from '../utils/DataManager';
 import markerParser from '../utils/markers/markerParser';
 import ProjectInterface from '../utils/expressions/ProjectInterface';
-import { getRenderer, getRegisteredRenderer } from '../renderers/renderersManager';
+import { getRenderer } from '../renderers/renderersManager';
 
 const AnimationItem = function () {
   this._cbs = [];
@@ -58,7 +58,6 @@ const AnimationItem = function () {
   this.onSetupError = this.onSetupError.bind(this);
   this.onSegmentComplete = this.onSegmentComplete.bind(this);
   this.drawnFrameEvent = new BMEnterFrameEvent('drawnFrame', 0, 0, 0);
-  this.expressionsPlugin = getExpressionsPlugin();
 };
 
 extendPrototype([BaseEvent], AnimationItem);
@@ -154,7 +153,7 @@ AnimationItem.prototype.setData = function (wrapper, animationData) {
           ? wrapperAttributes.getNamedItem('data-bm-renderer').value
           : wrapperAttributes.getNamedItem('bm-renderer')
             ? wrapperAttributes.getNamedItem('bm-renderer').value
-            : getRegisteredRenderer() || 'canvas';
+            : 'canvas';
 
   var loop = wrapperAttributes.getNamedItem('data-anim-loop') // eslint-disable-line no-nested-ternary
     ? wrapperAttributes.getNamedItem('data-anim-loop').value
@@ -197,11 +196,7 @@ AnimationItem.prototype.setData = function (wrapper, animationData) {
   if (prerender === 'false') {
     params.prerender = false;
   }
-  if (!params.path) {
-    this.trigger('destroy');
-  } else {
-    this.setParams(params);
-  }
+  this.setParams(params);
 };
 
 AnimationItem.prototype.includeLayers = function (data) {
@@ -382,9 +377,6 @@ AnimationItem.prototype.renderFrame = function () {
     return;
   }
   try {
-    if (this.expressionsPlugin) {
-      this.expressionsPlugin.resetFrame();
-    }
     this.renderer.renderFrame(this.currentFrame + this.firstFrame);
   } catch (error) {
     this.triggerRenderFrameError(error);
@@ -397,7 +389,7 @@ AnimationItem.prototype.play = function (name) {
   }
   if (this.isPaused === true) {
     this.isPaused = false;
-    this.trigger('_play');
+    this.trigger('_pause');
     this.audioController.resume();
     if (this._idle) {
       this._idle = false;
@@ -412,7 +404,7 @@ AnimationItem.prototype.pause = function (name) {
   }
   if (this.isPaused === false) {
     this.isPaused = true;
-    this.trigger('_pause');
+    this.trigger('_play');
     this._idle = true;
     this.trigger('_idle');
     this.audioController.pause();
@@ -634,7 +626,7 @@ AnimationItem.prototype.destroy = function (name) {
   this.onSegmentStart = null;
   this.onDestroy = null;
   this.renderer = null;
-  this.expressionsPlugin = null;
+  this.renderer = null;
   this.imagePreloader = null;
   this.projectInterface = null;
 };

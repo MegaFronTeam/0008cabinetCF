@@ -3,7 +3,6 @@ import getBlendMode from '../../utils/helpers/blendModes';
 import Matrix from '../../3rd_party/transformation-matrix';
 import CVEffects from './CVEffects';
 import CVMaskElement from './CVMaskElement';
-import effectTypes from '../../utils/helpers/effectTypes';
 
 function CVBaseElement() {
 }
@@ -38,7 +37,6 @@ CVBaseElement.prototype = {
     this.canvasContext = this.globalData.canvasContext;
     this.transformCanvas = this.globalData.transformCanvas;
     this.renderableEffectsManager = new CVEffects(this);
-    this.searchEffectTransforms();
   },
   createContent: function () {},
   setBlendMode: function () {
@@ -51,7 +49,6 @@ CVBaseElement.prototype = {
   },
   createRenderableComponents: function () {
     this.maskManager = new CVMaskElement(this.data, this);
-    this.transformEffects = this.renderableEffectsManager.getEffects(effectTypes.TRANSFORM_EFFECT);
   },
   hideElement: function () {
     if (!this.hidden && (!this.isInRange || this.isTransparent)) {
@@ -139,13 +136,12 @@ CVBaseElement.prototype = {
     }
     this.renderTransform();
     this.renderRenderable();
-    this.renderLocalTransform();
     this.setBlendMode();
     var forceRealStack = this.data.ty === 0;
     this.prepareLayer();
     this.globalData.renderer.save(forceRealStack);
-    this.globalData.renderer.ctxTransform(this.finalTransform.localMat.props);
-    this.globalData.renderer.ctxOpacity(this.finalTransform.localOpacity);
+    this.globalData.renderer.ctxTransform(this.finalTransform.mat.props);
+    this.globalData.renderer.ctxOpacity(this.finalTransform.mProp.o.v);
     this.renderInnerContent();
     this.globalData.renderer.restore(forceRealStack);
     this.exitLayer();

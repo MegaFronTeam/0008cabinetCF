@@ -181,6 +181,13 @@
 	}
 	&__group{
 		margin-bottom: rem(20);
+		&.is-invalid {
+			.choices {
+				&__inner {
+					border-color: $danger !important;
+				}
+			}
+		}
 	}
 	&__btn{
 		@extend .btn, .btn-orange;
@@ -202,6 +209,9 @@
 				top: rem(24);
 			}
 		}
+	}
+	.invalid-feedback {
+		display: block;
 	}
 }
 

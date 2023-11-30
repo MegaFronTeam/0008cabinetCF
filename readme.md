@@ -1,3 +1,9 @@
+#### 30.11.2023
+
+1. <https://megafronteam.github.io/0008cabinetCF/public/22-onboarding-1.html>
+1. <https://megafronteam.github.io/0008cabinetCF/public/22-onboarding-2.html>
+1. <https://megafronteam.github.io/0008cabinetCF/public/22-onboarding-3.html>
+
 ## Первая линия
 
 1. <https://megafronteam.github.io/0008cabinetCF/public/20-d-tabs-1.html>

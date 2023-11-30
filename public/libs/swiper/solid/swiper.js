@@ -13,7 +13,7 @@ const _tmpl$ = /*#__PURE__*/_$template(`<div class="swiper-wrapper"></div>`, 2),
       _tmpl$5 = /*#__PURE__*/_$template(`<div class="swiper-pagination"></div>`, 2),
       _tmpl$6 = /*#__PURE__*/_$template(`<div></div>`, 2);
 
-import { createEffect, createMemo, createSignal, onCleanup, onMount, Show, splitProps, children } from 'solid-js';
+import { createEffect, createMemo, createSignal, onCleanup, onMount, Show, splitProps } from 'solid-js';
 import SwiperCore from 'swiper';
 import { SwiperContext } from './context.js';
 import { getChangedParams } from '../components-shared/get-changed-params.js';
@@ -52,7 +52,10 @@ const Swiper = props => {
 
   const [local, rest] = splitProps(props, ['children', 'class', 'onSwiper', 'ref', 'tag', 'wrapperTag']);
   const params = createMemo(() => getParams(rest));
-  const slidesSlots = children(() => getChildren(local.children));
+  const {
+    slides,
+    slots
+  } = getChildren(local.children);
 
   const onBeforeBreakpoint = () => {
     setBreakpointChanged(state => !state);
@@ -76,17 +79,15 @@ const Swiper = props => {
     swiperRef.loopDestroy = () => {};
 
     if (params().params.loop) {
-      swiperRef.loopedSlides = calcLoopedSlides(slidesSlots().slides, params().params);
+      swiperRef.loopedSlides = calcLoopedSlides(slides, params().params);
     }
 
     if (swiperRef.virtual && swiperRef.params.virtual.enabled) {
-      swiperRef.virtual.slides = slidesSlots().slides;
+      swiperRef.virtual.slides = slides;
       const extendWith = {
         cache: false,
-        slides: slidesSlots().slides,
-        renderExternal: data => {
-          setVirtualData(data);
-        },
+        slides,
+        renderExternal: data => setVirtualData(data),
         renderExternalUpdate: true
       };
       extend(swiperRef.params.virtual, extendWith);
@@ -164,14 +165,14 @@ const Swiper = props => {
     const {
       passedParams
     } = params();
-    const changedParams = getChangedParams(passedParams, oldPassedParamsRef, slidesSlots().slides, oldSlides, c => c.key);
+    const changedParams = getChangedParams(passedParams, oldPassedParamsRef, slides, oldSlides, c => c.key);
     oldPassedParamsRef = passedParams;
-    oldSlides = slidesSlots().slides;
+    oldSlides = slides;
 
     if (changedParams.length && swiperRef && !swiperRef.destroyed) {
       updateSwiper({
         swiper: swiperRef,
-        slides: slidesSlots().slides,
+        slides,
         passedParams,
         changedParams,
         nextEl: nextElRef,
@@ -186,21 +187,18 @@ const Swiper = props => {
 
   createEffect(() => {
     updateOnVirtualData(swiperRef);
-    setTimeout(() => {
-      updateOnVirtualData(swiperRef);
-    });
   }); // bypass swiper instance to slides
 
   function renderSlides() {
     if (params().params.virtual) {
-      return renderVirtual(swiperRef, slidesSlots().slides, virtualData());
+      return renderVirtual(swiperRef, slides, virtualData());
     }
 
     if (!params().params.loop || swiperRef && swiperRef.destroyed) {
-      return slidesSlots().slides;
+      return slides;
     }
 
-    return renderLoop(swiperRef, slidesSlots().slides, params().params);
+    return renderLoop(swiperRef, slides, params().params);
   }
   /* eslint-disable react/react-in-jsx-scope */
 
@@ -219,14 +217,14 @@ const Swiper = props => {
       value: swiperRef,
 
       get children() {
-        return [_$memo(() => slidesSlots().slots['container-start']), (() => {
+        return [_$memo(() => slots['container-start']), (() => {
           const _el$2 = _tmpl$.cloneNode(true);
 
-          _$insert(_el$2, () => slidesSlots().slots['wrapper-start'], null);
+          _$insert(_el$2, () => slots['wrapper-start'], null);
 
           _$insert(_el$2, renderSlides, null);
 
-          _$insert(_el$2, () => slidesSlots().slots['wrapper-end'], null);
+          _$insert(_el$2, () => slots['wrapper-end'], null);
 
           return _el$2;
         })(), _$createComponent(Show, {
@@ -276,7 +274,7 @@ const Swiper = props => {
             return _el$6;
           }
 
-        }), _$memo(() => slidesSlots().slots['container-end'])];
+        }), _$memo(() => slots['container-end'])];
       }
 
     }));

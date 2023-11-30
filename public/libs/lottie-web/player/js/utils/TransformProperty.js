@@ -126,10 +126,7 @@ const TransformPropertyFactory = (function () {
   }
 
   function precalculateMatrix() {
-    this.appliedTransformations = 0;
-    this.pre.reset();
-
-    if (!this.a.effectsSequence.length) {
+    if (!this.a.k) {
       this.pre.translate(-this.a.v[0], -this.a.v[1], this.a.v[2]);
       this.appliedTransformations = 1;
     } else {

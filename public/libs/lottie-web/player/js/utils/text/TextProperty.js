@@ -11,9 +11,6 @@ function TextProperty(elem, data) {
   this.kf = false;
   this._isFirstFrame = true;
   this._mdf = false;
-  if (data.d && data.d.sid) {
-    data.d = elem.globalData.slotManager.getProp(data.d);
-  }
   this.data = data;
   this.elem = elem;
   this.comp = this.elem.comp;
@@ -153,49 +150,39 @@ TextProperty.prototype.buildFinalText = function (text) {
   var charCode;
   var secondCharCode;
   var shouldCombine = false;
-  var shouldCombineNext = false;
-  var currentChars = '';
   while (i < len) {
-    shouldCombine = shouldCombineNext;
-    shouldCombineNext = false;
     charCode = text.charCodeAt(i);
-    currentChars = text.charAt(i);
     if (FontManager.isCombinedCharacter(charCode)) {
-      shouldCombine = true;
-      // It's a potential surrogate pair (this is the High surrogate)
+      charactersArray[charactersArray.length - 1] += text.charAt(i);
     } else if (charCode >= 0xD800 && charCode <= 0xDBFF) {
-      if (FontManager.isRegionalFlag(text, i)) {
-        currentChars = text.substr(i, 14);
-      } else {
-        secondCharCode = text.charCodeAt(i + 1);
-        // It's a surrogate pair (this is the Low surrogate)
-        if (secondCharCode >= 0xDC00 && secondCharCode <= 0xDFFF) {
-          if (FontManager.isModifier(charCode, secondCharCode)) {
-            currentChars = text.substr(i, 2);
-            shouldCombine = true;
-          } else if (FontManager.isFlagEmoji(text.substr(i, 4))) {
-            currentChars = text.substr(i, 4);
-          } else {
-            currentChars = text.substr(i, 2);
-          }
+      secondCharCode = text.charCodeAt(i + 1);
+      if (secondCharCode >= 0xDC00 && secondCharCode <= 0xDFFF) {
+        if (shouldCombine || FontManager.isModifier(charCode, secondCharCode)) {
+          charactersArray[charactersArray.length - 1] += text.substr(i, 2);
+          shouldCombine = false;
+        } else {
+          charactersArray.push(text.substr(i, 2));
         }
+        i += 1;
+      } else {
+        charactersArray.push(text.charAt(i));
       }
     } else if (charCode > 0xDBFF) {
       secondCharCode = text.charCodeAt(i + 1);
-      if (FontManager.isVariationSelector(charCode)) {
+      if (FontManager.isZeroWidthJoiner(charCode, secondCharCode)) {
         shouldCombine = true;
+        charactersArray[charactersArray.length - 1] += text.substr(i, 2);
+        i += 1;
+      } else {
+        charactersArray.push(text.charAt(i));
       }
     } else if (FontManager.isZeroWidthJoiner(charCode)) {
+      charactersArray[charactersArray.length - 1] += text.charAt(i);
       shouldCombine = true;
-      shouldCombineNext = true;
-    }
-    if (shouldCombine) {
-      charactersArray[charactersArray.length - 1] += currentChars;
-      shouldCombine = false;
     } else {
-      charactersArray.push(currentChars);
+      charactersArray.push(text.charAt(i));
     }
-    i += currentChars.length;
+    i += 1;
   }
   return charactersArray;
 };
@@ -434,7 +421,6 @@ TextProperty.prototype.updateDocumentData = function (newData, index) {
   dData = this.copyData(dData, newData);
   this.data.d.k[index].s = dData;
   this.recalculate(index);
-  this.setCurrentData(dData);
   this.elem.addDynamicProperty(this);
 };
 

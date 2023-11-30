@@ -6,9 +6,9 @@
 	z-index: 1000;
 	overflow: hidden;
 	width: 100%;
-	height: 100%;
 	background-position: center 0;
 	opacity: 0;
+	// height: 15000px;
 	// opacity: 0.7;
 } 
 
@@ -2190,3 +2190,172 @@ a.text-body{
 	// --bs-btn-disabled-border-color: #E4E4E4;
 	// --bs-gradient: none;
 } 
+
+.blank-page {
+	min-height: 100vh;
+	margin: 0 auto;
+	width: 100%;
+	max-width: rem(438);
+	display: flex;
+	align-items: center;
+	position: relative;
+	padding-right: rem(15);
+	padding-left: rem(15);
+	--sPT: #{rem(50)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(114.200)};
+		--sPB: #{rem(95)};
+	}
+	.logo {
+		position: absolute;
+		width: 100%;
+		max-width: rem(124);
+		top: rem(18);
+		left: 50%;
+		transform: translateX(-50%);
+		@include media-breakpoint-up(md) {
+			max-width: rem(180);
+			top: rem(48);
+		}
+	}
+	&__questions {
+		color: $gray-600;
+		font-size: rem(14);
+		font-weight: 700;
+		line-height: 1.42;
+		margin-bottom: rem(18);
+	}
+	.progress {
+		--bs-progress-height: #{rem(2)};
+    // --bs-progress-font-size: 0.75rem;
+    --bs-progress-bg: #F6F7FA;
+    --bs-progress-border-radius: 0;
+    --bs-progress-bar-bg: #{$orange};
+
+		margin-bottom: rem(30);
+	}
+	&__title {
+		text-align: center;
+		font-size: rem(24);
+		line-height: 1.25;
+		margin-bottom: rem(30);
+		font-weight: 700;
+		@include media-breakpoint-up(md) {
+			font-size: rem(32);
+			margin-bottom: rem(18.200);
+		}
+	}
+	.form-wrap {
+		label {
+			width: 100%;
+		}
+		&__input-wrap {
+			margin-bottom: rem(15);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(20);
+			}
+			&:last-of-type {
+				margin-bottom: rem(30);
+				@include media-breakpoint-up(md) {
+					margin-bottom: rem(40);
+				}
+			}
+			&:has(.form-control--telegrem) {
+				&:before {
+					content: '';
+					position: absolute;
+					display: block;
+					width: rem(20);
+					height: rem(20);
+					background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='24' height='24' rx='12' fill='%23009FE3'/%3E%3Cpath d='M7.16998 11.2797C10.1765 9.94234 12.1812 9.06064 13.1843 8.63461C16.0484 7.41833 16.6435 7.20704 17.0314 7.20002C17.1167 7.19855 17.3075 7.22014 17.431 7.32249C17.5354 7.40894 17.5641 7.52572 17.5778 7.60766C17.5915 7.68963 17.6086 7.87633 17.595 8.02219C17.4398 9.6872 16.7683 13.7278 16.4266 15.5926C16.2821 16.3817 15.9974 16.6463 15.7218 16.6722C15.1229 16.7284 14.6681 16.2681 14.0881 15.8798C13.1804 15.2723 12.6676 14.8941 11.7865 14.3013C10.7683 13.6162 11.4284 13.2397 12.0087 12.6243C12.1605 12.4633 14.7993 10.0126 14.8504 9.79037C14.8568 9.76254 14.8627 9.6589 14.8024 9.60419C14.7421 9.54948 14.6531 9.56818 14.5889 9.58304C14.4978 9.60414 13.0478 10.5827 10.2387 12.5188C9.82714 12.8073 9.45435 12.9479 9.12033 12.9405C8.75211 12.9324 8.0438 12.728 7.51722 12.5532C6.87137 12.3388 6.35804 12.2256 6.40274 11.8615C6.42602 11.6719 6.68176 11.4779 7.16998 11.2797Z' fill='white'/%3E%3C/svg%3E%0A");
+					background-repeat: no-repeat;
+					background-size: contain;
+					background-position: center;
+					left: rem(9);
+					bottom: rem(9);
+					@include media-breakpoint-up(md) {
+						width: rem(24);
+						height: rem(24);
+						bottom: rem(7);
+					}
+				}
+				.form-wrap__input {
+					padding-left: rem(39);
+					@include media-breakpoint-up(md) {
+						padding-left: rem(43);
+					}
+				}
+			}
+			.row {
+				--bs-gutter-x: #{rem(10)};
+				--bs-gutter-y: #{rem(10)};
+			}
+			.choices {
+				margin-bottom: 0;
+			}
+		}
+		&__input-title {
+			font-size: rem(14);
+			font-weight: 700;
+			line-height: 1.42;
+			margin-bottom: rem(10);
+			display: inline-block;
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(15);
+			}
+		}
+		&__input {
+			width: 100%;
+		}
+		&__btn {
+			--bs-btn-disabled-color: #{$gray-600};
+			--bs-btn-disabled-bg: #F6F7FA;
+			--bs-btn-disabled-border-color: #F6F7FA;
+	
+			width: 100%;
+			@include media-breakpoint-up(md) {
+				--bs-btn-padding-y: #{rem(12)};
+			}
+		}
+		&__group {
+			.form-wrap__input-wrap {
+				margin-bottom: 0 !important;
+			}
+		}
+	}
+	.custom-input {
+		padding-left: 0;
+		margin-bottom: 0;
+		position: relative;
+		border-radius: 60px;
+		padding: rem(9.5) rem(17.5);
+		&__input {
+			@include mt;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			margin-left: 0;
+			border-radius: 60px;
+			border: 1px solid #E4E4E4;
+			&:checked {
+				background-image: none;
+				border-color: $primary;
+				background-color: $primary;
+				& ~ .custom-input__text {
+					color: #fff;
+					font-weight: 700;
+				}
+			}
+		}
+		&__text {
+			@include mt;
+			position: relative;
+			z-index: 1;
+			font-size: rem(14);
+			font-weight: 400;
+			line-height: 1.42;
+		}
+	}
+}

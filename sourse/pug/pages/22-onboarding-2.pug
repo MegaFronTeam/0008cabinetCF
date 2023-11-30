@@ -1,0 +1,54 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCabinetPanel/_sCabinetPanel.pug
+include ../blocks/footer/_footer.pug
+//- include ../blocks/Chat/_Chat.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= '22-onboarding-2.jpg'
+
+block title
+	- let  title= 'Onboarding-2'
+	title= title
+block pagecontent
+	+b.blank-page.section
+		+img('img/svg/logo.svg').logo
+		+e.body
+			+e.questions 11 вопросов
+			.progress
+				.progress-bar(role="progressbar" aria-label="Basic example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")
+			+e.title Прежде чем продолжить, пожалуйста, ответьте на вопросы
+			+form-wrap
+				+input('Введите название компании', 'text', 'Название компании')
+				+input('Введите вашу должность', 'text', 'Должность в компании')
+				+gr(`Сфера деятельности`)
+					+input("Выберите из списка",'select', label, t, 'Кафе, ресторан, столовая', 'Кофейня', 'Бар', 'Отель, гостиница, турбаза или пр.', 'Доставка готовой еды', 'Пекарня или кондитерская', 'Супермаркет или магазин', 'Торговля', 'Образование', 'Другое').custom-select-js
+				+gr(`Количество сотрудников`)
+					+input("Выберите из списка",'select', label, t, '1-5', '5-10', '10-25', '25-50', '50+').custom-select-js
+				+input('Иванов Иван Иванович', 'text', 'ФИО')
+				+input('Введите телефон', 'tel', 'Телефон для связи')
+				+input('Введите Telegram для связи', 'text', 'Telegram для связи').--telegrem
+				+input('Введите email', 'email', 'Email для связи')
+				+gr(`Сфера деятельности`)
+					+input("Выберите из списка",'select', label, t, 'В результате поиска в Яндексе/Google', 'Реклама в интернете', 'По рекомендации', 'В социальных сетях', 'Другое').custom-select-js
+				.form-wrap__input-wrap.form-group
+					.row
+						.col-auto: +in-c('radio', '✌ Впервые', 'from')
+						.col-auto: +in-c('radio', '😎 Пробовали ранее', 'from')
+				+gr(`Какая основная цель использования ChatFood?`)
+					+input("Выберите из списка",'select', label, t, 'Получение заказов через Telegram', 'Сбор клиентской базы через Telegram', 'Рассылки клиентам в Telegram', 'Все вместе').custom-select-js
+				+e.btn.btn.btn-orange(href='#') Продолжить
+	//- +aside('true')
+	//- +main('Сообщения', '', 'true','', 'hide')
+		//- +Chat('emty')

@@ -1,11 +1,12 @@
 import createShadow from '../../shared/create-shadow.js';
 import effectInit from '../../shared/effect-init.js';
 import effectTarget from '../../shared/effect-target.js';
-export default function EffectCoverflow({
-  swiper,
-  extendParams,
-  on
-}) {
+export default function EffectCoverflow(_ref) {
+  let {
+    swiper,
+    extendParams,
+    on
+  } = _ref;
   extendParams({
     coverflowEffect: {
       rotate: 50,

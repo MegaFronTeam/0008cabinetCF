@@ -1,10 +1,11 @@
 import { now } from '../../shared/utils.js';
-export default function freeMode({
-  swiper,
-  extendParams,
-  emit,
-  once
-}) {
+export default function freeMode(_ref) {
+  let {
+    swiper,
+    extendParams,
+    emit,
+    once
+  } = _ref;
   extendParams({
     freeMode: {
       enabled: false,
@@ -47,9 +48,10 @@ export default function freeMode({
     });
   }
 
-  function onTouchEnd({
-    currentPos
-  }) {
+  function onTouchEnd(_ref2) {
+    let {
+      currentPos
+    } = _ref2;
     const {
       params,
       $wrapperEl,

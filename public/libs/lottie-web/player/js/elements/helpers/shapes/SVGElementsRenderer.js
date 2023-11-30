@@ -58,6 +58,7 @@ const SVGElementsRenderer = (function () {
     var lvl = itemData.lvl;
     var paths;
     var mat;
+    var props;
     var iterations;
     var k;
     for (l = 0; l < lLen; l += 1) {
@@ -75,7 +76,8 @@ const SVGElementsRenderer = (function () {
           iterations = lvl - itemData.styles[l].lvl;
           k = itemData.transformers.length - 1;
           while (iterations > 0) {
-            mat.multiply(itemData.transformers[k].mProps.v);
+            props = itemData.transformers[k].mProps.v.props;
+            mat.transform(props[0], props[1], props[2], props[3], props[4], props[5], props[6], props[7], props[8], props[9], props[10], props[11], props[12], props[13], props[14], props[15]);
             iterations -= 1;
             k -= 1;
           }

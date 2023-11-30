@@ -38,9 +38,11 @@ ShapeTransformManager.prototype = {
       i += 1;
     }
     if (_mdf) {
+      var props;
       sequence.finalTransform.reset();
       for (i = len - 1; i >= 0; i -= 1) {
-        sequence.finalTransform.multiply(sequence.transforms[i].transform.mProps.v);
+        props = sequence.transforms[i].transform.mProps.v.props;
+        sequence.finalTransform.transform(props[0], props[1], props[2], props[3], props[4], props[5], props[6], props[7], props[8], props[9], props[10], props[11], props[12], props[13], props[14], props[15]);
       }
     }
     sequence._mdf = _mdf;

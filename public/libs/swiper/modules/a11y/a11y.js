@@ -1,10 +1,11 @@
 import classesToSelector from '../../shared/classes-to-selector.js';
 import $ from '../../shared/dom.js';
-export default function A11y({
-  swiper,
-  extendParams,
-  on
-}) {
+export default function A11y(_ref) {
+  let {
+    swiper,
+    extendParams,
+    on
+  } = _ref;
   extendParams({
     a11y: {
       enabled: true,
@@ -22,9 +23,6 @@ export default function A11y({
       id: null
     }
   });
-  swiper.a11y = {
-    clicked: false
-  };
   let liveRegion = null;
 
   function notify(message) {
@@ -34,7 +32,11 @@ export default function A11y({
     notification.html(message);
   }
 
-  function getRandomNumber(size = 16) {
+  function getRandomNumber(size) {
+    if (size === void 0) {
+      size = 16;
+    }
+
     const randomChar = () => Math.round(16 * Math.random()).toString(16);
 
     return 'x'.repeat(size).replace(/x/g, randomChar);
@@ -185,28 +187,12 @@ export default function A11y({
     addElControls($el, wrapperId);
   };
 
-  const handlePointerDown = () => {
-    swiper.a11y.clicked = true;
-  };
-
-  const handlePointerUp = () => {
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        if (!swiper.destroyed) {
-          swiper.a11y.clicked = false;
-        }
-      });
-    });
-  };
-
   const handleFocus = e => {
-    if (swiper.a11y.clicked) return;
     const slideEl = e.target.closest(`.${swiper.params.slideClass}`);
     if (!slideEl || !swiper.slides.includes(slideEl)) return;
     const isActive = swiper.slides.indexOf(slideEl) === swiper.activeIndex;
     const isVisible = swiper.params.watchSlidesProgress && swiper.visibleSlides && swiper.visibleSlides.includes(slideEl);
     if (isActive || isVisible) return;
-    if (e.sourceCapabilities && e.sourceCapabilities.firesTouchEvents) return;
 
     if (swiper.isHorizontal()) {
       swiper.el.scrollLeft = 0;
@@ -289,8 +275,6 @@ export default function A11y({
 
 
     swiper.$el.on('focus', handleFocus, true);
-    swiper.$el.on('pointerdown', handlePointerDown, true);
-    swiper.$el.on('pointerup', handlePointerUp, true);
   };
 
   function destroy() {
@@ -321,8 +305,6 @@ export default function A11y({
 
 
     swiper.$el.off('focus', handleFocus, true);
-    swiper.$el.off('pointerdown', handlePointerDown, true);
-    swiper.$el.off('pointerup', handlePointerUp, true);
   }
 
   on('beforeInit', () => {

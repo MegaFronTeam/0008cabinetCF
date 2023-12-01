@@ -1,0 +1,24 @@
+mixin sAdditionalServices(data)
+	// start sAdditionalServices
+	+b.SECTION.sAdditionalServices.section#sAdditionalServices&attributes(attributes)
+		+b.section-title
+			h2 Дополнительные услуги
+			p Вы можете подключить дополнительные услуги в личном кабинете
+		+e.row.row
+			mixin item(icon, text, span)
+				+e.item
+					+e.icon-wrap: +icon(icon)
+					p
+						!= text
+						+e.SPAN.toggle.tooltip-toggle( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="This top tooltip is themed via CSS variables.") ?
+					+e.price!= span
+					.row
+						+e.col.col: +addblock
+						.col.d-none.d-md-block: +e.btn.btn.btn-success(href='#') Подключить
+			.col-sm-6.col-xl-4
+				+item('add', 'Дополнительный пользователь', '100 ₽ в месяц к тарифу')
+			.col-sm-6.col-xl-4
+				+item('msg', 'Дополнительные рассылки', '50 ₽')
+			.col-sm-6.col-xl-4
+				+item('point', 'Дополнительная точка продаж', '1 500 ₽ в месяц к тарифу')
+	// end sAdditionalServices

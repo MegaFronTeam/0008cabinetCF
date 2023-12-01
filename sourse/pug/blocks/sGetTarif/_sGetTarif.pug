@@ -90,3 +90,97 @@ mixin sGetTarif(data)
 				+tab()
 
 	// end sGetTarif
+
+mixin sGetTarif2(data)
+	// start sGetTarif
+	+b.SECTION.sGetTarif--2.tabs#sGetTarif&attributes(attributes)
+		
+			+b.section-title
+				.h3.strong Сменить тариф
+			.tabs__caption
+				.tabs__btn.active Месяц
+				.tabs__btn 3 меcяца #[.badge.bg-warning -10%]
+				.tabs__btn 6 месяцев #[.badge.bg-orange -15%]
+				.tabs__btn Год #[.badge.bg-danger -20%]
+			.tabs__wrap
+				mixin tab()
+					.tabs__content&attributes(attributes)
+						.row.gy-md-4.gy-3
+							mixin item(label, labelImg, price, discount, number, text, current, badge, pop)
+								+e.col.col-xl-3.col-sm-6
+									+b.tarif-item
+										if pop
+											+e.pop!= pop
+										+e.head
+											+e.label
+												if labelImg
+													+img(`img/${labelImg}`) 
+												!= label
+											+e.price
+												= price
+												if badge
+													.badge.bg-warning –10%
+											+e.discount!= discount
+											if number
+												+e.economy 
+													span!= number
+													!= text
+										+e.body
+											block
+										if current
+											button.btn.btn-success.w-100(disabled data-fancybox="modal" data-src="modal-tarif" data-new-tarif= l)  Текущий  тариф
+										else
+											button.btn.btn-success.w-100( data-fancybox="modal" data-src="modal-tarif" data-new-tarif= l) Выбрать тариф
+							+item('Бесплатный', '', '0 ₽','Бесплатно навсегда')
+								ul
+									li До 15 товаров
+									li 1 рассылка в месяц
+									li 1 управляющий пользователь
+									li Опции товаров
+									li.close Расчет стоимости доставки
+									li.close Скрытие логотипа ChatFood
+									li.close Вариативные товары
+									li.close Онлайн-оплата
+									li.close API
+									li.close Премиум поддержка
+							+item('Старт', 'fire.png', '6 273 ₽','Без скидки 6 973 ₽', '3 440 ₽', 'При подключении автоплатежа', 'current', true)
+								ul
+									li До 30 товаров
+									li До 5 рассылок в месяц
+									li До 3 управляющих пользователей
+									li Опции товаров
+									li Расчет стоимости доставки
+									li Скрытие логотипа ChatFood
+									li.close Вариативные товары
+									li.close Онлайн-оплата
+									li.close API
+									li.close Премиум поддержка
+							+item('Стандарт', 'smile-cool.png', '8 696 ₽', 'Без скидки 9 665 ₽', '3 440 ₽','При подключении автоплатежа', '', true, 'Популярный')
+								ul
+									li До 80 товаров
+									li До 10 рассылок в месяц
+									li До 7 управляющих пользователей
+									li Опции товаров
+									li Расчет стоимости доставки
+									li Скрытие логотипа ChatFood
+									li Вариативные товары
+									li Онлайн-оплата
+									li API
+									li.close Премиум поддержка
+							+item('Профи', 'bomb.png', '10 634 ₽', 'Без скидки 11 819 ₽', '3 440 ₽','При подключении автоплатежа', '', true)
+								ul
+									li.infinity До 80 товаров
+									li До 10 рассылок в месяц
+									li До 7 управляющих пользователей
+									li Опции товаров
+									li Расчет стоимости доставки
+									li Скрытие логотипа ChatFood
+									li Вариативные товары
+									li Онлайн-оплата
+									li API
+									li Премиум поддержка
+				+tab().active
+				+tab()
+				+tab()
+			+e.btn.btn.btn-outline-orange(href='#') Смотреть полное описание тарифов
+	// end sGetTarif

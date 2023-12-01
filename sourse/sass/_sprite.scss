@@ -7,6 +7,10 @@
 	fill: currentColor;
 }
 
+.icon-add {
+	font-size:math.div(36,10)*1rem;
+	width: math.div(36,36)*1em;
+}
 .icon-add-more {
 	font-size:math.div(20,10)*1rem;
 	width: math.div(20,20)*1em;
@@ -163,6 +167,10 @@
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
 }
+.icon-msg {
+	font-size:math.div(36,10)*1rem;
+	width: math.div(36,36)*1em;
+}
 .icon-newspaper {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
@@ -174,6 +182,10 @@
 .icon-plus {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
+}
+.icon-point {
+	font-size:math.div(36,10)*1rem;
+	width: math.div(36,36)*1em;
 }
 .icon-reload {
 	font-size:math.div(20,10)*1rem;

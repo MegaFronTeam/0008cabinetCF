@@ -1,0 +1,189 @@
+// start .sTarifs
+.sTarifs {
+	--sPT: #{rem(20)};
+	--sPB: #{rem(40)};
+	// --sTPB: #{rem()};
+	&__row {
+		--bs-gutter-y: #{rem(12)};
+	}
+	&__col {
+		@include media-breakpoint-up(md) {
+			min-width: rem(276);
+		}
+	}
+	&__img-col {
+		min-width: calc(rem(48) + var(--bs-gutter-x));
+		@include media-breakpoint-up(md) {
+			min-width: calc(rem(80) + var(--bs-gutter-x));
+		}
+	}
+	&__item {
+		position: relative;
+		// display: flex;
+		padding: rem(21) rem(17);
+		border-radius: 12px;
+		border: 1px solid #E4E4E4;
+		@include media-breakpoint-up(md) {
+			padding: rem(23);
+		}
+		.form-check {
+			margin-bottom: 0;
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(12);
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(12);
+		}
+		&:has(.sTarifs__btn) {
+			@include media-breakpoint-down(md) {
+				padding-bottom: rem(62);
+				.sTarifs__btn {
+					position: absolute;
+					left: rem(21);
+					bottom: rem(17);
+					width: calc(100% - rem(42));
+				}
+			}
+		}
+	}
+	&__body {
+		// padding-left: rem(63);
+		// @include media-breakpoint-up(md) {
+		// 	padding-left: rem(105);
+		// }
+	}
+	&__img-wrap {
+		@include block(1, 1);
+		// position: absolute;
+		// top: rem(21);
+		// left: rem(17);
+		width: 100%;
+		max-width: rem(48);
+		background-color: var(--bgColor, #6F64EC);
+		font-size: rem(18);
+		font-weight: 700;
+		line-height: 1.22;
+		color: #fff;
+		border-radius: rem(12);
+		overflow: hidden;
+		@include media-breakpoint-up(md) {
+			max-width: rem(80);
+			font-size: rem(26);
+			border-radius: rem(18);
+			// top: rem(23);
+			// left: rem(23);
+		}
+	}
+	&__title {
+		font-size: rem(10);
+		line-height: 1.4;
+		font-weight: 700;
+		margin-bottom: rem(6);
+		@include media-breakpoint-up(md) {
+			font-size: rem(14);
+		}
+	}
+	&__label {
+		font-size: rem(12);
+		margin-bottom: rem(6);
+		line-height: 1.25;
+		@include media-breakpoint-up(md) {
+			font-size: rem(16);
+		}
+		img {
+			width: 1em;
+			vertical-align: text-top;
+		}
+		.badge {
+			--bs-badge-padding-x: #{rem(12)};
+			--bs-badge-padding-y: #{rem(7)};
+			--bs-badge-color: #{$body-color};
+			--bs-badge-font-size: #{rem(10)};
+			--bs-badge-font-weight: 400;
+			@include media-breakpoint-up(md) {
+				--bs-badge-font-size: #{rem(14)};
+			}
+			&.bg-invalid {
+				background-color: rgba(255, 44, 44, 0.12);
+			}
+			&.bg-normal {
+				background-color: rgba(0, 159, 227, 0.12);
+			}
+		}
+	}
+	&__text {
+		font-size: rem(10);
+		line-height: 1.4;
+		margin-bottom: rem(6);
+		@include media-breakpoint-up(md) {
+			font-size: rem(14);
+		}
+	}
+	&__setting {
+		width: 100%;
+		position: relative;
+		font-size: rem(10);
+		line-height: 1.4;
+		padding: rem(6) rem(24) rem(6) rem(12);
+		border-radius: 8px;
+		background-color: #F6F7FA;
+		@include media-breakpoint-up(md) {
+			padding: rem(6) rem(30) rem(6) rem(12);
+			font-size: rem(14);
+		}
+		span {
+			@include mt;
+			position: absolute;
+			display: block;
+			width: rem(12);
+			height: rem(12);
+			background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.96967 3.03027L8.90936 8.96997' stroke='%23C2C2C2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2.96967 8.96973L8.90936 3.03003' stroke='%23C2C2C2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			top: 50%;
+			transform: translateY(-50%);
+			right: rem(12);
+			cursor: pointer;
+			&:hover {
+				background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.96967 3.03027L8.90936 8.96997' stroke='%23009FE3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2.96967 8.96973L8.90936 3.03003' stroke='%23009FE3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				display: block;
+				width: rem(20);
+				height: rem(20);
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+	&__inner-row {
+		--bs-gutter-x: #{rem(12)};
+		--bs-gutter-y: #{rem(6)};
+
+		justify-content: flex-end;
+	}
+	&__btn {
+		--bs-btn-border-radius: #{rem(12)};
+		width: 100%;
+		max-width: rem(183);
+
+		@include media-breakpoint-down(md) {
+			--bs-btn-padding-y: #{rem(6)};
+			--bs-btn-font-size: #{rem(12)};
+
+			max-width: none;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sTarifs

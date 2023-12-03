@@ -227,6 +227,92 @@
 					</div>
 					<!-- end topLine-->
 					<div class="container-fluid container-main">
+						<!-- start sTarifs-->
+						<div class="sTarifs section" id="sTarifs">
+							<div class="sTarifs__item">
+								<div class="sTarifs__row row">
+									<div class="sTarifs__img-col col-auto">
+										<div class="sTarifs__img-wrap">
+											<div class="img-wrap-center"><span>C</span>
+											</div>
+										</div>
+									</div>
+									<div class="sTarifs__col col-auto">
+										<div class="sTarifs__body">
+											<div class="sTarifs__title">Текущий тариф 
+											</div>
+											<div class="sTarifs__label"><img src="img/smile-cool.png" alt="" loading="lazy"/> 
+												Стандарт
+												<div class="badge bg-normal">за 10 634 ₽ в месяц</div>
+											</div>
+											<div class="sTarifs__text">Осталось 27д
+											</div>
+											<div class="form-check form-switch">
+												<input class="form-check-input" type="checkbox" role="switch" id="auto-payment"/>
+												<label class="form-check-label" for="auto-payment">Автоплатеж</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 col-md">
+										<div class="sTarifs__inner-row row">
+											<div class="col-md-auto setting-js">
+												<div class="sTarifs__setting">Доп. пользователь х2<span></span>
+												</div>
+											</div>
+											<div class="col-md-auto setting-js">
+												<div class="sTarifs__setting">Доп. точка продаж х4<span></span>
+												</div>
+											</div>
+											<div class="col-md-auto setting-js">
+												<div class="sTarifs__setting">Доп. рассылки 7/30<span></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sTarifs__item">
+								<div class="sTarifs__row row">
+									<div class="sTarifs__img-col col-auto">
+										<div class="sTarifs__img-wrap">
+											<div class="img-wrap-center"><img src="img/logo.png" alt="" loading="lazy"/>
+											</div>
+										</div>
+									</div>
+									<div class="sTarifs__col col-auto">
+										<div class="sTarifs__body">
+											<div class="sTarifs__title">Текущий тариф 
+											</div>
+											<div class="sTarifs__label"><img src="img/smile-cool.png" alt="" loading="lazy"/> 
+												Стандарт
+												<div class="badge bg-invalid">за 10 634 ₽ в месяц</div>
+											</div>
+											<div class="sTarifs__text text-danger">Недостаточно средств
+											</div>
+											<div class="form-check form-switch">
+												<input class="form-check-input" type="checkbox" role="switch" id="auto-payment"/>
+												<label class="form-check-label" for="auto-payment">Автоплатеж</label>
+											</div>
+											<a class="sTarifs__btn btn btn-success" href="#">Пополнить баланс
+											</a>
+										</div>
+									</div>
+									<div class="col-12 col-md">
+										<div class="sTarifs__inner-row row">
+											<div class="col-md-auto setting-js">
+												<div class="sTarifs__setting">Доп. пользователь х2<span></span>
+												</div>
+											</div>
+											<div class="col-md-auto setting-js">
+												<div class="sTarifs__setting">Доп. точка продаж х4<span></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end sTarifs-->
 						<!-- start sGetTarif-->
 						<section class="sGetTarif sGetTarif--2 tabs" id="sGetTarif">
 							<div class="section-title">
@@ -246,8 +332,9 @@
 							</div>
 							<div class="tabs__wrap">
 									<div class="tabs__content active">
-										<div class="row gy-md-4 gy-3">
-														<div class="sGetTarif__col col-xl-3 col-sm-6">
+										<div class="sGetTarif__slider sGetTarif__slider--js swiper">
+											<div class="swiper-wrapper">
+														<div class="sGetTarif__slide swiper-slide">
 															<div class="tarif-item">
 																<div class="tarif-item__head">
 																	<div class="tarif-item__label">Бесплатный
@@ -274,7 +361,7 @@
 																<button class="btn btn-success w-100" data-fancybox="modal" data-src="modal-tarif">Выбрать тариф</button>
 															</div>
 														</div>
-														<div class="sGetTarif__col col-xl-3 col-sm-6">
+														<div class="sGetTarif__slide swiper-slide">
 															<div class="tarif-item">
 																<div class="tarif-item__head">
 																	<div class="tarif-item__label"><img src="img/fire.png" alt="" loading="lazy"/>Старт
@@ -304,7 +391,7 @@
 																<button class="btn btn-success w-100" disabled="disabled" data-fancybox="modal" data-src="modal-tarif"> Текущий  тариф</button>
 															</div>
 														</div>
-														<div class="sGetTarif__col col-xl-3 col-sm-6">
+														<div class="sGetTarif__slide swiper-slide">
 															<div class="tarif-item">
 																<div class="tarif-item__pop">Популярный
 																</div>
@@ -336,7 +423,7 @@
 																<button class="btn btn-success w-100" data-fancybox="modal" data-src="modal-tarif">Выбрать тариф</button>
 															</div>
 														</div>
-														<div class="sGetTarif__col col-xl-3 col-sm-6">
+														<div class="sGetTarif__slide swiper-slide">
 															<div class="tarif-item">
 																<div class="tarif-item__head">
 																	<div class="tarif-item__label"><img src="img/bomb.png" alt="" loading="lazy"/>Профи
@@ -366,11 +453,14 @@
 																<button class="btn btn-success w-100" data-fancybox="modal" data-src="modal-tarif">Выбрать тариф</button>
 															</div>
 														</div>
+											</div>
+											<div class="swiper-pagination"></div>
 										</div>
 									</div>
 									<div class="tabs__content">
-										<div class="row gy-md-4 gy-3">
-														<div class="sGetTarif__col col-xl-3 col-sm-6">
+										<div class="sGetTarif__slider sGetTarif__slider--js swiper">
+											<div class="swiper-wrapper">
+														<div class="sGetTarif__slide swiper-slide">
 															<div class="tarif-item">
 																<div class="tarif-item__head">
 																	<div class="tarif-item__label">Бесплатный
@@ -397,7 +487,7 @@
 																<button class="btn btn-success w-100" data-fancybox="modal" data-src="modal-tarif">Выбрать тариф</button>
 															</div>
 														</div>
-														<div class="sGetTarif__col col-xl-3 col-sm-6">
+														<div class="sGetTarif__slide swiper-slide">
 															<div class="tarif-item">
 																<div class="tarif-item__head">
 																	<div class="tarif-item__label"><img src="img/fire.png" alt="" loading="lazy"/>Старт
@@ -427,7 +517,7 @@
 																<button class="btn btn-success w-100" disabled="disabled" data-fancybox="modal" data-src="modal-tarif"> Текущий  тариф</button>
 															</div>
 														</div>
-														<div class="sGetTarif__col col-xl-3 col-sm-6">
+														<div class="sGetTarif__slide swiper-slide">
 															<div class="tarif-item">
 																<div class="tarif-item__pop">Популярный
 																</div>
@@ -459,7 +549,7 @@
 																<button class="btn btn-success w-100" data-fancybox="modal" data-src="modal-tarif">Выбрать тариф</button>
 															</div>
 														</div>
-														<div class="sGetTarif__col col-xl-3 col-sm-6">
+														<div class="sGetTarif__slide swiper-slide">
 															<div class="tarif-item">
 																<div class="tarif-item__head">
 																	<div class="tarif-item__label"><img src="img/bomb.png" alt="" loading="lazy"/>Профи
@@ -489,11 +579,14 @@
 																<button class="btn btn-success w-100" data-fancybox="modal" data-src="modal-tarif">Выбрать тариф</button>
 															</div>
 														</div>
+											</div>
+											<div class="swiper-pagination"></div>
 										</div>
 									</div>
 									<div class="tabs__content">
-										<div class="row gy-md-4 gy-3">
-														<div class="sGetTarif__col col-xl-3 col-sm-6">
+										<div class="sGetTarif__slider sGetTarif__slider--js swiper">
+											<div class="swiper-wrapper">
+														<div class="sGetTarif__slide swiper-slide">
 															<div class="tarif-item">
 																<div class="tarif-item__head">
 																	<div class="tarif-item__label">Бесплатный
@@ -520,7 +613,7 @@
 																<button class="btn btn-success w-100" data-fancybox="modal" data-src="modal-tarif">Выбрать тариф</button>
 															</div>
 														</div>
-														<div class="sGetTarif__col col-xl-3 col-sm-6">
+														<div class="sGetTarif__slide swiper-slide">
 															<div class="tarif-item">
 																<div class="tarif-item__head">
 																	<div class="tarif-item__label"><img src="img/fire.png" alt="" loading="lazy"/>Старт
@@ -550,7 +643,7 @@
 																<button class="btn btn-success w-100" disabled="disabled" data-fancybox="modal" data-src="modal-tarif"> Текущий  тариф</button>
 															</div>
 														</div>
-														<div class="sGetTarif__col col-xl-3 col-sm-6">
+														<div class="sGetTarif__slide swiper-slide">
 															<div class="tarif-item">
 																<div class="tarif-item__pop">Популярный
 																</div>
@@ -582,7 +675,7 @@
 																<button class="btn btn-success w-100" data-fancybox="modal" data-src="modal-tarif">Выбрать тариф</button>
 															</div>
 														</div>
-														<div class="sGetTarif__col col-xl-3 col-sm-6">
+														<div class="sGetTarif__slide swiper-slide">
 															<div class="tarif-item">
 																<div class="tarif-item__head">
 																	<div class="tarif-item__label"><img src="img/bomb.png" alt="" loading="lazy"/>Профи
@@ -612,6 +705,8 @@
 																<button class="btn btn-success w-100" data-fancybox="modal" data-src="modal-tarif">Выбрать тариф</button>
 															</div>
 														</div>
+											</div>
+											<div class="swiper-pagination"></div>
 										</div>
 									</div>
 							</div>

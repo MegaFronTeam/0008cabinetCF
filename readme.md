@@ -1,10 +1,9 @@
 #### 30.11.2023
 
 1. <https://megafronteam.github.io/0008cabinetCF/public/22-onboarding-1.html>
-1. <https://megafronteam.github.io/0008cabinetCF/public/22-onboarding-2.html>
-1. <https://megafronteam.github.io/0008cabinetCF/public/22-onboarding-3.html>
-
-
+2. <https://megafronteam.github.io/0008cabinetCF/public/22-onboarding-2.html>
+3. <https://megafronteam.github.io/0008cabinetCF/public/22-onboarding-3.html>
+--- 
 1. <https://megafronteam.github.io/0008cabinetCF/public/23-my-tarif-1.html>
 
 

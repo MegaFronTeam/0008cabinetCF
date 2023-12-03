@@ -13,6 +13,7 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sGetTarif/_sGetTarif.pug
 include ../blocks/footer/_footer.pug
 
+include ../blocks/sTarifs/_sTarifs.pug
 include ../blocks/sAdditionalServices/_sAdditionalServices.pug
 
 block variables
@@ -25,6 +26,7 @@ block title
 block pagecontent
 	+aside()
 	+main('Тарифы', false, 'true')
+		+sTarifs
 		+sGetTarif2
 		+sAdditionalServices
 		

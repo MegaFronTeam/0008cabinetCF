@@ -814,7 +814,23 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 		$("body").toggleClass("fixed-chat");
 	})
 
+	let settings = document.querySelectorAll('.setting-js');
+	if(settings.length > 0) {
+		settings.forEach((setting) => {
+			setting.addEventListener('click', () => {
+				$(setting).fadeOut();
+			})
+		})
+	}
 	
+	const sGetTarif = new Swiper('.sGetTarif__slider--js', { 
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		pagination: {
+			el: ".swiper-pagination",
+		},
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

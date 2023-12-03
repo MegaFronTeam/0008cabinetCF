@@ -1,0 +1,48 @@
+mixin sTarifs(data)
+	// start sTarifs
+	+b.sTarifs.section#sTarifs&attributes(attributes)
+		mixin item(data)
+			+e.item
+				+e.row.row
+					+e.img-col.col-auto
+						+e.img-wrap
+							.img-wrap-center
+								if data.img
+									+img(`img/${data.img}`)
+								else
+									span C
+					+e.col.col-auto
+						+e.body
+							+e.title Текущий тариф 
+							+e.label
+								+img(`img/smile-cool.png`)  
+								| 
+								| Стандарт
+								.badge(class=(data.danger ? 'bg-invalid' : 'bg-normal')) за 10 634 ₽ в месяц
+							+e.text(class=(data.danger ? 'text-danger' : ''))!= data.danger ? 'Недостаточно средств' : 'Осталось 27д'
+							.form-check.form-switch
+								input(class="form-check-input" type="checkbox" role="switch" id="auto-payment")
+								label(class="form-check-label" for="auto-payment") Автоплатеж
+							if data.btn
+								+e.btn.btn.btn-success(href='#') Пополнить баланс
+					.col-12.col-md
+						if data.settings.length > 0
+							+e.inner-row.row
+								each item in data.settings
+									.col-md-auto.setting-js: +e.setting
+										!= item
+										span
+					//- +e.row.row
+					//- 	+e.col.col-md-auto
+					//- 	.col-md.ms-auto
+		+item({
+			danger: false,
+			settings: ['Доп. пользователь х2', 'Доп. точка продаж х4', 'Доп. рассылки 7/30']
+		})
+		+item({
+			img: 'logo.png',
+			danger: true,
+			settings: ['Доп. пользователь х2', 'Доп. точка продаж х4'],
+			btn: true
+		})
+	// end sTarifs

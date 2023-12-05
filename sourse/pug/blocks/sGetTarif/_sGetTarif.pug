@@ -128,9 +128,9 @@ mixin sGetTarif2(data)
 									+e.body
 										block
 									if current
-										button.btn.btn-success.w-100(disabled data-fancybox="modal" data-src="modal-tarif" data-new-tarif= l)  Текущий  тариф
+										button.btn.btn-success.w-100(disabled data-fancybox="modal" data-src="modal-tarif2" data-tarif-title='Отмена дополнительной услуги' data-tarif-text='Дополнительная услуга отменится со следующего месяца.')  Текущий  тариф
 									else
-										button.btn.btn-success.w-100( data-fancybox="modal" data-src="modal-tarif" data-new-tarif= l) Выбрать тариф
+										button.btn.btn-success.w-100( data-fancybox="modal" data-src="modal-tarif2") Выбрать тариф
 						//- .row.gy-md-4.gy-3
 						+e.slider--js.swiper
 							.swiper-wrapper
@@ -187,4 +187,5 @@ mixin sGetTarif2(data)
 				+tab()
 				+tab()
 			+e.btn.btn.btn-outline-orange(href='#') Смотреть полное описание тарифов
+			//- +table
 	// end sGetTarif

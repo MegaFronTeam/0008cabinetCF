@@ -57,6 +57,20 @@
 		font-size: 40px;
 		font-weight: 100;
 	}
+	&--2 {
+		width: rem(552);
+		.h2 {
+			@include media-breakpoint-down(md) {
+				font-size: rem(18);
+			}
+		}
+		p {
+			font-size: rem(12);
+			@include media-breakpoint-up(md) {
+				font-size: rem(16);
+			}
+		}
+	}
 }
 
 a {

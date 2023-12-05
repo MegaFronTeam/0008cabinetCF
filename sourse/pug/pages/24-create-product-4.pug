@@ -1,0 +1,66 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCabinetPanel/_sCabinetPanel.pug
+include ../blocks/footer/_footer.pug
+include ../blocks/sCreateProduct/_sCreateProduct.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'create-product-4'
+	title= title
+block pagecontent
+	+aside('true')
+	+main('Создать товар', '', 'true','Список товаров', 'hide', true)
+		.title
+			.h2 Создать товар
+			.form-check.form-switch
+				input#variant.form-check-input(type='checkbox' role='switch')
+				label.form-check-label(for='variant') Вариативный товар
+		+b.btns-slider-wrapper
+			+b.btns-slider--js.swiper
+				.swiper-wrapper
+					-
+						var list = ["Фотографии товара", "Вариации", "Опции", "Бейджи", "Наличие",'Характеристики','Сопутствующие','Дополнительно']
+					+e.slide.swiper-slide
+						+e.btn.btn.btn-outline-secondary.active(href="#") Основное
+					each item in list
+						+e.slide.swiper-slide
+							+e.btn.btn.btn-outline-secondary(href="#")= item
+			+arrow
+		+sCreateProduct
+			h3 Характеристики
+			+e.wrap
+				mixin cInput(title, text, isRequired)
+					.form-wrap__input-wrap.form-wrap__input-wrap--custom.form-group
+						label
+							span.form-wrap__input-title!= title 
+							span.form-wrap__input-text!= text
+							block
+							.form-wrap__required!= isRequired ? 'Обязательно к заполнению' : 'Необязательно к заполнению'
+				+cInput('Поле ввода', 'Описание для поля', true)
+					+input('Поле ввода', 'text')
+				+cInput('Выпадающий список', 'Описание для поля')
+					+input('Выпадающий список','select', ``).custom-select-js
+				+cInput('Несколько вариантов из нескольких', 'Описание для поля')
+					+in-c('checkbox', 'Вариант 1', 'variant')
+					+in-c('checkbox', 'Вариант 2', 'variant')
+					+in-c('checkbox', 'Вариант 3', 'variant')
+				+cInput('Длинное описание', 'Описание для поля')
+					+input('Поле ввода','textarea', ``)
+				+cInput('Несколько вариантов из нескольких', 'Описание для поля')
+					+in-c('radio', 'Вариант 1', 'variant2')
+					+in-c('radio', 'Вариант 2', 'variant2')
+					+in-c('radio', 'Вариант 3', 'variant2')

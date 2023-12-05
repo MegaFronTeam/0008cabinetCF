@@ -124,7 +124,7 @@ mixin aside(second)
 							+e.id #13405
 						+icon("setting")
 
-mixin main(t='Мои чат-боты', badge, avatar, mailingList, hide)
+mixin main(t='Мои чат-боты', badge, avatar, mailingList, hide, save)
 	.main-center-wrap
 		main
 			+topLine(t, badge, avatar, mailingList)
@@ -132,7 +132,8 @@ mixin main(t='Мои чат-боты', badge, avatar, mailingList, hide)
 				block
 			if !hide
 				+footer()
-
+			if save
+				.save: .btn.btn-orange(href='#') Сохранить изменения
 
 mixin chat-item(t, btn, a)
 	.col-xl-3.col-sm-6
@@ -250,3 +251,125 @@ mixin link-block(v='https://chatfood.ru/?p=324')
 			+icon('copy')
 			+icon('check')
 		//- +e.icon-wrap
+
+mixin table()
+	+b.tariffs
+		table
+			thead
+				tr
+					th
+						//- +e.title
+						//- 	.h3 Сравнение тарифов
+						//- 	+e.switch.form-check.form-switch
+						//- 		label.form-check-label
+						//- 			span За месяц
+						//- 			input.form-check-input(type='checkbox' role='switch')
+						//- 			span За год
+					mixin item(t, p, d, i)
+						th
+							+b.tariffs-item
+								+e.title
+									if i
+										+img('img/fire.png')
+									!= t
+								+e.price!= p
+								if d
+									+e.price-day!= d
+								p За одного чат-бота
+								+e.btn.btn.btn-success(href="#") Выбрать
+
+					+item(`Бесплатный`, `0 ₽`)
+					+item(`Старт`, `19 200 ₽`, `89 ₽ в день`)
+					+item(`Стандарт`, `28 800 ₽`, `119 ₽ в день`, `i`)
+					+item(`Профи`, `57 600 ₽`, `149 ₽ в день`)
+			tbody
+				tr
+					td Количество товаров
+					td до&nbsp;15
+					td до&nbsp;30
+					td до&nbsp;80
+					td
+						+img('img/svg/infinity.svg')
+				tr
+					td Количество рассылок в&nbsp;месяц
+					td 1
+					td до&nbsp;5
+					td до&nbsp;10
+					td
+						+img('img/svg/infinity.svg')
+				tr
+					td Управляющие пользователи
+					td 1
+					td до&nbsp;3
+					td до&nbsp;7
+					td до&nbsp;10
+				tr
+					td Опции товаров
+					td 
+						+img('img/svg/bad.svg')
+					td 
+						+img('img/svg/corret.svg')
+					td 
+						+img('img/svg/corret.svg')
+					td 
+						+img('img/svg/corret.svg')
+				tr
+					td Расчет стоимости доставки
+					td 
+						+img('img/svg/bad.svg')
+					td 
+						+img('img/svg/corret.svg')
+					td 
+						+img('img/svg/corret.svg')
+					td 
+						+img('img/svg/corret.svg')
+				tr
+					td Скрытие логотипа ChatFood
+					td 
+						+img('img/svg/bad.svg')
+					td 
+						+img('img/svg/corret.svg')
+					td 
+						+img('img/svg/corret.svg')
+					td 
+						+img('img/svg/corret.svg')
+				tr
+					td Вариативные товары
+					td 
+						+img('img/svg/bad.svg')
+					td 
+						+img('img/svg/bad.svg')
+					td 
+						+img('img/svg/corret.svg')
+					td 
+						+img('img/svg/corret.svg')
+				tr
+					td Онлайн-оплата
+					td 
+						+img('img/svg/bad.svg')
+					td 
+						+img('img/svg/bad.svg')
+					td 
+						+img('img/svg/corret.svg')
+					td 
+						+img('img/svg/corret.svg')
+				tr
+					td API
+					td 
+						+img('img/svg/bad.svg')
+					td 
+						+img('img/svg/bad.svg')
+					td 
+						+img('img/svg/corret.svg')
+					td 
+						+img('img/svg/corret.svg')
+				tr
+					td Премиум поддержка
+					td 
+						+img('img/svg/bad.svg')
+					td 
+						+img('img/svg/bad.svg')
+					td 
+						+img('img/svg/bad.svg')
+					td 
+						+img('img/svg/corret.svg')

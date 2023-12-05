@@ -5,6 +5,16 @@
 3. <https://megafronteam.github.io/0008cabinetCF/public/22-onboarding-3.html>
 --- 
 1. <https://megafronteam.github.io/0008cabinetCF/public/23-my-tarif-1.html>
+---
+1. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product.html>
+2. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-2.html>
+3. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-3.html>
+4. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-4.html>
+5. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-5.html>
+6. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-6.html>
+7. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-7.html>
+8. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-8.html>
+9. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-9.html>
 
 
 ## Первая линия

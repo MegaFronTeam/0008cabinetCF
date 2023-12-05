@@ -1,0 +1,62 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCabinetPanel/_sCabinetPanel.pug
+include ../blocks/footer/_footer.pug
+include ../blocks/sCreateProduct/_sCreateProduct.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'create-product-1'
+	title= title
+block pagecontent
+	+aside('true')
+	+main('Создать товар', '', 'true','Список товаров', 'hide', true)
+		.title
+			.h2 Создать товар
+			.form-check.form-switch
+				input#variant.form-check-input(type='checkbox' role='switch')
+				label.form-check-label(for='variant') Вариативный товар
+		+b.btns-slider-wrapper
+			+b.btns-slider--js.swiper
+				.swiper-wrapper
+					-
+						var list = ["Основное", "Фотографии товара", "Вариации", "Опции", "Бейджи", "Наличие",'Характеристики','Сопутствующие','Дополнительно']
+					+e.slide.swiper-slide
+						+e.btn.btn.btn-outline-secondary.active(href="#") Каталог
+					each item in list
+						+e.slide.swiper-slide
+							+e.btn.btn.btn-outline-secondary(href="#")= item
+			+arrow
+		+sCreateProduct
+			h3 Основное
+			+b.form-wrap
+				+b.LABEL.avatar-block.add-photo--2.bg-wrap
+					input(type="file", name="" onchange="loadFile(event)")
+					//- +e.img-wrap.bg-wrap
+					img(src="", alt="").img-bg.img-preview
+					+e.caption.small
+						+img('img/hamburger_1f354 1.png')
+						.strong.mb-1 Изображение для внутреннего использования (не обязательно)
+						.text-secondary.mb-3 Для корректного отображения фотографии товара рекомендуем использовать пропорции 1:1, размер не&nbsp;менее 600&times;600&nbsp;px. Изображение в&nbsp;формате jpeg и&nbsp;png весом не&nbsp;более 5&nbsp;мб.
+						span.btn.btn-outline-primary  Выбрать файл
+				+input("Без названия",'select', `Категория меню`).custom-select-js
+				+input("Введите наименование товара",'text', 'Наименование')
+				+input("Например, “Пицца у нас просто божественная. Она готовится по специальным итальянским рецептам, на тонком нежном тесте. Есть много разновидностей: и с сыром, и с морепродуктами, и с овощами”",'textarea', 'Описание')
+				.form-wrap__input-wrap.form-wrap__input-wrap--price.form-group
+					label
+						span.form-wrap__input-title Цена
+						span.form-wrap__input-text Указанная цена будет применена к товару при условии отсутствия у него вариаций.
+						input.form-wrap__input.form-control(name='text' type='text' placeholder='Введите цену')

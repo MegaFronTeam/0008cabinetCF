@@ -592,6 +592,7 @@ input::-webkit-inner-spin-button {
 	background-color: #F6F7FA;
 	color: $body-color;
 	border: none;
+	border-radius: 8px;
 }
 
 .choices[data-type*=select-multiple] .choices__button {

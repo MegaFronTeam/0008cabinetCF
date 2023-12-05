@@ -15,6 +15,12 @@
 7. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-7.html>
 8. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-8.html>
 9. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-9.html>
+10. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-10.html>
+11. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-11.html>
+12. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-12.html>
+13. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-13.html>
+14. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-14.html>
+15. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-15.html>
 
 
 ## Первая линия

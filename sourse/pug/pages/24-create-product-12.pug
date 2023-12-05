@@ -1,0 +1,61 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCabinetPanel/_sCabinetPanel.pug
+include ../blocks/footer/_footer.pug
+include ../blocks/sCreateProduct/_sCreateProduct.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'create-product-10'
+	title= title
+block pagecontent
+	+aside('true')
+	+main('Создать товар', '', 'true','Список товаров', 'hide', true)
+		.title
+			.h2 Создать товар
+			.form-check.form-switch
+				input#variant.form-check-input(type='checkbox' role='switch')
+				label.form-check-label(for='variant') Вариативный товар
+		+b.btns-slider-wrapper
+			+b.btns-slider--js.swiper
+				.swiper-wrapper
+					-
+						var list = ["Фотографии товара", "Вариации", "Опции", "Бейджи", "Наличие",'Характеристики','Сопутствующие','Дополнительно']
+					+e.slide.swiper-slide
+						+e.btn.btn.btn-outline-secondary.active(href="#") Основное
+					each item in list
+						+e.slide.swiper-slide
+							+e.btn.btn.btn-outline-secondary(href="#")= item
+			+arrow
+		+sCreateProduct
+			h3 Бейджи
+			+e.wrap
+				.form-wrap__input-wrap.form-wrap__input-wrap--custom.form-group
+					label
+						span.form-wrap__input-title Выберите бейджи
+						span.form-wrap__input-text Не более 3 для товара
+						select.form-wrap__input.form-select(name='select' multiple).custom-multi-select-js
+							option(value="") 
+							option 👍🏻 Популярный выбор
+							option 👨‍🍳 Блюдо от шефа
+							option Сырный соус
+							option 🌶️ Острый
+							option 🌶️🌶️🌶️ Острый
+							option 🌶️🌶️ Острый
+							option Сырный соус
+							option 🌶️ Острый
+							option 🌶️🌶️🌶️ Острый
+							option 🌶️🌶️ Острый

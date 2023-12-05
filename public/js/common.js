@@ -841,7 +841,8 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 				placeholderValue: 'Ничего не выбрано',
 				searchEnabled: false,
 				searchChoices: false,
-				removeItemButton: true
+				removeItemButton: true,
+				shouldSort: false,
 			});
 		})
 	}

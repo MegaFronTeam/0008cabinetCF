@@ -2,7 +2,7 @@ mixin sBotMenuHead()
 	+e.head-row.row
 			.col-xl.order-sm-1.order-lg-1.d-none.d-sm-block
 				+e.all-goods
-					+input("Все товары",'select').custom-select-js
+					+input("Все точки продаж",'select').custom-select-js
 			.col-auto.col-sm-12.col-lg.order-3.order-sm-last.order-lg-2
 				+e.search.d-none.d-sm-block
 					+input("Поиск по товарам",'text')
@@ -130,6 +130,211 @@ mixin sBotMenu(table)
 	// end sBotMenu
 
 mixin sBotMenuEmpty(data)
+	// start sBotMenu
+	+b.sBotMenu--empty.section#sBotMenu&attributes(attributes)
+		+sBotMenuHead()
+		+e.empty
+			+img('img/robot_1f916 1.png')
+			.h1 Созданных товаров нет
+			p Создайте категории меню и добавьте товары.
+			+e.btn(href="#" style="--bs-btn-padding-y: .75rem").btn.btn-orange 
+				+icon('plus')
+				| Добавить товар
+	// end sBotMenu
+
+mixin sBotMenuHead2()
+	+e.head-row.row
+		.col-xl.d-none.d-lg-block
+			+e.all-goods
+				.sBotMenu__input-wrap.form-group
+					select.sBotMenu__input.form-select.custom-select-with-groups-js(name='select')
+						option(value='') Все точки продаж
+		.col-auto.col-xl.d-none.d-lg-block
+			+e.all-goods
+				+input("Все категории",'select').custom-select-js
+		.col-auto.col-xl.d-none.d-lg-block
+			+e.all-goods
+				+input("Все кроме удаленных",'select').custom-select-js
+		.col-auto.d-none.d-lg-block
+			+e.btn-head(href="#").btn.btn-outline-gray
+				+icon("import")
+				| Загрузить
+		.col-auto.d-none.d-lg-block
+			+e.btn-head(href="#").btn.btn-outline-gray
+				+icon("export")
+				| Выгрузить
+		.col.col-xl-auto
+			+e.btn-head--more-btn(href="#").btn.btn-orange
+				+icon("more")
+				|  Добавить 
+				span.d-none.d-sm-inline товар
+		.col-lg-12.m-0.p-0.d-none.d-lg-block
+		.col-auto.col-lg
+			+e.search.d-none.d-sm-block
+				+input("Поиск по товарам",'text')
+				button: +icon('search')
+			+e.search.d-block.d-sm-none
+				button.toggle-search: +icon('search')
+				+e.wrap.search--js
+					+e.cross.toggle-search
+					.h2 Поиск
+					+e.inner-search
+						+input("Поиск по товарам",'text')
+						button: +icon('search')
+					a(href="#").btn.btn-orange Показать товары
+		.col-auto.d-block.d-sm-none
+			+e.filter.toggle-filter: +icon('filter')
+			+e.wrap.filter--js
+				+e.cross.toggle-filter
+				.h2 Сортировать
+				+e.inputs
+					+e.headline По категориям товаров
+					+in-c('radio', 'Все товары', 'food')
+					+in-c('radio', '🍔 Бургеры', 'food')
+					+in-c('radio', '🥘 Основные блюда', 'food')
+					+in-c('radio', '🍳 Завтраки', 'food')
+					+in-c('radio', '🥓 Закуски', 'food')
+					+in-c('radio', '🥗 Салаты', 'food')
+					+in-c('radio', '🥐 Круассаны', 'food')
+				+e.inputs
+					+e.headline По типу товаров
+					+in-c('radio', 'Показывать все', 'show')
+					+in-c('radio', 'Только активные', 'show')
+					+in-c('radio', 'Только неактивные', 'show')
+				a(href="#").btn.btn-orange.toggle-filter Закрыть
+		.col-auto
+			+e.show-switch
+				+in-c('radio', '', 'switch')(checked)
+					+icon('category')
+				+in-c('radio', '', 'switch')
+					+icon('list')
+			//- .col-auto.col-sm-12.col-lg.order-3.order-sm-last.order-lg-2
+			//- 	+e.search.d-none.d-sm-block
+			//- 		+input("Поиск по товарам",'text')
+			//- 		button: +icon('search')
+			//- 	+e.search.d-block.d-sm-none
+			//- 		button.toggle-search: +icon('search')
+			//- 		+e.wrap.search--js
+			//- 			+e.cross.toggle-search
+			//- 			.h2 Поиск
+			//- 			+e.inner-search
+			//- 				+input("Поиск по товарам",'text')
+			//- 				button: +icon('search')
+			//- 			a(href="#").btn.btn-orange Показать товары
+			//- .col-auto.order-sm-2.order-lg-3.d-none.d-sm-block
+			//- 	+e.sort
+			//- 		+input("Показывать все",'select').custom-select-js.sort
+			//- .col-auto.order-sm-5.order-lg-4.d-none.d-lg-block
+			//- 	+e.show-switch
+			//- 		+in-c('radio', '', 'switch')(checked)
+			//- 			+icon('category')
+			//- 		+in-c('radio', '', 'switch')
+			//- 			+icon('list')
+			//- .col.col-lg-auto.order-2.order-sm-3.order-lg-4
+			//- 	+e.btn-head--categories(href="#").btn.btn-outline-gray
+			//- 		+icon("shopping-bag").text-orange
+			//- 		| Категории 
+			//- 		span.d-none.d-sm-inline меню
+			//- 		//- span.d-inline-block.d-sm-none Категории
+			//- .col.col-lg-auto.order-1.order-sm-4.order-lg-6
+			//- 	+e.btn-head--more-btn(href="#").btn.btn-orange
+			//- 		+icon("more")
+			//- 		|  Добавить 
+			//- 		span.d-none.d-sm-inline товар
+			//- .col-auto.order-last.d-block.d-sm-none
+			//- 	+e.filter.toggle-filter: +icon('filter')
+			//- 	+e.wrap.filter--js
+			//- 		+e.cross.toggle-filter
+			//- 		.h2 Сортировать
+			//- 		+e.inputs
+			//- 			+e.headline По категориям товаров
+			//- 			+in-c('radio', 'Все товары', 'food')
+			//- 			+in-c('radio', '🍔 Бургеры', 'food')
+			//- 			+in-c('radio', '🥘 Основные блюда', 'food')
+			//- 			+in-c('radio', '🍳 Завтраки', 'food')
+			//- 			+in-c('radio', '🥓 Закуски', 'food')
+			//- 			+in-c('radio', '🥗 Салаты', 'food')
+			//- 			+in-c('radio', '🥐 Круассаны', 'food')
+			//- 		+e.inputs
+			//- 			+e.headline По типу товаров
+			//- 			+in-c('radio', 'Показывать все', 'show')
+			//- 			+in-c('radio', 'Только активные', 'show')
+			//- 			+in-c('radio', 'Только неактивные', 'show')
+			//- 		a(href="#").btn.btn-orange.toggle-filter Закрыть
+
+mixin sBotMenu2(table)
+	// start sBotMenu
+	+b.sBotMenu--2.section#sBotMenu&attributes(attributes)
+		+sBotMenuHead2()
+		if table 
+			.table-wrap-js
+				table.table.table-js#table-5
+					thead
+						tr
+							th.td-small
+							th: span Товар
+							th: span Категория
+							th: span Цена
+							th: span Рейтинг
+							th: span Заказы
+							th: span Видимость
+					tbody.drug-wrap-block-js
+						mixin tr(title)
+							tr
+								td.td-small 
+										+e.ellipsis.my-handle
+											+icon('dots')
+								td 
+									+e.product-wrap
+										+img(`img/food.jpg`)
+										+e.headline-link(href="#")!= title
+								td 🥘 Основные блюда
+								td 350 ₽
+								td 
+									+icon('stars')
+									| 4.7
+								td 35
+								td 
+									+e.tooltips-wrap
+										label.form-check.form-switch
+											input.form-check-input(name='model' type='checkbox' role='switch')
+										+e.tooltips.col-auto
+											a(href="#")
+												+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Копировать")
+													+icon('copy')
+											a(href="#")
+												+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Редактировать")
+													+icon('edit')
+											a(href="#")
+												+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Удалить")
+													+icon('delete')
+						- for (var x = 0; x < 7; x++)
+							+tr('Фиш&Чипс с соусом Чеддер и овощным салатом третья строка названия')
+		else
+			+e.row.row.drug-wrap-block-js
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
+					+orderCard
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
+					+orderCard
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
+					+orderCard
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
+					+orderCard('Фиш&Чипс с соусом Чеддер и овощным салатом третья строка названия')
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
+					+orderCard
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
+					+orderCard
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
+					+orderCard
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
+					+orderCard
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
+					+orderCard
+				+e.colCard.col-sm-6.col-xl-3.drug-item-js
+					+orderCard
+	// end sBotMenu
+
+mixin sBotMenuEmpty2(data)
 	// start sBotMenu
 	+b.sBotMenu--empty.section#sBotMenu&attributes(attributes)
 		+sBotMenuHead()

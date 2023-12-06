@@ -631,6 +631,15 @@ input::-webkit-inner-spin-button {
 	}
 }
 
+.choices__heading {
+	font-size: rem(14);
+	font-weight: 700;
+	line-height: 1.42;
+	padding: rem(10) rem(20);
+	font-weight: 700;
+	color: $body-color;
+	background-color: #F6F7FA;
+}
 
 .input-group .choices{
 	margin: 0;

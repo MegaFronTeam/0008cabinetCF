@@ -604,7 +604,20 @@
 			
 		}
 	}
-
+	&--2 {
+		.sBotMenu {
+			&__head-row {
+				--bs-gutter-x: #{rem(15)};
+				--bs-gutter-y: #{rem(15)};
+			}
+			&__all-goods {
+				min-width: rem(191);
+			}
+		}
+		.choices__inner {
+			padding-right: rem(30);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

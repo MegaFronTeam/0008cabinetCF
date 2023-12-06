@@ -21,6 +21,8 @@
 13. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-13.html>
 14. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-14.html>
 15. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-15.html>
+---
+1. <https://megafronteam.github.io/0008cabinetCF/public/10-2-bot-menu-version-2.html>
 
 
 ## Первая линия

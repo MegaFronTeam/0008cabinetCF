@@ -1,0 +1,61 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCabinetPanel/_sCabinetPanel.pug
+include ../blocks/footer/_footer.pug
+include ../blocks/sCreateProduct/_sCreateProduct.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'create-product-4'
+	title= title
+block pagecontent
+	+aside('true')
+	+main('Категории', '', 'true','Создать категорию', 'hide', true)
+		.title
+			.h2 Создать категорию
+		+sCreateProduct
+			mixin cInput(title, text, isRequired)
+				.form-wrap__input-wrap.form-wrap__input-wrap--custom.form-group
+					label
+						if title
+							span.form-wrap__input-title!= title 
+						if text
+							span.form-wrap__input-text!= text
+						block
+						if isRequired
+							.form-wrap__required!= isRequired ? 'Обязательно к заполнению' : 'Необязательно к заполнению'
+			.tabs
+				.tabs__caption
+					.tabs__btn.active Основное
+					.tabs__btn Характеристики
+				.tabs__content.active
+					h3 Основное
+					+e.wrap
+						+cInput('Название категории', 'Можете использовать эмоджи в названии категории', true)
+							+input('Введите название категории', 'text')
+						+cInput('Описание категории', '')
+							+input('Введите небольшое описание категории', 'textarea')
+						+cInput('', '')
+							+e.custom-input-row.row
+								.col-12: +in-c('checkbox', 'Показывать по дням недели', 'day')
+								.col-auto: +in-c('checkbox', 'Пн', 'day')
+								.col-auto: +in-c('checkbox', 'Вт', 'day')
+								.col-auto: +in-c('checkbox', 'Ср', 'day')
+								.col-auto: +in-c('checkbox', 'Чт', 'day')
+								.col-auto: +in-c('checkbox', 'Пт', 'day')
+								.col-auto: +in-c('checkbox', 'Сб', 'day')
+								.col-auto: +in-c('checkbox', 'Вс', 'day')
+				.tabs__content 2

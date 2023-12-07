@@ -306,6 +306,40 @@
 			}
 		}
 	}
+	.tabs {
+		&__caption {
+			display: flex;
+			align-items: center;
+			margin-bottom: rem(15);
+			width: 100%;
+			@include roww('10px', 'm');
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(30);
+				width: auto;
+			}
+		}
+		&__btn {
+			@include mt;
+			font-size: rem(12);
+			padding: rem(11);
+			font-weight: 600;
+			line-height: 1.42;
+			border-radius: 8px;
+			border: 1px solid #E4E4E4;
+			&:hover, &.active {
+				background-color: $orange;
+				border-color: $orange;
+				color: #fff;
+			}
+			&.active {
+				font-weight: 700;
+			}
+			@include media-breakpoint-up(md) {
+				font-size: rem(14);
+				padding: rem(9) rem(18);
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

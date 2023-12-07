@@ -18,13 +18,9 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= '24 Category 1'
+	- let  title= '27 Options 2'
 	title= title
 block pagecontent
 	+aside('true')
-	+main('Категории товаров', 'true', 'true')
-		+sTable(true)
-			+tr('🥘 Основные блюда', 46, true)
-			+tr('🥐 Круассаны', 54, true)
-			+tr('🥘 Основные блюда', 3, true)
-			+tr('🥐 Круассаны', 1, true)
+	+main('Опции', 'true', 'true')
+		+sCreateTable('Опции', 'У вас нет созданных опций.', 'Создать опцию')

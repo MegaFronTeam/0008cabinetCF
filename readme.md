@@ -4,9 +4,11 @@
 1. <https://megafronteam.github.io/0008cabinetCF/public/22-onboarding-1.html>
 2. <https://megafronteam.github.io/0008cabinetCF/public/22-onboarding-2.html>
 3. <https://megafronteam.github.io/0008cabinetCF/public/22-onboarding-3.html>
+
 --- 
 ###### Тарифы и услуги
 1. <https://megafronteam.github.io/0008cabinetCF/public/23-my-tarif-1.html>
+
 ---
 ###### Создание/редактирование товара
 1. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product.html>
@@ -24,12 +26,27 @@
 13. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-13.html>
 14. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-14.html>
 15. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-15.html>
+
 ---
 ###### Список товаров
 1. <https://megafronteam.github.io/0008cabinetCF/public/10-bot-menu-version-2.html>
 2. <https://megafronteam.github.io/0008cabinetCF/public/10-bot-menu-version-2-2.html>
 3. <https://megafronteam.github.io/0008cabinetCF/public/10-2-bot-menu-version-2.html>
 4. <https://megafronteam.github.io/0008cabinetCF/public/10-3-bot-menu-version-2.html>
+
+---
+###### Категории
+1. <https://megafronteam.github.io/0008cabinetCF/public/25-category-1.html>
+2. <https://megafronteam.github.io/0008cabinetCF/public/25-category-2.html>
+
+---
+###### Создание/редактирование категории
+1. 
+
+---
+###### Опции
+1. <https://megafronteam.github.io/0008cabinetCF/public/27-options-1.html>
+2. <https://megafronteam.github.io/0008cabinetCF/public/27-options-2.html>
 
 
 ## Первая линия

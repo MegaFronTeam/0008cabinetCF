@@ -13,9 +13,31 @@
 		<link href="css/dataTables.bootstrap5.min.css" rel="stylesheet"/>
 		<link href="libs/@baseonmars/priority-nav/priority-nav-core.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
+		<link href="https://megafronteam.github.io/0034ChatFood/public/css/black-fr.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page">
+		<div class="black-line">
+			<div class="container">
+				<div class="black-line__text">Черная пятница в&nbsp;ChatFood.ru. При пополнении баланса от&nbsp;10&nbsp;000&nbsp;₽&nbsp;&mdash; удвоим ваш платеж!
+				</div>
+				<div class="black-line__date">с 23 по 30 ноября 2023 года
+				</div>
+				<div class="black-line__close"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 1.2L10.8 0L6 4.8L1.2 0L0 1.2L4.8 6L0 10.8L1.2 12L6 7.2L10.8 12L12 10.8L7.2 6L12 1.2Z" fill="#8C8D8F"/>
+</svg>
+				</div>
+			</div>
+		</div>
 		<div class="main-wrapper">
+			<script>
+				document.addEventListener("click", function(event){
+					let target = event.target.closest('.black-line__close')
+					if (!target) return;
+					document.querySelector(".black-line").remove()
+					document.documentElement.style.setProperty('--black-line-h', `0`);
+				
+				}) 
+			</script>
 			<aside>
 				<div class="nav-chat">
 					<ul>
@@ -54,7 +76,19 @@
 									</a>
 								</li>
 								<li>
-									<a class="nav-main__link nav-main__link--js active" href="#">
+									<a class="nav-main__link active" href="#">
+										<div class="nav-main__icon-wrap">
+											<svg class="icon icon-chat ">
+												<use xlink:href="img/svg/sprite.svg#chat"></use>
+											</svg>
+										</div>
+										<div class="nav-main__text">Сообщения
+											<div class="badge bg-success">99</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a class="nav-main__link nav-main__link--js" href="#">
 										<div class="nav-main__icon-wrap">
 											<svg class="icon icon-pizza ">
 												<use xlink:href="img/svg/sprite.svg#pizza"></use>
@@ -66,7 +100,7 @@
 											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
 										</svg>
 									</a>
-									<div class="nav-main__ddgroup-wrap active"><a class="active" href="#">Список товаров</a><a href="#">Категории меню</a><a href="#">Добавить товар</a>
+									<div class="nav-main__ddgroup-wrap undefined"><a class="active" href="#">Список товаров</a><a href="#">Категории меню</a><a href="#">Добавить товар</a>
 									</div>
 								</li>
 								<li>
@@ -191,9 +225,17 @@
 													<use xlink:href="img/svg/sprite.svg#stars"></use>
 												</svg>4.7
 											</div>
+											<div class="topLine__text">ID бота: 781
+											</div>
 											<div class="topLine__tarif">
 												<p>Тариф “Standart”</p>
 												<p class="timeout">Средств хватит до 22.06.2022</p>
+											</div>
+											<div class="topLine__tarif">
+												<p>Дополнительные услуги:</p>
+												<p class="timeout">Доп. пользователь х50</p>
+												<p class="timeout">Доп. точка продаж х15</p>
+												<p class="timeout">Доп. рассылки х150</p>
 											</div>
 											<a class="topLine__goto" href="#">Перейти в тарифы
 											</a>
@@ -293,7 +335,7 @@
 									<thead>
 										<tr>
 											<th>
-												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 												</label>
 											</th>
 											<th><span>ID</span></th>
@@ -307,7 +349,7 @@
 									<tbody>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -324,7 +366,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -341,7 +383,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -358,7 +400,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -375,7 +417,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -392,7 +434,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -409,7 +451,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -426,7 +468,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -443,7 +485,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -460,7 +502,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -477,7 +519,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -494,7 +536,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -511,7 +553,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -528,7 +570,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -545,7 +587,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -562,7 +604,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -579,7 +621,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -596,7 +638,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -613,7 +655,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -630,7 +672,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -647,7 +689,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -664,7 +706,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -681,7 +723,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -698,7 +740,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -715,7 +757,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -732,7 +774,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -749,7 +791,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -766,7 +808,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -783,7 +825,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -800,7 +842,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -817,7 +859,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -834,7 +876,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -851,7 +893,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -868,7 +910,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -885,7 +927,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -902,7 +944,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -919,7 +961,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -936,7 +978,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -953,7 +995,7 @@
 												</tr>
 												<tr>
 													<td> 
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label"></span>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 														</label>
 													</td>
 													<td> <a class="txt" href="#">#1127</a></td>
@@ -1321,6 +1363,21 @@
 			<div class="modal-win text-center">
 				<div class="h2 strong mb-3">Смена тарифа</div>
 				<p class="small mb-4">У&nbsp;вас уже подключен тариф <strong>Standart</strong>, вы&nbsp;уверены, что хотите изменить тариф на&nbsp;<strong class="newTarif">Free</strong>? Тариф можно изменять только раз в&nbsp;сутки. При смене тарифа будет произведен перерасчет.</p>
+				<div class="row">
+					<div class="col-6">
+						<button class="btn btn-outline-orange w-100">Подтвердить</button>
+					</div>
+					<div class="col-6">
+						<button class="btn btn-orange modal-close-js w-100">Отменить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="modal-tarif2" style="display: none">
+			<div class="modal-win modal-win--2 text-center">
+				<div class="h2 strong mb-3 tarifTitle">Добавление услуги</div>
+				<p class="mb-4 tarifText">У вас уже подключена услуга «Дополнительный пользователь» х3, вы хотите подключить еще одну услугу?</p>
 				<div class="row">
 					<div class="col-6">
 						<button class="btn btn-outline-orange w-100">Подтвердить</button>

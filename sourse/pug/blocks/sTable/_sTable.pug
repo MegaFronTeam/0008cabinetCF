@@ -1,0 +1,56 @@
+mixin sTable(data)
+	// start sTabel
+	+b.sTable.section#sTable&attributes(attributes)
+		+b.section-title
+			.row
+				.col-md
+					h2 Категории товаров
+				.col-md-auto
+					+e.btn.btn.btn-outline-gray(href='#')
+						+icon('more')
+						| Создать категорию
+		.table-wrap-js
+			table.table.table-js#table-5
+				thead
+					tr
+						th.td-small
+						th: span Товар
+						th: span Количество товаров
+				tbody.drug-wrap-block-js
+					mixin tr(title, num)
+						tr.drug-item-js
+							td.td-small 
+								+e.ellipsis.my-handle.d-none.d-lg-flex
+									+icon('dots')
+								+e.arrows.d-lg-none
+									+e.arrow.drop-top-js: +icon('chevron-up')
+									+e.arrow.drop-down-js: +icon('chevron-down')
+							td: +e.link(href="#")!= title
+							td
+								+e.wrap
+									span!= num
+									+e.tooltips.ms-auto
+										a(href="#")
+											+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Копировать")
+												+icon('copy')
+										a(href="#")
+											+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Редактировать")
+												+icon('edit')
+										a(href="#")
+											+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Удалить")
+												+icon('delete')
+					+tr('🥘 Основные блюда', 46)
+					+tr('🥐 Круассаны', 54)
+					+tr('🥘 Основные блюда', 3)
+					+tr('🥐 Круассаны', 1)
+	// end sTabel
+
+mixin sCreateTable(data)
+	// start sTabel
+	+b.sTable.section#sCreateTable&attributes(attributes)
+		+b.section-title--create
+			h2 Категории товаров
+			p У вас нет созданных категорий товаров.
+			+e.btn.btn.btn-outline-gray(href='#')
+				+icon('more')
+				| Создать категорию

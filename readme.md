@@ -1,11 +1,14 @@
 #### 30.11.2023
 
+###### Онбординг
 1. <https://megafronteam.github.io/0008cabinetCF/public/22-onboarding-1.html>
 2. <https://megafronteam.github.io/0008cabinetCF/public/22-onboarding-2.html>
 3. <https://megafronteam.github.io/0008cabinetCF/public/22-onboarding-3.html>
 --- 
+###### Тарифы и услуги
 1. <https://megafronteam.github.io/0008cabinetCF/public/23-my-tarif-1.html>
 ---
+###### Создание/редактирование товара
 1. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product.html>
 2. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-2.html>
 3. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-3.html>
@@ -22,7 +25,11 @@
 14. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-14.html>
 15. <https://megafronteam.github.io/0008cabinetCF/public/24-create-product-15.html>
 ---
-1. <https://megafronteam.github.io/0008cabinetCF/public/10-2-bot-menu-version-2.html>
+###### Список товаров
+1. <https://megafronteam.github.io/0008cabinetCF/public/10-bot-menu-version-2.html>
+2. <https://megafronteam.github.io/0008cabinetCF/public/10-bot-menu-version-2-2.html>
+3. <https://megafronteam.github.io/0008cabinetCF/public/10-2-bot-menu-version-2.html>
+4. <https://megafronteam.github.io/0008cabinetCF/public/10-3-bot-menu-version-2.html>
 
 
 ## Первая линия

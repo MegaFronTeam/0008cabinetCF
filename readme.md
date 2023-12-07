@@ -48,6 +48,10 @@
 1. <https://megafronteam.github.io/0008cabinetCF/public/27-options-1.html>
 2. <https://megafronteam.github.io/0008cabinetCF/public/27-options-2.html>
 
+---
+###### Создание/редактирование опции
+1. <https://megafronteam.github.io/0008cabinetCF/public/28-create-options-1.html>
+
 
 ## Первая линия
 

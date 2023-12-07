@@ -5,7 +5,7 @@
 	// --sTPB: #{rem()};
 	max-width: rem(556);
 	@include media-breakpoint-up(md) {
-		--sPT: #{rem(30)};
+		--sPT: #{rem(20)};
 		--sPB: #{rem(120)};
 	}
 	h3 {

@@ -27,7 +27,9 @@ mixin sTable(isDraggable, name='Товар')
 									+e.arrows.d-lg-none
 										+e.arrow.drop-top-js: +icon('chevron-up')
 										+e.arrow.drop-down-js: +icon('chevron-down')
-							td: +e.link(href="#")!= title
+							td: +e.link(href="#")
+								block
+								!= title
 							td
 								+e.wrap
 									span!= num

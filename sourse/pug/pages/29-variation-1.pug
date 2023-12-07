@@ -1,0 +1,35 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sTable/_sTable.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= '29 Variation 2'
+	title= title
+block pagecontent
+	+aside('true')
+	+main('Вариации', 'true', 'true')
+		+sTable('', 'Вариация')
+			+tr('Размер', 46)
+				+e.icon-wrap(style='--bgColor: #FF7A00'): +icon('room-service')
+			+tr('Тесто', 54)
+				+e.icon-wrap(style='--bgColor: #F5B04D'): +icon('hat-chef')
+			+tr('Напиток', 3)
+				+e.icon-wrap(style='--bgColor: #6F64EC'): +icon('cup-straw-swoosh')
+			+tr('Комбо-ланч', 1)
+				+e.icon-wrap(style='--bgColor: #4BB14B'): +icon('avocado')
+			+tr('Без иконки', 1)

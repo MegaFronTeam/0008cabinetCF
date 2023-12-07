@@ -52,6 +52,11 @@
 ###### Создание/редактирование опции
 1. <https://megafronteam.github.io/0008cabinetCF/public/28-create-options-1.html>
 
+---
+###### Вариации
+1. <https://megafronteam.github.io/0008cabinetCF/public/29-variation-1.html>
+2. <https://megafronteam.github.io/0008cabinetCF/public/29-variation-2.html>
+
 
 ## Первая линия
 

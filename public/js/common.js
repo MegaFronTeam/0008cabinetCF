@@ -502,35 +502,42 @@ function eventHandler() {
 		});
 	}
 
-	const choicesGroups = new Choices('.custom-select-with-groups-js',{
-		itemSelectText: '',
-		searchEnabled: false,
-		searchChoices: false,
-		shouldSort: false,
-	});
+	let groupSelect = document.querySelectorAll(".custom-select-with-groups-js");
 
-	choicesGroups.setChoices(
-		[
-			{
-				label: 'Самара',
-				id: 1,
-				disabled: false,
-				choices: [
-					{ value: 'ул. Партизанская, д. 86', label: 'ул. Партизанская, д. 86'},
-					{ value: 'ул. Ново-садовая, д. 367/2', label: 'ул. Ново-садовая, д. 367/2'},
+	if (groupSelect.length > 0) {
+		groupSelect.forEach((item) => {
+			const choicesGroups = new Choices(item,{
+				itemSelectText: '',
+				searchEnabled: false,
+				searchChoices: false,
+				shouldSort: false,
+			});
+			choicesGroups.setChoices(
+				[
+					{
+						label: 'Самара',
+						id: 1,
+						disabled: false,
+						choices: [
+							{ value: 'ул. Партизанская, д. 86', label: 'ул. Партизанская, д. 86'},
+							{ value: 'ул. Ново-садовая, д. 367/2', label: 'ул. Ново-садовая, д. 367/2'},
+						],
+					},
+					{
+						label: 'Москва',
+						id: 2,
+						disabled: false,
+						choices: [
+							{ value: 'ул. Петрова, д. 37', label: 'ул. Петрова, д. 37'},
+							{ value: 'ул. Иванова-Петрова, д 78/34', label: 'ул. Иванова-Петрова, д 78/34'},
+						],
+					},
 				],
-			},
-			{
-				label: 'Москва',
-				id: 2,
-				disabled: false,
-				choices: [
-					{ value: 'ул. Петрова, д. 37', label: 'ул. Петрова, д. 37'},
-					{ value: 'ул. Иванова-Петрова, д 78/34', label: 'ул. Иванова-Петрова, д 78/34'},
-				],
-			},
-		],
-	);
+			);
+		})
+
+	}
+
 
 
 	const convertImages = (query, callback) => {

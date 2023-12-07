@@ -206,7 +206,7 @@ mixin qrCode()
 					p QR код для авторизации в администраторском чат-боте ChatFood для получения уведомлений о новых заказах в телеграм.
 					a(href="#") @ChatFoodrubot
 
-mixin orderCard(title="Прага-Бургер")
+mixin orderCard(title="Прага-Бургер", isSwitch=true)
 	+b.order-card.card
 		+e.row.row
 			.col
@@ -221,11 +221,12 @@ mixin orderCard(title="Прага-Бургер")
 			a(href="#")!= title
 			+e.type 1350 -13350 ₽
 		.row.align-items-center
-			.col
-				label.form-check.form-switch
-					input.form-check-input(name='model' type='checkbox' role='switch')
-					.form-check-label Видимость
-			+e.tooltips.col-auto.mb-2
+			if isSwitch
+				.col
+					label.form-check.form-switch
+						input.form-check-input(name='model' type='checkbox' role='switch')
+						.form-check-label Видимость
+			+e.tooltips.col-auto
 				.row.gx-2.align-items-center
 					a(href="#").col-auto
 						+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Копировать")

@@ -232,7 +232,7 @@
 		}
 		&__rate {
 			font-size: 12px;
-			margin-bottom: rem(12);
+			margin-bottom: rem(5);
 			.icon {
 				font-size: 12px;
 				margin-right: 5px;
@@ -248,16 +248,24 @@
 			}
 			p {
 				margin-bottom: 0;
+				font-weight: 600;
 				&:not(:last-child) {
 					margin-bottom: 5px;
 				}
 				&.timeout {
+					font-weight: 400;
 					color: $gray-600;
 					@include media-breakpoint-up(md) {
 						font-size: 12px;
 					}
 				}
 			}
+		}
+		&__text {
+			font-size: rem(12);
+			color: $gray-600;
+			margin-bottom: rem(5);
+			line-height: 1.66;
 		}
 		&__goto {
 			color: $gray-900;

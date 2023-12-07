@@ -49,9 +49,15 @@ mixin topLine(t, badge, avatar, mailingList,alarmHide)
 								+e.rate
 									+icon('stars')
 									| 4.7
+								+e.text ID бота: 781
 								+e.tarif
 									p Тариф “Standart”
 									p.timeout Средств хватит до 22.06.2022
+								+e.tarif
+									p Дополнительные услуги:
+									p.timeout Доп. пользователь х50
+									p.timeout Доп. точка продаж х15
+									p.timeout Доп. рассылки х150
 								+e.goto(href="#") Перейти в тарифы
 								+e.logout(href="#") Выйти
 	// end topLine

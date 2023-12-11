@@ -2417,3 +2417,9 @@ a.text-body{
 		}
 	}
 }
+
+.order-md-6 {
+	@include media-breakpoint-up(md) {
+		order: 6;
+	}
+}

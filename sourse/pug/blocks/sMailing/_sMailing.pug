@@ -90,6 +90,165 @@ mixin sMailing2(data)
 		p Создайте первую рассылку вашим клиентам и убедитесь на сколько это эффективно.
 		+e.btn(href="#").btn.btn-orange Запустить рассылку
 
+mixin sMailing3(cards)
+	// start sMailing
+	+b.sMailing--order.section#sMailing&attributes(attributes)
+		+e.head-row.row
+			.col-auto.order-md-1
+				label.form-check.form-switch
+					input.form-check-input(name='model' type='checkbox' role='switch')
+					span.form-check-label 
+						span.d-none.d-md-inline Только за сегодня
+						span.d-md-none За сегодня
+			.col.col-xl-auto.d-none.d-md-block.order-md-5.order-xl-2
+				+e.all-goods
+					.sMailing__input-wrap.form-group
+						select.sMailing__input.form-select.custom-select-with-groups-js(name='select')
+							option(value='') Все точки продаж
+			.col.col-xl-auto.d-none.d-md-block.order-md-6.order-xl-3
+				+e.all-goods
+					+input("Все заказы",'select').custom-select-js
+			.col-auto.col-md.order-md-2.order-xl-4.ms-auto
+				+e.search.d-none.d-sm-block
+					+input("Поиск по заказам",'text')
+					button: +icon('search')
+				+e.search.d-block.d-sm-none
+					button.toggle-search: +icon('search')
+					+e.wrap.search--js
+						+e.cross.toggle-search
+						.h2 Поиск
+						+e.inner-search
+							+input("Поиск по заказам",'text')
+							button: +icon('search')
+						a(href="#").btn.btn-orange Показать товары
+			.col-auto.order-last.order-md-3.order-xl-5
+				+e.show-switch
+					+in-c('radio', '', 'switch')(checked)
+						+icon('category')
+					+in-c('radio', '', 'switch')
+						+icon('list')
+			.col-12.m-0.p-0.order-md-4.d-none.d-md-block.d-xl-none
+			.col-auto.d-block.d-md-none
+				+e.filter.toggle-filter: +icon('filter')
+				+e.wrap.filter--js
+					+e.cross.toggle-filter
+					.h2 Сортировать
+					+e.inputs
+						+e.headline По статусу
+						+in-c('radio', 'Все заказы', 'status')
+						+in-c('radio', 'Новый', 'status')
+						+in-c('radio', 'В работе', 'status')
+						+in-c('radio', 'В пути/готов', 'status')
+						+in-c('radio', 'Выполнен', 'status')
+						+in-c('radio', 'Отменен', 'status')
+					+e.inputs
+						+e.headline По точке продаж
+						.sMailing__input-wrap.form-group
+							select.sMailing__input.form-select.custom-select-with-groups-js(name='select')
+								option(value='') Все точки продаж
+					+e.inputs
+						+e.headline По категориям товаров
+						+in-c('radio', 'Все товары', 'food')
+						+in-c('radio', '🍔 Бургеры', 'food')
+						+in-c('radio', '🥘 Основные блюда', 'food')
+						+in-c('radio', '🍳 Завтраки', 'food')
+						+in-c('radio', '🥓 Закуски', 'food')
+						+in-c('radio', '🥗 Салаты', 'food')
+						+in-c('radio', '🥐 Круассаны', 'food')
+					+e.inputs
+						+e.headline По типу товаров
+						+in-c('radio', 'Показывать все', 'show')
+						+in-c('radio', 'Только активные', 'show')
+						+in-c('radio', 'Только неактивные', 'show')
+					a(href="#").btn.btn-orange.toggle-filter Закрыть
+		+e.row.row
+			mixin card(status="Завершена", bg='#4BB14B', color="#009FE3", tags=['Оплата картой на месте', 'Самовывоз'])
+				+e.card.card
+					+e.head-row.row
+						.col-auto
+							+e.status(style=`--bg: ${bg}`)!= status
+						.col-auto
+							+e.price 1260 ₽
+					+e.tag-row.row
+						each item in tags
+							.col-auto: +e.tag!= item
+					+e.body-row.row
+						.col
+							+e.time 18:24 01.02.2022
+						.col-auto
+							+e.id(href="#" style=`--color: ${color}`) #1128
+			if !cards
+				.col-md-6.col-lg-4.col-xl-3
+					+card('Новый')
+				.col-md-6.col-lg-4.col-xl-3
+					+card('В пути/готов', '#6F64EC', '#009FE3', ['Онлайн-оплата', 'Курьером'])
+				.col-md-6.col-lg-4.col-xl-3
+					+card('В работе', '#F5B04D', '#009FE3', ['Оплата картой на месте', 'Самовывоз'])
+				.col-md-6.col-lg-4.col-xl-3
+					+card('Выполнен', '#009FE3', '#009FE3', ['Онлайн-оплата', 'Курьером'])
+				.col-md-6.col-lg-4.col-xl-3
+					+card('Отменен', '#8C8D8F', '#009FE3', ['Оплата картой на месте', 'Курьером'])
+				.col-md-6.col-lg-4.col-xl-3
+					+card('Новый')
+				.col-md-6.col-lg-4.col-xl-3
+					+card('Отменен', '#8C8D8F', '#009FE3', ['Оплата картой на месте', 'Курьером'])
+				.col-md-6.col-lg-4.col-xl-3
+					+card('Новый')
+				.col-md-6.col-lg-4.col-xl-3
+					+card('В пути/готов', '#6F64EC', '#009FE3', ['Онлайн-оплата', 'Курьером'])
+				.col-md-6.col-lg-4.col-xl-3
+					+card('В работе', '#F5B04D', '#009FE3', ['Оплата картой на месте', 'Самовывоз'])
+				.col-md-6.col-lg-4.col-xl-3
+					+card('Выполнен', '#009FE3', '#009FE3', ['Онлайн-оплата', 'Курьером'])
+				.col-md-6.col-lg-4.col-xl-3
+					+card('Отменен', '#8C8D8F', '#009FE3', ['Оплата картой на месте', 'Курьером'])
+			else
+				+b.sMailingNewsletter--2
+					+e.footer-row--base
+						table.table.table-js#table-4.table-mob-flex
+							thead
+								tr
+									th: span №
+									th: span Время заказа
+									th: span Статус #[span.d-none.d-md-inline заказа]
+									th: span Сумма #[span.d-none.d-md-inline заказа]
+									th: span Способ оплаты
+									th: span Вид доставки
+									th: span Оценка заказа
+							tbody
+								mixin tr(i, name, bg='#8C8D8F', text='Не доставлено')
+									tr
+										td 
+											a(href="#").txt #1127
+										td 17:34 01.02.2022
+
+										td
+											+e.status(style=`--bg: ${bg}`).ms-0!= text
+
+										td 900 ₽
+										td
+											.mob-label Онлайн-оплата
+										td
+											.mob-label Курьером 
+										td.text-end
+											.d-inline-flex.align-items-center
+												+icon('stars').me-1
+												| 5
+								//- - for (var x = 0; x < 35; x++)
+								+tr(1, 'Михаил', '#4BB14B', 'Новый')
+								+tr(2, 'Ольга', '#6F64EC', 'В пути/готов')
+								+tr(3, 'Александр', '#F5B04D', 'В работе')
+								+tr(3, 'Александр', '#009FE3', 'Выполнен')
+								+tr(3, 'Александр', '#8C8D8F', 'Отменен')
+						button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-4
+							+icon("reload")
+							| Загрузить еще
+						+save-alert()
+		//- button.btn.btn-light.w-100.btn-example-load-more#btn-example-load-more-1
+		//- 	+icon("reload")
+		//- 	| Загрузить еще 
+	// end sMailing
+
 mixin sMailingNewsletter(data)
 	// start sMailing
 	+b.sMailingNewsletter.section&attributes(attributes)
@@ -918,7 +1077,7 @@ mixin sMailing12-5(data)
 				+e.footer-row--base
 					+e.title.h2 Заказы клиента
 						span.badge.bg-light 6
-					.table-wrap-js
+					//- .table-wrap-js
 					table.table.table-js#table-4.table-mob-flex
 						thead
 							tr

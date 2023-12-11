@@ -504,6 +504,84 @@
 			}
 		}
 	}
+	&--order {
+		.sMailingNewsletter {
+			margin-top: rem(20);
+			&__footer-row--base {
+				padding-top: 0;
+				&:after {
+					content: unset;
+				}
+			}
+			table {
+				tr {
+					th {
+						&:nth-child(4) {
+							@include media-breakpoint-down(md) {
+								width: 49px !important;
+							}
+						}
+					}
+					td {
+						&:first-child {
+							padding-right: rem(10);
+						}
+					}
+				}
+			}
+		}
+		table {
+			tr {
+				td {
+					vertical-align: middle;
+				}
+			}
+		}
+		.sMailing {
+			&__head-row {
+				align-items: center;
+				.form-switch {
+					margin-bottom: 0;
+				}
+			}
+			&__all-goods {
+				@include media-breakpoint-down(xl) {
+					width: 100%;
+				}
+			}
+			&__head-row {
+				margin-bottom: rem(15);
+				@include media-breakpoint-up(sm) {
+					margin-bottom: rem(20);
+				}
+			}
+			&__tag-row {
+				--bs-gutter-x: #{rem(5)};
+				--bs-gutter-y: #{rem(5)};
+				margin-bottom: rem(15);
+				@include media-breakpoint-up(md) {
+					--bs-gutter-x: #{rem(10)};
+					--bs-gutter-y: #{rem(10)};
+
+					margin-bottom: rem(20);
+				}
+			}
+			&__tag {
+				border-radius: 6px;
+				background-color: #F6F7FA;
+				font-size: rem(12);
+				line-height: 1.42;
+				padding: rem(4) rem(10);
+				@include media-breakpoint-up(md) {
+					font-size: rem(14);
+					padding: rem(5) rem(10);
+				}
+			}
+			&__body-row {
+				margin-top: auto;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -811,11 +889,11 @@
 					th {
 						&:last-child {
 							text-align: left !important;
-							@include media-breakpoint-down(md) {
+							@include media-breakpoint-down(lg) {
 								width: 30px !important;
 							}
 						}
-						@include media-breakpoint-down(md) {
+						@include media-breakpoint-down(lg) {
 							font-size: rem(12) !important;
 							&:nth-child(n+5) {
 								display: none;
@@ -830,7 +908,7 @@
 						&:last-child {
 							text-align: left !important;
 						}
-						@include media-breakpoint-down(md) {
+						@include media-breakpoint-down(lg) {
 							font-size: rem(12);
 							&:nth-child(n+5) {
 								display: none;

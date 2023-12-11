@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>33 Clients</title>
+		<title>34 Orders</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0, viewport-fit=cover">
@@ -191,12 +191,8 @@
 									</div>
 								</div>
 								<div class="col-auto">
-									<a class="topLine__back d-none d-xl-inline-flex" href="#">
-										<svg class="icon icon-chevron-left ">
-											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-										</svg>Все клиенты<span>&mdash;</span>
-									</a>
-									<div class="topLine__title">Клиент #1279
+									<div class="topLine__title">Заказы
+										<div class="badge bg-light d-none d-sm-flex">2344</div>
 									</div>
 								</div>
 								<div class="col p-0"></div>
@@ -254,60 +250,154 @@
 					<!-- end topLine-->
 					<div class="container-fluid container-main">
 						<!-- start sMailing-->
-						<div class="sMailingNewsletter sMailingNewsletter--2 pt-0 section" id="sMailing">
-							<div class="row row-lg">
-								<div class="col-xl-12 col-head pt-20">
-									<div class="sMailingNewsletter__head row gy-2">
-										<div class="col h2 strong">Данные о клиенте</div>
-										<div class="col-sm-auto">
-											<button class="btn btn-outline-danger btn-sm">Заблокировать пользователя</button>
+						<div class="sMailing sMailing--order section" id="sMailing">
+							<div class="sMailing__head-row row">
+								<div class="col-auto order-md-1">
+									<label class="form-check form-switch">
+										<input class="form-check-input" name="model" type="checkbox" role="switch"/><span class="form-check-label"> <span class="d-none d-md-inline">Только за сегодня</span><span class="d-md-none">За сегодня</span></span>
+									</label>
+								</div>
+								<div class="col col-xl-auto d-none d-md-block order-md-5 order-xl-2">
+									<div class="sMailing__all-goods">
+										<div class="sMailing__input-wrap form-group">
+											<select class="sMailing__input form-select custom-select-with-groups-js" name="select">
+												<option value="">Все точки продаж</option>
+											</select>
 										</div>
-									</div>
-									<div class="sMailingNewsletter__body">
-										<table class="table" style="--bs-table-border-color: transparent">
-												<tr>
-													<td>Имя</td>
-													<td class="text-end">
-														<div class="sMailingNewsletter__avatar justify-content-end">
-															<div class="sMailingNewsletter__avatar-img"><img src="img/avatar-1.png" alt="" loading="lazy"/>
-															</div>Михаил
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>Дата регистрации</td>
-													<td class="text-end">16:58, 13.07.2021
-													</td>
-												</tr>
-												<tr>
-													<td>Потраченное время</td>
-													<td class="text-end">135 мин
-													</td>
-												</tr>
-												<tr>
-													<td>Бонусы</td>
-													<td class="text-end">143 ₽
-														<button class="btn btn-outline-gray btn-sm ms-2"><img class="me-1" src="img/coin_icon_188044.svg" alt="" loading="lazy"/>Начислить бонусы
-														</button>
-													</td>
-												</tr>
-												<tr>
-													<td>Никнейм</td>
-													<td class="text-end"><a class="txt" href="#"> @arts_man</a>
-													</td>
-												</tr>
-												<tr>
-													<td>Рефералы</td>
-													<td class="text-end">6
-													</td>
-												</tr>
-										</table>
 									</div>
 								</div>
-								<div class="col-xl-12">
-									<div class="sMailingNewsletter__footer-row sMailingNewsletter__footer-row--base">
-										<div class="sMailingNewsletter__title h2">Заказы клиента<span class="badge bg-light">6</span>
+								<div class="col col-xl-auto d-none d-md-block order-md-6 order-xl-3">
+									<div class="sMailing__all-goods">
+										<div class="sMailing__input-wrap form-group">
+											<select class="sMailing__input form-select custom-select-js" name="select">
+												<option value="Все заказы">Все заказы</option>
+												<option value=" placeholder 1">placeholder 1</option>
+												<option value=" placeholder 2">placeholder 2</option>
+												<option value=" placeholder 3">placeholder 3</option>
+												<option value=" placeholder 4">placeholder 4</option>
+											</select>
 										</div>
+										<!-- +e.input-wrap-->
+									</div>
+								</div>
+								<div class="col-auto col-md order-md-2 order-xl-4 ms-auto">
+									<div class="sMailing__search d-none d-sm-block">
+										<div class="sMailing__input-wrap form-group"><input class="sMailing__input form-control" name="text" type="text" placeholder="Поиск по заказам"/>
+										</div>
+										<!-- +e.input-wrap-->
+										<button>
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="sMailing__search d-block d-sm-none">
+										<button class="toggle-search">
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</button>
+										<div class="sMailing__wrap search search--js">
+											<div class="sMailing__cross toggle-search">
+											</div>
+											<div class="h2">Поиск</div>
+											<div class="sMailing__inner-search">
+												<div class="sMailing__input-wrap form-group"><input class="sMailing__input form-control" name="text" type="text" placeholder="Поиск по заказам"/>
+												</div>
+												<!-- +e.input-wrap-->
+												<button>
+													<svg class="icon icon-search ">
+														<use xlink:href="img/svg/sprite.svg#search"></use>
+													</svg>
+												</button>
+											</div><a class="btn btn-orange" href="#">Показать товары</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-auto order-last order-md-3 order-xl-5">
+									<div class="sMailing__show-switch">
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="switch" type="radio" checked="checked"/>
+											<svg class="icon icon-category ">
+												<use xlink:href="img/svg/sprite.svg#category"></use>
+											</svg>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="switch" type="radio"/>
+											<svg class="icon icon-list ">
+												<use xlink:href="img/svg/sprite.svg#list"></use>
+											</svg>
+										</label>
+									</div>
+								</div>
+								<div class="col-12 m-0 p-0 order-md-4 d-none d-md-block d-xl-none"></div>
+								<div class="col-auto d-block d-md-none">
+									<div class="sMailing__filter toggle-filter">
+										<svg class="icon icon-filter ">
+											<use xlink:href="img/svg/sprite.svg#filter"></use>
+										</svg>
+									</div>
+									<div class="sMailing__wrap filter filter--js">
+										<div class="sMailing__cross toggle-filter">
+										</div>
+										<div class="h2">Сортировать</div>
+										<div class="sMailing__inputs">
+											<div class="sMailing__headline">По статусу
+											</div>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="status" type="radio"/><span class="custom-input__text form-check-label">Все заказы</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="status" type="radio"/><span class="custom-input__text form-check-label">Новый</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="status" type="radio"/><span class="custom-input__text form-check-label">В работе</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="status" type="radio"/><span class="custom-input__text form-check-label">В пути/готов</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="status" type="radio"/><span class="custom-input__text form-check-label">Выполнен</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="status" type="radio"/><span class="custom-input__text form-check-label">Отменен</span>
+											</label>
+										</div>
+										<div class="sMailing__inputs">
+											<div class="sMailing__headline">По точке продаж
+											</div>
+											<div class="sMailing__input-wrap form-group">
+												<select class="sMailing__input form-select custom-select-with-groups-js" name="select">
+													<option value="">Все точки продаж</option>
+												</select>
+											</div>
+										</div>
+										<div class="sMailing__inputs">
+											<div class="sMailing__headline">По категориям товаров
+											</div>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">Все товары</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">🍔 Бургеры</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">🥘 Основные блюда</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">🍳 Завтраки</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">🥓 Закуски</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">🥗 Салаты</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">🥐 Круассаны</span>
+											</label>
+										</div>
+										<div class="sMailing__inputs">
+											<div class="sMailing__headline">По типу товаров
+											</div>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="show" type="radio"/><span class="custom-input__text form-check-label">Показывать все</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="show" type="radio"/><span class="custom-input__text form-check-label">Только активные</span>
+											</label>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="show" type="radio"/><span class="custom-input__text form-check-label">Только неактивные</span>
+											</label>
+										</div><a class="btn btn-orange toggle-filter" href="#">Закрыть</a>
+									</div>
+								</div>
+							</div>
+							<div class="sMailing__row row">
+								<div class="sMailingNewsletter sMailingNewsletter--2">
+									<div class="sMailingNewsletter__footer-row sMailingNewsletter__footer-row--base">
 										<table class="table table-js table-mob-flex" id="table-4">
 											<thead>
 												<tr>
@@ -369,7 +459,51 @@
 															<td> <a class="txt" href="#">#1127</a></td>
 															<td>17:34 01.02.2022</td>
 															<td>
+																<div class="sMailingNewsletter__status ms-0" style="--bg: #F5B04D">В работе
+																</div>
+															</td>
+															<td>900 ₽</td>
+															<td>
+																<div class="mob-label">Онлайн-оплата</div>
+															</td>
+															<td>
+																<div class="mob-label">Курьером </div>
+															</td>
+															<td class="text-end">
+																<div class="d-inline-flex align-items-center">
+																	<svg class="icon icon-stars  me-1">
+																		<use xlink:href="img/svg/sprite.svg#stars"></use>
+																	</svg>5
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td> <a class="txt" href="#">#1127</a></td>
+															<td>17:34 01.02.2022</td>
+															<td>
 																<div class="sMailingNewsletter__status ms-0" style="--bg: #009FE3">Выполнен
+																</div>
+															</td>
+															<td>900 ₽</td>
+															<td>
+																<div class="mob-label">Онлайн-оплата</div>
+															</td>
+															<td>
+																<div class="mob-label">Курьером </div>
+															</td>
+															<td class="text-end">
+																<div class="d-inline-flex align-items-center">
+																	<svg class="icon icon-stars  me-1">
+																		<use xlink:href="img/svg/sprite.svg#stars"></use>
+																	</svg>5
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td> <a class="txt" href="#">#1127</a></td>
+															<td>17:34 01.02.2022</td>
+															<td>
+																<div class="sMailingNewsletter__status ms-0" style="--bg: #8C8D8F">Отменен
 																</div>
 															</td>
 															<td>900 ₽</td>

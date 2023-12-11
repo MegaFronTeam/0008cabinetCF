@@ -74,6 +74,11 @@
 ###### Клиенты
 1. <https://megafronteam.github.io/0008cabinetCF/public/33-clients.html>
 
+---
+###### Заказы
+1. <https://megafronteam.github.io/0008cabinetCF/public/34-orders.html>
+2. <https://megafronteam.github.io/0008cabinetCF/public/34-orders-2.html>
+
 
 ## Первая линия
 

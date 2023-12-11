@@ -2375,9 +2375,7 @@ a.text-body{
 		line-height: 1.25;
 		margin-right: rem(20);
 		font-size: rem(24);
-		@include media-breakpoint-up(md) {
-			margin-bottom: 0;
-		}
+		margin-bottom: 0;
 	}
 	.form-check {
 		margin-bottom: 0;

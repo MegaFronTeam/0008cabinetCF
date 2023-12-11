@@ -1,0 +1,71 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sTable/_sTable.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= '31 Badges 1'
+	title= title
+block pagecontent
+	+aside('true')
+	+main('Бейджи', 'true', 'true')
+		+sTable(false, 'Бейджи', 'Бейджи', 'Создать бейдж').sTable--simple-table
+			tr
+				td: .badge.bg-success 👍🏻 Популярный выбор
+				td
+					+e.wrap
+						span 46
+						+e.tooltips.ms-auto
+							a(href="#")
+								+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Копировать")
+									+icon('copy')
+							a(href="#")
+								+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Редактировать")
+									+icon('edit')
+							a(href="#")
+								+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Удалить")
+									+icon('delete')
+			tr
+				td: .badge.bg-secondary 👨‍🍳 Блюдо от шефа
+				td
+					+e.wrap
+						span 54
+						+e.tooltips.ms-auto
+							a(href="#")
+								+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Копировать")
+									+icon('copy')
+							a(href="#")
+								+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Редактировать")
+									+icon('edit')
+							a(href="#")
+								+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Удалить")
+									+icon('delete')
+			tr
+				td: .badge.bg-outline-secondary 🌶️ Острый
+				td
+					+e.wrap
+						span 3
+						+e.tooltips.ms-auto
+							a(href="#")
+								+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Копировать")
+									+icon('copy')
+							a(href="#")
+								+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Редактировать")
+									+icon('edit')
+							a(href="#")
+								+e.tooltip( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="Удалить")
+									+icon('delete')

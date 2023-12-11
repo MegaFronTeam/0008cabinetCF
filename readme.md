@@ -57,6 +57,15 @@
 1. <https://megafronteam.github.io/0008cabinetCF/public/29-variation-1.html>
 2. <https://megafronteam.github.io/0008cabinetCF/public/29-variation-2.html>
 
+---
+###### Создание/редактирование вариации
+1. <>
+
+---
+###### Бейджи
+1. <https://megafronteam.github.io/0008cabinetCF/public/31-badges-1.html>
+2. <https://megafronteam.github.io/0008cabinetCF/public/31-badges-2.html>
+
 
 ## Первая линия
 

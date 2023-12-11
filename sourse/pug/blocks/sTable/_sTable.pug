@@ -1,14 +1,14 @@
-mixin sTable(isDraggable, name='Товар')
+mixin sTable(isDraggable, name='Товар', sectiontitle='Категории товаров', sectionBtn='Создать категорию')
 	// start sTabel
 	+b.sTable.section#sTable&attributes(attributes)
 		+b.section-title
 			.row
 				.col-md
-					h2 Категории товаров
+					h2!= sectiontitle
 				.col-md-auto
 					+e.btn.btn.btn-outline-gray(href='#')
 						+icon('more')
-						| Создать категорию
+						!= sectionBtn
 		.table-wrap-js
 			table.table.table-js#table-5
 				thead
@@ -17,7 +17,7 @@ mixin sTable(isDraggable, name='Товар')
 							th.td-small
 						th: span!= name
 						th: span Количество товаров
-				tbody.drug-wrap-block-js
+				tbody(class=(isDraggable ? 'drug-wrap-block-js' : ''))
 					mixin tr(title, num, isDraggable)
 						tr.drug-item-js
 							if isDraggable

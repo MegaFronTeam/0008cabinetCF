@@ -18,13 +18,9 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= '27 Options 1'
+	- let  title= '24 Category 2'
 	title= title
 block pagecontent
 	+aside('true')
-	+main('Опции', 'true', 'true')
-		+sTable('', 'Опция', 'Опции', 'Создать опцию').sTable--simple-table
-			+tr('Кетчуп', 46)
-			+tr('Майонез', 54)
-			+tr('BBQ соус', 3)
-			+tr('Сырный соус', 1)
+	+main('Бейджи', 'true', 'true')
+		+sCreateTable('Бейджи', 'У вас нет созданных бейджей.', 'Создать бейдж')

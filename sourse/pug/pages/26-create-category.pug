@@ -26,7 +26,7 @@ block pagecontent
 	+main('Категории', '', 'true','Создать категорию', 'hide', true)
 		.title
 			.h2 Создать категорию
-		+sCreateProduct
+		+sCreateProduct.sCreateProduct--create-category
 			mixin cInput(title, text, isRequired)
 				.form-wrap__input-wrap.form-wrap__input-wrap--custom.form-group
 					label
@@ -58,4 +58,12 @@ block pagecontent
 								.col-auto: +in-c('checkbox', 'Пт', 'day')
 								.col-auto: +in-c('checkbox', 'Сб', 'day')
 								.col-auto: +in-c('checkbox', 'Вс', 'day')
-				.tabs__content 2
+				.tabs__content
+					+e.title--lg Характеристики
+					+e.text Создайте шаблон для заполнения характеристик к выбранной категории товаров.
+					select.form-wrap__input.form-select(name='select' multiple).custom-multi-select-js
+						option(value="") Поле ввода
+							option Выбор из списка
+							option Длинное поле ввода
+							option Несколько вариантов из нескольких
+							option Один вариант из нескольких

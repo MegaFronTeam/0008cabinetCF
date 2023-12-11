@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>create-product-4</title>
+		<title>31 Badges 1</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=0, viewport-fit=cover">
@@ -191,12 +191,8 @@
 									</div>
 								</div>
 								<div class="col-auto">
-									<a class="topLine__back d-none d-xl-inline-flex" href="#">
-										<svg class="icon icon-chevron-left ">
-											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-										</svg>Категории<span>&mdash;</span>
-									</a>
-									<div class="topLine__title">Создать категорию
+									<div class="topLine__title">Бейджи
+										<div class="badge bg-light d-none d-sm-flex">2344</div>
 									</div>
 								</div>
 								<div class="col p-0"></div>
@@ -253,95 +249,118 @@
 					</div>
 					<!-- end topLine-->
 					<div class="container-fluid container-main">
-						<div class="title">
-							<div class="h2">Создать категорию</div>
-						</div>
-						<!-- start sCreateProduct-->
-						<section class="sCreateProduct section sCreateProduct sCreateProduct--create-category" id="sCreateProduct">
-							<div class="tabs">
-								<div class="tabs__caption">
-									<div class="tabs__btn active">Основное</div>
-									<div class="tabs__btn">Характеристики</div>
-								</div>
-								<div class="tabs__content active">
-									<h3>Основное</h3>
-									<div class="sCreateProduct__wrap">
-										<div class="form-wrap__input-wrap form-wrap__input-wrap--custom form-group">
-											<label><span class="form-wrap__input-title">Название категории</span><span class="form-wrap__input-text">Можете использовать эмоджи в названии категории</span>
-												<div class="sCreateProduct__input-wrap form-group"><input class="sCreateProduct__input form-control" name="text" type="text" placeholder="Введите название категории"/>
-												</div>
-												<!-- +e.input-wrap-->
-												<div class="form-wrap__required">Обязательно к заполнению</div>
-											</label>
-										</div>
-										<div class="form-wrap__input-wrap form-wrap__input-wrap--custom form-group">
-											<label><span class="form-wrap__input-title">Описание категории</span>
-												<div class="sCreateProduct__input-wrap form-group"><textarea class="sCreateProduct__input form-control" name="textarea" placeholder="Введите небольшое описание категории"></textarea>
-												</div>
-												<!-- +e.input-wrap-->
-											</label>
-										</div>
-										<div class="form-wrap__input-wrap form-wrap__input-wrap--custom form-group">
-											<label>
-												<div class="sCreateProduct__custom-input-row row">
-													<div class="col-12">
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="day" type="checkbox"/><span class="custom-input__text form-check-label">Показывать по дням недели</span>
-														</label>
-													</div>
-													<div class="col-auto">
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="day" type="checkbox"/><span class="custom-input__text form-check-label">Пн</span>
-														</label>
-													</div>
-													<div class="col-auto">
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="day" type="checkbox"/><span class="custom-input__text form-check-label">Вт</span>
-														</label>
-													</div>
-													<div class="col-auto">
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="day" type="checkbox"/><span class="custom-input__text form-check-label">Ср</span>
-														</label>
-													</div>
-													<div class="col-auto">
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="day" type="checkbox"/><span class="custom-input__text form-check-label">Чт</span>
-														</label>
-													</div>
-													<div class="col-auto">
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="day" type="checkbox"/><span class="custom-input__text form-check-label">Пт</span>
-														</label>
-													</div>
-													<div class="col-auto">
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="day" type="checkbox"/><span class="custom-input__text form-check-label">Сб</span>
-														</label>
-													</div>
-													<div class="col-auto">
-														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="day" type="checkbox"/><span class="custom-input__text form-check-label">Вс</span>
-														</label>
-													</div>
-												</div>
-											</label>
-										</div>
+						<!-- start sTabel-->
+						<div class="sTable section sTable sTable--simple-table" id="sTable">
+							<div class="section-title">
+								<div class="row">
+									<div class="col-md">
+										<h2>Бейджи</h2>
 									</div>
-								</div>
-								<div class="tabs__content">
-									<div class="sCreateProduct__title sCreateProduct__title--lg">Характеристики
+									<div class="col-md-auto">
+										<a class="section-title__btn btn btn-outline-gray" href="#">
+											<svg class="icon icon-more ">
+												<use xlink:href="img/svg/sprite.svg#more"></use>
+											</svg>Создать бейдж
+										</a>
 									</div>
-									<div class="sCreateProduct__text">Создайте шаблон для заполнения характеристик к выбранной категории товаров.
-									</div>
-									<select class="form-wrap__input form-select custom-multi-select-js" name="select" multiple>
-										<option value="">Поле ввода
-											<option>Выбор из списка</option>
-											<option>Длинное поле ввода</option>
-											<option>Несколько вариантов из нескольких</option>
-											<option>Один вариант из нескольких</option>
-										</option>
-									</select>
 								</div>
 							</div>
-						</section>
-						<!-- end sCreateProduct-->
+							<div class="table-wrap-js">
+								<table class="table table-js" id="table-5">
+									<thead>
+										<tr>
+											<th><span>Бейджи</span></th>
+											<th><span>Количество товаров</span></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="badge bg-success">👍🏻 Популярный выбор</div>
+											</td>
+											<td>
+												<div class="sTable__wrap"><span>46</span>
+													<div class="sTable__tooltips ms-auto"><a href="#">
+															<div class="sTable__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
+																<svg class="icon icon-copy ">
+																	<use xlink:href="img/svg/sprite.svg#copy"></use>
+																</svg>
+															</div></a><a href="#">
+															<div class="sTable__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
+																<svg class="icon icon-edit ">
+																	<use xlink:href="img/svg/sprite.svg#edit"></use>
+																</svg>
+															</div></a><a href="#">
+															<div class="sTable__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
+																<svg class="icon icon-delete ">
+																	<use xlink:href="img/svg/sprite.svg#delete"></use>
+																</svg>
+															</div></a>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="badge bg-secondary">👨‍🍳 Блюдо от шефа</div>
+											</td>
+											<td>
+												<div class="sTable__wrap"><span>54</span>
+													<div class="sTable__tooltips ms-auto"><a href="#">
+															<div class="sTable__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
+																<svg class="icon icon-copy ">
+																	<use xlink:href="img/svg/sprite.svg#copy"></use>
+																</svg>
+															</div></a><a href="#">
+															<div class="sTable__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
+																<svg class="icon icon-edit ">
+																	<use xlink:href="img/svg/sprite.svg#edit"></use>
+																</svg>
+															</div></a><a href="#">
+															<div class="sTable__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
+																<svg class="icon icon-delete ">
+																	<use xlink:href="img/svg/sprite.svg#delete"></use>
+																</svg>
+															</div></a>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="badge bg-outline-secondary">🌶️ Острый</div>
+											</td>
+											<td>
+												<div class="sTable__wrap"><span>3</span>
+													<div class="sTable__tooltips ms-auto"><a href="#">
+															<div class="sTable__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Копировать">
+																<svg class="icon icon-copy ">
+																	<use xlink:href="img/svg/sprite.svg#copy"></use>
+																</svg>
+															</div></a><a href="#">
+															<div class="sTable__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Редактировать">
+																<svg class="icon icon-edit ">
+																	<use xlink:href="img/svg/sprite.svg#edit"></use>
+																</svg>
+															</div></a><a href="#">
+															<div class="sTable__tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Удалить">
+																<svg class="icon icon-delete ">
+																	<use xlink:href="img/svg/sprite.svg#delete"></use>
+																</svg>
+															</div></a>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- end sTabel-->
 					</div>
-					<div class="save">
-						<div class="btn btn-orange" href="#">Сохранить изменения</div>
-					</div>
+					<footer class="footer">
+						<div class="container-fluid">ChatFood v 3.1</div>
+					</footer>
 				</main>
 			</div>
 		</div>

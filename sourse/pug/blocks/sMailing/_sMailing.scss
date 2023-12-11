@@ -797,6 +797,50 @@
 		display: flex;
 		align-items: center;
 	}
+	&--2 {
+		.sMailingNewsletter__avatar-img {
+			display: block;
+			@include media-breakpoint-down(md)  {
+				width: rem(30);
+				height: rem(30);
+			}
+		}
+		.sMailingNewsletter__footer-row--base {
+			table {
+				tr {
+					th {
+						&:last-child {
+							text-align: left !important;
+							@include media-breakpoint-down(md) {
+								width: 30px !important;
+							}
+						}
+						@include media-breakpoint-down(md) {
+							font-size: rem(12) !important;
+							&:nth-child(n+5) {
+								display: none;
+							}
+						}
+					}
+					td {
+						vertical-align: middle;
+						&:nth-child(4) {
+							font-weight: 600;
+						}
+						&:last-child {
+							text-align: left !important;
+						}
+						@include media-breakpoint-down(md) {
+							font-size: rem(12);
+							&:nth-child(n+5) {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 

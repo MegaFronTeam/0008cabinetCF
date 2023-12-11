@@ -66,6 +66,14 @@
 1. <https://megafronteam.github.io/0008cabinetCF/public/31-badges-1.html>
 2. <https://megafronteam.github.io/0008cabinetCF/public/31-badges-2.html>
 
+---
+###### Создание/редактирование бейджа
+1. <>
+
+---
+###### Клиенты
+1. <https://megafronteam.github.io/0008cabinetCF/public/33-clients.html>
+
 
 ## Первая линия
 

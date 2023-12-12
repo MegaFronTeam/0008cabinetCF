@@ -1134,45 +1134,44 @@
   thead {
     vertical-align: top;
     display: block;
-    padding-left: rem(12);
-    padding-right: rem(12);
     border-bottom: 1px solid #E4E4E4;
     z-index: 100;
     background-color: #fff;
+		margin-left: calc(var(--bs-gutter-x) * -0.5);
+		margin-right: calc(var(--bs-gutter-x) * -0.5);
+		filter: drop-shadow(0px 5px 10px rgba(25, 28, 31, 0.10));
     @include media-breakpoint-up(md) {
       border: none;
-      padding-left: 0;
-      padding-right: 0;
+			margin-right: 0;
+			margin-left: 0;
       display: table-row-group;
     }
-    // @include media-breakpoint-down(md) {
-    //   position: sticky;
-    //   top: 0;
-    // }
-
     th {
 			border: 1px solid #E4E4E4;
 			padding: rem(24);
-			width: calc((100% - rem(440)) / 4);
-      &:first-child {
-        width: rem(440);
+      &:not(:first-child) {
+				width: rem(188);
       }
     }
     @include media-breakpoint-down(md) {
       tr {
         display: flex;
-        flex-wrap: wrap;
+				box-shadow: 0px 2px 10px 0px rgba(25, 28, 31, 0.10);
         th {
           width: calc(100% / 4);
           display: flex;
           justify-content: center;
           align-items: center;
+					padding: rem(12) rem(6);
+					border: none;
           &:first-child {
-            width: 100%;
-            flex-direction: column;
+						display: none;
           }
+					&:nth-child(2) {
+						padding-left: rem(18);
+					}
           &:last-child {
-            padding-right: rem(6);
+            padding-right: rem(18);
           }
         }
       }
@@ -1193,34 +1192,32 @@
         display: table-row !important;
       }
       @include media-breakpoint-down(md) {
-        &.active,
-        &:nth-child(-n + 5) {
-          display: flex;
-        }
-      }
-      &:last-child {
-        td {
-          @include media-breakpoint-up(md) {
-            padding-bottom: 0;
-          }
-        }
+        display: none;
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(4),
+				&:nth-child(5),
+				&:nth-child(6),
+				&:nth-child(9),
+				&:nth-child(10),
+				&:nth-child(11),
+				&:nth-child(12) {
+					display: flex;
+				}
       }
     }
     td {
       padding: rem(12) rem(6);
       text-align: center;
       @include media-breakpoint-up(md) {
-        padding: rem(12) 0 rem(12) rem(24);
+				padding: rem(12) rem(24) rem(12) rem(24);
+				border: 1px solid #E4E4E4;
       }
       &:first-child {
-        font-weight: 700;
+        // font-weight: 700;
         @include media-breakpoint-up(md) {
           text-align: left;
-          padding-left: 0;
         }
-        // @include media-breakpoint-down(md) {
-        // 	background-color: $light;
-        // }
       }
       &:last-child {
         @include media-breakpoint-up(md) {
@@ -1230,11 +1227,27 @@
       img {
         max-width: calc(1em * 1.4);
       }
+			&.fw-bold {
+				@include media-breakpoint-up(md) {
+					font-size: rem(16);
+				}
+			}
     }
     @include media-breakpoint-down(md) {
       tr {
-        display: none;
-        flex-wrap: wrap;
+				display: none;
+				flex-wrap: wrap;
+				position: relative;
+				&:after {
+					content: '';
+					position: absolute;
+					display: block;
+					width: 200vw;
+					left: -50vw;
+					height: 1px;
+					background-color: #E4E4E4;
+					bottom: 0;
+				}
         td {
           width: calc(100% / 4);
           display: flex;
@@ -1245,17 +1258,16 @@
             position: relative;
             width: 100%;
             z-index: 2;
-            &::before {
-              content: "";
-              position: absolute;
-              width: 100vh;
-              height: 100%;
-              left: rem(-12);
-              top: 0;
-              background-color: $light;
-              pointer-events: none;
-              z-index: -1;
-            }
+						&:after {
+							content: '';
+							position: absolute;
+							display: block;
+							width: 200vw;
+							left: -50vw;
+							height: 1px;
+							background-color: #E4E4E4;
+							bottom: 0;
+						}
           }
         }
       }
@@ -1308,53 +1320,77 @@
       }
     }
   }
-  .tariffs__switch {
-    display: flex;
-    // justify-content: center;
-    align-items: center;
-    padding-left: 0;
-    margin-bottom: 0;
-    min-height: rem(20);
-    font-weight: 400;
-    font-size: rem(12);
-    margin-bottom: rem(24);
-    @include media-breakpoint-up(md) {
-      font-size: rem(16);
-      margin-top: auto;
-      margin-bottom: rem(8);
-    }
-    @include media-breakpoint-up(lg) {
-      margin-bottom: rem(13);
-    }
-    label {
-      display: flex;
-      align-items: center;
-    }
-    input {
-      margin-left: rem(10);
-      margin-right: rem(10);
-      height: rem(20);
-      // width: rem(36);
-      border-radius: rem(30);
-      margin-top: 0;
-      background-size: 16px 16px;
-      background-position: 1px;
-      background-color: $secondary;
-      border-color: $secondary;
-      @include media-breakpoint-up(md) {
-        margin-left: rem(12);
-        margin-right: rem(12);
-      }
-      &:focus {
-        box-shadow: none;
-      }
-      &:checked {
-        background-color: $secondary;
-        border-color: $secondary;
-        background-position: 93%;
-      }
-    }
-  }
+	&__title {
+		display: flex;
+		align-items: center;
+		&.fw-bold {
+			@include media-breakpoint-up(md) {
+				font-size: rem(16);
+			}
+		}
+	}
+	&__toggle {
+		font-size: rem(14);
+		flex: 0 0 auto;
+		margin-left: rem(6);
+		width: 1em;
+		height: 1em;
+		background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23C2C2C2'/%3E%3Cpath d='M7.2632 7.26C7.68986 6.16 8.55986 5.61 9.8732 5.61C10.6265 5.61 11.2232 5.80667 11.6632 6.2C12.1099 6.59333 12.3332 7.08667 12.3332 7.68C12.3332 7.88667 12.3165 8.07667 12.2832 8.25C12.2499 8.42333 12.1932 8.58 12.1132 8.72C12.0332 8.86 11.9599 8.98 11.8932 9.08C11.8332 9.17333 11.7365 9.27 11.6032 9.37C11.4765 9.47 11.3799 9.54333 11.3132 9.59C11.2465 9.63667 11.1365 9.70333 10.9832 9.79C10.8299 9.87667 10.7332 9.93333 10.6932 9.96C10.4865 10.0867 10.3299 10.2167 10.2232 10.35C10.1165 10.4767 10.0632 10.6367 10.0632 10.83C10.0632 10.9567 10.0399 11.0433 9.9932 11.09C9.94653 11.13 9.8632 11.15 9.7432 11.15H9.3432C9.2232 11.15 9.13987 11.13 9.0932 11.09C9.04653 11.0433 9.0232 10.9567 9.0232 10.83C9.0232 10.4033 9.10653 10.07 9.2732 9.83C9.43986 9.59 9.67653 9.36667 9.9832 9.16C9.99653 9.15333 10.0599 9.11333 10.1732 9.04C10.2932 8.96667 10.3632 8.92333 10.3832 8.91C10.4099 8.89 10.4699 8.84667 10.5632 8.78C10.6565 8.70667 10.7165 8.65333 10.7432 8.62C10.7699 8.58667 10.8132 8.53333 10.8732 8.46C10.9399 8.38 10.9832 8.31 11.0032 8.25C11.0232 8.18333 11.0432 8.10667 11.0632 8.02C11.0832 7.92667 11.0932 7.83 11.0932 7.73C11.0932 7.42333 10.9832 7.17667 10.7632 6.99C10.5499 6.80333 10.2432 6.71 9.8432 6.71C9.45653 6.71 9.14986 6.79 8.9232 6.95C8.7032 7.10333 8.5232 7.33667 8.3832 7.65C8.32986 7.77667 8.2732 7.85333 8.2132 7.88C8.15986 7.90667 8.0732 7.9 7.9532 7.86L7.4732 7.69C7.24653 7.61667 7.17653 7.47333 7.2632 7.26ZM9.5932 11.7C9.8332 11.7 9.99986 11.7467 10.0932 11.84C10.1865 11.9333 10.2332 12.1 10.2332 12.34V12.43C10.2332 12.6767 10.1865 12.8467 10.0932 12.94C9.99986 13.0267 9.8332 13.07 9.5932 13.07H9.5132C9.2732 13.07 9.10653 13.0267 9.0132 12.94C8.91986 12.8467 8.8732 12.6767 8.8732 12.43V12.34C8.8732 12.1 8.91986 11.9333 9.0132 11.84C9.10653 11.7467 9.2732 11.7 9.5132 11.7H9.5932Z' fill='white'/%3E%3C/svg%3E%0A");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		@include media-breakpoint-up(md) {
+			font-size: rem(20);
+			margin-left: auto;
+		}
+	}
+  // .tariffs__switch {
+  //   display: flex;
+  //   // justify-content: center;
+  //   align-items: center;
+  //   padding-left: 0;
+  //   margin-bottom: 0;
+  //   min-height: rem(20);
+  //   font-weight: 400;
+  //   font-size: rem(12);
+  //   margin-bottom: rem(24);
+  //   @include media-breakpoint-up(md) {
+  //     font-size: rem(16);
+  //     margin-top: auto;
+  //     margin-bottom: rem(8);
+  //   }
+  //   @include media-breakpoint-up(lg) {
+  //     margin-bottom: rem(13);
+  //   }
+  //   label {
+  //     display: flex;
+  //     align-items: center;
+  //   }
+  //   input {
+  //     margin-left: rem(10);
+  //     margin-right: rem(10);
+  //     height: rem(20);
+  //     // width: rem(36);
+  //     border-radius: rem(30);
+  //     margin-top: 0;
+  //     background-size: 16px 16px;
+  //     background-position: 1px;
+  //     background-color: $secondary;
+  //     border-color: $secondary;
+  //     @include media-breakpoint-up(md) {
+  //       margin-left: rem(12);
+  //       margin-right: rem(12);
+  //     }
+  //     &:focus {
+  //       box-shadow: none;
+  //     }
+  //     &:checked {
+  //       background-color: $secondary;
+  //       border-color: $secondary;
+  //       background-position: 93%;
+  //     }
+  //   }
+  // }
   .tariffs-item {
     display: flex;
     flex-direction: column;
@@ -1365,6 +1401,10 @@
     font-weight: 400;
     line-height: 140%;
     width: 100%;
+		@include media-breakpoint-up(md) {
+			border-radius: 0 0 rem(16) rem(16);
+			filter: drop-shadow(0px 5px 10px rgba(25, 28, 31, 0.10));
+		}
     &__title {
       display: flex;
       align-items: center;
@@ -1410,6 +1450,13 @@
 				font-size: rem(12);
 			}
     }
+		&__discount {
+			span {
+				@include media-breakpoint-down(md) {
+					display: block;
+				}
+			}
+		}
     &__btn {
       width: 100%;
 
@@ -1417,13 +1464,14 @@
       --bs-btn-padding-y: #{rem(6)};
       --bs-btn-padding-x: #{rem(6)};
       border-radius: rem(8);
-      margin-top: rem(2);
+      // margin-top: rem(2);
+			margin-top: auto;
       @include media-breakpoint-up(lg) {
         --bs-btn-font-size: #{rem(16)};
         --bs-btn-padding-y: #{rem(10)};
         --bs-btn-padding-x: #{rem(10)};
         border-radius: rem(12);
-        margin-top: rem(8);
+        // margin-top: rem(8);
       }
       &:hover {
         box-shadow: 0 2px 10px rgba(75, 177, 75, 0.5) !important;

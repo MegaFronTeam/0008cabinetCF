@@ -266,111 +266,335 @@ mixin table()
 						//- 			span За месяц
 						//- 			input.form-check-input(type='checkbox' role='switch')
 						//- 			span За год
-					mixin item(t, p, d, i)
+					mixin item(title, price, badge, discount, dayPrice, perOne)
 						th
 							+b.tariffs-item
 								+e.title
-									if i
-										+img('img/fire.png')
-									!= t
-								+e.price!= p
-								if d
-									+e.price-day!= d
-								p За одного чат-бота
+									!= title
+								+e.price
+									!= price
+									if badge
+										.badge.bg-warning –10%
+								if discount
+									+e.discount!= discount
+								if dayPrice
+									+e.price-day!= dayPrice
+								if perOne
+									p За одного чат-бота
 								+e.btn.btn.btn-success(href="#") Выбрать
 
-					+item(`Бесплатный`, `0 ₽`)
-					+item(`Старт`, `19 200 ₽`, `89 ₽ в день`)
-					+item(`Стандарт`, `28 800 ₽`, `119 ₽ в день`, `i`)
-					+item(`Профи`, `57 600 ₽`, `149 ₽ в день`)
+					+item(`Бесплатный`, `0 ₽`, '', 'Бесплатно навсегда')
+					+item(`🔥 Старт`, `6 273 ₽`, true, `Без скидки <span>6 973 ₽</span>`, '3 440 ₽', true)
+					+item(`😎 Стандарт`, `8 696 ₽`, true, `Без скидки <span>9 665 ₽</span>`, `3 440 ₽`, true)
+					+item(`💣 Профи`, `10 634 ₽`, true, `Без скидки <span>11 819 ₽</span>`, '3 440 ₽', true)
 			tbody
 				tr
+					td 
+						+e.title.fw-bold
+							| Количество товаров
+							+e.SPAN.toggle.tooltip-toggle( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="This top tooltip is themed via CSS variables.")
+					td до&nbsp;150
+					td до&nbsp;300
+					td до&nbsp;100
+					td без лимита
+				tr
+					td 
+						+e.title.fw-bold
+							| Кастомизация бота
+							+e.SPAN.toggle.tooltip-toggle( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="This top tooltip is themed via CSS variables.")
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td 
+						+e.title.fw-bold
+							| Точки продаж
+							+e.SPAN.toggle.tooltip-toggle( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="This top tooltip is themed via CSS variables.")
+					td 1
+					td 1
+					td 1
+					td 1
+				tr
+					td.fw-bold Контактная информация в боте
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td Телефон, сайт, email
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td Социальные сети
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td Местоположение на карте
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td Режим работы
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td.fw-bold Способы оплаты заказа
+					td: +img('img/svg/corret.svg').d-md-none
+					td: +img('img/svg/corret.svg').d-md-none
+					td: +img('img/svg/corret.svg').d-md-none
+					td: +img('img/svg/corret.svg').d-md-none
+				tr
+					td Онлайн
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td Наличные
+					td: +img('img/svg/bad.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td Картой при получении
+					td: +img('img/svg/bad.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td.fw-bold Настройка способов получения заказа
+					td
+					td
+					td
+					td
+				tr
+					td Доставка
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td Самовывоз
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td В заведении
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td.fw-bold Настройка способов доставки
+					td
+					td
+					td
+					td
+				tr
+					td Бесплатная доставка
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td Фиксированная стоимость доставки
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td
+						+e.title
+							| Расчет по формуле
+							+e.SPAN.toggle.tooltip-toggle( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="This top tooltip is themed via CSS variables.")
+					td: +img('img/svg/bad.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td Минимальная сумма для бесплатной доставки
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td
+						+e.title.fw-bold
+							| Настройка управляющих пользователей
+							+e.SPAN.toggle.tooltip-toggle( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="This top tooltip is themed via CSS variables.")
+					td
+					td
+					td
+					td
+				tr
+					td Добавление администраторов
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td Разграничение ролей
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td
+						+e.title
+							| Количество управляющих пользователей
+							+e.SPAN.toggle.tooltip-toggle( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="This top tooltip is themed via CSS variables.")
+					td 1
+					td 3
+					td 5
+					td 10
+				tr
+					td.fw-bold Бонусная программа
+					td
+					td
+					td
+					td
+				tr
+					td Приветственные бонусы
+					td: +img('img/svg/bad.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td Кэшбек за обратную связь
+					td: +img('img/svg/bad.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td Бонус за приглашение
+					td: +img('img/svg/bad.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td Ручное начисление бонусов
+					td: +img('img/svg/bad.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td Настройка условий оплаты бонусами
+					td: +img('img/svg/bad.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td.fw-bold Рассылки
+					td
+					td
+					td
+					td
+				tr
+					td Функционал рассылки
+					td: +img('img/svg/bad.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td
+						+e.title
+							| Количество рассылок
+							+e.SPAN.toggle.tooltip-toggle( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="This top tooltip is themed via CSS variables.")
+					td 0
+					td 4
+					td 8
+					td 15
+				tr
+					td.fw-bold Аналитика
+					td
+					td
+					td
+					td
+				tr
+					td Количество клиентов в базе
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td Сумма заказов
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td Количество заказов
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td Активность за сегодня
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
+					td.fw-bold Категории и товары
+					td
+					td
+					td
+					td
+				tr
+					td Количество категорий
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				tr
 					td Количество товаров
-					td до&nbsp;15
-					td до&nbsp;30
-					td до&nbsp;80
-					td
-						+img('img/svg/infinity.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
 				tr
-					td Количество рассылок в&nbsp;месяц
-					td 1
-					td до&nbsp;5
-					td до&nbsp;10
-					td
-						+img('img/svg/infinity.svg')
+					td Создание категорий товаров
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
 				tr
-					td Управляющие пользователи
-					td 1
-					td до&nbsp;3
-					td до&nbsp;7
-					td до&nbsp;10
+					td Создание простого товара
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
 				tr
-					td Опции товаров
-					td 
-						+img('img/svg/bad.svg')
-					td 
-						+img('img/svg/corret.svg')
-					td 
-						+img('img/svg/corret.svg')
-					td 
-						+img('img/svg/corret.svg')
+					td Создание вриантивного товара
+					td: +img('img/svg/bad.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
 				tr
-					td Расчет стоимости доставки
-					td 
-						+img('img/svg/bad.svg')
-					td 
-						+img('img/svg/corret.svg')
-					td 
-						+img('img/svg/corret.svg')
-					td 
-						+img('img/svg/corret.svg')
+					td Настройка дополнительных опций
+					td: +img('img/svg/bad.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
 				tr
-					td Скрытие логотипа ChatFood
-					td 
-						+img('img/svg/bad.svg')
-					td 
-						+img('img/svg/corret.svg')
-					td 
-						+img('img/svg/corret.svg')
-					td 
-						+img('img/svg/corret.svg')
+					td Стоп-лист товаров
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
 				tr
-					td Вариативные товары
-					td 
-						+img('img/svg/bad.svg')
-					td 
-						+img('img/svg/bad.svg')
-					td 
-						+img('img/svg/corret.svg')
-					td 
-						+img('img/svg/corret.svg')
-				tr
-					td Онлайн-оплата
-					td 
-						+img('img/svg/bad.svg')
-					td 
-						+img('img/svg/bad.svg')
-					td 
-						+img('img/svg/corret.svg')
-					td 
-						+img('img/svg/corret.svg')
-				tr
-					td API
-					td 
-						+img('img/svg/bad.svg')
-					td 
-						+img('img/svg/bad.svg')
-					td 
-						+img('img/svg/corret.svg')
-					td 
-						+img('img/svg/corret.svg')
-				tr
-					td Премиум поддержка
-					td 
-						+img('img/svg/bad.svg')
-					td 
-						+img('img/svg/bad.svg')
-					td 
-						+img('img/svg/bad.svg')
-					td 
-						+img('img/svg/corret.svg')
+					td.fw-bold API
+					td: +img('img/svg/bad.svg')
+					td: +img('img/svg/bad.svg')
+					td: +img('img/svg/corret.svg')
+					td: +img('img/svg/corret.svg')
+				

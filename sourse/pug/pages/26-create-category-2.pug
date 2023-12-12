@@ -73,15 +73,43 @@ block pagecontent
 							+e.link Длинное поле ввода
 							+e.link Несколько вариантов из нескольких
 							+e.link Один вариант из нескольких
-					+b.custom-dropdown--js
-						+e.head
-							+e.wrap
-								+icon('more')
-								span Добавить
-							+e.chevron: +icon('chevron-down')
-						+e.content
-							+e.link Поле ввода
-							+e.link Выбор из списка
-							+e.link Длинное поле ввода
-							+e.link Несколько вариантов из нескольких
-							+e.link Один вариант из нескольких
+					+b.characteristic.drug-wrap-block-js
+						mixin characteristicItem(title, btn)
+							+e.wrap.drug-item-js
+								+e.head-row.row
+									.col
+										+e.ellips.my-handle: +icon('dots')
+										+e.title!= title
+									.col-auto
+										+e.delete Удалить
+								+e.body
+									block
+								if btn
+									+e.btn.btn.btn-outline-gray
+										+icon('more')
+										!= btn
+								+in-c('checkbox', 'Обязательно к заполнению')
+						+characteristicItem('Поле ввода')
+							+input('Название', 'text')
+							+input('Описание', 'text')
+								+e.SPAN.caption Описание видно только администраторам и менеджерам в личном кабинете
+						+characteristicItem('Выпадающий список', 'Добавить значение')
+							+input('Название', 'text')
+							+input('Описание', 'text')
+								+e.SPAN.caption Описание видно только администраторам и менеджерам в личном кабинете
+							+input('Введите значение', 'text', 'Значение 1')
+							+input('Введите значение', 'text', 'Значение 2')
+								+e.remove(href='#'): +icon('trash-can')
+						+characteristicItem('Один вариант из нескольких', 'Добавить значение')
+							+input('Название', 'text')
+							+input('Описание', 'text')
+								+e.SPAN.caption Описание видно только администраторам и менеджерам в личном кабинете
+							+input('Введите значение', 'text', 'Значение 1')
+							+input('Введите значение', 'text', 'Значение 2')
+								+e.remove(href='#'): +icon('trash-can')
+							+input('Введите значение', 'text', 'Значение 3')
+								+e.remove(href='#'): +icon('trash-can')
+						+characteristicItem('Длинное описание')
+							+input('Название', 'text')
+							+input('Описание', 'text')
+								+e.SPAN.caption Описание видно только администраторам и менеджерам в личном кабинете

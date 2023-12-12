@@ -42,6 +42,7 @@
 ---
 ###### Создание/редактирование категории
 1. <https://megafronteam.github.io/0008cabinetCF/public/26-create-category.html>
+1. <https://megafronteam.github.io/0008cabinetCF/public/26-create-category-2.html>
 
 ---
 ###### Опции

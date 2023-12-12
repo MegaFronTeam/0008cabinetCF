@@ -883,6 +883,20 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 		})
 	}
 
+	let customDropdowns = document.querySelectorAll('.custom-dropdown--js');
+	document.addEventListener('click', (e) => {
+		let customDropdownTarget = e.target.closest('.custom-dropdown--js');
+		if(!customDropdownTarget) {
+			customDropdowns.forEach((customDropdown) => {customDropdown.classList.remove('active')})
+		}
+	})
+
+	customDropdowns.forEach((customDropdown) => {
+		customDropdown.addEventListener('click', () => {
+			customDropdown.classList.toggle('active');
+		})
+	})
+
 
 };
 if (document.readyState !== 'loading') {

@@ -1,0 +1,66 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCabinetPanel/_sCabinetPanel.pug
+include ../blocks/footer/_footer.pug
+include ../blocks/sCreateProduct/_sCreateProduct.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'create-product-4'
+	title= title
+block pagecontent
+	+aside('true')
+	+main('Бейджи', '', 'true','Создать бейдж', 'hide', true)
+		+sCreateProduct.sCreateProduct--create-badge
+			+b.section-title
+				h2 
+					| Создать бейдж
+					| 
+					.badge.bg-success 👍🏻 Популярный выбор
+			.form-wrap__input-wrap.form-wrap__input-wrap--custom.form-group
+				label
+					span.form-wrap__input-title Название бейджа
+					span.form-wrap__input-text Можете использовать эмоджи в названии бейджа
+					+input('Например, 👍🏻 Популярный выбор', 'text')
+					.form-wrap__required Обязательно к заполнению
+			+e.settings
+				+e.settings-title Цвет
+				+e.settings-wrap
+					+e.color-wrap
+						label
+							input.form-control(name='color' type='color' placeholder='')
+							span Цвет текста
+							+icon('chevron-down')
+					+e.color-wrap
+						label
+							input.form-control(name='color' type='color' placeholder='')
+							span Цвет фона
+							+icon('chevron-down')
+				.form-wrap__required Обязательно к заполнению
+			+e.settings
+				+e.settings-title Цвет
+				+e.settings-wrap
+					+e.color-wrap
+						label
+							input.form-control(name='color' type='color' placeholder='')
+							span Цвет текста
+							+icon('chevron-down')
+					+e.color-wrap
+						label
+							input.form-control(name='color' type='color' placeholder='')
+							span Цвет фона
+							+icon('chevron-down')
+				.form-wrap__required Обязательно к заполнению

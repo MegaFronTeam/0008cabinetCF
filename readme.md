@@ -69,7 +69,7 @@
 
 ---
 ###### Создание/редактирование бейджа
-1. <>
+1. <https://megafronteam.github.io/0008cabinetCF/public/32-create-badge.html>
 
 ---
 ###### Клиенты

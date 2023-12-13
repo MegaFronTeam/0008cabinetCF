@@ -1563,6 +1563,9 @@
 		opacity: 0;
 		pointer-events: none;
 		z-index: 10;
+		max-height: rem(550);
+		overflow-y: auto;
+		overflow-x: hidden;
 		@include media-breakpoint-up(md) {
 			width: 100%;
 		}

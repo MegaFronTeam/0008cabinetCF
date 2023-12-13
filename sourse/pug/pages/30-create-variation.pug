@@ -1,0 +1,94 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCabinetPanel/_sCabinetPanel.pug
+include ../blocks/footer/_footer.pug
+include ../blocks/sCreateProduct/_sCreateProduct.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'create-product-4'
+	title= title
+block pagecontent
+	+aside('true')
+	+main('Вариации', '', 'true','Создать вариацию', 'hide', true)
+		+sCreateProduct.sCreateProduct--create-variation
+			+b.section-title
+				h2 Создать вариацию
+				p Вариации необходимы для наделения товара определенным набором свойств. Например: пирог маленький с&nbsp;песочным тестом. Вариации товара: размер и&nbsp;тесто. Свойства вариации &laquo;размер&raquo;: маленькая, средняя и&nbsp;большая. Свойства вариации &laquo;тесто&raquo;: песочное, слоенное и&nbsp;сдобное.
+			.alert.alert-primary.d-flex.align-items-center(role='alert')
+				+img('img/svg/info_square_icon-2.svg').me-2
+				.text-body.flex-grow-1.me-md-2 Каждая вариация со&nbsp;свойствами создается отдельно. При применении к&nbsp;товару нескольких вариаций, все свойства этих вариаций комбинирируются между собой в&nbsp;варианты. Каждый вариант может иметь отдельную цену. #[a(href="#") Как работают вариации товара.]
+			.form-wrap__input-wrap.form-wrap__input-wrap--custom.form-group
+				label
+					span.form-wrap__input-title Название вариации
+					+input('Например, размер', 'text')
+					.form-wrap__required Обязательно к заполнению
+			+in-c('checkbox', 'Добавить иконку')
+			+e.settings
+				+e.settings-title Иконка
+				+e.settings-wrap
+					+b.custom-dropdown--js
+						+e.head
+							+e.icon-wrap
+								+icon('room-service')
+							+icon('room-service')
+							span Иконка
+							+icon('chevron-down')
+						+e.content
+							+e.inner
+								+e.content-title Еда
+								-for (let i = 0; i < 36; i++)
+									+e.link: +icon('room-service')
+								+e.content-title Прочее
+								-for (let i = 0; i < 21; i++)
+									+e.link: +icon('room-service')
+					+e.color-wrap
+						label
+							input.form-control(name='color' type='color' placeholder='')
+							span Цвет иконки
+							+icon('chevron-down')
+					+e.color-wrap
+						label
+							input.form-control(name='color' type='color' placeholder='')
+							span Цвет иконки
+							+icon('chevron-down')
+			.alert.alert-primary.d-flex.align-items-center(role='alert')
+				+img('img/svg/info_square_icon-2.svg').me-2
+				.text-body.flex-grow-1.me-md-2 Вы&nbsp;также можете поставить ссылку на&nbsp;выбранную вами иконку из&nbsp;библиотеки. #[a(href="#") Как выбрать и&nbsp;поставить свою иконку.]
+			+input('Ссылка на иконку', 'text').mb-3
+			+b.characteristic.drug-wrap-block-js
+				mixin characteristicItem(title, btn, isDelete)
+					+e.wrap.drug-item-js
+						+e.head-row.row
+							.col
+								+e.ellips.my-handle: +icon('dots')
+								+e.title!= title
+							if isDelete
+								.col-auto
+									+e.delete Удалить
+						+e.body
+							block
+						+in-c('checkbox', 'Включить по умолчанию')
+						if btn
+							+e.btn.btn.btn-outline-gray(href='#')
+								+icon('more')
+								!= btn
+				+characteristicItem('Значение 1')
+					+input('Например, маленькая', 'text')
+				+characteristicItem('Значение 2', '', true)
+					+input('Например, средняя', 'text')
+				+characteristicItem('Значение 3', 'Добавить значение', true)
+					+input('Например, средняя', 'text')

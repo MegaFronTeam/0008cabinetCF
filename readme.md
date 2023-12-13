@@ -60,7 +60,7 @@
 
 ---
 ###### Создание/редактирование вариации
-1. <>
+1. <https://megafronteam.github.io/0008cabinetCF/public/30-create-variation.html>
 
 ---
 ###### Бейджи

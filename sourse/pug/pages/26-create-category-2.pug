@@ -41,7 +41,7 @@ block pagecontent
 				.tabs__caption
 					.tabs__btn.active Основное
 					.tabs__btn Характеристики
-				.tabs__content
+				.tabs__content.active
 					h3 Основное
 					+e.wrap
 						+cInput('Название категории', 'Можете использовать эмоджи в названии категории', true)
@@ -58,9 +58,13 @@ block pagecontent
 								.col-auto: +in-c('checkbox', 'Пт', 'day')
 								.col-auto: +in-c('checkbox', 'Сб', 'day')
 								.col-auto: +in-c('checkbox', 'Вс', 'day')
-				.tabs__content.active
+				.tabs__content
 					+e.title--lg Характеристики
 					+e.text Создайте шаблон для заполнения характеристик к выбранной категории товаров.
+					.alert.alert-primary.d-flex.align-items-center(role='alert')
+						+img('img/svg/info_square_icon-2.svg').me-2
+						.text-body.flex-grow-1.me-md-2  Шаблоны характеристик для категорий нужны чтобы упростить заполнение товаров в личном кабинете.
+
 					+b.custom-dropdown--js
 						+e.head
 							+e.wrap
@@ -85,7 +89,7 @@ block pagecontent
 								+e.body
 									block
 								if btn
-									+e.btn.btn.btn-outline-gray
+									+e.btn.btn.btn-outline-gray(href='#')
 										+icon('more')
 										!= btn
 								+in-c('checkbox', 'Обязательно к заполнению')

@@ -41,7 +41,7 @@ block pagecontent
 				.tabs__caption
 					.tabs__btn.active Основное
 					.tabs__btn Характеристики
-				.tabs__content
+				.tabs__content.active
 					h3 Основное
 					+e.wrap
 						+cInput('Название категории', 'Можете использовать эмоджи в названии категории', true)
@@ -58,7 +58,7 @@ block pagecontent
 								.col-auto: +in-c('checkbox', 'Пт', 'day')
 								.col-auto: +in-c('checkbox', 'Сб', 'day')
 								.col-auto: +in-c('checkbox', 'Вс', 'day')
-				.tabs__content.active
+				.tabs__content
 					+e.title--lg Характеристики
 					+e.text Создайте шаблон для заполнения характеристик к выбранной категории товаров.
 					+b.custom-dropdown--js

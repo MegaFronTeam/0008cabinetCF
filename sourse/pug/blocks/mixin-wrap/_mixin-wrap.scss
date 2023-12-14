@@ -1139,7 +1139,6 @@
     background-color: #fff;
 		margin-left: calc(var(--bs-gutter-x) * -0.5);
 		margin-right: calc(var(--bs-gutter-x) * -0.5);
-		filter: drop-shadow(0px 5px 10px rgba(25, 28, 31, 0.10));
     @include media-breakpoint-up(md) {
       border: none;
 			margin-right: 0;
@@ -1147,11 +1146,52 @@
       display: table-row-group;
     }
     th {
-			border: 1px solid #E4E4E4;
-			padding: rem(24);
       &:not(:first-child) {
 				width: rem(188);
       }
+			&:first-child {
+				.tariffs-item {
+					@include media-breakpoint-up(md) {
+						border-radius: 0 0 0 rem(16);
+						&:before {
+							content: '';
+							position: absolute;
+							display: block;
+							width: 1px;
+							height: 50px;
+							left: -1px;
+							bottom: 0;
+							background-color: #E4E4E4;
+						} 
+					}
+				}
+			}
+			&:last-child {
+				.tariffs-item {
+					@include media-breakpoint-up(md) {
+						border-right: 1px solid #E4E4E4;
+						border-radius: 0 0 rem(16) 0;
+						&:before {
+							content: '';
+							position: absolute;
+							display: block;
+							width: 1px;
+							height: 50px;
+							right: -1px;
+							bottom: 0;
+							background-color: #E4E4E4;
+						} 
+					}
+				}
+			}
+			.tariffs-item {
+				@include media-breakpoint-up(md) {
+					border-top: 1px solid #E4E4E4;
+					border-bottom: 1px solid #E4E4E4;
+					border-left: 1px solid #E4E4E4;
+					padding: rem(24);
+				}
+			}
     }
     @include media-breakpoint-down(md) {
       tr {
@@ -1188,8 +1228,19 @@
     }
     tr {
       @include media-breakpoint-up(md) {
-        border-top: 1px solid $gray-200;
         display: table-row !important;
+				&:first-child {
+					td {
+						.tariffs__wrap {
+							border-top: none;
+						}
+					}
+				}
+				&:last-child {
+					td {
+						border-bottom: 1px solid #E4E4E4;
+					}
+				}
       }
       @include media-breakpoint-down(md) {
         display: none;
@@ -1210,8 +1261,9 @@
       padding: rem(12) rem(6);
       text-align: center;
       @include media-breakpoint-up(md) {
-				padding: rem(12) rem(24) rem(12) rem(24);
-				border: 1px solid #E4E4E4;
+				// padding: rem(12) rem(24) rem(12) rem(24);
+				// border: 1px solid #E4E4E4;
+				padding: 0;
       }
       &:first-child {
         // font-weight: 700;
@@ -1222,6 +1274,7 @@
       &:last-child {
         @include media-breakpoint-up(md) {
           padding-right: 0;
+					border-right: 1px solid #E4E4E4;
         }
       }
       img {
@@ -1397,13 +1450,17 @@
     align-items: center;
     gap: rem(6);
     text-align: center;
+    width: 100%;
     height: 100%;
     font-weight: 400;
     line-height: 140%;
-    width: 100%;
 		@include media-breakpoint-up(md) {
-			border-radius: 0 0 rem(16) rem(16);
+			// border-radius: 0 0 rem(16) rem(16);
 			filter: drop-shadow(0px 5px 10px rgba(25, 28, 31, 0.10));
+			width: calc(100% + 2px);
+			top: 2px;
+			left: -1px;
+			position: relative;
 		}
     &__title {
       display: flex;
@@ -1478,6 +1535,14 @@
       }
     }
   }
+	&__wrap {
+		@include media-breakpoint-up(md)  {
+			padding: rem(12) rem(24) rem(12) rem(24);
+			border-top: 1px solid #E4E4E4;
+			border-left: 1px solid #E4E4E4;
+			height: 100%;
+		}
+	}
 }
 
 .custom-dropdown {

@@ -23,7 +23,7 @@ block title
 	title= title
 block pagecontent
 	+aside('true')
-	+main('Создать товар', '', 'true','Список товаров', 'hide', true)
+	+main('Список товаров', '', 'true','Создать товар', 'hide', true)
 		.title
 			.h2 Создать товар
 			.form-check.form-switch
@@ -49,12 +49,19 @@ block pagecontent
 					+e.img-col.col-4.col-sm
 						+b.LABEL.avatar-block.add-photo--3.bg-wrap
 							input(type="file", name="" onchange="loadFile(event)")
-							img(src="", alt="").img-bg.img-preview
+							img(src="img/food.jpg", alt="").img-bg.img-preview.active
 							+icon('add2')
 							+e.btn-delete.photo-file-delete-js
 								+icon("trash-can")
 						.small.text-center.text-secondary Основное фото
-					- for(let i = 0; i < 4; i++)
+					+e.img-col.col-4.col-sm
+						+b.LABEL.avatar-block.add-photo--3.bg-wrap
+							input(type="file", name="" onchange="loadFile(event)")
+							img(src="img/food-3.jpg", alt="").img-bg.img-preview.active
+							+icon('add2')
+							+e.btn-delete.photo-file-delete-js
+								+icon("trash-can")
+					- for(let i = 0; i < 3; i++)
 						+e.img-col.col-4.col-sm
 							+b.LABEL.avatar-block.add-photo--3.bg-wrap
 								input(type="file", name="" onchange="loadFile(event)")

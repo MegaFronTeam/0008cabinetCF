@@ -29,6 +29,9 @@
 			--bs-btn-padding-y: #{rem(9)};
 			--bs-btn-font-size: #{rem(12)};
 			--bs-btn-line-height: 1.33;
+			@include media-breakpoint-up(md) {
+				--bs-btn-font-size: #{rem(14)};
+			}
 
 			display: flex;
 			align-items: center;

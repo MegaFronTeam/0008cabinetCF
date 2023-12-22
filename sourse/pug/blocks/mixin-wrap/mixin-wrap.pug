@@ -260,7 +260,7 @@ mixin table()
 				tr
 					th
 						.tariffs-item
-					mixin item(title, price, badge, discount, dayPrice, perOne)
+					mixin item(title, price, badge, discount, dayPrice, perOne, otherModal)
 						th
 							+b.tariffs-item
 								+e.title
@@ -275,10 +275,10 @@ mixin table()
 									+e.price-day!= dayPrice
 								if perOne
 									p За одного чат-бота
-								+e.btn.btn.btn-success(href="#") Выбрать
+								+e.btn.btn.btn-success(href=(otherModal ? '#modal-tarif2' : "modal-tarif3")).link-modal-js  Выбрать
 
 					+item(`Бесплатный`, `0 ₽`, '', 'Бесплатно навсегда')
-					+item(`🔥 Старт`, `6 273 ₽`, true, `Без скидки <span>6 973 ₽</span>`, '3 440 ₽', true)
+					+item(`🔥 Старт`, `6 273 ₽`, true, `Без скидки <span>6 973 ₽</span>`, '3 440 ₽', true, true)
 					+item(`😎 Стандарт`, `8 696 ₽`, true, `Без скидки <span>9 665 ₽</span>`, `3 440 ₽`, true)
 					+item(`💣 Профи`, `10 634 ₽`, true, `Без скидки <span>11 819 ₽</span>`, '3 440 ₽', true)
 			tbody

@@ -102,7 +102,7 @@ mixin sMailing3(cards)
 						span.d-md-none За сегодня
 			.col.col-xl-auto.d-none.d-md-block.order-md-5.order-xl-2
 				+e.all-goods
-					.sMailing__input-wrap.form-group
+					.sMailing__input-wrap.sMailing__input-wrap--select-with-groups.form-group
 						select.sMailing__input.form-select.custom-select-with-groups-js(name='select')
 							option(value='') Все точки продаж
 			.col.col-xl-auto.d-none.d-md-block.order-md-6.order-xl-3
@@ -135,7 +135,7 @@ mixin sMailing3(cards)
 					.h2 Сортировать
 					+e.inputs
 						+e.headline По статусу
-						+in-c('radio', 'Все заказы', 'status')
+						+in-c('radio', 'Все заказы', 'status')(checked)
 						+in-c('radio', 'Новый', 'status')
 						+in-c('radio', 'В работе', 'status')
 						+in-c('radio', 'В пути/готов', 'status')
@@ -148,7 +148,7 @@ mixin sMailing3(cards)
 								option(value='') Все точки продаж
 					+e.inputs
 						+e.headline По категориям товаров
-						+in-c('radio', 'Все товары', 'food')
+						+in-c('radio', 'Все товары', 'food')(checked)
 						+in-c('radio', '🍔 Бургеры', 'food')
 						+in-c('radio', '🥘 Основные блюда', 'food')
 						+in-c('radio', '🍳 Завтраки', 'food')
@@ -157,7 +157,7 @@ mixin sMailing3(cards)
 						+in-c('radio', '🥐 Круассаны', 'food')
 					+e.inputs
 						+e.headline По типу товаров
-						+in-c('radio', 'Показывать все', 'show')
+						+in-c('radio', 'Показывать все', 'show')(checked)
 						+in-c('radio', 'Только активные', 'show')
 						+in-c('radio', 'Только неактивные', 'show')
 					a(href="#").btn.btn-orange.toggle-filter Закрыть

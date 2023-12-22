@@ -55,13 +55,25 @@ mixin modal()
 	div(id="modal-tarif2"  style="display: none" )
 		+b.modal-win--2.text-center
 			.h2.strong.mb-3.tarifTitle Добавление услуги
-			p.mb-4.tarifText У вас уже подключена услуга «Дополнительный пользователь» х3, вы хотите подключить еще одну услугу?
+			p.mb-4.tarifText У вас уже подключена услуга «Дополнительный<br>пользователь» х3, вы хотите подключить еще одну услугу?
 			.row
 				.col-6
-					button.btn.btn-outline-orange.w-100 Подтвердить
+					button.btn.btn-orange.w-100 Подтвердить
 					
 				.col-6
-					button.btn.btn-orange.modal-close-js.w-100 Отменить
+					button.btn.btn-outline-orange.modal-close-js.w-100 Отменить
+	// #modal-call
+
+	div(id="modal-tarif3"  style="display: none" )
+		+b.modal-win--2.text-center
+			.h2.strong.mb-3.tarifTitle Отмена дополнительной услуги
+			p.mb-4.tarifText Дополнительная услуга отменится со следующего месяца.
+			.row
+				.col-6
+					button.btn.btn-orange.w-100 Подтвердить
+					
+				.col-6
+					button.btn.btn-outline-orange.modal-close-js.w-100 Отменить
 	// #modal-call
 	
 	div(id="modal-add-bonus"  style="display: none" )

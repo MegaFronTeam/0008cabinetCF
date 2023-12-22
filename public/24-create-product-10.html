@@ -182,9 +182,9 @@
 									<a class="topLine__back d-none d-xl-inline-flex" href="#">
 										<svg class="icon icon-chevron-left ">
 											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-										</svg>Создать товар<span>&mdash;</span>
+										</svg>Список товаров<span>&mdash;</span>
 									</a>
-									<div class="topLine__title">Список товаров
+									<div class="topLine__title">Создать товар
 									</div>
 								</div>
 								<div class="col p-0"></div>
@@ -326,7 +326,8 @@
 									<div class="sCreateProduct__option-content">
 										<div class="sCreateProduct__option-name">Кетчуп
 										</div>
-										<div class="sCreateProduct__option-price"><span>+130</span>₽
+										<div class="sCreateProduct__option-price">
+											<input class="form-control" type="text" placeholder="0"><span class="valuta">₽</span>
 										</div>
 									</div>
 									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="def" type="checkbox" checked="checked"/><span class="custom-input__text form-check-label">Включить по умолчанию</span>
@@ -336,7 +337,8 @@
 									<div class="sCreateProduct__option-content">
 										<div class="sCreateProduct__option-name">Майонез
 										</div>
-										<div class="sCreateProduct__option-price"><span class="zero">0</span>₽
+										<div class="sCreateProduct__option-price">
+											<input class="form-control" type="text" placeholder="0"><span class="valuta">₽</span>
 										</div>
 									</div>
 									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="def" type="checkbox" checked="checked"/><span class="custom-input__text form-check-label">Включить по умолчанию</span>
@@ -346,7 +348,8 @@
 									<div class="sCreateProduct__option-content">
 										<div class="sCreateProduct__option-name">Сырный соус
 										</div>
-										<div class="sCreateProduct__option-price"><span>+130</span>₽
+										<div class="sCreateProduct__option-price">
+											<input class="form-control" type="text" placeholder="0"><span class="valuta">₽</span>
 										</div>
 									</div>
 									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="def" type="checkbox" checked="checked"/><span class="custom-input__text form-check-label">Включить по умолчанию</span>
@@ -356,7 +359,8 @@
 									<div class="sCreateProduct__option-content">
 										<div class="sCreateProduct__option-name">BBQ соус
 										</div>
-										<div class="sCreateProduct__option-price"><span class="zero">0</span>₽
+										<div class="sCreateProduct__option-price">
+											<input class="form-control" type="text" placeholder="0"><span class="valuta">₽</span>
 										</div>
 									</div>
 									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="def" type="checkbox" checked="checked"/><span class="custom-input__text form-check-label">Включить по умолчанию</span>
@@ -699,13 +703,28 @@
 		<div id="modal-tarif2" style="display: none">
 			<div class="modal-win modal-win--2 text-center">
 				<div class="h2 strong mb-3 tarifTitle">Добавление услуги</div>
-				<p class="mb-4 tarifText">У вас уже подключена услуга «Дополнительный пользователь» х3, вы хотите подключить еще одну услугу?</p>
+				<p class="mb-4 tarifText">У вас уже подключена услуга «Дополнительный<br>пользователь» х3, вы хотите подключить еще одну услугу?</p>
 				<div class="row">
 					<div class="col-6">
-						<button class="btn btn-outline-orange w-100">Подтвердить</button>
+						<button class="btn btn-orange w-100">Подтвердить</button>
 					</div>
 					<div class="col-6">
-						<button class="btn btn-orange modal-close-js w-100">Отменить</button>
+						<button class="btn btn-outline-orange modal-close-js w-100">Отменить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="modal-tarif3" style="display: none">
+			<div class="modal-win modal-win--2 text-center">
+				<div class="h2 strong mb-3 tarifTitle">Отмена дополнительной услуги</div>
+				<p class="mb-4 tarifText">Дополнительная услуга отменится со следующего месяца.</p>
+				<div class="row">
+					<div class="col-6">
+						<button class="btn btn-orange w-100">Подтвердить</button>
+					</div>
+					<div class="col-6">
+						<button class="btn btn-outline-orange modal-close-js w-100">Отменить</button>
 					</div>
 				</div>
 			</div>

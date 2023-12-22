@@ -2201,7 +2201,7 @@ a.text-body{
 	position: relative;
 	padding-right: rem(15);
 	padding-left: rem(15);
-	--sPT: #{rem(50)};
+	--sPT: #{rem(80)};
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(114.200)};
 		--sPB: #{rem(95)};
@@ -2375,11 +2375,15 @@ a.text-body{
 		line-height: 1.25;
 		margin-right: rem(20);
 		font-size: rem(24);
-		margin-bottom: 0;
+		margin-bottom: rem(10);
+		@include media-breakpoint-up(md) {
+			margin-bottom: 0;
+		}
 	}
 	.form-check {
 		margin-bottom: 0;
 		min-height: auto;
+		max-width: max-content;
 		&-input {
 			background-color: $gray-600;
 			border-color: $gray-600;
@@ -2394,6 +2398,7 @@ a.text-body{
 	background-color: #fff;
 	padding: rem(15) rem(20);
 	width: 100%;
+	z-index: 10;
 	@include media-breakpoint-up(md) {
 		box-shadow: 0px 0px 15px 0px rgba(25, 28, 31, 0.10);
 	}
@@ -2421,5 +2426,23 @@ a.text-body{
 .order-md-6 {
 	@include media-breakpoint-up(md) {
 		order: 6;
+	}
+}
+
+.btn {
+	&.btn-disabled {
+    --bs-btn-color: #8c8d8f;
+    --bs-btn-bg: #f6f7fa;
+    --bs-btn-border-color: #f6f7fa;
+
+    --bs-btn-hover-color: #8c8d8f;
+    --bs-btn-hover-bg: #f6f7fa;
+    --bs-btn-hover-border-color: #f6f7fa;
+
+    --bs-btn-active-color: #8c8d8f;
+    --bs-btn-active-bg: #f6f7fa;
+    --bs-btn-active-border-color: #f6f7fa;
+
+		cursor: not-allowed;
 	}
 }

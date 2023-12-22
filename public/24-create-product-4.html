@@ -182,9 +182,9 @@
 									<a class="topLine__back d-none d-xl-inline-flex" href="#">
 										<svg class="icon icon-chevron-left ">
 											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-										</svg>Создать товар<span>&mdash;</span>
+										</svg>Список товаров<span>&mdash;</span>
 									</a>
-									<div class="topLine__title">Список товаров
+									<div class="topLine__title">Создать товар
 									</div>
 								</div>
 								<div class="col p-0"></div>
@@ -327,15 +327,12 @@
 										<div class="form-wrap__required">Необязательно к заполнению</div>
 									</label>
 								</div>
-								<div class="form-wrap__input-wrap form-wrap__input-wrap--custom form-group">
-									<label><span class="form-wrap__input-title">Несколько вариантов из нескольких</span><span class="form-wrap__input-text">Описание для поля</span>
-										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="variant" type="checkbox"/><span class="custom-input__text form-check-label">Вариант 1</span>
-										</label>
-										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="variant" type="checkbox"/><span class="custom-input__text form-check-label">Вариант 2</span>
-										</label>
-										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="variant" type="checkbox"/><span class="custom-input__text form-check-label">Вариант 3</span>
-										</label>
-										<div class="form-wrap__required">Необязательно к заполнению</div>
+								<div class="form-wrap__input-wrap form-wrap__input-wrap--custom form-group"><span class="form-wrap__input-title">Несколько вариантов из нескольких</span><span class="form-wrap__input-text">Описание для поля</span>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="variant" type="checkbox" checked="checked"/><span class="custom-input__text form-check-label">Вариант 1</span>
+									</label>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="variant" type="checkbox"/><span class="custom-input__text form-check-label">Вариант 2</span>
+									</label>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="variant" type="checkbox"/><span class="custom-input__text form-check-label">Вариант 3</span>
 									</label>
 								</div>
 								<div class="form-wrap__input-wrap form-wrap__input-wrap--custom form-group">
@@ -346,15 +343,12 @@
 										<div class="form-wrap__required">Необязательно к заполнению</div>
 									</label>
 								</div>
-								<div class="form-wrap__input-wrap form-wrap__input-wrap--custom form-group">
-									<label><span class="form-wrap__input-title">Несколько вариантов из нескольких</span><span class="form-wrap__input-text">Описание для поля</span>
-										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="variant2" type="radio"/><span class="custom-input__text form-check-label">Вариант 1</span>
-										</label>
-										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="variant2" type="radio"/><span class="custom-input__text form-check-label">Вариант 2</span>
-										</label>
-										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="variant2" type="radio"/><span class="custom-input__text form-check-label">Вариант 3</span>
-										</label>
-										<div class="form-wrap__required">Необязательно к заполнению</div>
+								<div class="form-wrap__input-wrap form-wrap__input-wrap--custom form-group"><span class="form-wrap__input-title">Несколько вариантов из нескольких</span><span class="form-wrap__input-text">Описание для поля</span>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="variant2" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Вариант 1</span>
+									</label>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="variant2" type="radio"/><span class="custom-input__text form-check-label">Вариант 2</span>
+									</label>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="variant2" type="radio"/><span class="custom-input__text form-check-label">Вариант 3</span>
 									</label>
 								</div>
 							</div>
@@ -694,13 +688,28 @@
 		<div id="modal-tarif2" style="display: none">
 			<div class="modal-win modal-win--2 text-center">
 				<div class="h2 strong mb-3 tarifTitle">Добавление услуги</div>
-				<p class="mb-4 tarifText">У вас уже подключена услуга «Дополнительный пользователь» х3, вы хотите подключить еще одну услугу?</p>
+				<p class="mb-4 tarifText">У вас уже подключена услуга «Дополнительный<br>пользователь» х3, вы хотите подключить еще одну услугу?</p>
 				<div class="row">
 					<div class="col-6">
-						<button class="btn btn-outline-orange w-100">Подтвердить</button>
+						<button class="btn btn-orange w-100">Подтвердить</button>
 					</div>
 					<div class="col-6">
-						<button class="btn btn-orange modal-close-js w-100">Отменить</button>
+						<button class="btn btn-outline-orange modal-close-js w-100">Отменить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="modal-tarif3" style="display: none">
+			<div class="modal-win modal-win--2 text-center">
+				<div class="h2 strong mb-3 tarifTitle">Отмена дополнительной услуги</div>
+				<p class="mb-4 tarifText">Дополнительная услуга отменится со следующего месяца.</p>
+				<div class="row">
+					<div class="col-6">
+						<button class="btn btn-orange w-100">Подтвердить</button>
+					</div>
+					<div class="col-6">
+						<button class="btn btn-outline-orange modal-close-js w-100">Отменить</button>
 					</div>
 				</div>
 			</div>

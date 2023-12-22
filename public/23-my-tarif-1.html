@@ -723,7 +723,7 @@
 																</div>
 																<div class="tariffs-item__discount">Бесплатно навсегда
 																</div>
-																<a class="tariffs-item__btn btn btn-success" href="#">Выбрать
+																<a class="tariffs-item__btn btn btn-success link-modal-js" href="modal-tarif3"> Выбрать
 																</a>
 															</div>
 														</th>
@@ -739,7 +739,7 @@
 																<div class="tariffs-item__price-day">3 440 ₽
 																</div>
 																<p>За одного чат-бота</p>
-																<a class="tariffs-item__btn btn btn-success" href="#">Выбрать
+																<a class="tariffs-item__btn btn btn-success link-modal-js" href="#modal-tarif2"> Выбрать
 																</a>
 															</div>
 														</th>
@@ -755,7 +755,7 @@
 																<div class="tariffs-item__price-day">3 440 ₽
 																</div>
 																<p>За одного чат-бота</p>
-																<a class="tariffs-item__btn btn btn-success" href="#">Выбрать
+																<a class="tariffs-item__btn btn btn-success link-modal-js" href="modal-tarif3"> Выбрать
 																</a>
 															</div>
 														</th>
@@ -771,7 +771,7 @@
 																<div class="tariffs-item__price-day">3 440 ₽
 																</div>
 																<p>За одного чат-бота</p>
-																<a class="tariffs-item__btn btn btn-success" href="#">Выбрать
+																<a class="tariffs-item__btn btn btn-success link-modal-js" href="modal-tarif3"> Выбрать
 																</a>
 															</div>
 														</th>
@@ -1872,7 +1872,7 @@
 										<div class="sAdditionalServices__price">100 ₽ в месяц к тарифу
 										</div>
 										<div class="row">
-											<div class="sAdditionalServices__col col">
+											<div class="sAdditionalServices__col col-md">
 												<div class="addBlock">
 													<button class="addBlock__btn addBlock__btn--minus" type="button">
 													</button>
@@ -1881,7 +1881,7 @@
 													</button>
 												</div>
 											</div>
-											<div class="col d-none d-md-block">
+											<div class="col-md">
 												<a class="sAdditionalServices__btn btn btn-success" href="#">Подключить
 												</a>
 											</div>
@@ -1900,7 +1900,7 @@
 										<div class="sAdditionalServices__price">50 ₽
 										</div>
 										<div class="row">
-											<div class="sAdditionalServices__col col">
+											<div class="sAdditionalServices__col col-md">
 												<div class="addBlock">
 													<button class="addBlock__btn addBlock__btn--minus" type="button">
 													</button>
@@ -1909,7 +1909,7 @@
 													</button>
 												</div>
 											</div>
-											<div class="col d-none d-md-block">
+											<div class="col-md">
 												<a class="sAdditionalServices__btn btn btn-success" href="#">Подключить
 												</a>
 											</div>
@@ -1928,7 +1928,7 @@
 										<div class="sAdditionalServices__price">1 500 ₽ в месяц к тарифу
 										</div>
 										<div class="row">
-											<div class="sAdditionalServices__col col">
+											<div class="sAdditionalServices__col col-md">
 												<div class="addBlock">
 													<button class="addBlock__btn addBlock__btn--minus" type="button">
 													</button>
@@ -1937,7 +1937,7 @@
 													</button>
 												</div>
 											</div>
-											<div class="col d-none d-md-block">
+											<div class="col-md">
 												<a class="sAdditionalServices__btn btn btn-success" href="#">Подключить
 												</a>
 											</div>
@@ -2281,13 +2281,28 @@
 		<div id="modal-tarif2" style="display: none">
 			<div class="modal-win modal-win--2 text-center">
 				<div class="h2 strong mb-3 tarifTitle">Добавление услуги</div>
-				<p class="mb-4 tarifText">У вас уже подключена услуга «Дополнительный пользователь» х3, вы хотите подключить еще одну услугу?</p>
+				<p class="mb-4 tarifText">У вас уже подключена услуга «Дополнительный<br>пользователь» х3, вы хотите подключить еще одну услугу?</p>
 				<div class="row">
 					<div class="col-6">
-						<button class="btn btn-outline-orange w-100">Подтвердить</button>
+						<button class="btn btn-orange w-100">Подтвердить</button>
 					</div>
 					<div class="col-6">
-						<button class="btn btn-orange modal-close-js w-100">Отменить</button>
+						<button class="btn btn-outline-orange modal-close-js w-100">Отменить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="modal-tarif3" style="display: none">
+			<div class="modal-win modal-win--2 text-center">
+				<div class="h2 strong mb-3 tarifTitle">Отмена дополнительной услуги</div>
+				<p class="mb-4 tarifText">Дополнительная услуга отменится со следующего месяца.</p>
+				<div class="row">
+					<div class="col-6">
+						<button class="btn btn-orange w-100">Подтвердить</button>
+					</div>
+					<div class="col-6">
+						<button class="btn btn-outline-orange modal-close-js w-100">Отменить</button>
 					</div>
 				</div>
 			</div>

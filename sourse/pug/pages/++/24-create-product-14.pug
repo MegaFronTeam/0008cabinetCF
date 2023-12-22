@@ -19,11 +19,11 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= 'create-product-10'
+	- let  title= 'create-product-14'
 	title= title
 block pagecontent
 	+aside('true')
-	+main('Создать товар', '', 'true','Список товаров', 'hide', true)
+	+main('Список товаров', '', 'true','Создать товар', 'hide', true)
 		.title
 			.h2 Создать товар
 			.form-check.form-switch
@@ -43,10 +43,10 @@ block pagecontent
 		+sCreateProduct
 			h3 Вариации
 			+e.wrap
-				+e.title Выберите вариациии
-				p Создайте вариации в разделе #[a(href="#") Вариации], после чего вы сможете применять их к товарам.
+				+e.title Выберите вариации
+				p Вариант — это товар с определенным набором свойств. Например: пирог маленький с песочным тестом. Свойства товара: размер, тесто. Каждый вариант может иметь отдельную цену. #[a(href='#') Как работают вариации товара.]
 				select.form-wrap__input.form-select(name='select' multiple).custom-multi-select-js
-					option(value="") 
+					option(value="") Ничего не выбрано
 					option Размер
 					option Тесто
 					option Напиток

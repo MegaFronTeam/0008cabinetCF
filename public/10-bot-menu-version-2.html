@@ -242,7 +242,7 @@
 							<div class="sBotMenu__head-row row">
 								<div class="col-xl d-none d-lg-block">
 									<div class="sBotMenu__all-goods">
-										<div class="sBotMenu__input-wrap form-group">
+										<div class="sBotMenu__input-wrap sBotMenu__input-wrap--select-with-groups form-group">
 											<select class="sBotMenu__input form-select custom-select-with-groups-js" name="select">
 												<option value="">Все точки продаж</option>
 											</select>
@@ -329,7 +329,7 @@
 														<use xlink:href="img/svg/sprite.svg#search"></use>
 													</svg>
 												</button>
-											</div><a class="btn btn-orange" href="#">Показать товары</a>
+											</div><a class="btn btn-orange" href="#">Найти</a>
 										</div>
 									</div>
 								</div>
@@ -356,7 +356,7 @@
 										<div class="sBotMenu__inputs">
 											<div class="sBotMenu__headline">По категориям товаров
 											</div>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">Все товары</span>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Все товары</span>
 											</label>
 											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="food" type="radio"/><span class="custom-input__text form-check-label">🍔 Бургеры</span>
 											</label>
@@ -374,7 +374,7 @@
 										<div class="sBotMenu__inputs">
 											<div class="sBotMenu__headline">По типу товаров
 											</div>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="show" type="radio"/><span class="custom-input__text form-check-label">Показывать все</span>
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="show" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Показывать все</span>
 											</label>
 											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="show" type="radio"/><span class="custom-input__text form-check-label">Только активные</span>
 											</label>
@@ -1316,13 +1316,28 @@
 		<div id="modal-tarif2" style="display: none">
 			<div class="modal-win modal-win--2 text-center">
 				<div class="h2 strong mb-3 tarifTitle">Добавление услуги</div>
-				<p class="mb-4 tarifText">У вас уже подключена услуга «Дополнительный пользователь» х3, вы хотите подключить еще одну услугу?</p>
+				<p class="mb-4 tarifText">У вас уже подключена услуга «Дополнительный<br>пользователь» х3, вы хотите подключить еще одну услугу?</p>
 				<div class="row">
 					<div class="col-6">
-						<button class="btn btn-outline-orange w-100">Подтвердить</button>
+						<button class="btn btn-orange w-100">Подтвердить</button>
 					</div>
 					<div class="col-6">
-						<button class="btn btn-orange modal-close-js w-100">Отменить</button>
+						<button class="btn btn-outline-orange modal-close-js w-100">Отменить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="modal-tarif3" style="display: none">
+			<div class="modal-win modal-win--2 text-center">
+				<div class="h2 strong mb-3 tarifTitle">Отмена дополнительной услуги</div>
+				<p class="mb-4 tarifText">Дополнительная услуга отменится со следующего месяца.</p>
+				<div class="row">
+					<div class="col-6">
+						<button class="btn btn-orange w-100">Подтвердить</button>
+					</div>
+					<div class="col-6">
+						<button class="btn btn-outline-orange modal-close-js w-100">Отменить</button>
 					</div>
 				</div>
 			</div>

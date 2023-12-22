@@ -19,11 +19,11 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= 'create-product-10'
+	- let  title= 'create-product-15'
 	title= title
 block pagecontent
 	+aside('true')
-	+main('Создать товар', '', 'true','Список товаров', 'hide', true)
+	+main('Список товаров', '', 'true','Создать товар', 'hide', true)
 		.title
 			.h2 Создать товар
 			.form-check.form-switch
@@ -56,11 +56,11 @@ block pagecontent
 						+e.option-content
 							+e.option-name!= name
 							+e.option-price
-								span(class=(isNum ? '' : 'zero'))!= isNum ? isNum : '0'
-								| ₽
+								input.form-control(type="text" placeholder="0" value=(isNum ? '+130' : ''))&attributes(attributes)
+								span.valuta ₽
 						+e.delete(href='#'): +icon('trash-can')
 				+option('Размер Средний + Тесто Песочное + Напиток Coca Cola + Еще что-то Значение', false)
 				+option('Размер Маленький + Тесто Песочное + Напиток Coca Cola  + Еще что-то Значение', '5344')
 				+option('Размер Большой + Тесто Песочное + Напиток Coca Cola  + Еще что-то Значение', '24')
-				+option('Размер Средний + Тесто Сдобное + Напиток Coca Cola  + Еще что-то Значение', false)
+				+option('Размер Средний + Тесто Сдобное + Напиток Coca Cola  + Еще что-то Значение', false).is-invalid
 				+option('Размер Маленький + Тесто Сдобное + Напиток Coca Cola', false)

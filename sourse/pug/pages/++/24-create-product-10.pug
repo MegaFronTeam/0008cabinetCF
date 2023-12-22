@@ -23,7 +23,7 @@ block title
 	title= title
 block pagecontent
 	+aside('true')
-	+main('Создать товар', '', 'true','Список товаров', 'hide', true)
+	+main('Список товаров', '', 'true','Создать товар', 'hide', true)
 		.title
 			.h2 Создать товар
 			.form-check.form-switch
@@ -62,8 +62,9 @@ block pagecontent
 						+e.option-content
 							+e.option-name!= name
 							+e.option-price
-								span(class=(isNum ? '' : 'zero'))!= isNum ? '+130' : '0'
-								| ₽
+								//- span(class=(isNum ? '' : 'zero'))!= isNum ? '+130' : '0'
+								input.form-control(type="text" placeholder="0")
+								span.valuta ₽
 						+in-c('checkbox', 'Включить по умолчанию', 'def')(checked)
 				+option('Кетчуп', true)
 				+option('Майонез')

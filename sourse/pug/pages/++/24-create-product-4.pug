@@ -23,7 +23,7 @@ block title
 	title= title
 block pagecontent
 	+aside('true')
-	+main('Создать товар', '', 'true','Список товаров', 'hide', true)
+	+main('Список товаров', '', 'true','Создать товар', 'hide', true)
 		.title
 			.h2 Создать товар
 			.form-check.form-switch
@@ -54,13 +54,17 @@ block pagecontent
 					+input('Поле ввода', 'text')
 				+cInput('Выпадающий список', 'Описание для поля')
 					+input('Выпадающий список','select', ``).custom-select-js
-				+cInput('Несколько вариантов из нескольких', 'Описание для поля')
-					+in-c('checkbox', 'Вариант 1', 'variant')
+				.form-wrap__input-wrap.form-wrap__input-wrap--custom.form-group
+					span.form-wrap__input-title Несколько вариантов из нескольких
+					span.form-wrap__input-text Описание для поля
+					+in-c('checkbox', 'Вариант 1', 'variant')(checked)
 					+in-c('checkbox', 'Вариант 2', 'variant')
 					+in-c('checkbox', 'Вариант 3', 'variant')
 				+cInput('Длинное описание', 'Описание для поля')
 					+input('Поле ввода','textarea', ``)
-				+cInput('Несколько вариантов из нескольких', 'Описание для поля')
-					+in-c('radio', 'Вариант 1', 'variant2')
+				.form-wrap__input-wrap.form-wrap__input-wrap--custom.form-group
+					span.form-wrap__input-title Несколько вариантов из нескольких
+					span.form-wrap__input-text Описание для поля
+					+in-c('radio', 'Вариант 1', 'variant2')(checked)
 					+in-c('radio', 'Вариант 2', 'variant2')
 					+in-c('radio', 'Вариант 3', 'variant2')

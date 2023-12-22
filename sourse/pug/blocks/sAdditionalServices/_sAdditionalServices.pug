@@ -13,8 +13,8 @@ mixin sAdditionalServices(data)
 						+e.SPAN.toggle.tooltip-toggle( data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-custom-class="custom-tooltip"  data-bs-title="This top tooltip is themed via CSS variables.") ?
 					+e.price!= span
 					.row
-						+e.col.col: +addblock
-						.col.d-none.d-md-block: +e.btn.btn.btn-success(href='#') Подключить
+						+e.col.col-md: +addblock
+						.col-md: +e.btn.btn.btn-success(href='#') Подключить
 			.col-sm-6.col-xl-4
 				+item('add', 'Дополнительный пользователь', '100 ₽ в месяц к тарифу')
 			.col-sm-6.col-xl-4

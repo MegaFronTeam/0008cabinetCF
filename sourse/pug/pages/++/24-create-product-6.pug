@@ -23,7 +23,7 @@ block title
 	title= title
 block pagecontent
 	+aside('true')
-	+main('Создать товар', '', 'true','Список товаров', 'hide', true)
+	+main('Список товаров', '', 'true','Создать товар', 'hide', true)
 		.title
 			.h2 Создать товар
 			.form-check.form-switch
@@ -46,9 +46,12 @@ block pagecontent
 				p Сопутствующие товары будут предлагаться клиенту в&nbsp;корзине, если этот товар будет добавлен в&nbsp;корзину.
 				+e.title Выберите сопутствующие товары (не более 3)
 				+search()
-				mixin item(img, title, food, price)
+				mixin item(img, title, food, price, isDisabled)
 					+e.product-item
-						+in-c('checkbox', '', 'product')
+						if isDisabled
+							+in-c('checkbox', '', 'product')(disabled)
+						else
+							+in-c('checkbox', '', 'product')
 						+img(`img/${img}`).img
 						div
 							a(href="#")!= title
@@ -58,7 +61,7 @@ block pagecontent
 								!= food
 							+e.price!= price
 				+e.product-wrap
-					+item('food-2.jpg', 'Бургер с котлетой из мраморной говядины с томатным джемом', 'Круассаны', '350.00 ₽ - 450.00 ₽')
+					+item('food-2.jpg', 'Бургер с котлетой из мраморной говядины с томатным джемом', 'Круассаны', '350.00 ₽ - 450.00 ₽', true)
 					+item('food.jpg', 'Прага-Бургер', 'Основные блюда', '350.00 ₽ - 450.00 ₽')
 					+item('food-2.jpg', 'Бургер с котлетой из мраморной говядины с томатным джемом', 'Круассаны', '350.00 ₽ - 450.00 ₽')
 					+item('food.jpg', 'Прага-Бургер', 'Основные блюда', '350.00 ₽ - 450.00 ₽')

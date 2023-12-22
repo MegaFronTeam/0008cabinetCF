@@ -897,6 +897,15 @@ const sMenuswiper = new Swiper('.sMenu__slider--js', {
 		})
 	})
 
+	let disabledBtns = document.querySelectorAll('.btn-disabled');
+
+	if (disabledBtns.length > 0) {
+		disabledBtns.forEach((disabledBtn) => {
+			disabledBtn.addEventListener('click', (e) => {
+				e.preventDefault();
+			})
+		});
+	}
 
 };
 if (document.readyState !== 'loading') {

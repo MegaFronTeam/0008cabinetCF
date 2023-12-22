@@ -146,7 +146,7 @@ mixin sBotMenuHead2()
 	+e.head-row.row
 		.col-xl.d-none.d-lg-block
 			+e.all-goods
-				.sBotMenu__input-wrap.form-group
+				.sBotMenu__input-wrap.sBotMenu__input-wrap--select-with-groups.form-group
 					select.sBotMenu__input.form-select.custom-select-with-groups-js(name='select')
 						option(value='') Все точки продаж
 		.col-auto.col-xl.d-none.d-lg-block
@@ -181,7 +181,7 @@ mixin sBotMenuHead2()
 					+e.inner-search
 						+input("Поиск по товарам",'text')
 						button: +icon('search')
-					a(href="#").btn.btn-orange Показать товары
+					a(href="#").btn.btn-orange Найти
 		.col-auto.d-block.d-sm-none
 			+e.filter.toggle-filter: +icon('filter')
 			+e.wrap.filter--js
@@ -195,7 +195,7 @@ mixin sBotMenuHead2()
 							option(value='') Все точки продаж
 				+e.inputs
 					+e.headline По категориям товаров
-					+in-c('radio', 'Все товары', 'food')
+					+in-c('radio', 'Все товары', 'food')(checked)
 					+in-c('radio', '🍔 Бургеры', 'food')
 					+in-c('radio', '🥘 Основные блюда', 'food')
 					+in-c('radio', '🍳 Завтраки', 'food')
@@ -204,7 +204,7 @@ mixin sBotMenuHead2()
 					+in-c('radio', '🥐 Круассаны', 'food')
 				+e.inputs
 					+e.headline По типу товаров
-					+in-c('radio', 'Показывать все', 'show')
+					+in-c('radio', 'Показывать все', 'show')(checked)
 					+in-c('radio', 'Только активные', 'show')
 					+in-c('radio', 'Только неактивные', 'show')
 				a(href="#").btn.btn-orange.toggle-filter Фильтровать

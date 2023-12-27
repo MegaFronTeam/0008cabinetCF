@@ -1234,12 +1234,12 @@
   }
   tbody {
     display: block;
-    padding-left: rem(12);
-    padding-right: rem(12);
+    // padding-left: rem(12);
+    // padding-right: rem(12);
     @include media-breakpoint-up(md) {
       display: table-row-group !important;
-      padding-left: 0;
-      padding-right: 0;
+      // padding-left: 0;
+      // padding-right: 0;
     }
     tr {
 			&:hover {
@@ -1264,6 +1264,11 @@
       }
       @include media-breakpoint-down(md) {
         display: none;
+				&:hover {
+          &:before {
+            opacity: 1;
+          }
+        }
 				&:nth-child(1),
 				&:nth-child(2),
 				&:nth-child(4),
@@ -1275,6 +1280,19 @@
 				&:nth-child(12) {
 					display: flex;
 				}
+				&:before {
+          @include mt;
+          content: '';
+          position: absolute;
+          display: block;
+          width: 200vw;
+          height: 100%;
+          left: -50vw;
+          top: 0;
+          background-color: #F6F7FA;
+          z-index: -1;
+          opacity: 0;
+        }
       }
     }
     td {

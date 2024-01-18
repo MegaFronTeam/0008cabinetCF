@@ -1840,6 +1840,9 @@ body .table-wrap-js .table-mob-flex{
 .cards{
 	max-width: rem(505);
 	&__item{
+		@include media-breakpoint-down(sm) {
+			position: relative;
+		}
 		.row{
 			--bs-gutter-x: 20px;
 		}
@@ -1920,6 +1923,9 @@ body .table-wrap-js .table-mob-flex{
 .menu__dropdown-wrapper{
 	position: relative;
 	display: inline-block;
+	@include media-breakpoint-down(sm) {
+		position: static;
+	}
 }
 .menu__dropdown{
 	background: #FFFFFF;
@@ -1929,10 +1935,19 @@ body .table-wrap-js .table-mob-flex{
 	border-radius: 8px;
 	right: 0;
 	top: 110%;
+	@include media-breakpoint-down(sm) {
+		right: unset;
+		left: rem(-9);
+		width: calc(100vw - 12px);
+		top: 85%;
+	}
 	.labels__item{
 		display: block;
 		min-width: 124px;
 		border: none;
+		@include media-breakpoint-down(sm) {
+			white-space: normal;
+		}
 		&:not(:last-child){
 
 			border-bottom: 1px solid #EBEBEB;
